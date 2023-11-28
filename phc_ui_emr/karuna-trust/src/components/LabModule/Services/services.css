@@ -1,0 +1,35 @@
+.multi-organization .searchWrapper {
+  width: 85% !important;
+  border-radius: 4px !important;
+  height: 30px !important;
+  padding: 0px 5px !important;
+  font-size: 12px !important;
+}
+
+.multi-organization .chip {
+  background: transparent !important;
+  color: #000 !important;
+  display: none;
+}
+.multi-organization .closeIcon {
+  background: #2c369df0;
+  border-radius: 50%;
+}
+.multi-organization .optionListContainer {
+  width: 90% !important;
+}
+.multi-organization .multiSelectContainer ul {
+  max-width: 100% !important;
+}
+.multi-organization .multiSelectContainer li {
+  display: inline-flex !important;
+  width: 100% !important;
+}
+.ref-textarea textarea.form-control {
+  min-height: none !important;
+  height: 30px !important;
+  border-bottom: 1px solid grey !important;
+  border-right: 0px !important;
+  border-left: 0px !important;
+  border-top: 0px !important;
+}

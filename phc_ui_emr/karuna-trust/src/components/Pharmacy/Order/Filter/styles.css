@@ -1,0 +1,98 @@
+.CheckboxMenu .dropdown-item:hover,
+.CheckboxMenu .dropdown-item:active {
+  background-color: transparent;
+  color: black;
+}
+.form-check-label {
+  margin-bottom: 0;
+  cursor: pointer;
+  color: #000 !important;
+}
+
+#dropdown-basic::after {
+  display: none !important;
+}
+
+#check-show {
+  left: -80% !important;
+  z-index: 9999 !important;
+  padding: 10px 5px !important;
+  width: 200px !important;
+}
+
+.inwards-filter {
+  color: #000 !important;
+  cursor: pointer !important;
+}
+
+.select-all-btn {
+  margin: 0 -5% !important;
+}
+
+.inwards-check {
+  margin: 0 5% !important;
+  width: 16px !important;
+}
+
+.filterbtn {
+  border: none !important;
+  cursor: pointer !important;
+  color: #1476f7 !important;
+  background-color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.inwards-menu {
+  z-index: 9999 !important;
+}
+.fltr-drp-name {
+  display: inline-flex;
+  width: 100% !important;
+}
+.filter-btn.show {
+  display: initial !important;
+}
+.order-filter .CheckboxMenu {
+  transform: translate(-60px, 24px) !important;
+}
+.status-filter .CheckboxMenu {
+  transform: translate(-35px, 24px) !important;
+}
+.order-filter,
+.status-filter,
+.supplier-filter {
+  display: flex !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  align-items: center !important;
+}
+.supplier-filter .CheckboxMenu {
+  transform: translate(-84px, 24px) !important;
+}
+
+.order-filter .CheckboxMenu::after {
+  content: "";
+  position: absolute;
+  border: 6px solid;
+  border-color: transparent transparent #fff transparent;
+  top: -12px;
+  left: 52%;
+}
+
+.status-filter .CheckboxMenu::after {
+  content: "";
+  position: absolute;
+  border: 6px solid;
+  border-color: transparent transparent #fff transparent;
+  top: -12px;
+  left: 38%;
+}
+
+.supplier-filter .CheckboxMenu::after {
+  content: "";
+  position: absolute;
+  border: 6px solid;
+  border-color: transparent transparent #fff transparent;
+  top: -12px;
+  left: 43%;
+}

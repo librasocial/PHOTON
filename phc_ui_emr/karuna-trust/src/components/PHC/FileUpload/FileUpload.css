@@ -1,0 +1,74 @@
+.file-upload-div.fade.modal.show {
+  background-color: rgba(192, 189, 189, 0.383) !important;
+  padding: 0 !important;
+}
+.image-upload-div {
+  background-color: #eee;
+  border: 1px solid #d1d1d1;
+  margin: 3%;
+  border-radius: 4px;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-btn {
+  text-align: left;
+  padding: 1% !important;
+}
+.phc-image {
+  margin: 0 auto;
+  padding: 2% 0;
+}
+.file-upload-div .modal-dialog {
+  position: relative;
+  top: 5% !important;
+  max-width: 50%;
+  margin: 0 auto !important;
+}
+.file-header-div {
+  padding: 1%;
+}
+.file-process-header {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 2% 2% 2%;
+}
+.image-uploaded {
+  margin: 2% !important;
+}
+.regBtnPCImg,
+.regBtnBrowse {
+  min-width: 100px !important;
+  border-radius: 30px !important;
+  padding: 1px 15px !important;
+}
+.regBtnPCImg {
+  border: 2px solid #2d5986 !important;
+  background-color: #fff !important;
+  color: #2d5986 !important;
+}
+.regBtnBrowse {
+  border: 2px solid grey !important;
+  background-color: #fff !important;
+  color: grey !important;
+  cursor: pointer;
+}
+.image-capture-div {
+  text-align: right;
+}
+.user-login-img {
+  margin: 3% auto;
+  height: 60px;
+}
+.user-uploaded-img {
+  margin: 0 auto;
+  height: 250px;
+}
+.user-login-text {
+  text-align: center;
+  padding: 2% 0;
+}
+.browse-div {
+  text-align: center;
+}

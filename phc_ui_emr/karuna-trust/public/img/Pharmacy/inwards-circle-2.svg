@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+  <g id="circle" transform="translate(-646 -396)">
+    <g id="Group_200" data-name="Group 200" transform="translate(-3 3)">
+      <g id="outer-circle" transform="translate(649 393)" fill="#07baa6" stroke="rgba(112,112,112,0.1)" stroke-width="1">
+        <circle cx="37" cy="37" r="37" stroke="none"/>
+        <circle cx="37" cy="37" r="36.5" fill="none"/>
+      </g>
+      <g id="inner-circle" transform="translate(652 396)" fill="#fff" stroke="rgba(112,112,112,0.2)" stroke-width="1">
+        <circle cx="34" cy="34" r="34" stroke="none"/>
+        <circle cx="34" cy="34" r="33.5" fill="none"/>
+      </g>
+      <path id="Icon_material-receipt" data-name="Icon material-receipt" d="M34.462,32.962H10.492V28.967h23.97Zm0-7.99H10.492V20.977h23.97Zm0-7.99H10.492V12.987h23.97ZM4.5,42.949l3-3,3,3,3-3,3,3,3-3,3,3,3-3,3,3,3-3,3,3,3-3,3,3V3l-3,3-3-3-3,3-3-3-3,3-3-3-3,3-3-3-3,3-3-3-3,3-3-3Z" transform="translate(663.5 407)" fill="none" stroke="#707070" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

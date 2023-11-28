@@ -1,0 +1,258 @@
+/* css for check-in modal box */
+
+.invest-print-modal.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+}
+
+.invest-print-modal .modal-dialog {
+  position: relative;
+  top: 8% !important;
+  max-width: 55% !important;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+}
+
+.invest-print-modal {
+  margin: -10% 0 0 0 !important;
+}
+
+.invest-print-modal .modal-content {
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0px 0px 3px 1px grey;
+  margin: -16% 0 0 0;
+}
+
+.check-in-text {
+  padding: 2% 5% !important;
+}
+
+.checkin-cancel,
+.checkin-start {
+  width: 120px !important;
+  margin: 2% 2% !important;
+  border-radius: 20px !important;
+  min-height: 35px !important;
+  line-height: 1 !important;
+}
+
+.checkin-cancel {
+  background-color: #fff !important;
+  border: 1px solid grey !important;
+  color: grey !important;
+}
+
+.checkin-start {
+  background-color: #2d5986e6 !important;
+  border: 1px solid #2d5986e6 !important;
+}
+
+/* css for check-in modal box */
+.invest-details-header {
+  color: #252525;
+  opacity: 1;
+  padding: 10% 0% 0% 10%;
+  font-size: 25px;
+}
+
+.invest-body {
+  width: 95%;
+  padding: 0 0 5% 5% !important;
+}
+
+.med-off,
+.pat-fname {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.pat-off {
+  padding: 0 0 1% 0;
+  margin: -1% 0 0 0;
+}
+
+.recommended-details,
+.pat-off {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.med-date {
+  margin: 5% 0 0 0 !important;
+}
+
+.invest-detail,
+.pat-body,
+.inveastigation-details {
+  padding: 3% 0;
+}
+
+.uhid-detail {
+  margin: -2% 0 2% 0 !important;
+}
+
+.age-details,
+.gender-details {
+  text-align: center;
+}
+
+.mobile-details {
+  text-align: right;
+}
+
+.mo-sign {
+  text-align: right;
+  padding: 13% 0 2% 0;
+}
+
+.investigation-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+}
+
+.selected-inveastigation-details {
+  padding: 1% 0;
+}
+
+.recommended-details {
+  padding: 0 0 1% 0;
+}
+
+.investigation-cancel-btn {
+  width: 150px;
+  border-radius: 20px !important;
+}
+
+.investigation-save-btn {
+  width: 150px;
+  border-radius: 20px !important;
+  background-color: #232f8fe4 !important;
+  color: #fff !important;
+}
+
+.indicator {
+  text-align: center;
+}
+
+.my {
+  margin: 2% 0% 2% -8% !important;
+}
+
+.dis-list {
+  margin: -7px 0 !important;
+}
+
+.invest {
+  margin: -5% 0 0 -25%;
+  height: 150px;
+}
+
+.invest::after {
+  display: none;
+}
+
+/* Allergy tab */
+.allergy-data-div {
+  margin: 3% 5%;
+  padding: 2%;
+  box-shadow: 0px 0px 2px 3px #eee;
+  border-radius: 6px !important;
+}
+
+.allergy-row {
+  width: 100%;
+  margin: 1% !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.delete-icon,
+.edit-icon {
+  font-size: 16px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgb(203, 202, 202);
+  padding: 4% 8% !important;
+  background-color: rgba(228, 227, 227, 0.866);
+}
+
+.delete-medication {
+  margin: 0px 2%;
+}
+
+.edit-medication:hover {
+  color: #1d9824 !important;
+  cursor: pointer;
+}
+
+.delete-medication:hover {
+  color: red !important;
+  cursor: pointer;
+}
+
+.add-allergy-btn {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.allergy-details-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #252525cc !important;
+  border: 1px solid #252525cc !important;
+  border-radius: 20px !important;
+  height: 35px !important;
+  background: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  margin: 2% 0 0 0;
+}
+.printing {
+  margin: 1% 0 0 0 !important;
+}
+
+/* css for allegy modal */
+.alergy-molal {
+  display: flex;
+}
+.allergy-div-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 800 !important;
+  background-color: rgb(236, 236, 236) !important;
+  padding: 0px 2% !important;
+}
+.success-icon {
+  background: green;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  padding: 2% 1% !important;
+}
+.alergy-check2 {
+  margin: 0 !important;
+}
+.success-text {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+}
+.alergy-molal .modal-dialog {
+  max-width: 400px !important;
+}
+.test-div {
+  width: 100% !important;
+}
+.allergy-row1 {
+  padding: 1% 0 !important;
+}
+.allergy-check {
+  margin: 15% 0 0 0 !important;
+  font-weight: bold !important;
+}
+/* css for allegy modal */
+/* Allergy tab */

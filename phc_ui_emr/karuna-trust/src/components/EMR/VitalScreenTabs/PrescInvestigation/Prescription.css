@@ -1,0 +1,179 @@
+.presription-form {
+  background-color: #fff !important;
+  /* margin: 2% 0px !important; */
+  border-radius: 4px !important;
+  padding: 2% !important;
+}
+
+.vital-text {
+  margin: 3% 0 0 0;
+}
+
+.presc-table {
+  margin: 5% 0 3% 0;
+  border-collapse: collapse !important;
+  text-align: left;
+}
+
+.presc-thead {
+  padding: 5px 6px !important;
+  font-weight: bold;
+}
+
+.presc-tbody {
+  padding: 6px 6px !important;
+}
+
+.del-icon {
+  margin: 0 0 0 50%;
+}
+
+.savebtn,
+.savebtn:hover {
+  color: #000 !important;
+}
+
+.act-body {
+  display: inline !important;
+}
+
+.myact {
+  display: inline-flex;
+  padding: 0 15px 0 0 !important;
+}
+
+.btnact {
+  padding: 2px !important;
+  color: #000 !important;
+}
+
+.drug-instruction {
+  text-align: center !important;
+}
+
+/* .presc-table {
+    width: 100%;
+    border-collapse: collapse !important;
+} */
+
+.pre-drop {
+  text-align: center !important;
+  width: 90px;
+}
+
+/* .predetails {
+    margin-left: -5% !important;
+} */
+
+.modal-desc {
+  padding: 0 4%;
+}
+
+.presc {
+  padding: 2% 0px;
+  font-weight: bold !important;
+  font-size: 17px !important;
+  margin: 0px !important;
+}
+
+.presc-tab-head {
+  padding: 0px 0px !important;
+  justify-content: flex-start !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+.prescription-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+}
+
+.prescription-cancel-btn {
+  width: 150px;
+  border-radius: 20px !important;
+}
+
+.prescription-save-btn {
+  width: 150px;
+  border-radius: 20px !important;
+  background-color: #232f8fe4 !important;
+  color: #fff !important;
+}
+
+.presc-details-header {
+  color: #252525;
+  opacity: 1;
+  padding: 10% 0% 0% 10%;
+  font-size: 25px;
+}
+
+.med-off,
+.pat-fname {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.presc-detail,
+.pat-body,
+.prescription-details {
+  padding: 3% 0;
+}
+
+.presc-body {
+  width: 95%;
+  padding: 0 0 5% 5% !important;
+}
+
+.prescuhid-detail {
+  margin: -2% 0 2% 0 !important;
+}
+
+.rx-advice {
+  color: #1d9824;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 0 5px 0 0;
+}
+
+.meditation-text {
+  margin: 1% 0 -2% 0;
+  font-size: 15px;
+}
+
+.last-tr {
+  height: 35px !important;
+  border-bottom: 1px solid #eee;
+}
+
+.drug-details {
+  width: 23%;
+  text-align: left !important;
+}
+
+.drug-dropdown {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.drug-align {
+  text-align: center !important;
+}
+
+.drug-align-day {
+  text-align: center !important;
+  width: 9%;
+}
+
+.drug-instruction {
+  width: 25% !important;
+}
+
+.mr10 {
+  margin: 0 0 0 1% !important;
+  padding: 5px !important;
+}
+
+.days-input {
+  text-align: center !important;
+}

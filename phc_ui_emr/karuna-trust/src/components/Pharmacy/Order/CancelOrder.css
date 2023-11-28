@@ -1,0 +1,46 @@
+.cancel-order-modal.fade.modal.show {
+  background-color: #464646bf !important;
+  overflow-y: scroll !important;
+}
+
+.order-cancel,
+.order-cancel:hover {
+  background: #fff !important;
+  border-radius: 20px !important;
+  opacity: 1 !important;
+  text-align: center !important;
+  padding: 5px 20px !important;
+  font-size: 15 !important;
+  color: #000 !important;
+  margin: 1% 5% !important;
+}
+
+.confirm-cancel,
+.confirm-cancel:hover {
+  background: #2d5986 !important;
+  color: #fff !important;
+}
+
+.cancel-purchase {
+  margin: 30px 0 20px 15px !important;
+}
+
+.cancel-text {
+  text-align: left !important;
+  margin: 0 0 10px 20px !important;
+}
+
+/* Extra Small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 601px) and (max-width: 768px) {} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 769px) and (max-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 993px) and (max-width: 1200px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1201px) {} */

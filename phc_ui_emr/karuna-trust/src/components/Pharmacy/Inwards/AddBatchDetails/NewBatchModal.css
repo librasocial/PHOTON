@@ -1,0 +1,74 @@
+.batch-display-modal-div.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+}
+
+.batch-display-modal-div .modal-dialog {
+  position: relative;
+  max-width: 82% !important;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+}
+
+.batch-order-div > div {
+  padding: 1% 1% !important;
+}
+
+.batch-table-div {
+  padding: 1% 3% !important;
+}
+
+#batch-po {
+  background-color: #e2e2e2 !important;
+  height: 30px !important;
+}
+
+.batch-info-footer {
+  color: #d2caca !important;
+  margin: -6% 0 0 0 !important;
+}
+
+.add-new-batch,
+.cancel-new-batch {
+  width: 50% !important;
+}
+
+.cancel-new-batch {
+  text-align: right !important;
+}
+
+.addBatch {
+  background-color: #2d5986 !important;
+  border: 1px solid #2d5986;
+  width: 120px;
+  height: 32px;
+  border-radius: 30px !important;
+  padding: 0% 2% !important;
+}
+
+.cancelBatch {
+  background-color: #ffffff !important;
+  border: 1px solid #000;
+  color: #000;
+  width: 120px;
+  height: 32px;
+  border-radius: 30px !important;
+  padding: 0% 2% !important;
+}
+
+.cancelBatch:hover {
+  background-color: #ffffff !important;
+}
+
+.batchAdd,
+.batchDel {
+  cursor: pointer !important;
+}
+.batchAdd {
+  color: #000 !important;
+  margin: 0 0 0 70% !important;
+}
+.batchDel {
+  color: red !important;
+  margin: 0 0 0 -70% !important;
+}

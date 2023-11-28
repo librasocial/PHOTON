@@ -1,0 +1,53 @@
+.add-view-header {
+  margin: 3% 0 !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+}
+.dem-row {
+  margin: 2% 0 !important;
+}
+.demand-supply-header {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+.supply-demand-body {
+  font-size: 14px !important;
+}
+.sup-dem-row > div {
+  padding: 1% 2% 2% !important;
+}
+.orderSupply {
+  background-color: #2d5986 !important;
+  border: 1px solid #2d5986 !important;
+  width: 120px !important;
+  height: 32px !important;
+  padding: 0% 2% !important;
+}
+.resetSupply {
+  background-color: #ffffff !important;
+  border: 1px solid #000 !important;
+  color: #2d5986 !important;
+  width: 120px !important;
+  height: 32px !important;
+  padding: 0% 2% !important;
+  border: none !important;
+}
+.po-supp-number,
+.supply-order-date {
+  font-size: 15px !important;
+}
+.supply-order-date {
+  font-style: italic !important;
+}
+.supply-badge {
+  font-weight: 700;
+  background-color: #ffecb5 !important;
+  color: #e9b10e !important;
+  border-radius: 3px;
+  padding: 4px 5px !important;
+  margin-bottom: 0px !important;
+  cursor: pointer !important;
+}
+.supplier-row {
+  margin: 2% 0 !important;
+}

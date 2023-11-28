@@ -1,0 +1,193 @@
+.lab-service {
+  margin: 0px 6% !important;
+}
+.dia-heading {
+  font-size: 17px !important;
+  font-weight: bold !important;
+}
+.tabs-col {
+  padding: 0px !important;
+}
+.tabs-col .nav-link {
+  border-left: 2px solid #fff !important;
+  color: #000 !important;
+  background-color: #fff !important;
+  border-radius: 0px !important;
+}
+.tabs-col .nav-link.active {
+  border-left: 2px solid #1d9824 !important;
+  color: #1d9824 !important;
+  background-color: #fff !important;
+  border-radius: 0px !important;
+}
+
+/* css for Lab Service tab */
+.lab-service-tab {
+  background-color: #fff !important;
+  padding: 2% !important;
+}
+.lab-service-data-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px !important;
+}
+.service-visible-screen {
+  padding: 2% !important;
+}
+.service-btn {
+  display: flex;
+  justify-content: center;
+  padding: 2% !important;
+}
+.add-lab-servive-btn {
+  border-radius: 20px !important;
+}
+.service-thead {
+  font-weight: bold !important;
+  text-align: center !important;
+}
+.service-tbody {
+  font-weight: normal !important;
+  text-align: center !important;
+}
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: bold;
+  margin: 4%;
+}
+.dotBtn:focus {
+  border-color: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dotBtn-group1 .dropdown-menu.show::after {
+  /* content: ""; */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent grey transparent;
+}
+.dotBtn-group1 {
+  left: 10% !important;
+}
+.dotBtn-group1 #show {
+  left: -0px !important;
+}
+.dot-div,
+.dotBtn-group1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.nav-pills .nav-link {
+  cursor: pointer !important;
+}
+.dotBtn-group1 .dropdown-item {
+  font-size: 13px !important;
+  cursor: pointer !important;
+}
+.drug-det {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+.medicine-div {
+  margin: 5% 0 0 -12px;
+}
+.drug-information-div {
+  margin: 2% 0 !important;
+}
+.alternate-uom {
+  color: #2c369df0 !important;
+}
+.alternate-uom,
+.alternate-uom:hover {
+  background: #f3f2f3;
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.add-lab-servive-btn:focus {
+  box-shadow: none !important;
+}
+.seachlnk-link {
+  margin: 0 -11px !important;
+}
+.search-drug {
+  margin: 2% 0 !important;
+}
+.drug-border {
+  border-bottom: 2px solid black;
+  border-style: dashed;
+  padding: 0 0 1% 0 !important;
+  margin: 0 10px !important;
+}
+.alternate-row {
+  margin: 2% 0 !important;
+}
+.alter-label {
+  text-align: left !important;
+}
+.alternate-trash {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 20px !important;
+}
+.my-trash {
+  color: red !important;
+  font-size: 17px !important;
+  cursor: pointer !important;
+}
+.add-pharmacy {
+  margin: 1% 0 3% 0 !important;
+}
+.drug-action {
+  font-size: 18px;
+}
+.pharmacy-thead {
+  font-weight: bold !important;
+}
+.pharma-act {
+  text-align: center !important;
+}
+.presription-input {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  border-bottom: 1px solid grey !important;
+}
+.reference-head {
+  margin: 3% 0 0 0 !important;
+}
+.prescrib-save-btn {
+  background-color: #232f8fe4 !important;
+  color: white !important;
+}
+.prescrib-cancel-btn,
+.prescrib-save-btn {
+  border-radius: 20px !important;
+  margin: 0px 10px !important;
+  width: 80px !important;
+}
+/* css for Lab Service tab */
+
+/* css for mui table */
+.pagination-body p {
+  font-size: 13px !important;
+}
+
+.pagination-body .MuiInputBase-root {
+  border: 1px solid #cdc8c8;
+  border-radius: 2px !important;
+}
+/* css for mui table */

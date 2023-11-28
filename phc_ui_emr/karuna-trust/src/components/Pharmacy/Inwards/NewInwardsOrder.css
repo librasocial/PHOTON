@@ -1,0 +1,56 @@
+.inwards-alert {
+  margin: 8% 0 0 0 !important;
+  background-color: #1476f71a !important;
+  border: 1px solid #1476f7;
+  border-radius: 4px !important;
+  color: #1476f7 !important;
+  font-weight: 700 !important;
+  height: 30px;
+  padding: 2px 10px;
+}
+.inwards-order-div > div {
+  padding: 0% 2% 1% 2% !important;
+}
+.new-inwards-details th,
+.against-indent-details th {
+  font-weight: 700 !important;
+  background-color: rgba(45, 89, 134, 0.1) !important;
+}
+
+.inwards-batch-link {
+  color: #1476f7 !important;
+  text-decoration: underline !important;
+  background-color: #fff !important;
+  border: none !important;
+}
+.po-sta-head-det,
+.po-sta-body-det {
+  font-size: 15px !important;
+}
+.po-sta-body-det {
+  font-weight: 700 !important;
+}
+.po-details {
+  width: 0px !important;
+}
+.newInwardsAdd,
+.newInwardsDel {
+  cursor: pointer !important;
+}
+
+.newInwardsAdd {
+  color: #000 !important;
+  margin: 0 0 0 70% !important;
+}
+
+.newInwardsDel {
+  color: red !important;
+  /* margin: 0 0 0 -70% !important; */
+}
+
+.against-indent-btn {
+  background-color: #fff !important;
+  border: none !important;
+  color: #1476f7 !important;
+  display: inline-flex !important;
+}

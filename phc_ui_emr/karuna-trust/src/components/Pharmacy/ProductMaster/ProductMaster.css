@@ -1,0 +1,58 @@
+.add-product-btn {
+  color: #232f8fe4 !important;
+  border-radius: 5px !important;
+}
+
+.add-product-btn:hover {
+  background-color: #fff !important;
+  border-radius: 5px !important;
+}
+.alt-pro-div {
+  margin: 2% 0 0 0 !important;
+}
+.product-add-item-div {
+  padding: 0px 15px !important;
+}
+.alternate-uom-list {
+  margin: 2% 0px !important;
+}
+.alternate-medicine {
+  text-align: center;
+  padding: 1% 0 !important;
+  background-color: #f3f2f3;
+}
+.alternate-uom-div {
+  padding: 4% 0 !important;
+}
+.add-uom {
+  color: #888d97 !important;
+  padding: 1% 0px !important;
+}
+.prod-Icons {
+  display: inline-grid !important;
+  /* height: 10px; */
+}
+.prod-Icons .pro-up {
+  height: 15px !important;
+  cursor: pointer;
+  /* font-size: 20px !important; */
+  position: absolute;
+  /* top: 16%; */
+  /* border-radius: 50% !important; */
+}
+.prod-Icons .pro-down {
+  height: 15px !important;
+  cursor: pointer;
+  /* font-size: 20px !important; */
+  position: absolute;
+  /* bottom: 35%; */
+  /* border-radius: 50% !important; */
+}
+.loader-product {
+  position: relative;
+  width: 30%;
+  padding: 3% !important;
+  border-radius: 6px;
+  background-color: white;
+  vertical-align: middle;
+}

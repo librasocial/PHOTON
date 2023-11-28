@@ -1,0 +1,96 @@
+.homeImg {
+  position: relative;
+}
+
+.welcompage-div {
+  overflow-y: hidden !important;
+}
+
+.select-languge select {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+.select-languge select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+.select-languge select {
+  position: relative !important;
+  color: #252525 !important;
+  display: flex !important;
+  width: 6em !important;
+  height: 3em !important;
+  border-radius: 0.25em !important;
+  overflow: hidden !important;
+}
+
+/* Arrow */
+.select-languge::after {
+  content: "\25BC";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  padding: 1em;
+  transition: 0.25s all ease;
+  pointer-events: none;
+}
+
+/* Transition */
+
+/* Other styles*/
+
+.homeRight {
+  padding: 7% 10% 7% 2%;
+  height: auto !important;
+}
+
+.homeHeader {
+  font-size: 30px;
+  font-weight: 800 !important;
+}
+
+.homText {
+  padding: 2.5% 0px;
+  font-size: 16px;
+  font-family: "Source Sans Pro";
+  line-height: 20px;
+  opacity: 0.8;
+}
+
+.homeNav {
+  box-shadow: 0px 3px 6px #00000029 !important;
+  height: 60px !important;
+  /* border-bottom: 1px solid grey !important; */
+  box-shadow: 1px 3px 6px #00000029 !important;
+  position: fixed !important;
+}
+
+.homeBtn {
+  margin: 3%;
+}
+
+.homeDiv {
+  margin-top: 5.3%;
+}
+.login-div-row {
+  min-height: 80vh !important;
+}
+.homebutton {
+  font-size: 15px !important;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro";
+  border-radius: 20px !important;
+  background-color: #2d5986 !important;
+  padding: 1% 4% !important;
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.714" height="24.256" viewBox="0 0 19.714 24.256">
+  <g id="icon-patient-complaint" transform="translate(0.514 0.5)">
+    <g id="Group_14" data-name="Group 14">
+      <path id="Path_12" data-name="Path 12" d="M2067.95,316v.781l1.622.541.331-.541,1.021.39v.751h0l2.012.721s.781.6.871,1.111.991,6.307.991,6.307.09,1.351-.871,1.442-3.514,0-3.514,0l.511-9.46" transform="translate(-2056.106 -305.173)" fill="none" stroke="#252525" stroke-linecap="round" stroke-width="1"/>
+      <path id="Path_13" data-name="Path 13" d="M2281.622,315v.856l-.871.24h0l-1.772.541s-2.282.961-2.4,1.051a2.687,2.687,0,0,0-1.352,1.652c-.36,1.2-.18,7.959-.18,7.959h4.445a4.359,4.359,0,0,0,1.8,0,1.959,1.959,0,0,0,1.306-.991" transform="translate(-2275.002 -304.218)" fill="none" stroke="#252525" stroke-linecap="round" stroke-width="1"/>
+      <path id="Path_14" data-name="Path 14" d="M2178.006,102.581s.09-4.865-3.964-4.685a4.041,4.041,0,0,0-3.514,2.117,5.172,5.172,0,0,0-.5,2.883" transform="translate(-2164.822 -97.891)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_15" data-name="Path 15" d="M2163.72,170.054a1.307,1.307,0,0,0,1.712-1.081c.049-.632-.325-1.509-1.712-1.4-3.333.27-4.5-1.577-4.5-1.577l-1.307,1.577v2.883a2.5,2.5,0,0,0,1.307,2.252,6.641,6.641,0,0,0,1.442.45,5.463,5.463,0,0,0,1.351-.225C2163.8,172.664,2163.72,170.054,2163.72,170.054Z" transform="translate(-2151.558 -162.931)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_16" data-name="Path 16" d="M2326.533,202s-1.349.18-1.485,1.351,1.485,1.261,1.485,1.261" transform="translate(-2320.75 -197.07)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_17" data-name="Path 17" d="M2196,202v2.433" transform="translate(-2183.679 -197.072)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_18" data-name="Path 18" d="M2218.739,343l-1.892,1.4L2215,343" transform="translate(-2207.509 -331.711)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_19" data-name="Path 19" d="M2144.6,344l-3.6,11.082h4.459l.315-3.694h.9" transform="translate(-2131.792 -331.911)" fill="none" stroke="#252525" stroke-width="1"/>
+      <line id="Line_10" data-name="Line 10" x2="0.045" y2="5.045" transform="translate(2.799 17.832)" fill="none" stroke="#252525" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_11" data-name="Line 11" y1="2.883" transform="translate(8.416 19.499)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_21" data-name="Path 21" d="M2239.8,512.253s-1.981-.287-1.79-2.061,2.376-1.7,2.376-1.7h3.019" transform="translate(-2233.553 -488.992)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_45" data-name="Path 45" d="M133.685,133.108H133" transform="translate(-122.824 -127.198)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_46" data-name="Path 46" d="M133.685,133.108H133" transform="translate(-125.87 -127.245)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_47" data-name="Path 47" d="M133.685,133.108H133" transform="translate(-124.173 -125.688)" fill="none" stroke="#252525" stroke-width="1"/>
+      <path id="Path_48" data-name="Path 48" d="M2355.2,1594a1.39,1.39,0,0,1-1.862,0" transform="translate(-2345.149 -1585.373)" fill="none" stroke="#252525" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

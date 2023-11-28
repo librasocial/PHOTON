@@ -1,0 +1,791 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+/* Common CSS */
+#wish1 {
+  border-radius: 8px 0px 0px 8px;
+  background-color: #000;
+  color: #fff;
+  padding: 2%;
+}
+#gm {
+  background-image: url("../../public/img/blog.png");
+  border-radius: 0px 8px 8px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+/* Common CSS */
+
+/* .ambulanve-bilb::after{
+  content: ' \e420';
+  
+} */
+.empty-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0px !important;
+}
+
+#pat_sta {
+  font-size: 14px;
+  opacity: 1;
+  color: #000000;
+}
+#pat_que3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 5px 0;
+}
+.dotBtn-group .show {
+  display: flex !important;
+}
+
+.encounter-gender-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gen-count {
+  width: 100%;
+  align-items: center;
+}
+
+#pat_name {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.med_off {
+  font-size: 14px;
+  font-weight: 600;
+  color: #252525;
+}
+
+#pat_doc {
+  font-size: 14px;
+  color: #252525;
+}
+
+#pat_ico {
+  font-size: 14px;
+  opacity: 1;
+}
+
+#lightred {
+  color: red;
+}
+
+#visit_text {
+  font-size: 14px;
+  opacity: 1;
+}
+
+#pat_visit1 {
+  border-left: 1px solid #ccc;
+  padding: 10px !important;
+}
+.srchBy {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2% 6%;
+  width: 100%;
+  font-size: 15px;
+}
+.dtedesn h3 {
+  font-size: 25px;
+}
+
+.my_text {
+  text-align: center;
+}
+
+.user-type {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.dtedesn h2 {
+  font-size: 30px;
+}
+
+.create-icon {
+  padding: 2px 0px !important;
+}
+
+#card-wish {
+  margin: 3% 0;
+  border-radius: 0px 8px 8px 0px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  display: flex;
+}
+
+.dash-mnag-list {
+  margin: 3% 2% 2% 0% !important;
+  font-weight: bold;
+  font-size: 20px !important;
+}
+
+#doct_name {
+  margin: 0px !important;
+  font-weight: 700 !important;
+}
+
+#pat_que2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ViewQue {
+  float: right;
+  padding: 1% 5%;
+}
+
+#eme_sta {
+  font-size: 13px !important;
+  padding: 3% 8%;
+  background-color: red !important;
+}
+
+#pat_tok {
+  font-size: 14px;
+}
+
+.box-dsg1 {
+  box-shadow: 0px 0px 5px 2px rgb(216 216 216);
+  border-radius: 4px;
+  padding: 1%;
+  margin: 3% 0%;
+  vertical-align: middle !important;
+}
+
+.box-lob {
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  /* padding: 1%; */
+  margin: 2% 0% 4% 0% !important;
+}
+
+.avalabledoctorlist {
+  background-color: #86bbd829;
+  border-radius: 6px;
+  border: 1px solid #cccccc99;
+  margin-left: 15px;
+}
+
+.service-provider {
+  padding: 20px;
+  background: #bccfd3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.available-list {
+  padding: 10px 20px 20px 20px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.doctor_name {
+  font-size: 13px;
+  opacity: 1;
+  color: #252525;
+}
+
+#appo {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.visit-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medical-officer-div,
+.medical-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medical-row {
+  width: 100% !important;
+  margin: 2%;
+  margin-top: 13px !important;
+  font-size: 14px !important;
+}
+
+.encount-yest {
+  color: red !important;
+}
+
+.encounter-count {
+  margin: 1% !important;
+  border-right: 1px solid grey;
+}
+
+a#pat_visit2 {
+  background: #2d5986 0% 0% no-repeat padding-box;
+  border: #2d5986;
+  border-radius: 20px;
+  opacity: 1;
+  text-align: center;
+  padding: 6px 20px !important;
+  text-transform: none;
+  font-size: 14px !important;
+}
+
+button.btn.btn-primary.dotBtn {
+  border: none !important;
+}
+
+i.bi.bi-calendar-check {
+  color: skyblue;
+}
+
+.appoint {
+  background: #efefef !important;
+  min-height: 60px;
+  height: auto !important;
+  border-radius: 4px;
+  padding: 4px !important;
+}
+
+#pat_id {
+  background: #fff;
+  margin: 0% 2px;
+  padding: 1% 12px !important;
+  border-radius: 4px;
+}
+
+.appo-icon {
+  margin: 0% 2px;
+  padding: 1% 1% !important;
+}
+
+.visit-text {
+  margin: 0% 3px;
+  padding: 1% 6% !important;
+}
+
+div#doc_pro {
+  margin: 0 0 0 10px;
+}
+
+.card-clr.card-body {
+  color: #fff;
+}
+
+#doc_list {
+  height: 28px;
+  padding: 1% 2%;
+  /* margin: 3% 0; */
+  font-size: 13px;
+  border: 1px solid black !important;
+  /* width: 95% */
+}
+
+div#doc_card {
+  background: #86bbd829;
+}
+
+span#pro {
+  color: #000;
+  border: 1px dashed #4f7488;
+  background-color: #86bbd8;
+
+  padding: 2% 6%;
+}
+
+button#pat_visit2 {
+  background: #2d5986 0% 0% no-repeat padding-box;
+  border-color: #2d5986;
+}
+
+.rounded_pat {
+  display: flex;
+  align-items: center !important;
+  border: none !important;
+  justify-content: center !important;
+}
+
+.rounded_doc {
+  border-radius: 50%;
+  border: none;
+  width: 100% !important;
+}
+
+.viewing-list {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+#doc_img1 {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  z-index: 1;
+  font-size: 10px !important;
+  left: 72%;
+  bottom: 5%;
+}
+
+.pagination {
+  margin: 25px 0px !important;
+}
+
+#med,
+.tok.col-md-1,
+#mob_num,
+#sta {
+  text-align: center;
+}
+
+#med {
+  line-height: 20px;
+}
+
+#det_doc {
+  margin: 3% 0 3% 0;
+}
+
+#doc_det {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0px 10px !important;
+}
+
+.dotBtn {
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent !important;
+  border: none !important;
+  position: relative;
+  top: 10%;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: bold;
+  margin: 4%;
+}
+
+.pateintdataforfontsize {
+  font-size: 14px;
+  color: #252525;
+}
+
+.dotBtn-group .dropdown-menu.show::after {
+  /* content: ""; */
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent grey transparent;
+}
+
+.enBtn-group.show {
+  display: inline-flex !important;
+}
+
+.modal-drop-div #show {
+  left: -37px !important;
+}
+
+.dotBtn-group #show {
+  left: -64px !important;
+}
+
+.dot-div,
+.dotBtn-group,
+div#date,
+#pat_age,
+.dataGender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dot-dropdown-menu {
+  width: 100%;
+  cursor: pointer !important;
+}
+
+p#visit_time {
+  font-weight: 600;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.consult-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bi-arrow-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bi-arrow-right::before {
+  background-color: #1d9824;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 800;
+}
+
+i.bi.bi-check2 {
+  font-size: 25px;
+  background: #fff;
+  border-radius: 10px;
+  color: green;
+}
+
+div#icon {
+  background: green;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .modal-dialog {
+  position: relative;
+  top: 9% !important;
+} */
+
+.successVisit {
+  width: 700px !important;
+  height: 60px !important;
+  background-color: white !important;
+}
+
+.modelCls {
+  margin: 2% 0px !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-backdrop.show {
+  opacity: 0 !important;
+}
+
+div#modal_text {
+  padding: 1% 2% !important;
+  height: auto !important;
+  background-color: #fff !important;
+}
+
+button#btn {
+  margin: 0px;
+}
+
+p#asign {
+  padding: 0px 10px 0px 10px;
+}
+
+.modal-header .btn-close {
+  margin: 0px;
+}
+
+.modal-header {
+  padding: 1%;
+}
+
+.modal-body {
+  padding: 0px;
+}
+
+#dash_que {
+  margin: 1% 3% !important;
+}
+
+.pateint-details-windowiwidth.modal-dialog {
+  max-width: 60%;
+  margin-top: 5%;
+}
+
+.details-design {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 8px !important;
+  border: 1px solid #fff !important;
+  opacity: 1;
+}
+
+.patient-details-header {
+  color: #252525;
+  opacity: 1;
+  padding: 2% 0%;
+  font-size: 25px;
+}
+
+.deatilsname {
+  padding: 4% 4% 4% 8%;
+  font-size: 15px;
+  font-weight: bold;
+  color: #252525;
+  line-height: 12px;
+  width: 95%;
+}
+
+.image-details {
+  margin: 16% 0% 0% 9%;
+  border-radius: 50%;
+}
+
+.modaldetails.fade.modal.show {
+  background-color: rgba(0, 0, 0, 0.405) !important;
+  opacity: 1;
+  padding: 0px !important;
+}
+
+.close-popup {
+  color: black;
+  font-size: 28px;
+  font-weight: bolder;
+  opacity: 1;
+}
+
+.close-btn {
+  color: black;
+  font-size: 25px !important;
+  font-weight: 900 !important;
+  opacity: 1;
+  float: right;
+  padding: 2% 4%;
+}
+
+.modal-backdrop {
+  position: fixed !important;
+  height: inherit !important;
+}
+
+.bi-geo-alt {
+  color: #000000;
+  float: left;
+}
+
+.address-details {
+  display: flex;
+}
+
+#patient-details {
+  margin-top: 4%;
+}
+
+/* css for check-in modal box */
+.capturevitals {
+  cursor: pointer;
+}
+
+.check-In-modal-div.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+  overflow-y: scroll !important;
+}
+.check-In-modal-div::-webkit-scrollbar {
+  display: none;
+}
+
+.check-In-modal-div .modal-dialog {
+  position: relative;
+  /* top: -8% !important; */
+  max-width: 65% !important;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+}
+
+.check-In-modal-div .modal-content {
+  border-radius: 5px !important;
+  border: none !important;
+  box-shadow: 0px 0px 5px 1px grey;
+  padding: 5px 20px;
+}
+
+.check-in-text {
+  padding: 2% 5% !important;
+}
+
+.check-in-buttons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% !important;
+}
+
+.checkin-cancel,
+.checkin-start {
+  width: 120px !important;
+  margin: 2% 2% !important;
+  border-radius: 20px !important;
+  min-height: 35px !important;
+  line-height: 1 !important;
+}
+
+.checkin-cancel {
+  background-color: #fff !important;
+  border: 1px solid grey !important;
+  color: grey !important;
+}
+
+.checkin-start {
+  background-color: #2d5986e6 !important;
+  border: 1px solid #2d5986e6 !important;
+}
+
+/* css for check-in modal box */
+
+/* Lab css */
+.lab {
+  padding-left: 0% !important;
+  text-align: left !important;
+}
+
+.box-dsg2 {
+  box-shadow: 0px 3px 6px #00000029;
+  padding: 1%;
+  opacity: 1;
+  margin: 10px 0% 20px 0% !important;
+}
+
+.lab-data-row-1 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.lab-data-row-2 {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #dceef5de;
+  margin: 0 !important;
+  height: 100%;
+}
+
+.lab-time {
+  margin: -11% 0 0 0;
+}
+
+.lab-order {
+  text-align: center !important;
+}
+
+.lab-order-link {
+  margin: 10% 0 !important;
+  text-align: left;
+  display: block !important;
+}
+
+.lab-order-link a,
+.lab-order-link a:hover {
+  color: #000 !important;
+  text-decoration: underline !important;
+}
+
+.my-lab-queue {
+  border: 1px solid #eee;
+  max-height: 217px;
+}
+
+.datebet {
+  padding: 0 0% 0 3%;
+}
+
+.lab-date-fil {
+  padding: 6px 0px !important;
+}
+
+.lab-btn {
+  display: block;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* css for Lab Technician */
+.lab_det {
+  margin: 3% 0 0 0 !important;
+}
+
+.lab_img {
+  margin-top: 15px !important;
+}
+
+.lab-queue {
+  line-height: 20px !important;
+}
+
+.lab-date {
+  line-height: 35px;
+}
+
+#lab_status {
+  color: #071a8e !important;
+  border: 1px dashed #4f7488 !important;
+  background-color: #efefef !important;
+  font-size: 13px !important;
+  padding: 2% 6%;
+}
+
+#lab_token {
+  background-color: #07baa6 !important;
+  color: #071a8e !important;
+  font-size: 13px !important;
+  padding: 5% 10%;
+}
+
+#dot {
+  outline: dashed 1px #07baa6;
+  height: 20.83px;
+  width: 20.06px;
+  margin: 0 30%;
+  background: #fff !important;
+  color: #000;
+  padding: 5% 10% !important;
+}
+
+.smallDeviceText {
+  display: none !important;
+}
+/* css for Lab Technician */
+
+.admin-carousel .carousel-indicators .active,
+.admin-carousel .carousel-indicators {
+  opacity: 0 !important;
+}
+.rounded-pill {
+  top: -3px !important;
+  left: 13px !important;
+}
+/* Lab css */
