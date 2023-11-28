@@ -1,0 +1,411 @@
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  user-select: none;
+  transform: translate(-50%, -50%);
+}
+.MuiMenu-list {
+  max-height: 210px !important;
+}
+
+.MuiMenu-list li {
+  font-size: 12px !important;
+}
+.marker:hover {
+  z-index: 1;
+}
+
+.map-div {
+  background: #fff !important;
+  padding: 2% !important;
+}
+.makeStyles-DropDownButton-1,
+.jss1 {
+  width: 100% !important;
+  font-size: 11px !important;
+  padding: 0px 10px !important;
+}
+.makeStyles-DropDownButton-11,
+.jss11,
+.makeStyles-DropDownButton-21 {
+  width: 100% !important;
+  font-size: 11px !important;
+  padding: 0px 10px !important;
+}
+.bounce {
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+.css-xxees4 .MuiOutlinedInput-root .MuiAutocomplete-input {
+  height: 0px !important;
+}
+
+.pulse {
+  /* background: #d6d4d4; */
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 11px 0px 0px -12px;
+  transform: rotateX(55deg);
+  z-index: -2;
+}
+
+#google_visit {
+  background: #fff;
+  border: none;
+  opacity: 1;
+  text-align: center;
+  font-size: 14px !important;
+  padding: 0 !important;
+}
+#google_visit,
+.subcenterLink {
+  color: #509bf4 !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+}
+.subcenterLink,
+.locationText,
+.facilityHead,
+.facilityText,
+.subcenterText {
+  font-size: 15px !important;
+  margin: 2% 0 !important;
+}
+.locationText,
+.facilityText {
+  color: #909397 !important;
+}
+.facilityHead,
+.subcenterLink {
+  font-weight: 700 !important;
+}
+.pro-select {
+  padding: 0 3% !important;
+}
+.css-16awh2u-MuiAutocomplete-root
+  .MuiOutlinedInput-root
+  .MuiAutocomplete-input {
+  height: 0 !important;
+}
+
+.pro-label {
+  margin: 0 0 10px 0 !important;
+}
+.clrDiv {
+  text-align: right;
+  padding: 111% 0;
+}
+.pro-input {
+  width: 90% !important;
+}
+.google-select {
+  background-image: url("../../../public/img/g-map.png") !important;
+  height: 50vh;
+}
+.gmapClr {
+  background: #fff !important;
+  color: #000 !important;
+  border: none !important;
+  position: absolute;
+  right: 11% !important;
+  top: 55% !important;
+  padding: 0 !important;
+}
+
+/* CSS */
+.pro-map {
+  margin: 0 3% !important;
+  padding: 3% !important;
+  border: 1px solid rgb(127, 123, 123);
+  min-height: 80vh;
+  max-height: 80vh;
+  overflow: scroll;
+}
+.pro-text-select {
+  font-size: 14px;
+  font-weight: 700;
+}
+.pro-suggestion {
+  margin-top: 6%;
+}
+.pro-suggestion .react-autosuggest__input,
+.pro-suggestion .react-autosuggest__suggestions-container--open {
+  width: 100% !important;
+}
+.pro-suggestion .react-autosuggest__input {
+  border-radius: 15px !important;
+  padding-left: 15% !important;
+}
+/* .pro-suggestion .react-autosuggest__suggestions-container--open{
+    top:31px !important;
+} */
+.searchClr {
+  background: #fff !important;
+  color: #000 !important;
+  border: none !important;
+  position: relative;
+  padding: 0 !important;
+  margin-left: 10px;
+  margin-top: -55px;
+}
+.topClr {
+  background: #fff !important;
+  color: #000 !important;
+  border: none !important;
+  position: relative;
+  right: 5% !important;
+  padding: 0 !important;
+  float: right;
+  margin-top: -50px;
+}
+.pro-gis-map {
+  margin-top: 10% !important;
+}
+.pro-head-select {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px !important;
+}
+.pro-dummy-select {
+  color: #a5a3a3;
+}
+
+.gis-mapping-div .pro-input,
+.gis-mapping-div .rmsc .dropdown-container {
+  height: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* CSS */
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    /* transform: translateY(-2000px) rotate(-45deg); */
+  }
+
+  60% {
+    opacity: 1;
+    /* transform: translateY(30px) rotate(-45deg); */
+  }
+
+  80% {
+    /* transform: translateY(-10px) rotate(-45deg); */
+  }
+
+  100% {
+    /* transform: translateY(0) rotate(-45deg); */
+  }
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 320px;
+  height: 30px;
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 29px;
+  width: 320px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 999 !important;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  padding: 5px 10px;
+  border-bottom: 1px solid #000 !important;
+}
+.react-autosuggest__suggestion:last-child {
+  padding: 5x 10px;
+  border-bottom: none !important;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #fff !important;
+}
+
+.makeStyles-dashboardSelectMenu-8 .MuiPopover-paper {
+  top: 44% !important;
+  left: 38.7% !important;
+}
+.makeStyles-dashboardSelectMenu-18 .MuiPopover-paper {
+  top: 44% !important;
+  left: 58.1% !important;
+}
+.makeStyles-dashboardSelectMenu-28 .MuiPopover-paper {
+  top: 44% !important;
+  left: 77.5% !important;
+}
+.village-name {
+  color: rgb(255, 255, 255) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  background-color: rebeccapurple !important;
+  padding: 0px 15px !important;
+  margin: 0px !important;
+}
+
+.multi-select {
+  margin: 0px !important;
+}
+
+.rmsc .dropdown-heading {
+  height: 30px !important;
+}
+
+.select-topics .css-1s2u09g-control {
+  min-height: 30px;
+}
+
+.select-topics .css-319lph-ValueContainer {
+  padding: 0px 8px;
+}
+
+.select-topics .css-6j8wv5-Input {
+  margin: 0.5%;
+}
+
+.select-topics .css-tlfecz-indicatorContainer,
+.select-topics .css-1gtu0rj-indicatorContainer {
+  padding: 0px 8px;
+}
+.select-topics .css-1pahdxg-control {
+  min-height: 30px !important;
+  border-color: #b2b7bd !important;
+  box-shadow: none !important;
+}
+.select-topics .css-1pahdxg-control:hover {
+  min-height: 30px !important;
+}
+.sub_topics .accordion-collapse {
+  width: 80%;
+  margin-left: 20%;
+}
+.sub_topics .dur-head {
+  /* padding: 6px 0px !important; */
+  border-bottom: 0px !important;
+}
+/*.accordion-body {
+    padding: 0px !important;
+}*/
+.sub_topic_acc_body .subTopic {
+  padding: 6px 15px !important;
+  border-top: 1px solid #ccc;
+}
+.sub_topic_acc_body .selectedTopic {
+  padding: 6px 15px !important;
+  border-top: 1px solid #ccc;
+  background-color: #eee;
+}
+.accordion-item {
+  border-bottom: 1px solid #eee !important;
+}
+
+.sub_topics .vital-acc-head .accordion-button {
+  padding: 20px 10px 20px 40px !important;
+}
+.sub_topics .accordion-button:not(.collapsed) {
+  background-color: #eee !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+.sub-topic-image {
+  width: 15px !important;
+  /* height: 10px; */
+  margin-right: 5px;
+}
+
+.gm-style .gm-style-iw-c,
+.gm-style .gm-style-iw-d {
+  padding: 0px !important;
+}
+.gm-style .gm-style-iw-tc,
+.gm-style .gm-style-iw-t button {
+  display: none !important;
+}
+
+.gm-style .gm-style-iw-c {
+  /* transform: translate3d(-47%, 25px, 0) !important; */
+  /* transform: translate3d(-47%, 190%, 0) !important; */
+  transform: translate3d(-5px, 9px, 0) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+}
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+}
+
+.btn-dash-board {
+  text-align: center;
+  padding: 10px;
+  background: #eee;
+  border-radius: 50px;
+  width: 60%;
+  font-size: 15px;
+}

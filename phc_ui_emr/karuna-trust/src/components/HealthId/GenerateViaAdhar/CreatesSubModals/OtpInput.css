@@ -1,0 +1,31 @@
+.adhar-otp-div input {
+  width: 35px !important;
+  height: 38px !important;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.otp-resend {
+  padding: 15px 30px 15px 0px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resend-btn {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 13px !important;
+  line-height: 0 !important;
+}
+.counter-time {
+  font-weight: 800;
+  color: #1c4b5e;
+}

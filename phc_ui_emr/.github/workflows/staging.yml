@@ -1,0 +1,109 @@
+name: EMR.UI.staging
+
+on:
+  workflow_dispatch:
+#   push:
+#     branches: main
+
+jobs:
+  build:
+    name: Build 🛠
+    runs-on: ubuntu-latest
+    
+    steps:
+      
+      - name: Checkout
+        uses: actions/checkout@v2       
+      
+      - name: Restore Dependencies
+        run: |
+         cd ${{ github.workspace}}/
+         mkdir -p footer-dist
+         mkdir -p header-dist
+         mkdir -p login-dist
+         mkdir -p main-dist
+      
+      - name: Build Footer
+        run: |
+         cd ${{ github.workspace}}/footer
+         npm install --legacy-peer-deps
+         npm run-script build
+         cp -R dist/** ../footer-dist
+      
+      - name: Build Header
+        run: |
+         cd ${{ github.workspace}}/mainheader
+         npm install --legacy-peer-deps
+         npm run-script build
+         cp -R dist/** ../header-dist
+      
+      - name: Build Login Container
+        run: |
+         cd ${{ github.workspace}}/logincontainer
+         npm install --legacy-peer-deps
+         npm run-script build
+         cp -R dist/** ../login-dist
+      
+      - name: Build Main Container
+        run: |
+         cd ${{ github.workspace}}/karuna-trust
+         rm -rf package-lock.json
+         npm install --legacy-peer-deps
+         npm run-script build
+         cp -R dist/** ../main-dist
+      
+      - name: Upload Footer Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: deploy_footer_dist
+          path: ${{ github.workspace}}/footer-dist
+          
+      - name: Upload Header Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: deploy_header_dist
+          path: ${{ github.workspace}}/header-dist
+          
+      - name: Upload Login Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: deploy_login_dist
+          path: ${{ github.workspace}}/login-dist     
+          
+      - name: Upload Main Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: deploy_main_dist
+          path: ${{ github.workspace}}/main-dist   
+  
+  deploy:
+    name: Deploy to S3 🚀
+    runs-on: ubuntu-latest
+    needs: build
+    
+    environment:
+      name: staging
+      url: http://ssf-stg-emr.s3-website.ap-south-1.amazonaws.com
+      
+    steps: 
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.1.0
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESSKEYID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+      
+      - name: Deploy static site to S3 bucket
+        run: |
+             ls -ltra ./
+             aws s3 sync deploy_main_dist s3://ssf-stg-emr --delete
+             aws s3 sync deploy_header_dist s3://ssf-stg-emr/healthui-header 
+             aws s3 sync deploy_footer_dist s3://ssf-stg-emr/healthui-footer 
+             aws s3 sync deploy_login_dist s3://ssf-stg-emr/healthui-login

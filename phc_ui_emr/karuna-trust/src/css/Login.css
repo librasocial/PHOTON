@@ -1,0 +1,47 @@
+.loginDiv {
+  min-height: 80vh !important;
+}
+
+.left {
+  padding: 3% 5% 2% 5% !important;
+}
+.logScnText {
+  padding-left: 8%;
+  justify-content: left !important;
+  text-align: left !important;
+  font-size: 16px;
+  line-height: 20px;
+  color: #707070;
+}
+.loginScnImg {
+  width: 100% !important;
+  padding: 10% !important;
+}
+.imagedivision {
+  padding-top: 2%;
+}
+
+.login-conent-sec {
+  padding: 3% 2% 0% 2% !important;
+}
+
+.LoginHeader {
+  font-size: 30px;
+  text-align: center !important;
+  margin-bottom: 10% !important;
+}
+.login-container-sec {
+  padding: 11% 2% 11% 2% !important;
+}
+.loginForm {
+  width: 100% !important;
+  font-size: 20px;
+  padding: 2% 8%;
+  background-color: #f4f6f9;
+}
+.FormField {
+  display: block !important;
+}
+.fLabel {
+  margin-bottom: 5px !important;
+}

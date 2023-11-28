@@ -1,0 +1,12 @@
+.direct-inwards-modal-div .modal-dialog {
+  position: relative;
+  max-width: 80% !important;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+  right: -7.5% !important;
+}
+
+.direct-inwards-modal-div.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+}

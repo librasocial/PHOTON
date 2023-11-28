@@ -1,0 +1,49 @@
+.notification-div {
+  margin: -1% 0 0 0 !important;
+}
+.approvalslink {
+  color: #509bf4 !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+.notifify-div {
+  background-color: #eeeeee !important;
+  padding: 2% 15% !important;
+}
+.notifify-div .flex-column {
+  background-color: #fff !important;
+}
+#approval_list {
+  width: 95% !important;
+  margin: 0 5% !important;
+}
+.approval-row-date {
+  background-color: #eee !important;
+}
+.approval-date {
+  font-weight: 800 !important;
+  margin: 1% !important;
+}
+.approval-text {
+  font-size: 13px !important;
+}
+.approval-time {
+  color: #9a9a9a !important;
+  font-size: 13px !important;
+}
+.searchFilter-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notifify-border {
+  border: 1px solid #d3d3d3;
+}
+.search-pro-div:last-child {
+  border-bottom: none !important;
+}
+
+.search-pro-div {
+  border-bottom: 1px solid #ececec !important;
+  padding: 1% 2%;
+}

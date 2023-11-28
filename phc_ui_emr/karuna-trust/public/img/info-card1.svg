@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="358" height="208.292" viewBox="0 0 358 208.292">
+  <defs>
+    <filter id="Path_328" x="0" y="0" width="358" height="208.292" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.239"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.682" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.102"/>
+      <stop offset="1" stop-color="#e2c0c0" stop-opacity="0.502"/>
+    </linearGradient>
+  </defs>
+  <g id="info-card" transform="translate(-463 -232)">
+    <g transform="matrix(1, 0, 0, 1, 463, 232)" filter="url(#Path_328)">
+      <g id="Path_328-2" data-name="Path 328" transform="translate(3 1)" fill="rgba(127,189,131,0.05)">
+        <path d="M7.2,0H344.8c3.978,0,7.2,2.765,7.2,6.177V196.115c0,3.411-3.224,6.177-7.2,6.177H7.2c-3.978,0-7.2-2.765-7.2-6.177V6.177C0,2.765,3.224,0,7.2,0Z" stroke="none"/>
+        <path d="M 7.202056884765625 1 C 3.7822265625 1 1 3.322311401367188 1 6.176864624023438 L 1 196.1153106689453 C 1 198.9698638916016 3.7822265625 201.2921752929688 7.202056884765625 201.2921752929688 L 344.7979431152344 201.2921752929688 C 348.2177734375 201.2921752929688 351 198.9698638916016 351 196.1153106689453 L 351 6.176864624023438 C 351 3.322311401367188 348.2177734375 1 344.7979431152344 1 L 7.202056884765625 1 M 7.202056884765625 0 L 344.7979431152344 0 C 348.7755126953125 0 352 2.765457153320312 352 6.176864624023438 L 352 196.1153106689453 C 352 199.5266723632812 348.7755126953125 202.2921752929688 344.7979431152344 202.2921752929688 L 7.202056884765625 202.2921752929688 C 3.224456787109375 202.2921752929688 0 199.5266723632812 0 196.1153106689453 L 0 6.176864624023438 C 0 2.765457153320312 3.224456787109375 0 7.202056884765625 0 Z" stroke="none" fill="rgba(204,204,204,0.2)"/>
+      </g>
+    </g>
+    <g id="Group_108" data-name="Group 108" transform="translate(2 -3.464)">
+      <text id="Lab_services_will_be_visible_here" data-name="Lab services will be visible here" transform="translate(640 269.137)" fill="#252525" font-size="20" font-family="SourceSansPro-Regular, Source Sans Pro"><tspan x="-129" y="0">Lab services will be visible here</tspan></text>
+      <g id="tube-img-svg" transform="translate(196 171.888)">
+        <g id="cap" transform="translate(422 117)">
+          <rect id="Rectangle_128" data-name="Rectangle 128" width="30" height="27" rx="5" transform="translate(0 -0.424)" fill="#1d9824"/>
+          <line id="Line_27" data-name="Line 27" y2="18" transform="translate(5 4.576)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_27-2" data-name="Line 27" y2="18" transform="translate(15 4.576)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_57" data-name="Line 57" y2="18" transform="translate(25 4.576)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        </g>
+        <g id="glass" transform="translate(425.185 144.072)">
+          <g id="Rectangle_129" data-name="Rectangle 129" transform="translate(-0.186 -0.496)" fill="#fff" stroke="rgba(112,112,112,0.16)" stroke-width="1">
+            <path d="M0,0H23a0,0,0,0,1,0,0V94.5A11.5,11.5,0,0,1,11.5,106h0A11.5,11.5,0,0,1,0,94.5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+            <path d="M.569.5H22.431A.069.069,0,0,1,22.5.569V94.5a11,11,0,0,1-11,11h0a11,11,0,0,1-11-11V.569A.069.069,0,0,1,.569.5Z" fill="none"/>
+          </g>
+          <path id="blood" d="M0,0H23a0,0,0,0,1,0,0V64.5A11.5,11.5,0,0,1,11.5,76h0A11.5,11.5,0,0,1,0,64.5V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 29.504)" fill="#eb1616"/>
+          <line id="Line_28" data-name="Line 28" y2="32.312" transform="translate(19.544 5.953)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-width="2"/>
+          <line id="Line_29" data-name="Line 29" y2="54.329" transform="translate(19.544 42.225)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-width="2"/>
+          <path id="Path_8" data-name="Path 8" d="M0,1.974s3.239.254,4.744-.5A14.588,14.588,0,0,0,8.015-1.23" transform="translate(10.674 100.757)" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-width="2"/>
+          <path id="transparent" d="M0,0H23a0,0,0,0,1,0,0V94.5A11.5,11.5,0,0,1,11.5,106h0A11.5,11.5,0,0,1,0,94.5V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 -0.496)" fill="url(#linear-gradient)"/>
+        </g>
+        <g id="markers-bg" transform="translate(425.185 161.192)">
+          <g id="Rectangle_130" data-name="Rectangle 130" transform="translate(-0.186 0.384)" fill="#fff" stroke="rgba(112,112,112,0.16)" stroke-width="0.5">
+            <path d="M0,0H9a4,4,0,0,1,4,4V43a4,4,0,0,1-4,4H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+            <path d="M.5.25H9A3.75,3.75,0,0,1,12.75,4V43A3.75,3.75,0,0,1,9,46.75H.5a.25.25,0,0,1-.25-.25V.5A.25.25,0,0,1,.5.25Z" fill="none"/>
+          </g>
+          <path id="Rectangle_131" data-name="Rectangle 131" d="M0,0H6A1,1,0,0,1,7,1V1A1,1,0,0,1,6,2H0A0,0,0,0,1,0,2V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 4.384)" fill="#ccc"/>
+          <path id="Rectangle_132" data-name="Rectangle 132" d="M0,0H8.5A.5.5,0,0,1,9,.5v0a.5.5,0,0,1-.5.5H0A0,0,0,0,1,0,1V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 11.384)" fill="#ccc"/>
+          <path id="Rectangle_133" data-name="Rectangle 133" d="M0,0H7A1,1,0,0,1,8,1V1A1,1,0,0,1,7,2H0A0,0,0,0,1,0,2V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 20.384)" fill="#ccc"/>
+          <path id="Rectangle_134" data-name="Rectangle 134" d="M0,0H3A1,1,0,0,1,4,1V1A1,1,0,0,1,3,2H0A0,0,0,0,1,0,2V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 29.384)" fill="#ccc"/>
+          <path id="Rectangle_135" data-name="Rectangle 135" d="M0,0H7.5A.5.5,0,0,1,8,.5v0a.5.5,0,0,1-.5.5H0A0,0,0,0,1,0,1V0A0,0,0,0,1,0,0Z" transform="translate(-0.186 39.384)" fill="#ccc"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

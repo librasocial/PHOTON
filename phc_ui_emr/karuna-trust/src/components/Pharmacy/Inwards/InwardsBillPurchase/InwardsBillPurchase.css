@@ -1,0 +1,92 @@
+.purchase-order {
+  background-color: #f4f6f9 !important;
+  border-radius: 5px !important;
+  padding: 2% !important;
+  margin: 0 2% !important;
+}
+
+.billorder-border {
+  margin: 0 0 1% 0 !important;
+  border-bottom: 2px dashed #eee !important;
+  padding: 0 0 1% 0 !important;
+}
+
+.billorder-head {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #2d5986 !important;
+}
+
+.downprint {
+  text-align: right !important;
+}
+
+.print-head {
+  cursor: pointer !important;
+}
+
+.down-head {
+  margin: 0 -30% 0 0 !important;
+}
+
+.bill-line {
+  border-right: 2px solid #9ca3af;
+  height: 40px !important;
+  margin: -30% -140% 0 4% !important;
+}
+
+.po-head {
+  color: #25252580 !important;
+}
+
+.po-supply-head {
+  text-align: left !important;
+}
+
+.po-supply-body {
+  text-align: left !important;
+}
+
+.po-supply-dot {
+  margin: 0 12px;
+}
+
+.bill-purchase {
+  margin: 2% !important;
+}
+
+.billpurchase {
+  height: 30px !important;
+}
+
+.view-page-paper-table {
+  margin: 2% !important;
+}
+
+/* css for total amount section in table */
+
+.bill-ammount {
+  text-align: left !important;
+  width: 15% !important;
+}
+/* css for total amount section in table */
+
+/* Extra Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+}

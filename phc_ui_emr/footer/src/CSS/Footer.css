@@ -1,0 +1,42 @@
+.footer {
+  background-color: black !important;
+  padding: 5px;
+  color: white !important;
+  font-size: 15px;
+  position: relative !important;
+  /* bottom: 0;
+    width: 100%; */
+  z-index: 2;
+  /* margin-top: 40px; */
+}
+
+.footer1 {
+  padding: 6% !important;
+  font-size: 15px;
+}
+
+.right-div {
+  padding: 5% 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2%;
+  }
+
+  .footer1 {
+    padding: 3% !important;
+    font-size: 15px;
+  }
+
+  .right-div {
+    padding: 3% 0px !important;
+  }
+
+  .footImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

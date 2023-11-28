@@ -1,0 +1,752 @@
+/* Responsive CSS for Karuna Trust */
+/* Extra small devices (phones, 320px and 480px) */
+@media only screen and (max-width: 480px) {
+  .KarunaLogo {
+    max-width: 100px;
+  }
+
+  /* .homeDiv {
+            margin-top: 10% !important;
+            padding: 10px !important;
+        } */
+}
+
+/* Medium devices (landscape tablets, 481px and 768px) */
+@media only screen and (max-width: 767px) {
+  .side-bar {
+    display: none !important;
+  }
+
+  .main-div {
+    margin-top: 13% !important;
+  }
+
+  .dataImg {
+    height: 90px !important;
+    width: 90px !important;
+  }
+
+  .dtedesn h3 {
+    font-size: 16px;
+  }
+
+  .morn,
+  .user-type,
+  .names {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 13px !important;
+  }
+
+  .pat-name-id {
+    padding: 5px 0px;
+    text-align: center !important;
+    /* border-bottom: 1px solid #ccc; */
+  }
+
+  .box-dsg1 {
+    margin: 3% 10% !important;
+  }
+
+  .mobile-view,
+  .queue,
+  #ViewQue {
+    text-align: center !important;
+  }
+
+  .search-date {
+    padding: 5px 0 !important;
+  }
+
+  #approval_list {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .back-btn-div,
+  .end-consultation {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .back-btn-div {
+    padding-top: 2%;
+  }
+
+  .end-consultation {
+    padding-bottom: 2%;
+  }
+
+  .med-history {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .vital-div {
+    padding-top: 8% !important;
+  }
+
+  .dataVital {
+    width: 100% !important;
+    padding: 3% 0% !important;
+  }
+
+  .order-search {
+    padding-top: 3% !important;
+    width: 100% !important;
+  }
+
+  .order-search .form-control-ord-feedback {
+    top: 43% !important;
+    right: 0% !important;
+  }
+
+  .super-phc,
+  .super-details,
+  .super-config-details {
+    font-size: 13px !important;
+    padding: 0 2% 0 0;
+  }
+
+  .super-admin-form {
+    padding: 4% 0 0 2% !important;
+  }
+
+  .super-config-cards {
+    padding-top: 0% !important;
+  }
+
+  .super-card {
+    width: 98% !important;
+    margin: 0 0 5% 0 !important;
+  }
+
+  .notify-div {
+    padding: 5% !important;
+  }
+
+  .super_row {
+    border: 1px solid #d3d3d3;
+    padding: 5% 0 !important;
+  }
+
+  .phc-desc {
+    padding: 0 5%;
+  }
+
+  .config-desc {
+    padding: 4% !important;
+  }
+
+  .dataGender,
+  .dataMob,
+  .dotBtn-group,
+  .dataName,
+  .data-caste {
+    padding: 0% !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .presription-form,
+  .table thead th,
+  .table td,
+  .pre-drop {
+    width: 100% !important;
+  }
+
+  .invest {
+    margin: -5% 0 0 35% !important;
+  }
+
+  .prescription-form-table {
+    overflow-x: scroll;
+  }
+
+  .table thead th,
+  .table td {
+    width: 100% !important;
+    display: block;
+    text-align: center !important;
+  }
+
+  .mytab {
+    display: block !important;
+    padding: 10px 0 !important;
+  }
+
+  .view-prev-details {
+    margin-top: 3%;
+  }
+
+  .check-In-modal-div .modal-dialog {
+    position: relative;
+    top: 0% !important;
+    max-width: 96% !important;
+  }
+
+  .predetails {
+    margin: 0 !important;
+  }
+
+  .dur-date {
+    font-size: 12px !important;
+  }
+
+  .vital-modal-div .modal-dialog {
+    max-width: 100% !important;
+  }
+
+  .ward-search {
+    margin: 2% 0;
+    padding: 0 !important;
+  }
+
+  .checkbox {
+    width: 15% !important;
+  }
+
+  .add-product-btn {
+    width: 100% !important;
+    margin: 0 0 5% 0 !important;
+  }
+
+  .OrderCancel {
+    margin: 0 0 2% 0;
+  }
+
+  .pr-btn-sec {
+    padding: 5px !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  #ViewQue {
+    float: none !important;
+  }
+
+  #pat_que2 {
+    flex-direction: column-reverse !important;
+  }
+
+  .provider-list {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+  }
+
+  .rounded_doc {
+    width: 45% !important;
+  }
+
+  .avalabledoctorlist {
+    margin: 5px 30px !important;
+  }
+
+  #doc_img1 {
+    left: 62%;
+  }
+
+  #doc_list {
+    width: 80% !important;
+  }
+
+  .logScnText {
+    padding-left: none !important;
+    text-align: center !important;
+  }
+
+  .loginScnImg {
+    padding: 10% 20% !important;
+  }
+
+  #pat_visit1 {
+    border-left: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .KarunaLogo {
+    max-width: 100px;
+  }
+
+  .navbar-toggler {
+    padding: 4px !important;
+  }
+
+  .homeDiv {
+    margin-top: 12% !important;
+    padding: 30px 10px !important;
+  }
+
+  .main-div {
+    margin-top: 12% !important;
+  }
+
+  .homeHeader {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+
+  .homText {
+    text-align: center !important;
+    padding: 0px !important;
+  }
+
+  .col-container {
+    margin: 0 !important;
+  }
+
+  .responge-age {
+    padding: 10px !important;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .responge-divider,
+  .devider {
+    display: inline-flex;
+  }
+
+  .devider {
+    padding: 2px 10px !important;
+  }
+
+  .vl {
+    display: none !important;
+  }
+
+  .vlH {
+    display: block !important;
+    width: 30px;
+    border-bottom: 2px solid grey;
+    margin: 0px 5px 9% 5px;
+  }
+
+  .line1 {
+    display: block !important;
+    width: 30px;
+    border-bottom: 2px solid grey;
+    margin: 0px 5px 9% 5px;
+  }
+
+  .person-Img {
+    width: 60% !important;
+  }
+
+  .encounter-count {
+    padding: 4px !important;
+    margin: 2% !important;
+    border-right: none !important;
+    border-bottom: 1px solid grey;
+  }
+
+  .encounter-gender-count,
+  .encounter-count,
+  .encounter-compare {
+    padding: 10px !important;
+  }
+
+  .Reg-Text {
+    width: 90% !important;
+    margin: 3% 0px !important;
+  }
+
+  .searchForm {
+    padding: 3% 0px !important;
+  }
+
+  .regbtn {
+    padding-bottom: 2% !important;
+  }
+
+  .ptext {
+    display: inline !important;
+    padding: 3% !important;
+  }
+
+  .gen-count,
+  .day-visit {
+    display: inline-flex !important;
+    justify-content: center;
+  }
+
+  #icon-text1,
+  #pat_id {
+    margin: 0% 10px !important;
+    font-size: 13px;
+  }
+
+  .inline-for-mobile-device,
+  .bokkedtimedate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inline-for-mobile-device {
+    margin: 2% 1% !important;
+  }
+
+  .pateintdataforfontsize,
+  #pro,
+  p {
+    padding: 5px 10px;
+  }
+
+  .card-clr {
+    padding: 5% !important;
+  }
+
+  .lab-date {
+    line-height: 15px;
+  }
+
+  .consult-button p {
+    display: inline-flex !important;
+    justify-content: center !important;
+  }
+
+  .consult-button i {
+    margin: 0px 5px !important;
+  }
+
+  .pat-tabs .nav-tabs-header,
+  .bigDevice,
+  .flex-column.bigDevice {
+    display: none !important;
+  }
+
+  .vitals-accordion {
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    font-size: 14px !important;
+  }
+
+  .vitals-accordion-image {
+    margin: 0 20px 0 0 !important;
+  }
+
+  .main_acc .vitals-accordion {
+    color: #000 !important;
+    font-weight: 700;
+  }
+
+  .main_acc .collapsed {
+    color: green !important;
+  }
+
+  #content0 {
+    margin: 0 3% 5% 3% !important;
+  }
+
+  #content12,
+  #content13,
+  #content14,
+  #content15,
+  #content16,
+  #content17,
+  #contentpre {
+    margin: 2% 0 !important;
+  }
+
+  .smallDeviceText,
+  #content0,
+  #content12,
+  #content13,
+  #content14,
+  #content15,
+  #content16,
+  #content17,
+  #contentpre {
+    display: block !important;
+  }
+  .vitals-accordion {
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    font-size: 13px !important;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 769px) and (max-height: 820px) {
+  .login-div-row {
+    min-height: 54vh !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .admin-head {
+    flex-direction: row !important;
+    border-bottom: none !important;
+  }
+}
+
+/* Medium devices (landscape, 992px) */
+@media only screen and (max-width: 992px) {
+  .KarunaLogo {
+    max-width: 130px;
+  }
+
+  .lab-date-fil {
+    text-align: center !important;
+  }
+
+  .login-sidemenu {
+    color: rgb(0, 0, 0) !important;
+    padding: 1% 5% !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+  }
+
+  .Img-capture button {
+    width: 65% !important;
+  }
+
+  .admin-head {
+    flex-direction: row-reverse !important;
+    border-bottom: 1px solid #ccc !important;
+  }
+
+  .dash-icon {
+    margin: 0% 3% 0% 0% !important;
+  }
+
+  .accodian-style {
+    padding: 0px 10px !important;
+  }
+
+  .side-bar {
+    display: none !important;
+  }
+
+  .photo-div {
+    width: 60% !important;
+  }
+
+  .register-Header {
+    text-align: center;
+    font-size: 22px !important;
+  }
+
+  #doc_det {
+    justify-content: center;
+    padding: 20px 0px 0px 0px !important;
+  }
+
+  .navbar-toggler {
+    padding: 4px !important;
+    font-size: 15px !important;
+  }
+
+  .icn {
+    width: 75% !important;
+  }
+
+  .acc-head .accordion-button::after {
+    left: 40% !important;
+  }
+
+  .homText {
+    font-size: 13px !important;
+  }
+
+  .search-div-modal .modal-dialog {
+    max-width: 100% !important;
+  }
+
+  .srchBy {
+    justify-content: center !important;
+  }
+
+  .search-dropdown {
+    padding: 2% 0;
+  }
+
+  .select-languge::after {
+    padding: 10px !important;
+  }
+
+  .super-complaint .nav-link {
+    height: 55px !important;
+    font-size: 10px !important;
+  }
+
+  .super-member-head {
+    font-size: 14px !important;
+  }
+
+  .super-member-image {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .config-desc {
+    padding: 6% 4% !important;
+  }
+
+  .super-tab {
+    padding: 5% !important;
+  }
+
+  .approval-text,
+  .approval-time,
+  .approval-date,
+  .history-body-section,
+  .save-btn-section,
+  .config-desc,
+  .lab-order-link,
+  .vital-div,
+  .super-inst,
+  .super-phc,
+  .super-config-details,
+  .super-desc,
+  .super-details,
+  .super-list,
+  .super-member-head,
+  #pat_det {
+    text-align: center !important;
+  }
+
+  .pateint-details-windowiwidth.modal-dialog,
+  .lab-print-div .modal-dialog {
+    max-width: 96% !important;
+    margin-top: 5% !important;
+  }
+
+  .cons-det,
+  .det-right,
+  .print-details.head-value {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  #que_div,
+  #pat_que3 {
+    padding: 2% 0 !important;
+  }
+
+  #lab_token {
+    font-size: 13px !important;
+    padding: 2% 5% !important;
+    margin: 2% 0 !important;
+  }
+
+  #lab_status {
+    padding: 2% 3% !important;
+    margin: 2% 0 !important;
+  }
+
+  .lab-service-modal .modal-dialog,
+  .referance-modal-div .modal-dialog {
+    max-width: 96% !important;
+    top: 0% !important;
+  }
+
+  .pre-cbc-section {
+    justify-content: center !important;
+  }
+
+  .blood-count {
+    margin: 3% !important;
+    text-align: center !important;
+  }
+
+  .status-text {
+    left: 20% !important;
+  }
+
+  .regDropdown,
+  #search-input {
+    border-radius: 6px !important;
+  }
+
+  .dia-heading,
+  .lab-body {
+    text-align: center;
+  }
+
+  .pro-search {
+    padding: 0 !important;
+  }
+
+  .add-lab-form {
+    margin: 0 0 0 3%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .homeDiv {
+    margin-top: 7% !important;
+  }
+
+  .homeHeader {
+    font-size: 18px !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 993px and 1024px) */
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .homeDiv {
+    margin-top: 7% !important;
+  }
+
+  .photo-div {
+    width: 100% !important;
+  }
+
+  .col-container {
+    margin: 0px 4px;
+  }
+
+  .LoginHeader {
+    font-size: 22px !important;
+  }
+
+  .homeHeader {
+    font-size: 22px !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1025px and 1200px) */
+@media only screen and (max-width: 1200px) {
+  .LoginHeader {
+    font-size: 26px !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .homeDiv {
+    margin-top: 6% !important;
+  }
+
+  .LoginHeader {
+    font-size: 22px !important;
+  }
+
+  .homeHeader {
+    font-size: 24px !important;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1201px and more) */
+/* @media only screen and (min-width: 1201px) {
+
+} */

@@ -1,0 +1,229 @@
+.register-Header {
+  font-size: 25px;
+  color: #2d5986 !important;
+  padding: 1% 1% 1% 2% !important;
+  margin: 0px !important;
+}
+.search-bar {
+  padding: 2% 1%;
+}
+.iCpt {
+  color: grey;
+  border: 2px solid grey;
+  background-color: #fff !important;
+  border-radius: 20px;
+  height: 30px !important;
+  font-size: 15px;
+  padding: 1% 2%;
+  width: 100% !important;
+  margin: 0px 30px !important;
+}
+.regDropdown {
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  border: 1px solid #ced4da !important;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  font-size: 12px;
+}
+.regDropdown:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid black !important;
+}
+.seacrh-input {
+  border: 2px solid grey !important;
+  border-radius: 6px;
+  flex-direction: column;
+  height: 70%;
+}
+#seacrh-input:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid black !important;
+}
+
+.SearchLink {
+  font-size: 14px !important;
+  text-decoration: underline;
+  color: #2783c5;
+}
+.img-block img {
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  justify-content: center;
+  place-items: center;
+  display: grid;
+}
+.SearchIcon {
+  color: grey;
+}
+
+.img-block {
+  width: 50%;
+  height: 50% !important;
+  border: 1px solid grey;
+  padding: 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 3;
+
+  place-items: center;
+}
+
+.IconCamera {
+  background-color: white;
+  overflow: hidden;
+  z-index: -1;
+  border-top: 1px solid grey;
+}
+
+.cameraIcon {
+  font-size: 15px !important;
+  margin-top: -5%;
+
+  overflow: hidden;
+  color: grey;
+  position: relative;
+  width: 60px !important;
+}
+
+.Img-capture {
+  padding: 10% 2%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.Img-capture button {
+  color: grey;
+  border: 2px solid grey;
+  background-color: #fff !important;
+}
+.Img-capture button:hover {
+  color: #fff !important;
+  border: 2px solid grey;
+  background-color: grey !important;
+}
+
+.Reg-Text {
+  justify-items: center;
+  justify-content: center;
+  width: 400px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 6px 5px;
+  line-height: 15px;
+  font-size: 13px !important;
+  background-color: lightyellow;
+}
+.patient-reg {
+  width: 100%;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  justify-content: center;
+}
+
+.ptext {
+  display: inline-flex;
+  font-size: 15px;
+  padding: 2%;
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+  background: #e8ebe9 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+}
+.ptext p {
+  padding-top: 3px;
+}
+.pbutton {
+  color: grey !important;
+  border: 2px solid grey !important;
+  background-color: #fff !important;
+  border-radius: 20px !important;
+  padding: 0% 2% !important;
+  font-size: 15px !important;
+}
+.pbutton:hover {
+  color: grey;
+  border: 2px solid grey;
+  background-color: #fff !important;
+}
+.hr-reg {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hl {
+  border-top: 2px solid grey;
+  width: 40px;
+  margin-left: 4%;
+}
+
+.searchIcon {
+  height: 70%;
+  width: 50px;
+
+  display: grid;
+  place-items: center;
+
+  margin-left: -40px;
+}
+.searchForm {
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent !important;
+  height: 100% !important;
+  width: 100%;
+}
+
+.laoder-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid grey;
+  width: 330px;
+  height: 180px;
+  position: absolute;
+  left: 40%;
+
+  border-radius: 6px;
+}
+
+.loadSrhBox {
+  position: relative;
+  height: 35%;
+  /* border: 2px solid grey; */
+  border-radius: 6px;
+
+  justify-content: center !important;
+  top: 20%;
+  background-color: white;
+  display: flex;
+  padding: 0px !important;
+}
+.loadSrhText {
+  width: 100%;
+  left: 0% !important;
+
+  font-size: 15px;
+}
+
+.srhImg {
+  position: absolute;
+  top: 40%;
+}
+Col {
+  overflow-x: hidden;
+}
+
+/* media query css */

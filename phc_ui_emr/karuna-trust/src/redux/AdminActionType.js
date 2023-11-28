@@ -1,0 +1,13 @@
+export const Abha_Token = "Abha_Token";
+export const Adhar_OTP = "Adhar_OTP";
+export const Adhar_OTP_Again = "Adhar_OTP_Again";
+export const Adhar_Pre_Verified = "Adhar_Pre_Verified";
+export const Adhar_Verification = "Adhar_Verification";
+export const Get_Profile_Data = "Get_Profile_Data";
+export const Get_QR_Data = "Get_QR_Data";
+export const Get_Card_Data = "Get_Card_Data";
+export const Get_SVG_Data = "Get_SVG_Data";
+export const Get_Png_Data = "Get_Png_Data";
+export const Encript_Key = "Encript_Key";
+export const HRP_Validate = "HRP_Validate";
+export const register_Abdm = "register_Abdm";

@@ -1,0 +1,680 @@
+.pro-tab {
+  border: 1px solid #eee !important;
+  margin: 2% !important;
+}
+
+.pr-btn-sec {
+  padding: 2px 5px;
+}
+.pharma-search-row {
+  padding: 5px 0px !important;
+}
+.pro-search {
+  padding-right: 10px;
+}
+
+.prod-search {
+  border-radius: 6px !important;
+  margin: 5% 0 0 0 !important;
+  height: 40px !important;
+}
+
+.pro-search .form-control-pro-feedback {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 20px !important;
+  text-align: center;
+  color: #000;
+  margin-top: -30px;
+  margin-right: 5px;
+  float: right !important;
+  cursor: pointer;
+}
+
+.add-pro-div {
+  margin: 2% 0 !important;
+}
+.search-select {
+  margin: 5px 0 !important;
+}
+.pro-div
+  .css-viou3o-MuiAutocomplete-root
+  .MuiOutlinedInput-root
+  .MuiAutocomplete-input,
+.search-select
+  .css-viou3o-MuiAutocomplete-root
+  .MuiOutlinedInput-root
+  .MuiAutocomplete-input {
+  font-size: 12px !important;
+  z-index: 9999;
+}
+
+.MuiAutocomplete-hasPopupIcon.css-1pfgy4j .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon.css-1pfgy4j .MuiOutlinedInput-root {
+  padding: 0px !important;
+}
+
+.popper {
+  z-index: 11010;
+}
+
+.css-1uvydh2 {
+  height: 18px !important;
+  z-index: 9999;
+}
+
+.pro-div .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
+.pro-div .css-p0rm37,
+.search-select .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
+.search-select .css-p0rm37 {
+  font-size: 13px !important;
+  top: -10px !important;
+}
+.pro-div .css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root,
+.pro-div .css-bvz20t .MuiOutlinedInput-root,
+.search-select .css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root,
+.search-select .css-bvz20t .MuiOutlinedInput-root,
+.MuiAutocomplete-hasClearIcon.css-j5nvp8 .MuiOutlinedInput-root {
+  padding: 0px 10px !important;
+}
+.pro-div .css-bvz20t .MuiOutlinedInput-root .MuiAutocomplete-input,
+.search-select .css-bvz20t .MuiOutlinedInput-root .MuiAutocomplete-input {
+  padding: 4px !important;
+}
+.css-1wuilmg-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+  font-size: 12px !important;
+}
+.pro-div .css-wb57ya-MuiFormControl-root-MuiTextField-root,
+.pro-div .css-viou3o-MuiAutocomplete-root,
+.pro-div .css-bvz20t,
+.search-select .css-wb57ya-MuiFormControl-root-MuiTextField-root,
+.search-select .css-viou3o-MuiAutocomplete-root,
+.search-select .css-bvz20t,
+.css-j5nvp8 {
+  width: 100% !important;
+}
+
+.pro-border {
+  border: none !important;
+  padding: 0 1% !important;
+}
+
+.div-space {
+  padding: 0px 5px !important;
+}
+
+.pro-med {
+  margin: 0 13px 0 1% !important;
+  width: 97% !important;
+}
+
+.ord-search {
+  border-radius: 6px !important;
+  /* height: 40px !important; */
+  padding: 5px !important;
+}
+
+.ord-search .form-control-ord-feedback {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  text-align: center;
+  color: #000;
+  float: right;
+  top: -24px !important;
+  cursor: pointer;
+}
+
+.ourdate {
+  display: flex !important;
+}
+
+.search-date {
+  padding: 5px;
+}
+
+#pharma-input {
+  border-bottom-right-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  border-top-left-radius: 6px !important;
+}
+
+.orderBtn,
+.pharma-search-Btn {
+  background-color: #232f8fe4 !important;
+  border-radius: 30px !important;
+  padding: 2px 10px !important;
+  height: 30px !important;
+}
+.pharma-search-Btn {
+  margin: 0px 4px !important;
+}
+.orderBtn {
+  margin: 5px !important;
+}
+
+.linkBtn,
+.pharma-linkBtn {
+  background-color: #fff !important;
+  color: #232f8fe4 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  border: none !important;
+  padding: 2px 10px !important;
+  height: 30px !important;
+}
+.linkBtn {
+  margin: 5px !important;
+}
+.pharma-linkBtn {
+  margin: 0px 5px !important;
+}
+
+.divider1 {
+  padding: 4px 2px;
+  border-radius: 4px;
+}
+.dispence-div {
+  padding: 3% 2% !important;
+}
+.searchFilter-div {
+  padding: 1% !important;
+}
+
+.create-btn {
+  color: #000 !important;
+  background: #fff !important;
+  margin: 5px 4px !important;
+  padding: 1px 8px !important;
+  font-size: 13px !important;
+}
+
+.dropdown-menu.dropdown-menu-dark.my-menu.show {
+  left: 0 !important;
+  top: 0% !important;
+}
+
+.dropdown-item.my-menuitem,
+.dropdown-menu.dropdown-menu-dark.my-menu.show {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.dropdown-item.my-menuitem:active,
+.dropdown-item.my-menuitem:hover {
+  background: #e9ecef !important;
+  color: #000 !important;
+}
+
+.my-vertline {
+  border-right: 2px solid #9ca3af;
+  height: 20px !important;
+}
+
+.my-paper {
+  width: 100% !important;
+  border: none !important;
+}
+
+th {
+  padding: 10px !important;
+  font-weight: 700 !important;
+  background-color: #eeeeee !important;
+  font-size: 12px !important;
+}
+td {
+  padding: 10px 10px !important;
+  font-size: 12px !important;
+}
+.pr-mdl-header {
+  margin: 7px 0 0 15px !important;
+}
+.al-status {
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 4px 5px !important;
+  margin-bottom: 0px !important;
+}
+.alert-draft {
+  background-color: #60606029 !important;
+  color: #606060 !important;
+}
+.alert-created {
+  background-color: #f0ad4e29 !important;
+  color: #f0ad4e !important;
+  margin: 0px !important;
+  padding: 4px 5px !important;
+  font-weight: 700;
+}
+.alert-auth {
+  background-color: #c3efea !important;
+  color: #07baa6 !important;
+}
+.alert-comp {
+  background-color: #cde2f0 !important;
+  color: #2c8dc2 !important;
+}
+.alert-raised {
+  background-color: #10e53029 !important;
+  color: #0dcf2a !important;
+}
+
+.my-menuitem {
+  border: none !important;
+  width: 100% !important;
+  text-align: left !important;
+  color: #000 !important;
+}
+
+.my-menuitem:hover {
+  background-color: #e9ecef !important;
+  border-radius: 0px !important;
+}
+
+.pur-order-breadcrumb a {
+  text-decoration: underline !important;
+  color: #2d5986 !important;
+}
+
+.breadcrumb {
+  background-color: #fff !important;
+  margin: 2% !important;
+}
+
+.purchase-order {
+  background-color: #f4f6f9 !important;
+  border-radius: 5px !important;
+}
+
+.porder-border {
+  color: #232f8fe4 !important;
+  margin: 0 -1% !important;
+}
+
+.porder-head {
+  margin: 0px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  border-bottom: 2px dashed #eee !important;
+  padding: 0 0 1% 0 !important;
+}
+.total-amount {
+  padding: 0px 4px;
+}
+.add-purchase-order {
+  border-radius: 5px !important;
+}
+
+.porder-tab {
+  background-color: #eee !important;
+}
+
+.pharma-form {
+  min-height: 0 !important;
+  padding-bottom: 0px;
+  padding: 2% 2% 1px 2%;
+  background-color: #fff !important;
+}
+
+.pharma-btn {
+  padding: 2% 4% 0 4% !important;
+  margin: 0 0 -4% 0 !important;
+}
+
+.add-drugs-material {
+  font-size: 17px;
+  padding: 10px 0px !important;
+}
+
+.pharmaBtnPC {
+  border: 1px dashed #232f8fe4;
+  background-color: rgba(45, 89, 134, 0.1) !important;
+  color: #232f8fe4 !important;
+  padding: 5px 75px;
+}
+
+.css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root {
+  padding: 15px;
+}
+
+.css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+  padding: 0 4px;
+}
+
+.add-order {
+  margin: 3% 0 !important;
+}
+
+.my-order {
+  padding-left: 2% !important;
+}
+
+.item-cancel {
+  float: right;
+}
+
+.item-add {
+  float: left;
+  background-color: #232f8fe4 !important;
+  color: #fff !important;
+}
+
+.item-add,
+.item-cancel {
+  border-radius: 20px !important;
+  width: 100px !important;
+}
+
+.add-item-btn {
+  padding: 5% 0 !important;
+}
+
+.product-master-drp #show {
+  left: -40% !important;
+}
+
+.product-master-drp,
+p {
+  margin-bottom: 0px !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #e9ecef !important;
+}
+
+.css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+  padding: 5px 0 !important;
+  height: 20px !important;
+}
+
+.fade.addPurchase-modal.modal.show {
+  background-color: #464646bf !important;
+  overflow-y: scroll !important;
+}
+
+.order-table {
+  margin: 0px !important;
+}
+.purchase-order-div > div {
+  padding: 1% 2% 1% 0% !important;
+}
+.total-bill {
+  text-align: right !important;
+  width: 100%;
+  padding: 1% !important;
+}
+
+.total-bill {
+  text-align: right !important;
+  background-color: #f4f6f9 !important;
+  padding: 1% !important;
+}
+
+.add-btn {
+  /* margin: 0 0 -30px -30px; */
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+  background: #fff !important;
+}
+
+.total-ammount {
+  text-align: right !important;
+  margin: 3% 20% 0 0 !important;
+  font-size: 20px !important;
+}
+
+.submit-line {
+  border-right: 1px solid #9ca3af;
+  height: 40px !important;
+  margin: 7% -150% 0 0 !important;
+}
+
+#mypo {
+  height: 30px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  width: 15% !important;
+}
+
+#mypo-footer {
+  color: #d2caca !important;
+  margin: 0 !important;
+}
+.css-bckmzb-MuiAutocomplete-popper {
+  z-index: 9999 !important;
+}
+
+.mytrash {
+  color: red !important;
+}
+
+.mypen,
+.mytrash,
+.ord-details {
+  cursor: pointer !important;
+  margin: 0px 6% !important;
+}
+.action-btn {
+  min-width: 25px !important;
+  color: #000 !important;
+}
+.action-disable {
+  min-width: 25px !important;
+  color: #ccc !important;
+}
+
+.pharma-row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 10px 0px !important;
+}
+.status-row {
+  align-items: center !important;
+}
+
+.pharma-cancel-btn {
+  float: left !important;
+  height: 40px;
+  font-size: 20px;
+  margin: 10% 0 0 0 !important;
+}
+
+.orderSubmit {
+  background-color: #2d5986 !important;
+  border: 1px solid #2d5986;
+  width: 120px;
+  height: 32px;
+  border-radius: 30px !important;
+  padding: 0% 2% !important;
+}
+
+.OrderCancel,
+.OrderCancel:hover,
+.OrderCancel:focus {
+  background-color: #ffffff !important;
+  border: 1px solid #000;
+  color: #000;
+  width: 120px;
+  height: 32px;
+  border-radius: 30px !important;
+  padding: 0% 2% !important;
+}
+
+.tooltip-inner {
+  background-color: #fff;
+  color: #000;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.purch-line {
+  border-left: 2px solid grey;
+  margin-left: 50%;
+  height: 35px;
+}
+
+.purchase-line {
+  border-left: 2px solid grey;
+  margin-left: 50%;
+  height: 35px;
+}
+
+.pur-select {
+  cursor: pointer;
+}
+
+.pro-field .css-1yhpg23-MuiTableCell-root {
+  padding: 4px !important;
+}
+
+/* css for pharmacy dash board */
+#pharma-search {
+  border-bottom-right-radius: 6px !important;
+  border-top-right-radius: 6px !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.order-search .form-control-ord-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  text-align: center;
+  color: #000;
+  top: 21%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.order-search {
+  margin: 0 4% 0 0 !important;
+}
+
+.dash-sea {
+  height: 30px !important;
+  padding: 0 !important;
+}
+
+.box-pharma {
+  padding: 1%;
+  margin: 2% 0% 2% 0% !important;
+}
+.pharma-dash-badge {
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 4px 5px !important;
+  margin-bottom: 0px !important;
+  border: 1px dashed #000 !important;
+}
+/* css for pharmacy dash board */
+
+/* css for table element */
+
+.css-177gid-MuiTableCell-root {
+  padding: 0px !important;
+}
+.css-sgafyg-MuiPaper-root {
+  margin: 0px !important;
+  border-radius: 0px !important;
+}
+/* css for table element */
+/* css for table scroll */
+.fix-width {
+  overflow-y: hidden;
+  overflow-x: auto;
+  cursor: pointer !important;
+}
+.add-lab-form .multi-select .dropdown {
+  width: 100% !important;
+}
+
+.scroll-inner::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-inner::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.scroll-inner::-webkit-scrollbar-track {
+  background-color: rgba(204, 204, 204, 0.3);
+}
+
+.scroll-inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(204, 204, 204, 0.5);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+/* css for table scroll */
+
+/* css for badge */
+.pharma-dashboard {
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 2px 8px !important;
+  margin-bottom: 0px !important;
+}
+
+.ord-badge {
+  background-color: #efefef !important;
+  border: 1px dashed #f0ad4e !important;
+  color: #f0ad4e !important;
+}
+
+.reg-badge {
+  background-color: #efefef !important;
+  border: 1px dashed #071a8e !important;
+  color: #071a8e !important;
+}
+
+.pharma-prescription-btn {
+  text-decoration: underline !important;
+  color: #232f8fe4 !important;
+  background-color: #f4f6f9 !important;
+  border: none !important;
+}
+.css-bckmzb-MuiAutocomplete-popper {
+  z-index: 9999 !important;
+}
+.MuiPopperUnstyled-root {
+  z-index: 9999 !important;
+}
+/* css for badge */
+
+.ordersLink,
+.ordersText {
+  font-weight: 600 !important;
+}
+
+.ordersLink {
+  color: #509bf4 !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+}
+.stock-date {
+  display: flex;
+}
+
+.stock-head {
+  text-align: center;
+}
+
+.pro-stock-table {
+  padding: 2% 0 !important;
+}
+
+.selected-stock-date {
+  padding-bottom: 1%;
+}

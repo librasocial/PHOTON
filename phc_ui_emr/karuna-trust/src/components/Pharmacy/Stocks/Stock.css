@@ -1,0 +1,61 @@
+.fade.print-stock-div-modal.modal.show {
+  background-color: #464646bf !important;
+}
+
+.print-stock-div-modal .modal-dialog {
+  position: relative;
+  top: 1% !important;
+  max-width: 85%;
+}
+
+.stock-claffication,
+.stock-display-claffication {
+  background-color: #f4f6f9;
+  border: 1px solid #eaeaea;
+}
+
+.stock-claffication {
+  padding: 2% !important;
+}
+.div-print-btn {
+  padding: 2% 0 !important;
+}
+
+.stock-display-claffication {
+  padding: 5% !important;
+  text-align: center;
+}
+
+.row-staff-classify {
+  width: 95%;
+}
+
+.phc-name-div,
+.stock-info-div {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.phc-name-div {
+  padding: 1% 0;
+  margin: 2% 2% 0 2%;
+}
+
+.stock-info-div {
+  padding: 0 0 2%;
+}
+
+.stock-status-div {
+  margin: 2% !important;
+}
+
+.div-table-stock {
+  padding: 0% 15% 5% 0%;
+}
+
+.modal-table-stock {
+  padding: 2% 10%;
+}
+
+.info-stock-para {
+  font-size: 14px;
+}

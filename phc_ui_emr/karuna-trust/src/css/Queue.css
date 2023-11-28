@@ -1,0 +1,237 @@
+.queue-div {
+  margin: 0px 2% 2% 2% !important;
+}
+
+.dot-div .dropdown-item {
+  text-align: center;
+  cursor: pointer !important;
+}
+.dot-div .dropdown-item a {
+  color: #000;
+}
+.dot-div .dropdown-item a:hover {
+  color: #0d6efd;
+}
+
+.dropdown-item:hover {
+  color: #0d6efd !important;
+}
+
+#que_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0px;
+}
+
+.capturevitals {
+  font-size: 15px;
+  color: #509bf4;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.booktimeanddate {
+  margin-left: 20px !important;
+}
+
+hr#que_sta {
+  margin: 2% 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap");
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+/* .ambulanve-bilb::after{
+  content: ' \e420';
+  
+} */
+div#pat_age1 {
+  padding-right: 1% !important;
+}
+
+#pat_sta {
+  font-size: 14px;
+  opacity: 1;
+  color: #000000;
+}
+
+#pat_name {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 1;
+}
+
+#pat_age1 {
+  font-size: 14px;
+}
+
+.med_off {
+  font-size: 14px;
+  font-weight: 600;
+  color: #252525;
+}
+
+#pat_doc {
+  font-size: 14px;
+  color: #252525;
+}
+
+#pat_ico {
+  font-size: 14px;
+  opacity: 1;
+}
+
+#visit_text {
+  font-size: 14px;
+  opacity: 1;
+}
+
+.dtedesn h2 {
+  font-size: 30px;
+}
+
+.queue-mnag-list {
+  margin: 2% 2% 0% 3% !important;
+  font-weight: bold;
+}
+
+#pat_gen,
+#pat_age,
+#mob_num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-dsg {
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 1%;
+  margin: 2% 0% 4% 4% !important;
+}
+
+button.btn.btn-primary.dotBtn {
+  border: none !important;
+}
+
+i.bi.bi-calendar-check {
+  color: skyblue;
+}
+div#doc_pro {
+  margin: 0 0 0 10px;
+}
+
+.card-clr.card-body {
+  color: #fff;
+}
+div#doc_card {
+  background: #86bbd829;
+}
+
+span#pro {
+  color: #000;
+  border: 1px dashed #4f7488;
+  background-color: #86bbd8;
+
+  padding: 2% 6%;
+}
+
+button#pat_visit2 {
+  background: #2d5986 0% 0% no-repeat padding-box;
+  border-color: #2d5986;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  font-weight: bold;
+  margin: 4%;
+}
+
+.pateintdataforfontsize {
+  font-size: 14px;
+  color: #252525;
+}
+
+.badge1 {
+  color: #000;
+  background-color: #07baa6;
+  border-radius: 20%;
+  padding: 2px 10px;
+}
+
+.dotBtn-group .dropdown-menu.show::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent grey transparent;
+}
+
+p#visit_time {
+  font-weight: bold;
+}
+.patimg {
+  margin: 2% 0 0 0 !important;
+}
+
+/* .modal-dialog {
+  position: relative;
+  top: 9% !important;
+} */
+
+.successVisit {
+  width: 700px !important;
+  height: 60px !important;
+  background-color: white !important;
+}
+
+.modelCls {
+  margin: 2% 0px !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0 !important;
+}
+
+button#btn {
+  margin: 0px;
+}
+
+p#asign {
+  padding: 0px 10px 0px 10px;
+}
+
+.modal-header .btn-close {
+  margin: 0px;
+}
+
+.modal-header {
+  padding: 1%;
+}
+
+.modal-body {
+  padding: 0px;
+}
+
+/* Queue Management Tabs */
+.que-div-tab .nav-link {
+  color: #000 !important;
+}
+
+.que-div-tab .nav-link.active {
+  color: dodgerblue !important;
+}
+
+/* Queue Management Tabs */

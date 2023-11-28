@@ -1,0 +1,320 @@
+.lab-head,
+.lab-head-id {
+  margin: 0 0 1% 0 !important;
+}
+
+.lab-head {
+  font-size: 20px !important;
+  font-weight: 900;
+}
+
+.lab-head-id {
+  font-size: 16px !important;
+  font-weight: 900;
+}
+
+.lab-save-btn,
+.mo-report-btn {
+  background-color: #232f8fe4 !important;
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+.mo-report-btn {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+.lab-header {
+  font-size: 20px !important;
+  font-weight: bold;
+  margin: 0 0 1% -8% !important;
+}
+.lab-list {
+  margin: -7px 0 !important;
+}
+.lab-heading {
+  margin-bottom: 20px;
+}
+.lab-line {
+  margin: 1% 0 !important;
+}
+.lab-row-div {
+  padding-top: 1% !important;
+}
+.sample-link {
+  text-decoration: underline;
+  color: #509bf4 !important;
+  text-align: center;
+  cursor: pointer;
+}
+.add-cont {
+  margin: 2% 0 0 0 !important;
+  background-color: aliceblue;
+}
+.add-cont {
+  margin: 2% 0 0 0 !important;
+  background-color: aliceblue;
+  padding: 1% 0 !important;
+  text-align: right;
+}
+.add-sample {
+  width: 120px !important;
+  margin: 0 2% !important;
+}
+.lab-row {
+  width: 90%;
+  margin: 0 0 0 5% !important;
+}
+.lab-img {
+  margin: -5% 0 0 5%;
+}
+#vehicle1 {
+  width: 25px;
+  height: 25px;
+}
+.lab-table.row {
+  border-bottom: 1px solid #eee;
+  padding: 2% 0;
+}
+.sample-checkbox {
+  text-align: center;
+  vertical-align: middle;
+}
+.lab-test {
+  margin: 2% 0 0 2% !important;
+  font-size: 25px;
+}
+.lab-stat {
+  margin: 1% 2% 0% 2% !important;
+}
+.lab-sample {
+  display: flex;
+  text-align: left;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.lab-fields {
+  width: 100% !important;
+  padding: 0px 5px !important;
+  justify-content: center;
+}
+.save-lab-data {
+  text-align: right;
+  padding: 1% !important;
+}
+.lab-data #show {
+  left: -30% !important;
+  top: 1% !important;
+}
+.lab-data-btn {
+  margin: 4% 0 0 2% !important;
+  width: 90px !important;
+  padding: 3px 0 !important;
+  font-size: 13px !important;
+}
+.caret-box {
+  font-size: 20px;
+  margin: -10px 0 0 0 !important;
+}
+.lab-test-name {
+  color: #000 !important;
+  font-size: 13px !important;
+}
+.border {
+  border: none !important;
+  padding: 2% 0px !important;
+}
+.lab-test-no {
+  margin: 0 0 0 -7%;
+}
+.lab-unit {
+  margin: 0 13% !important;
+}
+.view-report {
+  width: 92% !important;
+  margin: 0 4% !important;
+}
+.cons-det {
+  margin: 2% 0;
+}
+.print-details {
+  font-weight: bold;
+  min-width: 100px;
+  max-width: max-content;
+}
+.print-details.head,
+.print-btn-pat-details,
+.print-details-body {
+  text-align: center;
+}
+
+.cons-det,
+.det-right,
+.print-details.head-value,
+.print-details-body-value {
+  text-align: right;
+}
+
+.view-reports {
+  width: 100px !important;
+}
+
+.address-details {
+  padding: 2% 0% 2% 2%;
+}
+
+.phc-hr {
+  width: 97% !important;
+  margin: 0 0 0 1% !important;
+}
+
+.lab-body {
+  width: 98% !important;
+  padding: 2% 0 5% 1% !important;
+}
+
+.lab-fname {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* .lab-print-div {
+    width: 138% !important;
+    left: -15% !important; 
+/* } */
+
+.lab-print-div.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+}
+
+.lab-print-div .modal-dialog {
+  position: relative;
+  top: -8% !important;
+  max-width: 75%;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+}
+
+.lab-print-div .modal-content {
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0px 0px 3px 1px grey;
+  font-size: 14px !important;
+}
+
+.lab-invest {
+  font-weight: bold;
+  text-align: center;
+  margin: 1% 0 2% 0;
+  font-size: 20px;
+}
+
+.service-tab {
+  background: #eee !important;
+  padding: 2% 8%;
+}
+.report-page-main-div {
+  min-height: 85vh;
+}
+
+/* css for toggle check box */
+.sample-collect-checkbox .checkbox {
+  width: 25%;
+  height: 0.8rem;
+  border-radius: 20px;
+  border-color: #d6d9fff0;
+  background: #d6d9fff0;
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sample-collect-checkbox .checkbox--on {
+  flex-direction: row;
+  background: #888ecbc1;
+  border-color: #888ecbc1;
+  color: #fff;
+  flex-direction: row-reverse;
+}
+
+.sample-collect-checkbox .checkbox--on .checkbox__ball {
+  /* box-shadow: 0px 3px 4px 0px rgb(29, 80, 29); */
+  background: #545cb7f0;
+  margin-right: -4px;
+  border-radius: 50%;
+}
+
+.sample-collect-checkbox .checkbox__ball {
+  background: #8b91d4f0;
+  /* box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.72); */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: -4px;
+}
+
+.sample-collect-checkbox .checkbox__text {
+  font-size: 1.8rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sample-collect-checkbox .status-text {
+  position: absolute;
+  color: black;
+  left: 35% !important;
+  font-size: 13px !important;
+}
+
+/* end css for checkbox */
+
+/* css for add container modal */
+.add-container-modal-div.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+}
+
+.add-container-modal-div .modal-dialog {
+  position: relative;
+  max-width: 50% !important;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+}
+
+.add-container-modal-div .modal-content {
+  border-radius: 2px !important;
+  border: none !important;
+  box-shadow: 0px 0px 3px 1px grey;
+}
+/* css for add container modal */
+
+.disable-input:disabled {
+  background-color: #fff !important;
+}
+.disable-input {
+  border: none !important;
+}
+
+/* Cancel modal */
+.cancel-test {
+  margin: 5px 0;
+}
+
+.cancel-head {
+  margin: 25px 0px;
+  font-size: 25px !important;
+}
+.orderContinue {
+  margin: 0px 0 0 20px;
+  background: #2d5986 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+  text-align: center;
+  padding: 5px 40px;
+  font-size: 13px;
+  color: #fff !important;
+}
+/* Cancel modal */

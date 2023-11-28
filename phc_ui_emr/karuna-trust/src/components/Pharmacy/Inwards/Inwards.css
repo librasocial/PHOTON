@@ -1,0 +1,42 @@
+.inwards-border {
+  padding: 1% 2% 0 2% !important;
+}
+.inwards-head {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  border-bottom: 1px dashed #cccccc !important;
+  padding: 0 0 5px 0 !important;
+  color: #000 !important;
+}
+/* .inwards-paper-table .css-y8ay40-MuiTableCell-root, .inwards-paper-table .css-1ex1afd-MuiTableCell-root{
+    padding: 15px 10px !important;
+    min-width: max-content;
+} */
+.inwards-pen,
+.file-inwards {
+  cursor: pointer !important;
+}
+.inwards-btn {
+  background-color: #fff !important;
+  color: #000 !important;
+  margin: 5px 4px !important;
+  padding: 1px 8px !important;
+}
+.inwards-pen {
+  margin: 0 -95% 0 0 !important;
+}
+.inwards-vert {
+  margin: 0 -15% 0 0 !important;
+}
+.file-inwards {
+  margin: 0 0 0 -75% !important;
+}
+
+.order-vertline {
+  border-right: 2px solid #9ca3af;
+  height: 45px !important;
+  margin: -5% 95% 0 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+}

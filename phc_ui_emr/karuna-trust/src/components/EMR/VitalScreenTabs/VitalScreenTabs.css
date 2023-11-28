@@ -1,0 +1,1353 @@
+/* global css for all Tabs */
+.vital-tab {
+  background-color: #efefef;
+  padding: 1% 8%;
+}
+
+.vital-header {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.view-prev-details {
+  border-radius: 20px !important;
+  border: 1px solid #509bf43d !important;
+  background-color: rgb(231, 231, 231) !important;
+  color: #509bf4 !important;
+  padding: 1% 4% !important;
+  font-size: 13px !important;
+}
+
+.cheif-complaint-form,
+.assessment-form,
+.presription-form,
+.patient-history-form {
+  background-color: #fff !important;
+  /* margin: 2% 0px !important; */
+  border-radius: 4px !important;
+  padding: 2% !important;
+  min-height: 300px !important;
+}
+
+.assessment-header,
+.presription-header {
+  display: inline-flex;
+  align-items: center;
+}
+
+.assessment-header h6,
+.assessment-button-section h6 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+.assessment-header img,
+.presription-header img {
+  width: 8%;
+}
+
+/* global css for all Tabs */
+
+/* css for vital summary tab */
+.summary-div {
+  background-color: #fff !important;
+  margin: 2% 0px !important;
+  border-radius: 4px !important;
+  padding: 3% 4%;
+}
+
+/* css for vital summary tab */
+
+/* css for Cheif complaint tab */
+
+.microphone-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.microphone-icon {
+  font-size: 16px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgb(203, 202, 202);
+  padding: 1% 2% !important;
+  background-color: rgba(228, 227, 227, 0.866);
+}
+
+.chief-textarea {
+  margin: 2% 0px !important;
+}
+
+.chief-textarea textarea.form-control {
+  border: none !important;
+  min-height: calc(20.5em + 0.75rem + 2px) !important;
+}
+
+.chief-edit {
+  font-size: 13px;
+  padding: 0 2%;
+}
+
+.medhistory-textarea textarea.form-control {
+  border: none !important;
+  min-height: calc(20.5em + 0.75rem + 2px) !important;
+}
+
+.complaint-history-body {
+  background-color: #fff !important;
+  padding: 2% !important;
+  /* margin: 1% 0px !important; */
+}
+
+.cheif-complaint-form .form-control {
+  padding: 0px 6px !important;
+}
+
+.history-header {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 2% !important;
+}
+
+.history-body-section {
+  padding: 5% !important;
+}
+
+.doc-name {
+  font-weight: normal !important;
+  font-style: italic;
+  margin: 2% 0 0 0;
+}
+
+.doc-desc {
+  margin: 1% 0 0 0;
+}
+
+.history-date {
+  font-weight: 700;
+  margin: 2% 0 0 0;
+  font-size: 14px !important;
+}
+.edit-medication {
+  margin: 0 1% !important;
+}
+.vital-clock2 {
+  margin: 0 5px !important;
+}
+.history-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-btn {
+  border-radius: 20px !important;
+  padding: 1% 4% !important;
+  font-size: 13px !important;
+  border: 1px solid #509bf43d !important;
+  background-color: rgb(231, 231, 231) !important;
+  color: #509bf4 !important;
+  width: 40% !important;
+}
+
+.vital-btn {
+  border-radius: 20px !important;
+  padding: 4px 3% !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  border: 1px solid grey !important;
+  background-color: rgb(255, 255, 255) !important;
+  color: black !important;
+  margin: 2% 2% !important;
+}
+
+.patient-complaint .flex-column {
+  background-color: #fff !important;
+}
+
+.patient-complaint .nav {
+  margin: 2% 0px !important;
+}
+
+.patient-complaint .nav-link {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 0px !important;
+  height: 40px !important;
+  border-left: 4px solid #fff !important;
+  display: flex;
+  justify-content: left;
+  padding: 0px 15px !important;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600 !important;
+}
+
+.patient-complaint .nav-link:hover {
+  border-bottom: 0px !important;
+  border-left: 4px solid green !important;
+  border-radius: 0px !important;
+}
+
+.patient-complaint .nav-link.active {
+  border-bottom: 0px !important;
+  border-left: 4px solid green !important;
+  border-radius: 0px !important;
+}
+
+.vital-header .form-control {
+  padding: 1% 0px !important;
+}
+
+/* css for Cheif complaint tab */
+
+/* css code for vital sign tab */
+.vital-accordian {
+  /* background-color: #fff !important; */
+  margin: 1% 0px !important;
+}
+
+.vital-form {
+  background-color: #fff !important;
+  margin: 2% 0px !important;
+  border-radius: 4px !important;
+}
+
+.form-col {
+  padding: 0px px 0px 0px !important;
+}
+
+.vital-form .col-container {
+  margin: 0px 4px;
+}
+
+/* form css */
+.form-text {
+  padding: 2% 1%;
+  background-color: #d9e7f8;
+  margin: 0px 2% !important;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.form-note {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000 !important;
+}
+
+.form-fields {
+  margin: 2%;
+}
+
+textarea.form-control {
+  border: 1px solid #ced4da !important;
+}
+
+/* end form css */
+/* css for accordion section */
+.vital-acc-header {
+  padding: 2% 0px;
+  border-bottom: 2px solid #1d9824;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion-div .accordion-item {
+  margin: 8px 0px;
+  border-radius: none !important;
+  border: 0px !important;
+  /* box-shadow: 0px 0px 2px 0px grey; */
+}
+
+.vital-acc-head .accordion-button {
+  height: 30px;
+  background-color: #fff !important;
+  display: flex;
+  text-align: left !important;
+  font-size: 13px !important;
+  justify-content: left;
+  padding-left: 45px !important;
+  border: 0px !important;
+}
+
+.vital-acc-head .accordion-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.accordion-body-section {
+  padding: 2px 8px;
+}
+
+.vital-acc-head {
+  text-align: center !important;
+  font-size: 15px !important;
+}
+
+.vital-acc-head .accordion-button::after {
+  position: absolute;
+  background-image: none !important;
+}
+
+/* .accordion-button:not(.collapsed) .down-mark {
+    color: rgb(167, 52, 52) !important;
+}
+
+.accordion-button:not(.collapsed) .down-mark {
+    color: #1D9824 !important;
+} */
+#final-input {
+  height: 7% !important;
+  width: 90% !important;
+}
+
+.kHRuXD:checked + .sc-dkPtRN {
+  content: "\f00c";
+}
+
+.dis-container {
+  margin: 2% 0 0 0;
+}
+
+.down-mark {
+  position: absolute;
+  left: 0%;
+}
+.selectedTopic .down-mark,
+.subTopic .down-mark {
+  /* jp */
+  position: absolute;
+  left: 5%;
+  top: 32%;
+}
+.coll-panel .down-mark {
+  position: relative;
+  left: 0%;
+}
+.coll-panel .coll-panel-btn {
+  margin: 1% 0px !important;
+}
+
+.vital-acc-head .accordion-button:not(.collapsed)::after {
+  transform: rotate(0) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000 !important;
+}
+
+.acc-time {
+  border-bottom: 1px dotted;
+}
+
+.vital-acc-head #edit-icon {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right !important;
+  position: absolute;
+  right: 5%;
+}
+
+.vitalBtnPC {
+  width: 110px;
+  height: 30px;
+  border-radius: 30px !important;
+  border: 2px solid grey !important;
+  background-color: #fff !important;
+  color: grey !important;
+  padding: 0% 2% !important;
+  font-size: 14px !important;
+}
+
+.vitalBtnN {
+  background-color: #2d5986 !important;
+  border: 1px solid #2d5986;
+  height: 30px !important;
+  width: 110px;
+  border-radius: 30px !important;
+  padding: 0% 2% !important;
+  font-size: 14px !important;
+}
+
+.vitalsubmit {
+  padding: 40px 0px;
+}
+
+/* end css for accordion section */
+
+/* css code position radio-button */
+.pa-img {
+  width: 20px;
+}
+
+/* end  css code position radio-button */
+
+/* css for toggle check box */
+.checkbox {
+  width: 70%;
+  height: 1rem;
+  border-radius: 20px;
+  border: 2.5px solid rgb(173, 167, 166);
+  background: rgb(179, 172, 172);
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  /* box-shadow: 0px 0.5px 1px 0px rgba(50, 50, 50, 0.72); */
+}
+
+.checkbox--on {
+  flex-direction: row;
+  background: #4e9e52c1;
+  border: 2.5px solid #4e9e52c1;
+  color: #fff;
+  flex-direction: row-reverse;
+}
+
+.checkbox--on .checkbox__ball {
+  /* box-shadow: 0px 3px 4px 0px rgb(29, 80, 29); */
+  background: #1d9824;
+  margin-right: -4px;
+  border-radius: 50%;
+}
+
+.checkbox__ball {
+  background: whitesmoke;
+  box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.72);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: -4px;
+}
+
+.checkbox__text {
+  font-size: 1.8rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* end css for checkboc */
+/* end css code for vital sign Tab */
+
+/* css for physical examination Tab */
+.physical-cards {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.physical-card-img {
+  width: 35% !important;
+}
+
+.card-body {
+  padding: 0px !important;
+}
+
+.card-link {
+  font-size: 11px !important;
+  color: rgb(0, 110, 255) !important;
+  text-decoration: underline !important;
+}
+
+.physical-card-header {
+  display: flex;
+  align-items: flex-end !important;
+  justify-content: center !important;
+}
+
+.physical-exam-header {
+  display: flex;
+  align-items: center !important;
+}
+
+.assessment-col {
+  padding: 0px 8px !important;
+}
+
+.assessment-col-form {
+  border-radius: 4px !important;
+  padding: 2% !important;
+  margin: 2% 0px !important;
+  box-shadow: 0px 0px 4px 1px #c7c6c6c7;
+}
+
+.assessment-checkbox,
+.presription-checkbox {
+  border-radius: 20px;
+  border: none !important;
+  border-radius: 20px !important;
+  background: rgba(220, 218, 218, 0.866) !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+  font-size: 13px !important;
+  margin-right: 2%;
+  margin-top: 1%;
+  font-weight: 600 !important;
+  font-size: 10px !important;
+  /* box-shadow: 0px 0.5px 1px 0px rgba(50, 50, 50, 0.72); */
+}
+
+.assessment-button-section {
+  margin: 1% 0px !important;
+  padding: 2% 0px;
+}
+
+.assessment-button-section h3 {
+  font-weight: 600;
+}
+
+.assessment-buttons,
+.presription-buttons {
+  margin: 3% 0px !important;
+}
+
+.examin-btn {
+  box-shadow: 0px 0px 4px 1px grey;
+  padding: 10px !important;
+  max-height: 120px !important;
+  overflow-y: scroll !important;
+}
+
+.assessment-checkbox--on,
+.presription-checkbox--on {
+  flex-direction: row;
+  background: #8bc18d42 !important;
+  border: none !important;
+  color: #00cd0afe !important;
+}
+
+.assessment-buttons .form-control {
+  width: 90% !important;
+  padding: 0px 3% !important;
+}
+
+/* css for toggle check box */
+.checkbox-slider {
+  width: 10%;
+  height: 1rem;
+  border-radius: 20px;
+  border: 2.5px solid rgb(206, 206, 206);
+  background: rgb(206, 206, 206);
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  /* box-shadow: 0px 0.5px 1px 0px rgba(50, 50, 50, 0.72); */
+}
+
+.checkbox-slider--on {
+  flex-direction: row;
+  background: #4e9e52c1;
+  border: 2.5px solid #4e9e52c1;
+  color: #fff;
+  flex-direction: row-reverse;
+}
+
+.checkbox-slider--on .checkbox-slider__ball {
+  /* box-shadow: 0px 3px 4px 0px rgb(29, 80, 29); */
+  background: #1d9824;
+  margin-right: -4px;
+  border-radius: 50%;
+}
+
+.checkbox-slider__ball {
+  background: rgba(76, 87, 172, 0.894);
+  box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.72);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: -4px;
+}
+
+.checkbox-slider__text {
+  font-size: 1.8rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* css for toggle check box */
+.go-assessment {
+  font-weight: 700;
+}
+
+.my-navigate {
+  /* display: inline-flex; */
+  margin: 5px 7px;
+}
+
+.mytab {
+  color: #1d9824;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline;
+  padding: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* css for physical examination Tab */
+
+/* css for Prescription Tab */
+.presription-multi-form {
+  box-shadow: 0px 0px 2px 1px grey;
+  border-radius: 4px;
+}
+
+.pre-form {
+  padding: 2%;
+}
+
+.presription-form-column {
+  padding-right: 20px !important;
+}
+
+.presription-checkbox {
+  padding: 3px 10px !important;
+}
+
+/* css for toggle check box */
+.presription-slider {
+  width: 30%;
+  height: 1rem;
+  border-radius: 20px;
+  border: 2.5px solid rgb(206, 206, 206);
+  background: rgb(206, 206, 206);
+  color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  /* box-shadow: 0px 0.5px 1px 0px rgba(50, 50, 50, 0.72); */
+}
+
+.presription-slider--on {
+  flex-direction: row;
+  background: #4e9e52c1;
+  border: 2.5px solid #4e9e52c1;
+  color: #fff;
+  flex-direction: row-reverse;
+}
+
+.presription-slider--on .presription-slider__ball {
+  /* box-shadow: 0px 3px 4px 0px rgb(29, 80, 29); */
+  background: #1d9824;
+  margin-right: -4px !important;
+  border-radius: 50%;
+}
+
+.presription-slider__ball {
+  background: rgba(76, 87, 172, 0.894);
+  box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.72);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: -4px;
+}
+
+.presription-slider__text {
+  font-size: 1.8rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.presription-slider-col {
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-end !important;
+}
+
+.presription-slider-div {
+  width: 100% !important;
+  display: inline-flex;
+}
+
+.presription-input {
+  border: none !important;
+  border-radius: 0px !important;
+  border-bottom: 1px solid grey !important;
+}
+
+.delete-icon-div,
+.add-icon-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1% 3%;
+}
+
+.add-icon {
+  font-size: 20px !important;
+  border-radius: 50% !important;
+  padding: 1% 2% !important;
+  background-color: rgba(255, 255, 255, 0.866);
+}
+
+/* .review-area-div {
+    display: flex;
+    align-items: center;
+} */
+
+.review-area {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.print-btn {
+  background-color: #232f8fe4 !important;
+  color: white !important;
+  width: 150px;
+  border-radius: 20px !important;
+}
+
+.pre-btn-section {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.prescrib-cancel-btn,
+.prescrib-save-btn {
+  border-radius: 20px !important;
+  margin: 0px 10px !important;
+  width: 80px !important;
+}
+
+.prescrib-save-btn {
+  background-color: #232f8fe4 !important;
+  color: white !important;
+}
+
+.pre-table-body {
+  background-color: white !important;
+}
+
+.pre-table > tbody,
+.pre-table > tbody {
+  border-color: white !important;
+}
+.presc-modal-table > :not(:first-child) {
+  border-top: 1px solid currentColor !important;
+}
+.drug-name {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+/* css for Prescription Tab */
+
+/* css for patient history */
+.commun-disease-div,
+.noncommun-disease-div {
+  margin: 0px 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 2px rgba(217, 217, 217, 0.772);
+  min-height: calc(20.5em + 0.75rem + 2px) !important;
+  font-size: 13px !important;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.medical-header {
+  font-size: 13px !important;
+  display: inline-flex;
+  font-weight: 800;
+}
+
+.medical-header img {
+  width: 10% !important;
+}
+.commun-disease-div {
+  border-top: 6px solid rgb(9, 138, 237);
+}
+.noncommun-disease-div {
+  border-top: 6px solid rgb(9, 100, 237);
+}
+/* css for patient history */
+/* Modal box */
+.vital-modal-div.fade.modal.show {
+  background-color: rgba(192, 189, 189, 0.383) !important;
+}
+.vital-modal-div .modal-dialog {
+  position: relative;
+  top: 1% !important;
+  max-width: 70%;
+  border-radius: none !important;
+  margin: 0 auto !important;
+}
+.vital-modal-div {
+  padding: 2% !important;
+}
+.pa-complaint {
+  height: 80px !important;
+}
+/* Modal box */
+/* check box */
+.assessment-buttons [type="checkbox"]:checked,
+.assessment-buttons [type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.assessment-buttons .checkbox-tools:checked + label {
+  background-color: rgba(207, 228, 207, 0.833) !important;
+  color: rgb(0, 163, 0) !important;
+  font-weight: 700 !important;
+}
+.assessment-buttons .checkbox-tools:checked + label,
+.assessment-buttons .checkbox-tools:not(:checked) + label {
+  position: relative;
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+.assessment-buttons .checkbox-tools:not(:checked) + label {
+  background-color: rgba(235, 235, 235, 0.846);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.472);
+}
+.assessment-buttons .checkbox-tools:checked + label {
+  background-color: transparent;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.assessment-buttons .checkbox-tools:not(:checked) + label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.assessment-buttons .checkbox-tools:checked + label::before,
+.assessment-buttons .checkbox-tools:not(:checked) + label::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-image: linear-gradient(298deg, var(--red), var(--yellow));
+  z-index: -1;
+}
+.assessment-buttons .checkbox-tools:checked + label .uil,
+.assessment-buttons .checkbox-tools:not(:checked) + label .uil {
+  font-size: 24px;
+  line-height: 24px;
+  display: block;
+  padding-bottom: 10px;
+}
+.allergy-information-div > div {
+  padding: 0% 2% !important;
+}
+.close-btn-style {
+  float: right;
+  cursor: pointer;
+}
+/* Modal Image */
+.pat-data {
+  height: 10vh !important;
+  margin: 10% auto !important;
+}
+.pat-message {
+  min-height: 300px;
+}
+/* Modal Image */
+/* chief modal */
+.prev-icon {
+  margin: 0 10px 0 0;
+}
+.doc-name1 {
+  font-weight: normal !important;
+  margin: 0 0 0 10%;
+}
+.modal-accordian .accordion-button:not(.collapsed) .down-mark {
+  color: rgb(0, 0, 0) !important;
+  transform: rotate(180deg);
+}
+.accordion-button:not(.collapsed) .down-mark {
+  color: rgb(0, 0, 0) !important;
+  transform: rotate(180deg);
+}
+.dur-head {
+  border-bottom: 1px solid #eee !important;
+}
+.dur-date {
+  margin: 0 0 0 -2%;
+  font-size: 16px;
+}
+/* dhief modal */
+.vital-heads,
+.physical-head {
+  font-weight: bold;
+  font-size: 18px;
+}
+.psy-head {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 1%;
+}
+.back-btn {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.scroll-to-top {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  position: fixed;
+  bottom: 7rem;
+  right: 2rem;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+}
+.up-arrow {
+  font-size: 25px;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 0px 5% !important;
+  font-weight: 900 !important;
+}
+.vital-acc-head span {
+  font-weight: 900 !important;
+}
+
+/* final diagnosis */
+.final-diagnosis-div {
+  display: flex;
+  justify-content: center;
+}
+.final-dagnosis {
+  border-radius: 20px !important;
+  padding: 0px 5% !important;
+  border-color: #707070 !important;
+}
+.final-dagnosis:focus {
+  outline: none !important;
+  border-color: #707070 !important;
+}
+.refers {
+  display: inline-flex !important;
+  margin: 2% 0 !important;
+  width: 100%;
+  align-items: flex-end;
+}
+.assessment-buttons h1 {
+  font-size: 1rem !important;
+}
+.asignHospital {
+  margin: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.referHospital {
+  width: 100%;
+  padding: 0px 3% !important;
+}
+.next-visit-inp {
+  width: 15% !important;
+  height: 20px !important;
+
+  text-align: center;
+}
+.asignHospital .form-control {
+  margin: 0px 2% !important;
+}
+.death-date .form-control,
+.note-input .form-control {
+  padding: 10px !important;
+}
+/* final diagnosis */
+
+/* css for modal buttons */
+.modal-header h3,
+.sub-modal-header h3 {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+.sub-modal-header {
+  font-size: 14px;
+}
+.physical-modal-buttons {
+  border-radius: 20px !important;
+  background-color: rgba(225, 237, 225, 0.833) !important;
+  color: rgb(24, 186, 24) !important;
+  font-weight: 700 !important;
+  border-color: rgba(225, 237, 225, 0.833) !important;
+  font-size: 13px !important;
+  margin: 2px !important;
+}
+.phymodal-acc-body {
+  padding: 2% 0px !important;
+}
+.phymodal-acc-body .accordion-body-section {
+  padding: 0px !important;
+}
+/* css for modal buttons */
+
+/* css for all save btn */
+.onsave-btn {
+  border-radius: 20px !important;
+  background-color: #232f8fe4 !important;
+  height: 30px !important;
+  padding: 0px 10px !important;
+  margin: 0px 5px !important;
+  border-color: #232f8fe4 !important;
+}
+/* css for all save btn */
+
+/* css for radio button */
+.radio-tools {
+  display: none;
+}
+/* css for radio button */
+.display-discharge {
+  margin: 0 0 0 4% !important;
+}
+.dis-data {
+  margin: 5% 0;
+}
+.final-div {
+  width: 60% !important;
+}
+.view-details-history {
+  border-left: 2px dotted #eee;
+}
+.visit-textarea {
+  margin: 2% 8% !important;
+}
+
+.visit-button {
+  text-align: center !important;
+  margin: 18% 0 0 0 !important;
+}
+
+.multiSelectContainer input {
+  margin-top: 0px !important;
+}
+
+/* for general physical page */
+/* .assessment-buttons .form-select {
+    width: 90% !important;
+    padding: 0px 3% !important;
+}
+.assessment-radio-form {
+    border-radius: 4px !important;
+    padding: 2% !important;
+    min-height: 200px;
+}
+.assessment-radio-section {
+    margin-top: 3% !important;
+}
+.assessment-buttons-controls {
+    width: 50%;
+}
+.status-button-text,.status-physical-text,.status-sensation-text  {
+    position: absolute;
+    color: black;
+    font-size: 14px !important;
+}
+.status-button-text {
+    left: 13%;
+}
+.status-physical-text {
+    left: 35%;
+}
+.status-sensation-text {
+    left: 20%;
+}
+.pro-control{
+    margin: 3% 0 !important;
+    width: 200px;
+}
+.phy-general{
+    margin: 4% 0 !important;
+}
+.phy-general1,.phy-general2,.phy-general3 {
+    width: 200px;
+}
+.phy-general1 {
+    margin: 7% 0 !important;
+}
+.phy-general4 {
+    margin-top: 12% !important;
+} */
+.item_display {
+  padding: 1% 2%;
+  border-bottom: 1px solid #ccc;
+}
+.item_display_final {
+  padding: 0% 10%;
+}
+/* for general physical page */
+
+.total-physical-process {
+  background-color: #e6f3ff;
+  padding: 1% 2%;
+  color: #000 !important;
+  margin: 0 0 5% 0 !important;
+  font-size: 14px;
+  width: 46%;
+}
+
+.physical-accordion {
+  box-shadow: 0px 0px 2px 2px rgb(216 216 216);
+  margin: 2% 0;
+}
+
+.physical-roles-head .accordion-button::after,
+.general-roles-head .accordion-button::after {
+  background-image: url("../../../../public/img/super/down.png") !important;
+  background-size: 13px !important;
+  position: relative;
+  margin-left: 20px;
+  width: 20px;
+  height: 8px !important;
+  margin-top: 2px !important;
+}
+.physical-roles-head .accordion-button:not(.collapsed)::after,
+.general-roles-head .physical-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+.physical-roles-head .accordion-button:focus,
+.general-roles-head .accordion-button:focus {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* .assessment-head-section { remove
+    padding: 0 2% !important;
+} */
+
+.physical-staff {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.physical-roles-body {
+  padding: 1% 2%;
+}
+
+.assessment-button-section1 h3,
+.gastro-assessment-button h3 {
+  font-weight: 600;
+}
+
+.acc-sub-title {
+  font-size: 16px;
+}
+
+.new-assessment-body {
+  margin: 5px 0px !important;
+  display: flex;
+  padding-right: 20px;
+  /* justify-content: space-between; */
+}
+
+.new-assessment-buttons [type="checkbox"]:checked,
+.new-assessment-buttons [type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.new-assessment-buttons .checkbox-tools:checked + label {
+  background-color: rgba(207, 228, 207, 0.833) !important;
+  color: rgb(0, 163, 0) !important;
+  font-weight: 700 !important;
+}
+
+.new-assessment-buttons .checkbox-tools:checked + label,
+.new-assessment-buttons .checkbox-tools:not(:checked) + label {
+  position: relative;
+  display: inline-block;
+  padding: 4px 13px;
+  font-size: 11px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 100ms linear;
+  margin-right: 15px;
+}
+
+.new-assessment-buttons .checkbox-tools:not(:checked) + label {
+  background-color: rgba(235, 235, 235, 0.846);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.472);
+}
+
+.new-assessment-buttons .checkbox-tools:checked + label {
+  background-color: transparent;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.new-assessment-buttons .checkbox-tools:not(:checked) + label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.new-assessment-buttons .checkbox-tools:checked + label::before,
+.new-assessment-buttons .checkbox-tools:not(:checked) + label::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-image: linear-gradient(298deg, var(--red), var(--yellow));
+  z-index: -1;
+}
+
+.new-assessment-buttons .checkbox-tools:checked + label .uil,
+.new-assessment-buttons .checkbox-tools:not(:checked) + label .uil {
+  font-size: 24px;
+  line-height: 24px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.phy-general1 {
+  margin: 1% 0 0 0;
+}
+.assessment-component-section {
+  padding: 10px 0 0 0;
+}
+.component-button-section {
+  padding: 1% 0 3% 0;
+}
+.assessment-button-section1,
+.gastro-assessment-button {
+  margin: 1% 0 !important;
+  /* display: flex;
+    justify-content: space-between; */
+}
+.assessment-button-section1 > div,
+.gastro-assessment-button > div,
+.assessments-button-section > div {
+  padding: 0 5px 0 0 !important;
+}
+.assessment-button-section1 .form-label {
+  min-height: 45px;
+  display: flex;
+  align-items: flex-end;
+}
+.sysPsyHead {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.psySysImage {
+  width: 30px;
+  margin: 0 1% 0 0;
+}
+
+.toolText {
+  margin: 2% 0 0 0;
+}
+
+.assessment-form-button-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2% 0;
+}
+
+.assessment-table-section {
+  margin: 3% 0 0 0 !important;
+}
+
+.physubtitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table-drop-down {
+  border: none !important;
+  border-bottom: 1px solid #000 !important;
+  border-radius: 0 !important;
+}
+
+.physical-limb-table {
+  margin: 1% 0;
+}
+
+.assessment-button-pro-section {
+  display: flex;
+  align-items: center;
+}
+
+.multiselect-container li input {
+  max-width: 30px !important;
+}
+
+/* previous investigation */
+.previous-data-details {
+  margin: 2% 0 !important;
+}
+
+.view-more-details,
+.view-less-details {
+  color: #000;
+  cursor: pointer;
+}
+
+.view-more-details,
+.backList {
+  font-size: 14px;
+}
+
+.view-more-details {
+  padding: 0 10%;
+}
+
+.view-less-details {
+  padding: 0 2% 0 0;
+  font-size: 25px;
+}
+
+.prev-investigation-date {
+  font-weight: 900;
+}
+
+.backList {
+  margin: 2% 0 0 0;
+  display: flex;
+  align-items: center;
+}
+.service-tab-for-prev-report {
+  margin: 2% 0px;
+  box-shadow: 0px 0px 5px 2px rgb(216 216 216);
+}
+#content0,
+#content12,
+#content13,
+#content14,
+#content15,
+#content16,
+#content17,
+#contentpre {
+  display: none;
+}
+/* previous investigation */

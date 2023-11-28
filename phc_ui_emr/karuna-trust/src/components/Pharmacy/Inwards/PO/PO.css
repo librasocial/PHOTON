@@ -1,0 +1,44 @@
+.indent-batch-modal .modal-dialog {
+  position: relative;
+  max-width: 60% !important;
+  border-radius: none !important;
+  transform: translate(0, 50px) !important;
+}
+.indent-batch-modal.fade.modal.show {
+  background-color: rgba(134, 134, 134, 0.535) !important;
+  padding: 0px !important;
+}
+.batch-supply-batch th {
+  font-weight: 700 !important;
+  background-color: rgba(45, 89, 134, 0.1) !important;
+  min-width: 150px !important;
+}
+.batch-details-image {
+  height: 20px !important;
+  padding: 0 0 0 5px;
+}
+.ag_indent {
+  padding: 0px 10% 3%;
+}
+.ag_po {
+  padding: 0px 2% 3%;
+}
+.inwards-img {
+  opacity: 0.5;
+  width: 7%;
+}
+.theader-1 {
+  min-width: 120px !important;
+}
+.theader-2 {
+  min-width: 150px !important;
+}
+.theader-3 {
+  min-width: 80px !important;
+}
+.theader-4 {
+  min-width: 140px !important;
+}
+.theader-5 {
+  min-width: 200px !important;
+}
