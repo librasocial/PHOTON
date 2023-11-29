@@ -1,0 +1,24 @@
+{
+	"citizenId": "citizen Id",
+	"rchId": "12345",
+	"registeredBy": "staff1",
+	"registeredByName": "staff1Name",
+	"registeredOn": "2022-07-15T10:15:49.348Z",
+	"financialYear": "2022",
+	"fatherName": "father of the child",
+	"mobileNumber": "9003456718",
+	"mobileOwner": "father", 
+	"birthCertificateNo": "3435", 
+    "childAadharNo": "6765656656556", 
+    "isCovidTestDone": "true", 
+    "isCovidResultPositive": "false", 
+    "isILIExperienced": "false", 
+    "didContactCovidPatient": "false", 
+	"dataEntryStatus": "DRAFT", 
+	"audit": {
+		"dateCreated": "2022-07-15T10:15:49.348Z",
+		"createdBy": "user",
+		"dateModified": "2022-07-15T10:15:49.348Z",
+		"modifiedBy": "string null"
+	}
+}
