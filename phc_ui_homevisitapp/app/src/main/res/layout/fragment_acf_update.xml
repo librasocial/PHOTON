@@ -1,0 +1,487 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:minWidth="800dp"
+        android:minHeight="650dp">
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_cancel"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Health  Wellness Surveillance"
+                    android:textStyle="bold"
+                    android:textColor="#646464"
+                    android:textSize="19sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="25dp"
+                    android:textStyle="bold"
+                    android:text="Individual Level"
+                    android:textColor="#646464"
+                    android:textSize="19sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:textStyle="bold"
+                    android:text="Update Lab Results"
+                    android:textColor="#1D9824"
+                    android:textSize="19sp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/header_brand"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_select_household"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_update"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw" />
+
+        <TextView
+            android:id="@+id/tv_select_household"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Update Lab Results"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_select_household"
+            app:layout_constraintStart_toEndOf="@id/iv_select_household"
+            app:layout_constraintTop_toTopOf="@id/iv_select_household" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_individual"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_individual_bg"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            app:layout_constraintStart_toStartOf="@id/iv_select_household"
+            app:layout_constraintTop_toBottomOf="@id/iv_select_household">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ecPhoto"
+                    android:layout_width="120dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_image_place_holder"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ecName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Laksmamma" />
+
+                    <TextView
+                        android:id="@+id/ecAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="35years - Female" />
+
+                    <TextView
+                        android:id="@+id/ecPhoneNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Ph : 98450 98450" />
+
+                    <TextView
+                        android:id="@+id/ecDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="DOB : 12/08/1986" />
+
+                    <TextView
+                        android:id="@+id/ecStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Status : Resident" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ecHealthId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Health ID number : 77-7146-0314-8894" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvParent"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="40dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_individual"
+            app:layout_constraintTop_toTopOf="@id/ll_individual">
+
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_visit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/visit_date"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_date"
+                        android:layout_width="101dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_visit"
+                        app:layout_constraintStart_toEndOf="@id/tv_visit"
+                        app:layout_constraintTop_toTopOf="@id/tv_visit">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/card_background">
+
+                            <TextView
+                                android:id="@+id/tv_current_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="20_05_2022" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tvCenter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Centre where sputum was sent for testing"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit"
+                        app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                    <LinearLayout
+                        android:id="@+id/llCenter"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/spinner_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvCenter"
+                        app:layout_constraintTop_toBottomOf="@id/tvCenter">
+
+                        <Spinner
+                            android:id="@+id/spinnerCenter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvLabTechnician"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Name of Lab technician"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/llCenter"
+                        app:layout_constraintTop_toBottomOf="@id/llCenter" />
+
+                    <EditText
+                        android:id="@+id/etTechnicianName"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:hint="Type"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/tvLabTechnician"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabTechnician" />
+
+
+                    <TextView
+                        android:id="@+id/tvLabSerial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="Lab serial number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/tvLabTechnician"
+                        app:layout_constraintTop_toTopOf="@id/tvLabTechnician" />
+
+
+                    <EditText
+                        android:id="@+id/etLabSerial"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edit_text_bg"
+                        android:hint="Type"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/tvLabSerial"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabTechnician" />
+
+                    <TextView
+                        android:id="@+id/tvResultSample"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Result of the  sample"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/etTechnicianName"
+                        app:layout_constraintTop_toBottomOf="@id/etTechnicianName" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llResultSample"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/alert_phc_other"
+                        app:layout_constraintStart_toStartOf="@id/tvResultSample"
+                        app:layout_constraintTop_toBottomOf="@id/tvResultSample">
+
+                        <Spinner
+                            android:id="@+id/SpinnerResultSample"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/updateImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/update_lab_report_image"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tvLabTechnician"
+                        app:layout_constraintTop_toBottomOf="@+id/llResultSample" />
+
+
+                    <ImageView
+                        android:id="@+id/frontImage"
+                        style="@style/subTitleNoBold"
+                        android:layout_width="100dp"
+                        android:layout_height="108dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_image_place_holder"
+                        android:text="@string/attach_images"
+                        app:layout_constraintStart_toEndOf="@+id/updateImage"
+                        app:layout_constraintTop_toTopOf="@+id/updateImage" />
+
+                    <ImageView
+                        android:id="@+id/secondImage"
+                        style="@style/subTitleNoBold"
+                        android:layout_width="100dp"
+                        android:layout_height="108dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/card_background"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_image_place_holder"
+                        android:text="@string/attach_images"
+                        app:layout_constraintStart_toEndOf="@+id/frontImage"
+                        app:layout_constraintTop_toTopOf="@+id/frontImage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_footer_wth_stroke"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/cvParent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="102dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="#0085FF"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

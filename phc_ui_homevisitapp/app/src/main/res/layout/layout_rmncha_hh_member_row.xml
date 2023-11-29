@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.HouseholdMappingFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/selected_half_white_two"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/root_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@color/selected_half_white_two"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:id="@+id/member_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_placeholder" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/member_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laksmamma"
+                        android:textAppearance="@style/health_id_style"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/member_age_and_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35years - Female"
+                        android:textAppearance="@style/health_id_style_grey" />
+
+                    <TextView
+                        android:id="@+id/member_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Ph : 98450 98450"
+                        android:textAppearance="@style/health_id_style_grey" />
+
+                    <TextView
+                        android:id="@+id/member_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DOB : 12/08/1986"
+                        android:textAppearance="@style/health_id_style_grey" />
+
+                    <TextView
+                        android:id="@+id/member_resident_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Status : Not Available"
+                        android:textAppearance="@style/health_id_style"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/health_id_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="start|center_vertical"
+                android:text="Health ID number : 77-7146-0314-8894"
+                android:textAppearance="@style/health_id_style" />
+
+            <TextView
+                android:id="@+id/rch_id_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/bg_rounder_corner_blue"
+                android:drawableStart="@drawable/ic_service"
+                android:drawablePadding="10dp"
+                android:gravity="start|center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="5dp"
+                android:text="BC Service : Ongoing"
+                android:textAppearance="@style/health_id_style_white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

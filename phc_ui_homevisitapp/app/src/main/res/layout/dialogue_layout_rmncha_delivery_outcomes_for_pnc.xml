@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rmncha.ec.selectspouse.SelectSpouseForECActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.ec.selectspouse.SelectSpouseForECViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/divider"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="RMNCH+A"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=">"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hh_pnc_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=">"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hh_pnc_delivery_outcomes_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textColor="#1D9824"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/close_dialogue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_close" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/alert_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/women_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include
+                            layout="@layout/layout_rmncha_hh_member_row"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/mandatory_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Fields in *asterisk is mandatory"
+                        android:textColor="@color/red"
+                        android:textStyle="italic"
+                        app:drawableStartCompat="@drawable/ic_warning" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:id="@+id/main_scrolview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="Last ANC visit"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/text_view_anc_visit_date"
+                                    android:layout_width="90dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/bg_rounder_corner_half_white"
+                                    android:gravity="left|center"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:singleLine="true"
+                                    android:text="2022/05/20"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="LMP date"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/text_view_lmp_date"
+                                    android:layout_width="90dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/bg_rounder_corner_half_white"
+                                    android:gravity="left|center"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:singleLine="true"
+                                    android:text="20/05/2022"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="EDD date"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/text_view_edd_date"
+                                    android:layout_width="90dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/bg_rounder_corner_half_white"
+                                    android:gravity="left|center"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:singleLine="true"
+                                    android:text="20/05/2022"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="Date of delivery"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/text_view_delivery_date"
+                                    android:layout_width="130dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/alert_phc_other"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:hint="YYYY/MM/DD"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14sp"
+                                    app:drawableEndCompat="@drawable/ic_calendar_black" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="Financial year"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/text_view_financial_year"
+                                    android:layout_width="80dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/bg_rounder_corner_half_white"
+                                    android:gravity="left|center"
+                                    android:paddingStart="5dp"
+                                    android:singleLine="true"
+                                    android:text="2022-23"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="20dp"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="Delivery time"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/text_view_delivery_time"
+                                    android:layout_width="110dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/alert_phc_other"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:hint="hh:mm"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textSize="14sp"
+                                    app:drawableEndCompat="@drawable/ic_calendar_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Place of delivery"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_place_of_delivery"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_expected_facility_for_delivery"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Location of delivery"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_location_of_delivery"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Delivery conducted by"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_delivery_conducted_by"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_deliver_conducted_by"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Type of delivery"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_type_of_delivery"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_type_of_delivery"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Outcomes of delivery"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_outcomes_of_delivery"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_count_one_to_six"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Live birth"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_live_birth"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_count_zero_to_six"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Still birth"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_still_birth"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_count_zero_to_six"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Delivery complication"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="20dp"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_delivery_complications"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_delivery_complications"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Date of discharge"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/text_view_date_of_discharge"
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:hint="YYYY/MM/DD"
+                                        android:orientation="horizontal"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:textSize="14sp"
+                                        app:drawableEndCompat="@drawable/ic_calendar_black" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Discharge time"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/text_view_discharge_time"
+                                        android:layout_width="110dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:drawablePadding="10dp"
+                                        android:gravity="center_vertical"
+                                        android:hint="hh:mm"
+                                        android:orientation="horizontal"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:textSize="14sp"
+                                        app:drawableEndCompat="@drawable/ic_calendar_black" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableStart="@drawable/ic_covid"
+                                        android:drawablePadding="5dp"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Is Covid test done?"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_covid_test_taken"
+                                            android:layout_width="140dp"
+                                            android:layout_height="30dp"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/layout_covid_result"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="25dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Covid test results"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="140dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="8dp"
+                                        android:background="@drawable/alert_phc_other"
+                                        android:orientation="horizontal">
+
+                                        <Spinner
+                                            android:id="@+id/spinner_covid_test_result"
+                                            android:layout_width="140dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="0dp"
+                                            android:layout_weight="1"
+                                            android:entries="@array/array_positive_negative"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:lines="3"
+                                    android:text="Is pregnant woman experiencing ILI (Influenza Like Illness)"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="140dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/alert_phc_other"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_having_ili"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:entries="@array/array_positive_negative"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="165dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:gravity="center_vertical"
+                                    android:lines="4"
+                                    android:text="Did Pregnant woman have any contact with Covid-19 positive patients in the last 14 days?"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:text="*"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="140dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/alert_phc_other"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_covid_contact"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:entries="@array/array_positive_negative"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="330dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:hint="(Are there symptoms like Cough, Fever, Cold, Sore throat, Difficulty in Breathing?)"
+                                android:lines="2"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/footer_submit"
+            android:background="@color/alert_divider" />
+
+        <RelativeLayout
+            android:id="@+id/footer_submit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/button_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_submit_button"
+                android:contentDescription="@string/submit" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="meeting"
+            type="com.ssf.homevisit.models.Meeting" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".005" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineReSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".72" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".85" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="24dp"
+            monthFromDate="@{meeting.schedule.eventDate}"
+            android:textColor="#893F2E"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_small_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineMonth"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{meeting.schedule.eventDate}"
+            android:textColor="#893F2E"
+            app:layout_constraintEnd_toStartOf="@id/tvTopics"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTopics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#893F2E"
+            app:layout_constraintEnd_toStartOf="@id/tvReSchedule"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineTopics"
+            app:layout_constraintTop_toTopOf="parent"
+            textArray="@{meeting.eventTopics}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:text="Re-Schedule"
+            android:textColor="@color/button_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_redo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineReSchedule"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:drawablePadding="4dp"
+            android:layout_marginHorizontal="24dp"
+            android:text="Cancel"
+            android:textColor="@color/button_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_cross"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/alert_divider"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

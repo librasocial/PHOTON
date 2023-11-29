@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.HouseholdMappingFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.anc.selectwomen.SelectWomenForANCViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/divider"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="RMNCH+A"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=">"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hh_anc_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=">"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/select_female_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hh_select_female_for_anc_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textColor="#1D9824"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/logo_tree"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="+"
+                        android:textAppearance="@style/rmncha_hh_sub_header_style"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="@string/ssf_logo"
+                        android:padding="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo_two" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/alert_divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginRight="15dp"
+                android:drawableLeft="@drawable/ic_home"
+                android:drawablePadding="10dp"
+                android:focusableInTouchMode="true"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="@string/hh_select_female_for_anc_header_message"
+                android:textAppearance="@style/what_are_yo"
+                android:textStyle="bold" />
+
+            <GridView
+                android:id="@+id/select_female_member_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:numColumns="4"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/backButton"
+            android:background="@color/alert_divider" />
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/back"
+            android:textAppearance="@style/footer_back_button_style"
+            app:drawableLeftCompat="@drawable/ic_back_button" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/aganwadi___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/healthsc_phc___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/primary_school___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/high_school___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/college___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+    </LinearLayout>
+</merge>

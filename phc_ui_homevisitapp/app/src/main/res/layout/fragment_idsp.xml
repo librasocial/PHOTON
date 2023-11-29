@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/footer_logo_first"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="27dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/footer_logo_first"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_plus" />
+
+            <ImageView
+                android:id="@+id/footer_logo_two"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toStartOf="@id/plus"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_tree" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_amp_wellness_surveillance"
+                    android:textColor="#646464"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/surveyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Individual Level"
+                    android:textColor="#646464"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Fill S-Form for IDSP"
+                    android:textColor="#1D9824"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_select_household"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_idsd_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw" />
+
+        <TextView
+            android:id="@+id/tv_select_household"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_select_household"
+            app:layout_constraintStart_toEndOf="@id/iv_select_household"
+            app:layout_constraintTop_toTopOf="@id/iv_select_household"
+            android:text="Select Symptoms for IDSP S-Form" />
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_individual"
+            android:layout_width="320dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_individual_bg"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_select_household">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ecPhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_image_place_holder"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ecName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Laksmamma" />
+
+                    <TextView
+                        android:id="@+id/ecAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="35years - Female" />
+
+                    <TextView
+                        android:id="@+id/ecPhoneNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Ph : 98450 98450" />
+
+                    <TextView
+                        android:id="@+id/ecDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="DOB : 12/08/1986" />
+
+                    <TextView
+                        android:id="@+id/ecStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Status : Resident" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ecHealthId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Health ID number : 77-7146-0314-8894" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:text="Today's Date"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/ll_individual"
+            app:layout_constraintTop_toTopOf="@id/ll_individual" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_date"
+            android:layout_width="101dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_visit"
+            app:layout_constraintStart_toEndOf="@id/tv_visit"
+            app:layout_constraintTop_toTopOf="@id/tv_visit">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background">
+
+                <TextView
+                    android:id="@+id/tv_current_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="20_05_2022" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/llDateOfDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/cv_date"
+            app:layout_constraintTop_toTopOf="@id/cv_date">
+
+
+            <TextView
+                android:id="@+id/tvDateOfDeath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Date of death*"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_calendar"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/calendar_bg"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="@id/tvDateOfDeath"
+                app:layout_constraintTop_toBottomOf="@id/tvDateOfDeath">
+
+
+                <TextView
+                    android:id="@+id/tv_calendar"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="4dp"
+                    android:text="DD/MM/YYYY"
+                    android:textColor="#646464"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/ic_calendar" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSelectSymptom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/tv_visit"
+            app:layout_constraintTop_toBottomOf="@id/tv_visit">
+
+
+            <TextView
+                android:id="@+id/tvVaccineType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="Select symptom(s)*"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_visit"
+                app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+            <LinearLayout
+                android:id="@+id/spinnerVaccineType"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/alert_phc_other"
+                app:layout_constraintStart_toStartOf="@id/tv_visit"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/specifySuspectedType">
+
+                <com.ssf.homevisit.healthWellnessSurveillance.individual.multiselectionspinner.MultiSpinner
+                    android:id="@+id/spinnerMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvReportDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Click to Report Death"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/llSelectSymptom"
+            app:layout_constraintEnd_toStartOf="@id/separator_view"
+            app:layout_constraintTop_toTopOf="@id/llSelectSymptom" />
+
+        <View
+            android:id="@+id/separator_view"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:background="#646464"
+            app:layout_constraintBottom_toBottomOf="@id/tvReportDeath"
+            app:layout_constraintEnd_toStartOf="@id/checkboxReferral"
+            app:layout_constraintTop_toTopOf="@id/tvReportDeath" />
+
+        <CheckBox
+            android:id="@+id/checkboxReferral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Referral-up to PHC"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llSelectSymptom" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@id/footer_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/llSelectSymptom"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/llSelectSymptom">
+
+            <LinearLayout
+                android:id="@+id/llParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FAFAFA"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/btn_continue"
+                android:text="@string/cancel"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="102dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="#0085FF"
+                android:clickable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

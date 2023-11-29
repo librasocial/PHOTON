@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="specialInvitee"
+            type="com.ssf.homevisit.models.SpecialInvitee" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clListHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_constraintTop_toBottomOf="@id/txtHeading">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineInviteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".65" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSINumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txtInviteName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/edit_text_bg2"
+        android:hint="Invitee Name"
+        android:text="@={specialInvitee.name}"
+        android:maxLength="56"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:imeOptions="actionNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEmail"
+        app:layout_constraintStart_toEndOf="@id/guidelineInviteName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txtEmailId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/edit_text_bg2"
+        android:hint="E-mail ID"
+        android:maxLength="56"
+        android:text="@={specialInvitee.emailId}"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:imeOptions="actionNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelinePhone"
+        app:layout_constraintStart_toEndOf="@id/guidelineEmail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/txtPhoneNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/edit_text_bg2"
+        android:hint="Phone Number"
+        android:text="@={specialInvitee.phoneNumber}"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:imeOptions="actionDone"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtDelete"
+        app:layout_constraintStart_toEndOf="@id/guidelinePhone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/txtDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="12dp"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <View
+        android:id="@+id/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/alert_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

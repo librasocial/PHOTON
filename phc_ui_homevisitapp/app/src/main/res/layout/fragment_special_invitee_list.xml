@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:drawablePadding="12dp"
+            android:drawableTint="@color/black"
+            android:text="Add Special Invitees for VHSNC Meeting"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_send_invite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/listHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:layout_constraintTop_toBottomOf="@id/txtHeading"
+            layout="@layout/layout_special_header"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintTop_toBottomOf="@id/listHeader"
+            tools:listitem="@layout/item_special_invitee"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            android:layout_width="match_parent"
+            tools:visibility="gone"
+            android:layout_height="0dp"/>
+
+        <include
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintTop_toBottomOf="@id/listHeader"
+            layout="@layout/empty_state_special_invitees"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addNewInvitee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:backgroundTint="#E2A0A0"
+            android:text="Add Row"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:borderWidth="0dp"
+            app:elevation="2dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

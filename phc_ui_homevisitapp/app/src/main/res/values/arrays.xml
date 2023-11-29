@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="child_care_whose_mobile">
+        <item>Select</item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="child_care_birth_places">
+        <item>Select</item>
+        <item>Primary health care centre</item>
+        <item>Community health centre</item>
+        <item>Urban health centre</item>
+        <item>District hospital</item>
+        <item>Referral hospital</item>
+        <item>Medical college hospital</item>
+        <item>Other private hospital</item>
+        <item>Home</item>
+        <item>In - transit</item>
+        <item>Sub-centre</item>
+        <item>Other public facility</item>
+        <item>Accredited private hospital</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="child_care_covid_test">
+        <item>Select</item>
+        <item>Done</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="child_care_covid_test_result">
+        <item>Select</item>
+        <item>Positive</item>
+        <item>Negative</item>
+    </string-array>
+
+    <string-array name="vaccination_status">
+        <item>Select</item>
+        <item>Done</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="aefi_status">
+        <item>Nil</item>
+        <item>Serious</item>
+        <item>Non-Serious</item>
+    </string-array>
+
+    <string-array name="vaccination_status_serious">
+        <item>Hospitalization</item>
+        <item>Clustering of cases</item>
+        <item>Disability</item>
+        <item>Death</item>
+    </string-array>
+    <string-array name="vaccination_status_non_serious">
+        <item>Hospitalization</item>
+        <item>Clustering of cases</item>
+        <item>Disability</item>
+        <item>Death</item>
+    </string-array>
+    <string-array name="case_closure_reason">
+        <item>Death</item>
+        <item>Migrated out (left)</item>
+        <item>Others (specify option)</item>
+    </string-array>
+    <string-array name="probable_cause_of_death">
+        <item>Diarrhoea</item>
+        <item>High fever</item>
+        <item>Low birth weight</item>
+        <item>Measles</item>
+        <item>Pneumonia</item>
+        <item>Any others (Specify)</item>
+    </string-array>
+    <string-array name="place_of_death">
+        <item>Hospital</item>
+        <item>Home</item>
+        <item>Transit</item>
+    </string-array>
+    <string-array name="vaccine_name">
+        <item>OPV-1</item>
+        <item>Penta-1</item>
+        <item>Rota-1</item>
+        <item>PCV-1</item>
+        <item>IPV-1</item>
+    </string-array>
+    <string-array name="vaccine_not_done_reason">
+        <item>Out of Stock</item>
+        <item>Expired</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="type_of_contraception">
+        <item>Condom</item>
+        <item>OC Pills</item>
+        <item>EC Pills</item>
+    </string-array>
+</resources>

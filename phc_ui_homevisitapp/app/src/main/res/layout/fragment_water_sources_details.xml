@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="720dp"
+        android:layout_height="490dp"
+        android:minWidth="720dp"
+        android:minHeight="490dp">
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/ic_cancel"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/socio_economic_survey"
+                    android:textColor="#646464"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:textSize="15sp"
+                    android:text="@string/village_level"
+                    android:textColor="#646464"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:textSize="15sp"
+                    android:text="Enter Details of Water Sources"
+                    android:textColor="#1D9824"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/header_brand"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_water_drop"
+            android:layout_width="17dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_water_drop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw" />
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Enter Details of Water Sources"
+            android:textColor="#333333"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_water_drop"
+            app:layout_constraintStart_toEndOf="@id/iv_water_drop"
+            app:layout_constraintTop_toTopOf="@id/iv_water_drop" />
+
+        <TextView
+            android:id="@+id/tv_sub_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Select Water Sources in the Village"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_water_drop"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_water_sources"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_resources_count"
+            app:layout_constraintStart_toStartOf="@+id/iv_water_drop"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_heading"
+            tools:itemCount="9"
+            tools:listitem="@layout/water_sources_single_item" />
+
+        <TextView
+            android:id="@+id/tv_resources_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Provide the Number of Water Sources in the Village"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/rv_water_sources"
+            app:layout_constraintTop_toBottomOf="@id/rv_water_sources" />
+
+        <ScrollView
+            android:id="@+id/sv_resource_count"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toTopOf="@id/cv_footer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_resources_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_resources_count">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_resources_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="10"
+                tools:listitem="@layout/fragment_water_sources_count_single_item" />
+        </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_footer"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_footer_wth_stroke">
+
+                <LinearLayout
+                    android:id="@+id/btn_save"
+                    android:layout_width="102dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_disabled"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/ic_floppy_disk_solid"
+                        android:backgroundTint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

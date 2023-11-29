@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vhndTopics"
+            type="com.ssf.homevisit.fragment.vhnd.VHNDTopics" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corner_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/path_toolbar_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfCouples"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.ELIGIBLE_COUPLE_Q1}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="Provide the total no. of Eligible Couple in the meeting"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfCouples"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNoOfCouples" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfCouples"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfCouples"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="4dp"
+        android:text="Enter Details for Eligible Couple"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_pregnant"
+        app:layout_constraintStart_toStartOf="@id/txtNoOfCouples"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfCouples" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFamilyPlanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.ELIGIBLE_COUPLE_Q2}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etFamilyPlanning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etFamilyPlanning" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFamilyPlanning"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfCouples"
+        app:layout_constraintTop_toBottomOf="@id/txtHeading" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoECs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.ELIGIBLE_COUPLE_Q3}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etECs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etECs" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etECs"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfCouples"
+        app:layout_constraintTop_toBottomOf="@id/etFamilyPlanning" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtECsReceivedCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.ELIGIBLE_COUPLE_Q4}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etECsReceivedCC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etECsReceivedCC" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etECsReceivedCC"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfCouples"
+        app:layout_constraintTop_toBottomOf="@id/etECs" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtIUCD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.ELIGIBLE_COUPLE_Q5}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etIUCD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etIUCD" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etIUCD"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionDone"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfCouples"
+        app:layout_constraintTop_toBottomOf="@id/etECsReceivedCC" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/alert_divider"
+        app:layout_constraintTop_toBottomOf="@id/etIUCD" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_bar_btn"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

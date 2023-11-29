@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".healthWellnessSurveillance.ui.village.mapping.fragment.PerformLarvaSurveillanceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/footer_logo_first"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="27dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/footer_logo_first"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_plus" />
+
+            <ImageView
+                android:id="@+id/footer_logo_two"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toStartOf="@id/plus"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_tree" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_amp_wellness_surveillance"
+                    android:textColor="#646464"
+                    android:textStyle="bold"
+                    android:textSize="19sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_surveyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    tools:text="@string/village_level"
+                    android:textStyle="bold"
+                    android:textColor="#646464"
+                    android:textSize="19sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Perform Larva Surveillance"
+                    android:textStyle="bold"
+                    android:textColor="#1D9824"
+                    android:textSize="19sp" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+        <ImageView
+            android:id="@+id/templeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw"
+            tools:src="@drawable/ic_house" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/swaminarayana_temple"
+            app:layout_constraintBottom_toBottomOf="@+id/templeIcon"
+            app:layout_constraintStart_toEndOf="@+id/templeIcon"
+            app:layout_constraintTop_toTopOf="@+id/templeIcon" />
+
+        <View
+            android:id="@+id/vw"
+            app:layout_constraintStart_toEndOf="@id/titleTextView"
+            app:layout_constraintTop_toTopOf="@id/titleTextView"
+            app:layout_constraintBottom_toBottomOf="@id/titleTextView"
+            android:layout_width="2dp"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            android:background="@color/black"
+            android:layout_height="19dp"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_number_members"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:text="6"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/templeIcon"
+            app:layout_constraintStart_toEndOf="@+id/vw"
+            app:layout_constraintTop_toTopOf="@+id/templeIcon" />
+
+        <TextView
+            android:id="@+id/tv_noImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:text="Image not available"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileImage"
+            app:layout_constraintStart_toStartOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_noImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_home"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/tv_noImage"
+            app:layout_constraintEnd_toEndOf="@id/profileImage"
+            app:layout_constraintStart_toStartOf="@id/profileImage"
+            app:layout_constraintTop_toTopOf="@id/profileImage" />
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_card_background"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@+id/templeIcon"
+            app:layout_constraintTop_toBottomOf="@+id/templeIcon" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="@id/profileImage"
+            app:layout_constraintStart_toStartOf="@id/profileImage">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/card_bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_card_bottom"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_image_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="amanndcndcme.,cm., .., . .d,mcndmcdc,.d c," />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/dateTitle"
+            style="@style/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/visit_date"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/profileImage"
+            app:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/dateTitleValueLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/text_view_rect_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/dateTitle"
+            app:layout_constraintStart_toEndOf="@+id/dateTitle"
+            app:layout_constraintTop_toTopOf="@+id/dateTitle">
+
+            <TextView
+                android:id="@+id/dateTitleValue"
+                style="@style/subTitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_20_05_2022" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/filterCategory"
+            style="@style/subHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_a_breeding_spot"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/profileImage"
+            app:layout_constraintTop_toBottomOf="@+id/dateTitleValueLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/breedingSpotRv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/filterCategory"
+            app:layout_constraintTop_toBottomOf="@+id/filterCategory"
+            app:spanCount="2"
+            tools:listitem="@layout/surveillance_rv_item" />
+
+        <ImageView
+            android:id="@+id/iv_larva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_larva"
+            app:layout_constraintStart_toStartOf="@+id/profileImage"
+            app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            style="@style/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Fill Details about Larva Surveillance"
+            app:layout_constraintBottom_toBottomOf="@id/iv_larva"
+            app:layout_constraintStart_toEndOf="@id/iv_larva"
+            app:layout_constraintTop_toTopOf="@+id/iv_larva" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/breedingLinear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_linear"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:weightSum="7"
+            app:layout_constraintEnd_toEndOf="@+id/breedingSpotRv"
+            app:layout_constraintStart_toStartOf="@+id/profileImage"
+            app:layout_constraintTop_toBottomOf="@+id/subTitleTextView">
+
+            <TextView
+                style="@style/subTitleNoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="@string/breeding_spots"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+            <TextView
+                style="@style/subTitleNoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Breeding sites*"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+            <TextView
+                style="@style/subTitleNoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Any Larva Found?*"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+            <TextView
+                android:id="@+id/solutionProvided"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:textColor="#828282"
+                android:text="Solution Provided*"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+
+            <TextView
+                style="@style/subTitleNoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="@string/attach_images"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+            <TextView
+                style="@style/subTitleNoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="@string/next_inspection_date"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+            <TextView
+                style="@style/subTitleNoBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="@string/delete"
+                app:layout_constraintStart_toStartOf="@+id/profileImage"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/breedingSpotRvRaw"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/footer_brand"
+            app:layout_constraintEnd_toEndOf="@+id/breedingLinear"
+            app:layout_constraintStart_toStartOf="@+id/breedingLinear"
+            app:layout_constraintTop_toBottomOf="@+id/breedingLinear"
+            tools:listitem="@layout/mapping_raw" />
+
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_footer_wth_stroke"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <ImageView
+                android:id="@+id/footer_logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/footer_tv"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/footer_tv"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/powered_by_"
+                android:textAppearance="@style/powered_by__"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@id/btnContinue"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_save_button"
+                android:clickable="false"
+                android:enabled="false"
+                android:visibility="visible" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grp_footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:constraint_referenced_ids="footer_tv,footer_logo">
+
+            </androidx.constraintlayout.widget.Group>
+
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

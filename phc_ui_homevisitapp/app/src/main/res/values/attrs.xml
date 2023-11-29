@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MarkedPlaceOptions">
+        <attr name="assetType" format="string" localization="suggested"/>
+        <attr name="assetCount" format="integer"/>
+        <attr name="color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SESQuestionResponseTextView">
+        <attr name="question_text" format="string"/>
+        <attr name="answer_background" format="string"/>
+        <attr name="answer_type" format="enum">
+            <enum name="edit_text" value="0"/>
+            <enum name="text_view" value="1"/>
+            <enum name="dropdown" value="2"/>
+            <enum name="radio" value="3"/>
+            <enum name="checkbox" value="4"/>
+        </attr>
+        <attr name="disabled" format="boolean"/>
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LandingPageBtn">
+        <attr name="BtnImg" format="reference"/>
+        <attr name="BtnBgColor" format="reference"/>
+        <attr name="BtnTxt" format="string"/>
+        <attr name="android:ems" />
+    </declare-styleable>
+
+    <declare-styleable name="RMNCHAButton">
+        <attr name="ButtonImg" format="reference"/>
+        <attr name="ButtonBgColor" format="reference"/>
+        <attr name="ButtonTxt" format="string"/>
+        <attr name="android:ems" />
+    </declare-styleable>
+    <declare-styleable name="VHNDTopicButton">
+        <attr name="BtnIcon" format="reference"/>
+        <attr name="BtnLabel" format="string"/>
+        <attr name="BtnChecked" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/footer_logo_first"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="27dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/footer_logo_first"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_plus" />
+
+            <ImageView
+                android:id="@+id/footer_logo_two"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toStartOf="@id/plus"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_tree" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_amp_wellness_surveillance"
+                    android:textColor="#646464"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/surveyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Individual Level"
+                    android:textColor="#646464"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Select Surveillance Type for Blood Smear Testing "
+                    android:textColor="#1D9824"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_select_household"
+            android:layout_width="18dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_blood_smear_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw" />
+
+        <TextView
+            android:id="@+id/tv_select_household"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Select Surveillance Type for Blood Smear Testing "
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_select_household"
+            app:layout_constraintStart_toEndOf="@id/iv_select_household"
+            app:layout_constraintTop_toTopOf="@id/iv_select_household" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_individual"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_individual_bg"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_select_household">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ecPhoto"
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_image_place_holder"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ecName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Laksmamma" />
+
+                    <TextView
+                        android:id="@+id/ecAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="35years - Female" />
+
+                    <TextView
+                        android:id="@+id/ecPhoneNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Ph : 98450 98450" />
+
+                    <TextView
+                        android:id="@+id/ecDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="DOB : 12/08/1986" />
+
+                    <TextView
+                        android:id="@+id/ecStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Status : Resident" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ecHealthId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Health ID number : 77-7146-0314-8894" />
+
+        </LinearLayout>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMalaria"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:text="Malaria"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="#E2A0A0"
+            app:chipStrokeWidth="2dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/ll_individual"
+            app:layout_constraintTop_toTopOf="@id/ll_individual" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFilaria"
+            android:layout_width="80dp"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:text="Filaria"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:focusable="true"
+            android:visibility="visible"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="#E2A0A0"
+            app:chipStrokeWidth="2dp"
+            app:layout_constraintStart_toEndOf="@id/chipMalaria"
+            app:layout_constraintTop_toTopOf="@id/ll_individual" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_malaria"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/footer_brand"
+            app:layout_constraintStart_toStartOf="@id/chipMalaria"
+            app:layout_constraintTop_toBottomOf="@id/chipMalaria">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F3F3F3"
+                    android:paddingBottom="10dp">
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/grp_malaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="tv_visit,cv_date,ll_1,ll_2,ll_3,ll_5,ll_6,checkboxReferralMalaria" />
+
+
+                    <TextView
+                        android:id="@+id/tv_visit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/visit_date"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_date"
+                        android:layout_width="101dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_visit"
+                        app:layout_constraintStart_toEndOf="@id/tv_visit"
+                        app:layout_constraintTop_toTopOf="@id/tv_visit">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/card_background">
+
+                            <TextView
+                                android:id="@+id/tv_current_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="20_05_2022" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/cv_date"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/tvBloodSmear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Blood smear slide number*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                        <EditText
+                            android:id="@+id/et_BloodSmear"
+                            android:layout_width="205dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="@string/type"
+                            android:maxLength="3"
+                            android:inputType="number"
+                            android:paddingLeft="8dp"
+                            android:textColor="#646464"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="@id/tv_resources_name"
+                            app:layout_constraintTop_toBottomOf="@id/tv_resources_name" />
+
+
+                    </LinearLayout>
+
+
+                    <CheckBox
+                        android:id="@+id/checkboxReferralMalaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Referral-up to PHC"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/ll_1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit"
+                        app:layout_constraintTop_toBottomOf="@id/ll_1">
+
+
+                        <TextView
+                            android:id="@+id/tvBloodCollected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Has the blood sample been\ncollected for testing?*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                        <LinearLayout
+                            android:id="@+id/llBloodCollected"
+                            android:layout_width="180dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/alert_phc_other"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/specifySuspectedType">
+
+                            <Spinner
+                                android:id="@+id/spinnerBloodCollectedMalaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit"
+                        app:layout_constraintTop_toBottomOf="@id/ll_2">
+
+
+                        <TextView
+                            android:id="@+id/tvTabletCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Number of 4AQ tablets  \nprovided*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                        <LinearLayout
+                            android:id="@+id/llTabletCount"
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/alert_phc_other"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/specifySuspectedType">
+
+                            <Spinner
+                                android:id="@+id/spinnerTabletCountMalaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/ll_2"
+                        app:layout_constraintTop_toTopOf="@id/ll_2">
+
+
+                        <TextView
+                            android:id="@+id/tvDateOfSampleCollected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Date of sample\ncollected"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvDateSampleCollected"
+                            android:layout_width="121dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background">
+
+                                <TextView
+                                    android:id="@+id/tv_current_date_sample"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:text="20/05/2022" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintStart_toEndOf="@id/ll_5"
+                        app:layout_constraintTop_toTopOf="@id/ll_5">
+
+
+                        <TextView
+                            android:id="@+id/tvIllnessCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="How long has it been since \nthe onset of fever?*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                        <LinearLayout
+                            android:id="@+id/llIllnessCount"
+                            android:layout_width="180dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/alert_phc_other"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/specifySuspectedType">
+
+                            <Spinner
+                                android:id="@+id/spinnerIllnessDuration"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBloodSmear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/ic_larva"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ll_3" />
+
+                    <TextView
+                        android:id="@+id/tvUpdateSample"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Update Sample Details"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/ivBloodSmear"
+                        app:layout_constraintStart_toEndOf="@id/ivBloodSmear"
+                        app:layout_constraintTop_toTopOf="@id/ivBloodSmear" />
+
+                    <TextView
+                        android:id="@+id/tvSubmissionDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Date of sample\nsubmitted to the lab"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/ivBloodSmear"
+                        app:layout_constraintTop_toBottomOf="@id/ivBloodSmear" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sampleSubmissionDate"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/calendar_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintStart_toStartOf="@id/ivBloodSmear"
+                        app:layout_constraintTop_toBottomOf="@id/tvSubmissionDate">
+
+
+                        <TextView
+                            android:id="@+id/tvDateOfSample"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="DD/MM/YYYY"
+                            android:textColor="#646464"
+                            android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCalendar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginStart="40dp"
+                            android:background="@drawable/ic_calendar" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvSampleDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Sample detail*"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/ll_sampleSubmissionDate"
+                        app:layout_constraintTop_toTopOf="@id/tvSubmissionDate" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llSampleDetails"
+                        android:layout_width="170dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/alert_phc_other"
+                        app:layout_constraintStart_toStartOf="@id/tvSampleDetails"
+                        app:layout_constraintTop_toBottomOf="@id/tvSampleDetails">
+
+                        <Spinner
+                            android:id="@+id/spinnerSampleDetailsMalaria"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Result of RDT (if done)"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/llSampleDetails"
+                        app:layout_constraintTop_toTopOf="@id/tvSampleDetails" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llResult"
+                        android:layout_width="180dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/alert_phc_other"
+                        app:layout_constraintStart_toStartOf="@id/tvResult"
+                        app:layout_constraintTop_toBottomOf="@id/tvSampleDetails">
+
+                        <Spinner
+                            android:id="@+id/spinnerResultMalaria"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_filaria"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/footer_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/chipFilaria"
+            app:layout_constraintTop_toBottomOf="@id/chipFilaria">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F3F3F3"
+                    android:paddingBottom="10dp">
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/grp_filaria"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="tv_visit_filaria,cv_date_filaria,ll_1_filaria,checkboxReferralFilaria,ll_2_Filaria,ll_3_filaria,ll_5_filaria,ll_6_filaria,ll_7_filaria" />
+
+
+                    <TextView
+                        android:id="@+id/tv_visit_filaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/visit_date"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_date_filaria"
+                        android:layout_width="101dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_visit_filaria"
+                        app:layout_constraintStart_toEndOf="@id/tv_visit_filaria"
+                        app:layout_constraintTop_toTopOf="@id/tv_visit_filaria">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/card_background">
+
+                            <TextView
+                                android:id="@+id/tv_current_date_filaria"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="20_05_2022" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_1_filaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/cv_date_filaria"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/tvBloodSmearFilaria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Blood smear slide number*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_BloodSmearFilaria"
+                            android:layout_width="180dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="@string/type"
+                            android:maxLength="3"
+                            android:inputType="number"
+                            android:paddingLeft="8dp"
+                            android:textColor="#646464"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+
+                    <CheckBox
+                        android:id="@+id/checkboxReferralFilaria"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Referral-up to PHC"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ll_1_filaria"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_2_Filaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit_filaria"
+                        app:layout_constraintTop_toBottomOf="@id/ll_1_filaria">
+
+
+                        <TextView
+                            android:id="@+id/tvPermanent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Permanent address"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                        <EditText
+                            android:id="@+id/etPermanentAddress"
+                            android:layout_width="380dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="@string/type"
+                            android:inputType="text"
+                            android:paddingLeft="8dp"
+                            android:textColor="#646464"
+                            android:textSize="14sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="@id/tv_resources_name"
+                            app:layout_constraintTop_toBottomOf="@id/tv_resources_name" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_3_filaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit_filaria"
+                        app:layout_constraintTop_toBottomOf="@id/ll_2_Filaria">
+
+
+                        <TextView
+                            android:id="@+id/tvSputumCollected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Has the blood sample been \ncollected for testing?*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/tv_visit" />
+
+                        <LinearLayout
+                            android:id="@+id/llSputumCollected"
+                            android:layout_width="180dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/alert_phc_other"
+                            app:layout_constraintStart_toStartOf="@id/tv_visit"
+                            app:layout_constraintTop_toBottomOf="@id/specifySuspectedType">
+
+                            <Spinner
+                                android:id="@+id/spinnerSampleCollectedFilaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_5_filaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/ll_3_filaria"
+                        app:layout_constraintTop_toTopOf="@id/ll_3_filaria">
+
+
+                        <TextView
+                            android:id="@+id/tvDateOfSampleCollectedFilaria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Date of sample\ncollected"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_date_sample"
+                            android:layout_width="121dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background">
+
+                                <TextView
+                                    android:id="@+id/tv_current_date_sampleFilaria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:text="----" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_6_filaria"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/ll_5_filaria"
+                        app:layout_constraintTop_toTopOf="@id/ll_5_filaria">
+
+
+                        <TextView
+                            android:id="@+id/tvTimeFilaria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Time when the sample\n was collected"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="match_parent">
+
+                                <EditText
+                                    android:id="@+id/tv_hour_Filaria"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:inputType="number"
+                                    android:hint="hh"
+                                    android:max="100"
+                                    android:maxLength="2"
+                                    android:padding="5dp"
+                                    android:background="@drawable/ic_hour_bg"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/tvColon"
+                                    android:background="@drawable/ic_colon"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_hour_Filaria"
+                                    app:layout_constraintTop_toTopOf="@id/tv_hour_Filaria"
+                                    app:layout_constraintStart_toEndOf="@id/tv_hour_Filaria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_height="wrap_content"/>
+
+                                <EditText
+                                    android:id="@+id/tv_min_Filaria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:inputType="number"
+                                    android:hint="mm"
+                                    android:max="60"
+                                    android:maxLength="2"
+                                    android:padding="5dp"
+                                    android:background="@drawable/ic_hour_bg"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/tvColon"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    />
+
+                                <LinearLayout
+                                    android:id="@+id/llDuration"
+                                    android:layout_width="90dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:background="@drawable/ic_hour_bg"
+                                    app:layout_constraintStart_toEndOf="@+id/tv_min_Filaria"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <Spinner
+                                        android:id="@+id/spinnerDuration"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_7_filaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit_filaria"
+                        app:layout_constraintTop_toBottomOf="@id/ll_3_filaria">
+
+
+                        <TextView
+                            android:id="@+id/tvLongFilaria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="How long has it been since\nthe onset of fever?*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/llLongFilaria"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/alert_phc_other">
+
+                            <Spinner
+                                android:id="@+id/spinnerLongFilaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_larva"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/ic_larva"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit_filaria"
+                        app:layout_constraintTop_toBottomOf="@id/ll_7_filaria" />
+
+                    <TextView
+                        android:id="@+id/tvUpdateFilariaSample"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Update Sample Details"
+                        android:textColor="#000000"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_larva"
+                        app:layout_constraintStart_toEndOf="@id/iv_larva"
+                        app:layout_constraintTop_toTopOf="@id/iv_larva" />
+
+                    <TextView
+                        android:id="@+id/tvSubmissionDateFilaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Date of sample\nsubmitted to the lab"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/iv_larva"
+                        app:layout_constraintTop_toBottomOf="@id/iv_larva" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sample_submission_Filaria"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/calendar_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintStart_toStartOf="@id/tv_visit_filaria"
+                        app:layout_constraintTop_toBottomOf="@id/tvSubmissionDateFilaria">
+
+
+                        <TextView
+                            android:id="@+id/tvDateOfSampleFilaria"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="4dp"
+                            android:text="DD/MM/YYYY"
+                            android:textColor="#646464"
+                            android:textSize="14sp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCalendarFilaria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginStart="40dp"
+                            android:background="@drawable/ic_calendar" />
+
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_test_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#F6F8FA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_result_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_status">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/clParent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#D7E7F6"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center"
+                        android:text="Blood Sample\nCount"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="40dp"
+                        android:text="Blood smear\n       no"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item1"
+                        app:layout_constraintEnd_toStartOf="@id/item3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:gravity="center"
+                        android:text="Date of sample\n collected"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:gravity="center"
+                        android:text="Date of sample \nsubmitted to the lab"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="40dp"
+                        android:gravity="center"
+                        android:text="RDT Results"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="40dp"
+                        android:gravity="center"
+                        android:text="Date when sample was \nreceived by PHCO/HIO"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="50dp"
+                        android:gravity="center"
+                        android:text="Lab results"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clHeader">
+
+
+                    <TextView
+                        android:id="@+id/value1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="01"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/value2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/value2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="100dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/value1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="3dsssss" />
+
+                    <TextView
+                        android:id="@+id/value3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        tools:text="20/04/1998"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/value2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/value4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:gravity="center"
+                        tools:text="20/04/1998"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/value3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/value5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        tools:text="Ups"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/value4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/value6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/value5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Ups" />
+
+                    <TextView
+                        android:id="@+id/value7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:gravity="center"
+                        android:lines="2"
+                        android:text="Update lab results"
+                        android:clickable="true"
+                        android:textSize="16sp"
+                        android:focusable="true"
+                        android:textColor="#0085FF"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/value6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viewSeparator"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#CACACA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clValue">
+
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_result_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:text="Lab Results Status"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_individual" />
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_footer_wth_stroke"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/btn_continue"
+                android:text="@string/cancel"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="#0085FF"
+                android:clickable="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

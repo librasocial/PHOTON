@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.childCare.mapping.ChildCareViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <fragment
+            android:id="@+id/childCareMap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".3" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llFloatingMsg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/extra_round_corner_bg"
+            android:backgroundTint="#FFC0D7"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@id/childCareMap"
+            app:layout_constraintStart_toStartOf="@id/childCareMap"
+            app:layout_constraintTop_toTopOf="@id/childCareMap">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:shapeAppearanceOverlay="@style/FullRoundImageView"
+                app:srcCompat="@drawable/ic_child_care" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="@{@string/child_care_mapping_title(viewModel.selectedVillage.target.villageProperties.name)}"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sideView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/childCareMap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="500dp">
+
+                <include
+                    android:id="@+id/toobar"
+                    layout="@layout/path_toolbar_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hideCross="@{true}"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/searchBar"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/edit_text_bg2"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:gravity="center_vertical"
+                    android:hint="Search by Name"
+                    android:inputType="textCapWords"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    app:layout_constraintStart_toStartOf="@id/toobar"
+                    app:layout_constraintTop_toBottomOf="@id/toobar"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/regChildren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:gravity="center"
+                    android:text="Show List of Registered Children List"
+                    android:textColor="@{viewModel.listModeAll ? @color/button_blue : @color/selected_grey}"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/searchBar"
+                    app:layout_constraintEnd_toStartOf="@id/tvHHList"
+                    app:layout_constraintStart_toEndOf="@id/searchBar"
+                    app:layout_constraintTop_toTopOf="@id/searchBar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHHList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:text="Show Complete list of HH"
+                    android:textColor="@{viewModel.listModeAll ? @color/selected_grey : @color/button_blue}"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/searchBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/regChildren"
+                    app:layout_constraintTop_toTopOf="@id/searchBar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text='@{viewModel.listModeAll ? "Here is a list of Households" : "Here is a list of Children for Child Care"}'
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/searchBar"
+                    app:layout_constraintTop_toBottomOf="@id/searchBar" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSubHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawablePadding="12dp"
+                    android:text='@{viewModel.listModeAll ? "Select a Child for Child Care" : "Select a Household for Child Care"}'
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_home"
+                    app:layout_constraintStart_toStartOf="@id/searchBar"
+                    app:layout_constraintTop_toBottomOf="@id/txtHeading" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/flHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/txtSubHeading">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{viewModel.listModeAll == true ? View.GONE : View.VISIBLE}">
+
+                        <include
+                            android:id="@+id/childCareListHeader"
+                            layout="@layout/layout_header_child_care" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{viewModel.listModeAll == true ? View.VISIBLE : View.GONE}">
+
+                        <include
+                            android:id="@+id/allListHeader"
+                            layout="@layout/layout_header_all_hh" />
+                    </FrameLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/childCareRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@id/flHeader"
+                    tools:itemCount="20"
+                    tools:listitem="@layout/item_all_hh_list" />
+
+                <include
+                    android:id="@+id/emptyState"
+                    layout="@layout/empty_state_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/flHeader" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE, default=gone}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:background="@drawable/ic_footer_wth_stroke"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:text="@string/back"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawablePadding="10dp"
+                android:layout_marginStart="24dp"
+                android:drawableLeft="@drawable/ic_back_button"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

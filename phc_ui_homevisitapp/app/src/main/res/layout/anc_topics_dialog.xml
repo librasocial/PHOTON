@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vhndTopics"
+            type="com.ssf.homevisit.fragment.vhnd.VHNDTopics" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_round_corner_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/path_toolbar_dialog"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="match_parent"
+        android:paddingTop="40dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fieldsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNoOfAnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q1}"
+            tools:text="Provide the total no. of ANC women in the meeting"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/etNoOfANC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etNoOfANC" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNoOfANC"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="4dp"
+            android:text="Enter Details for Ante Natal Care"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_pregnant"
+            app:layout_constraintStart_toStartOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etNoOfANC" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTTInjection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q2}"
+            android:textColor="@color/black"
+            tools:text="No. of tetanus toxoid injections(TT) given"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etTTInjection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etTTInjection" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTTInjection"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/txtHeading" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtNoOfBloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q3}"
+            tools:text="No. of blood pressure measurement done"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etNoOfBloodPressure"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etNoOfBloodPressure" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNoOfBloodPressure"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etTTInjection" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtBloodTests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q4}"
+            tools:text="No. of blood test done"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etBloodTests"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etBloodTests" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etBloodTests"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etNoOfBloodPressure" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAbnormalExams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q5}"
+            tools:text="No. of abdominal examinations done"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etAbnormalExams"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etAbnormalExams" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etAbnormalExams"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etBloodTests" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCounsellingDietRest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q6}"
+            tools:text="No. of counselling on diet and rest done"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etCounsellingDietRest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etCounsellingDietRest" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCounsellingDietRest"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etAbnormalExams" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtIFBTeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q7}"
+            tools:text="No. of IFA tablets given"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etIFBTablets"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etIFBTablets" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etIFBTablets"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etCounsellingDietRest" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCalciumTeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q8}"
+            tools:text="No. of calcium tablets given"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etCalciumTablet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etCalciumTablet" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCalciumTablet"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etIFBTablets" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtInstDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q9}"
+            tools:text="No. of women counselled for institutional delivery"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etInstDelivery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etInstDelivery" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etInstDelivery"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etCalciumTablet" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtReferredDueToSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.ANC_Q10}"
+            tools:text="No. of women referred up due to danger signs"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/etRefferedDueToSign"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etRefferedDueToSign" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRefferedDueToSign"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionDone"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtNoOfAnc"
+            app:layout_constraintTop_toBottomOf="@id/etInstDelivery" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btnSave"
+        android:background="@color/alert_divider"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bottom_bar_btn"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

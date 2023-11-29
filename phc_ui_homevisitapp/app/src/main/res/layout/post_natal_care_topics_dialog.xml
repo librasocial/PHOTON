@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vhndTopics"
+            type="com.ssf.homevisit.fragment.vhnd.VHNDTopics" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corner_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/path_toolbar_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="match_parent"
+        android:paddingTop="40dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fieldsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfPNC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.PNC_Q1}"
+        tools:text="Provide the total no. of PNC women in the meeting"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfPNC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNoOfPNC" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfPNC"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfInfants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.PNC_Q2}"
+        tools:text="Provide the total no. of PNC infants in the meeting"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfInfants"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNoOfInfants" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfInfants"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfPNC" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="4dp"
+        android:text="Enter Details for Post Natal Care"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_pnc"
+        app:layout_constraintStart_toStartOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfInfants" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTTInjection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        tools:text="No. of IFA tablets given to PNC women"
+        android:text="@{vhndTopics.PNC_Q3}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etTTInjection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etTTInjection" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etTTInjection"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/txtHeading" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfBloodPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        tools:text="No. of calcium tablets given to PNC women"
+        android:text="@{vhndTopics.PNC_Q4}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfBloodPressure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNoOfBloodPressure" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfBloodPressure"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etTTInjection" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtBloodTests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        tools:text="No. of women counselled for breast feeding"
+        android:text="@{vhndTopics.PNC_Q5}"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etBloodTests"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etBloodTests" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etBloodTests"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfBloodPressure" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAbnormalExams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.PNC_Q6}"
+        tools:text="No. of children to whom ORS is given (0 to 5 years)"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etAbnormalExams"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etAbnormalExams" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etAbnormalExams"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etBloodTests" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCounsellingDietRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.PNC_Q7}"
+        tools:text="No. of women referred up due to danger signs"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etCounsellingDietRest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etCounsellingDietRest" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCounsellingDietRest"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etAbnormalExams" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtInfantsRef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.PNC_Q8}"
+        tools:text="No. of infants referred up due to danger signs"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/etInfantsRef"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etInfantsRef" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etInfantsRef"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionDone"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etCounsellingDietRest" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/alert_divider"
+        app:layout_constraintBottom_toTopOf="@id/btnSave" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_bar_btn"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

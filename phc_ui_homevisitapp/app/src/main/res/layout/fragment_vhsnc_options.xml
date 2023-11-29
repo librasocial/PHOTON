@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.vhsnc.VHSNCOptionsFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/select_an_activity_for_vhsnc"
+        android:textAppearance="@style/rmncha_hh_sub_header_style"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toBottomOf="@id/txtHeading">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                app:constraint_referenced_ids="monthlyMeeting, unitedVillageFund, unitedVillageHealthFund, recordMaintenance, monitorAccessToPublic, localCollectiveAction, deliveryInVillage, monitorHealthService, villageHealthPlanning"
+                app:flow_horizontalAlign="start"
+                app:flow_horizontalBias="0"
+                app:flow_horizontalGap="10dp"
+                app:flow_horizontalStyle="packed"
+                app:flow_verticalAlign="top"
+                app:flow_verticalGap="10dp"
+                app:flow_verticalStyle="packed"
+                app:flow_wrapMode="aligned" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/monthlyMeeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_meeting"
+                app:ButtonTxt="Monthly meeting" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/unitedVillageFund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_village_account_fund"
+                app:ButtonTxt="United Village Fund Accounting" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/unitedVillageHealthFund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_management"
+                app:ButtonTxt="United Village Health Fund - Management" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/recordMaintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_record_maintanence"
+                app:ButtonTxt="Record Maintenance" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/monitorAccessToPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_access_to_public"
+                app:ButtonTxt="Monitoring &amp; Facilitating Access to the Public" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/localCollectiveAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_health_promotion"
+                app:ButtonTxt="Local Collective Action - Health Promotion" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/deliveryInVillage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_service_delivery"
+                app:ButtonTxt="Facilitating Service Delivery in Villages" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/monitorHealthService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_health_service"
+                app:ButtonTxt="Community Monitoring of Health Care Services" />
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/villageHealthPlanning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_health_planning"
+                app:ButtonTxt="Village Health Planning" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/vhsnc_bottom_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

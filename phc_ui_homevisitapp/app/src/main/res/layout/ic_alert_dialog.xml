@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="5dp"
+        android:background="#FFFFFF"
+        android:layout_height="300dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/ic_nil_report_question" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#646464"
+            android:gravity="start"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon"
+            tools:text="Submit Nil Report?" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_cancel"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubTitile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Would you like to save ‘Nil Report’ for today?" />
+
+        <View
+            android:id="@+id/vwSeparator"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitile"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="#CACACA"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/save"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:text="Continue"
+            android:padding="3dp"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:background="@color/button_blue"
+            android:drawableStart="@drawable/ic_save"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwSeparator" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/save"
+            app:layout_constraintTop_toTopOf="@id/save"
+            android:text="Cancel"
+            android:visibility="gone"
+            android:textColor="#646464"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/save"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/exit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Exit"
+            android:drawablePadding="5dp"
+            android:drawableEnd="@drawable/ic_blue_right_arrow"
+            android:textSize="19sp"
+            android:textColor="#0085FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

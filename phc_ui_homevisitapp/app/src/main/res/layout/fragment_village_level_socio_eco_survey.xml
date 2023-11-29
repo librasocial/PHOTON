@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.VillageLevelSocioEcoSurveyFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.VillageSESurveyViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/villagelevelsocioecosurveyview"
+        android:isScrollContainer="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/popuphead" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Village Level Socio-Economic Survey"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cacaca" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="650dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/popuphead" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="@string/villageinfo"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="14dp"
+                                android:text="@string/villagename"
+                                android:textFontWeight="500"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:orientation="vertical"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="22dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/gram_panchayat_name"
+                                android:textColor="#000"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gpname"
+                                android:hint="first name" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                    android:id="@+id/tauluk__"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/district__"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/state__"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="630dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="35dp"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/populationinhousehold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Population In Household"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/househead_container"
+                            android:layout_alignStart="@+id/househead_container"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/male___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/females___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/male_children___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/female_children___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/third_gender___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/househead_container"
+                            android:layout_alignStart="@+id/househead_container"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseView
+                                android:id="@+id/total_no_of_migrant"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/total_no_houses"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/total_population"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="40dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:minWidth="500dp"
+                        android:orientation="vertical"
+                        android:paddingTop="22dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/personwithdisabl" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Person With Disabilities"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_blind_low_person"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_hearing_impaired_person"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_physically_disabled"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_leporsy_cured_person"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_mentally_retarded_person"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_persons_mentally_ill"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="780dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="22dp">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/populationinhousehold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Population In Household"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/househead_container"
+                            android:layout_alignStart="@+id/househead_container"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/general__"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/obc___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/sc___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/st___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/categorytotalPopulation___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="23dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/religionwise" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Religion Wise"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:background="#cacaca" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/househead_container"
+                            android:layout_alignStart="@+id/househead_container"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/hindu__"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/muslim___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/christian___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/jain___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/othersreli___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="525dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/mainlang" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Main Language Spoken In Village"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/househead_container"
+                            android:layout_alignStart="@+id/househead_container"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/kannadaspo___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/teluguspo___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/tamilspo___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/othersspo___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="755dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rupee" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Economic Status"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/househead_container"
+                            android:layout_alignStart="@+id/househead_container"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/bpl_household__"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/apl_household___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/apl_household1___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseTextView
+                                android:id="@+id/othereconomic___"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseView
+                                android:id="@+id/household_primarily_depends"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="40dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="570dp"
+                        android:orientation="vertical"
+                        android:paddingTop="22dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/person_diabli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/naturalresources" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Natural Resources"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/water_quality"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/air_quality"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/drainage_system"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/waste_disposal"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/source_of_pollution"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/is_there_any_open_defecation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="710dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="11dp"
+                        android:paddingTop="22dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/watersourcecont" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Water Source &amp; Contamination"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/water_source_for_village"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/piped_water"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/well___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/tank___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/tube_well___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/hand_pump___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/canal___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/river___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/lake___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/watershed___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/others___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/househead_container"
+                                android:layout_alignStart="@+id/househead_container"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_wells__"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_tanks__"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_tubewells__"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+
+                                <com.ssf.homevisit.views.SESQuestionResponseView
+                                    android:id="@+id/no_of_handpumps___"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="504dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/physicalinfrastru" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Physical Infrastructure"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="21dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:paddingRight="13dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Distance of the Village from the nearest \n National/Sate Highway/Major District Road *"
+                                    android:textColor="#000"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/taulukdist"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2.34L"
+                                        android:textColor="#828282"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="kms"
+                                        android:textColor="#CACACA"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/is_the_village_connected_by_a_pukka_road"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:minWidth="776dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/availmodtra" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Available Mode Of Transport"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="21dp">
+
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#cacaca" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Rail"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Government Bus"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Private Bus"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Taxi/Tamp/Auto"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Boat"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Others"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="None"
+                                        android:textColor="#000"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="276dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/physicalinfrastru" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Availability of Public facilities \nin the Village"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="21dp">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/panchayatbhawan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/library_readingroom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/public_playground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/park___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/public_distribution_system"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/forrest___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="267dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/physicalinfrastru" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Social Infrastructure\n(Within Village)"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="21dp">
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/aganwadi___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/healthsc_phc___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/primary_school___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/high_school___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/college___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cacaca" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="276dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="26dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/physicalinfrastru" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="Physical Infrastructure"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="21dp">
+
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/primary_agriculture_society__"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/cooperation_marketing_society"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/dairy_pollutry_fisheries___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/banks_rural___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/does_the_village"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+                            <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+                                android:id="@+id/any_other___"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="rrres" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cacaca"
+                    android:paddingTop="27dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fafafa"
+                    android:elevation="4dp"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginRight="23dp"
+                        android:background="#0085FF"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@drawable/ic_floppy_disk_solid"
+                            android:backgroundTint="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/save_survey"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="meetingData"
+            type="com.ssf.homevisit.models.Meeting" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.ARSViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newMeetingRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMeetingDetailHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/monthly_meeting_details"
+                    android:textAppearance="@style/rmncha_hh_sub_header_style"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvMeetingDetailHeading">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ccMeetingInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:background="@drawable/gray_round_corner_bg"
+                        android:padding="12dp"
+                        app:layout_constraintEnd_toStartOf="@id/ccParticipants"
+                        app:layout_constraintHorizontal_weight="2.8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/meetingInfoHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/meeting_information"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/topicsHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Topic(s)"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/meetingInfoHeading" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/topicsValue"
+                            arrayText="@{meetingData.eventTopics}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/topicsHeading"
+                            tools:text="Employment, Health/VHND" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dateHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Date"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/topicsValue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/timeHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Start Time"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/dateHeading"
+                            app:layout_constraintTop_toBottomOf="@id/topicsValue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/dateValue"
+                            selectText="@{viewModel.meetingDate}"
+                            trimChar='@{"T"}'
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toStartOf="@id/timeValue"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dateHeading"
+                            tools:text="12/11/2022" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/timeValue"
+                            selectText="@{viewModel.meetingTime}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@id/timeHeading"
+                            app:layout_constraintTop_toBottomOf="@id/timeHeading"
+                            tools:text="11:04 PM" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ccParticipants"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="24dp"
+                        android:background="@drawable/gray_round_corner_bg"
+                        android:padding="12dp"
+                        app:layout_constraintEnd_toStartOf="@id/ccSpecialInvitees"
+                        app:layout_constraintHorizontal_weight="2.5"
+                        app:layout_constraintStart_toEndOf="@id/ccMeetingInfo"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/participantHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Message for Participants"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etParticipantMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/white_round_corner_bg"
+                            android:gravity="top|start"
+                            android:imeOptions="actionNext"
+                            android:padding="12dp"
+                            android:text='@={viewModel._msgForParticipant}'
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/participantHeading" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ccSpecialInvitees"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="24dp"
+                        android:background="@drawable/gray_round_corner_bg"
+                        android:padding="12dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="2.5"
+                        app:layout_constraintStart_toEndOf="@id/ccParticipants"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/specialInviteesHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Message for Special Invitees"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etInviteeMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/white_round_corner_bg"
+                            android:gravity="top|start"
+                            android:imeOptions="actionDone"
+                            android:padding="12dp"
+                            android:text='@={viewModel._msgForSpclInvitees}'
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/specialInviteesHeading" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@color/alert_divider"
+                        app:layout_constraintTop_toBottomOf="@id/ccMeetingInfo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnEditMeeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/btn_meeting_actions"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="Edit Meeting Details"
+                        android:textColor="@drawable/meeting_action_btn_text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnSpecialInvitee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="24dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/btn_meeting_actions"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="Select Special Invitees"
+                        android:textColor="@drawable/meeting_action_btn_text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/btnInviteParticipant"
+                        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnInviteParticipant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="24dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/btn_meeting_actions"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:text="Select to Invite the ARS Committee"
+                        android:textColor="@drawable/meeting_action_btn_text_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/btnEditMeeting"
+                        app:layout_constraintTop_toBottomOf="@id/divider" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE, default=gone}"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

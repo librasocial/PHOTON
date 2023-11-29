@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MySpinnerDatePickerStyle" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/MySpinnerDatePicker</item>
+    </style>
+
+    <style name="DatePickerDialogTheme" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="MySpinnerDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="n_2_10_26_5">
+        <![CDATA[<style name="n_2_10_26_5">  <item name="android:textSize"> 12sp </item>  <item name="android:textColor"> #000000 </item>  </style>]]></style>
+
+    <style name="lgd_code_00">
+        <![CDATA[<style name="lgd_code_00">  <item name="android:textSize"> 24sp </item>  <item name="android:textColor"> #000000 </item>  </style>]]></style>
+
+    <style name="check">
+
+        <item name="android:textSize">
+            33.57sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="mapping_suc">
+
+        <item name="android:textSize">
+            9sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <style name="village_level_mapping_raido_button" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@drawable/villagelevelmapping_radio_text_color</item>
+        <item name="android:buttonTint">#0000</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:foregroundGravity">center</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:foregroundTint">@drawable/radio_foreground_color</item>
+        <item name="android:background">@drawable/village_asset_mapping_radio_background</item>
+        <item name="android:layout_marginEnd">26dp</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+    </style>
+
+    <style name="construction_radio_button" parent="village_level_mapping_raido_button">
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:scaleWidth">32dp</item>
+        <item name="android:scaleHeight">32dp</item>
+    </style>
+
+    <style name="textstyle" parent="construction_radio_button">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:gravity">center|bottom</item>
+    </style>
+
+    <style name="based_on_yo">
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="find_automa">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:textColor">
+            #828282
+        </item>
+
+    </style>
+
+    <style name="hh_survey_qt">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="hhses_icons">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
+
+    <style name="hhses_title_style">
+        <item name="android:textColor">#333</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="titleText">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="subTitle">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="subTitleNoBold">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="subTitleDisabled">
+        <item name="android:textColor">#D1D1D1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="subHeading">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="subTitleValue">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="chip_text">
+        <item name="android:textSize">16sp</item>
+        <item name="chipBackgroundColor">@color/chip_background_selector</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:colorAccent">#1D9824</item>
+        <item name="android:textColorAlertDialogListItem">@color/black</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/selected_grey</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+
+    <style name="RoundCornerImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="FullRoundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.Theme.HomeVisit.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+    <style name="TabSelected" parent="">
+        <item name="background">@drawable/bg_tab_btn</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TabNotSelected" parent="">
+        <item name="background">@drawable/bg_tab_btn_unchecked</item>
+        <item name="android:textColor">@color/selected_grey</item>
+    </style>
+
+</resources>

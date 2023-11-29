@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+        android:id="@+id/layout_frame"
+>
+    <data>
+        <import type="android.view.View"
+        />
+        <variable name="viewModel" type="com.ssf.homevisit.viewmodel.HouseHoldLevelMappingViewModel"/>
+    </data>
+    <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                <TextView
+                        android:id="@+id/lgdcode001"
+                        android:text="LGDCODE 001"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/householdname"
+                        android:text="Ramappa"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:textSize="14sp"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/familymem"
+                        android:text="3"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/latlng001"
+                        android:minWidth="100dp"
+                        android:textSize="14sp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                        android:id="@+id/time"
+                        android:textSize="14sp"
+                        android:text="10.25am"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="4">
+                    <ImageButton
+                            android:layout_gravity="start"
+                            android:id="@+id/markgpsloc"
+                            android:background="@drawable/markgpsloc"
+                            android:text="Action"
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_height="wrap_content"/>
+                    <ImageButton
+                            android:id="@+id/editdata"
+                            android:background="@drawable/editdata"
+                            android:text="Action"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                    android:id="@+id/line_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/drawableline8"/>
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cacaca"/>
+    </LinearLayout>
+</layout>

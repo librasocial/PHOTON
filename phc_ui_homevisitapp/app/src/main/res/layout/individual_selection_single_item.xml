@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#F3F3F3"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:id="@+id/llParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ecPhoto"
+                    android:layout_width="140dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    tools:background="@drawable/ic_image_place_holder" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ecName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Laksmamma" />
+
+                    <TextView
+                        android:id="@+id/ecAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="35years - Female" />
+
+                    <TextView
+                        android:id="@+id/ecPhoneNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="Ph : 98450 98450" />
+
+                    <TextView
+                        android:id="@+id/ecDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="DOB : 12/08/1986" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/ecHealthId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="Health ID number : 77-7146-0314-8894" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="5dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="#FFBE5E"
+                app:cardCornerRadius="1000dp">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:background="@drawable/ic_result_pending" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivIcon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Lab Results : Pending">
+
+
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

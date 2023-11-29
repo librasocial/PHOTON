@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/panchayatbhawan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/library_readingroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/public_playground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/park___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/public_distribution_system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/forrest___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+    </LinearLayout>
+</merge>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_looseStools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="10dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F3F3"
+        android:paddingBottom="10dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_looseStools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/ic_loose_stools" />
+
+        <TextView
+            android:id="@+id/tvLooseStools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Provide additional details for Loose Stools"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_looseStools"
+            app:layout_constraintStart_toEndOf="@id/iv_looseStools"
+            app:layout_constraintTop_toTopOf="@id/iv_looseStools" />
+
+
+        <TextView
+            android:id="@+id/tvLooseStoolsDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:text="How long has it been since \nthe onset of Loose Stools?*"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_looseStools"
+            app:layout_constraintTop_toBottomOf="@id/iv_looseStools" />
+
+        <LinearLayout
+            android:id="@+id/spinSpecifyLooseStoolsSymptoms"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/alert_phc_other"
+            app:layout_constraintStart_toStartOf="@id/tvLooseStoolsDuration"
+            app:layout_constraintTop_toBottomOf="@id/tvLooseStoolsDuration">
+
+            <Spinner
+                android:id="@+id/spinnerSpecifyLooseStoolsSymptom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDehydration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Any dehydration?"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvLooseStoolsDuration"
+            app:layout_constraintTop_toTopOf="@+id/tvLooseStoolsDuration" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupDehydration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/tvDehydration"
+            app:layout_constraintTop_toBottomOf="@id/tvDehydration">
+
+            <RadioButton
+                android:id="@+id/yes_radio_button_dehydration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YES"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/no_radio_button_dehydration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="NO"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/tvExtentDehydration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="What is the extent\nof dehydration?*"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/tvDehydration"
+            app:layout_constraintTop_toBottomOf="@id/iv_looseStools" />
+
+        <LinearLayout
+            android:id="@+id/spinExtentDehydration"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/alert_phc_other"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/tvExtentDehydration"
+            app:layout_constraintTop_toBottomOf="@id/tvExtentDehydration">
+
+            <Spinner
+                android:id="@+id/spinnerExtentDehydration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvBlood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Any blood seen in\nstools?"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvExtentDehydration"
+            app:layout_constraintTop_toTopOf="@+id/tvExtentDehydration" />
+
+        <RadioGroup
+            android:id="@+id/radiogroupBloodSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/tvBlood"
+            app:layout_constraintTop_toBottomOf="@id/tvBlood">
+
+            <RadioButton
+                android:id="@+id/yes_radio_button_BloodSeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YES"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/no_radio_button_BloodSeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="NO"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

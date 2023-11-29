@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/naturalResourceFragment">
+
+    <fragment
+        android:id="@+id/performLarvaSurveillance"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.mapping.fragment.PerformLarvaSurveillanceFragment"
+        android:label="fragment_perform_larva_surveillance"
+        tools:layout="@layout/fragment_perform_larva_surveillance" />
+    <fragment
+        android:id="@+id/selectSTFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.selectST.fragment.SelectSTFragment"
+        android:label="SelectSTFragment"
+        tools:layout="@layout/fragment_select_st" />
+    <fragment
+        android:id="@+id/selectPlaceFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.selectST.fragment.SelectPlaceFragment"
+        android:label="SelectPlaceFragment"
+        tools:layout="@layout/fragment_select_place" />
+    <fragment
+        android:id="@+id/updateWaterSampleFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.mapping.fragment.PerformWaterSampleFragment"
+        android:label="UpdateWaterSampleFragment"
+        tools:layout="@layout/fragment_perform_surveillance_test" />
+    <fragment
+        android:id="@+id/updateIodineTestFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.mapping.fragment.PerformIodineTestFragment"
+        android:label="UpdateIodineTestFragment"
+        tools:layout="@layout/fragment_perform_surveillance_test" />
+    <fragment
+        android:id="@+id/naturalResourceFragment"
+        android:name="com.ssf.homevisit.fragment.NaturalResourceVSEFragment"
+        android:label="NaturalResourceVSEFragment"
+        tools:layout="@layout/fragment_natural_resource" />
+    <dialog
+        android:id="@+id/environmentQualityFragment"
+        android:name="com.ssf.homevisit.fragment.EnvironmentQualityFragment"
+        android:label="EnvironmentQualityFragment"
+        tools:layout="@layout/fragment_quality_environment" />
+    <dialog
+        android:id="@+id/waterSourcesFragment"
+        android:name="com.ssf.homevisit.fragment.WaterSourcesFragment"
+        android:label="WaterSourceFragment"
+        tools:layout="@layout/fragment_water_sources_details" />
+    <dialog
+        android:id="@+id/villageInfraFragment"
+        android:name="com.ssf.homevisit.fragment.VillageInfraFragment"
+        android:label="villageInfraFragment"
+        tools:layout="@layout/fragment_village_se_survey" />
+    <dialog
+        android:id="@+id/transportModeFragment"
+        android:name="com.ssf.homevisit.fragment.TransportModeFragment"
+        android:label="transportModeFragment"
+        tools:layout="@layout/fragment_transport_modes" />
+    <dialog
+        android:id="@+id/publicFacilityFragment"
+        android:name="com.ssf.homevisit.fragment.PublicFacilityFragment"
+        android:label="publicFacilityFragment"
+        tools:layout="@layout/fragment_public_facility" />
+
+    <fragment
+        android:id="@+id/individualSurveillanceTypeFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.IndividualSurveillanceTypeFragment"
+        android:label="IndividualSurveillanceTypeFragment"
+        tools:layout="@layout/individual_surveillance_type" />
+    <fragment
+        android:id="@+id/individualMappingFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.IndividualMappingFragment"
+        android:label="IndividualMappingFragment"
+        tools:layout="@layout/individual_mapping" />
+    <fragment
+        android:id="@+id/individualSelectionFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.IndividualSelectionFragment"
+        android:label="IndividualSelectionFragment"
+        tools:layout="@layout/individual_selection" />
+    <fragment
+        android:id="@+id/leprosyFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.LeprosyFragment"
+        android:label="LeprosyFragment"
+        tools:layout="@layout/fragment_leprosy" />
+    <fragment
+        android:id="@+id/bloodSmearFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.BloodSmearFragment"
+        android:label="BloodSmearFragment"
+        tools:layout="@layout/fragment_blood_smear" />
+    <fragment
+        android:id="@+id/covidFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.CovidFragment"
+        android:label="LeprosyFragment"
+        tools:layout="@layout/fragment_leprosy" />
+    <fragment
+        android:id="@+id/idspFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.IDSPFragment"
+        android:label="IDSPFragment"
+        tools:layout="@layout/fragment_leprosy" />
+    <fragment
+        android:id="@+id/AcfFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.AcfFragment"
+        android:label="AcfFragment"
+        tools:layout="@layout/fragment_acf" />
+    <fragment
+        android:id="@+id/urineFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.UrineFragment"
+        android:label="UrineSampleFragment"
+        tools:layout="@layout/fragment_urine" />
+
+    <dialog
+        android:id="@+id/leprosyUpdateFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.update.fragment.LeprosyUpdateFragment"
+        android:label="LeprosyUpdateFragment"
+        tools:layout="@layout/fragment_leprosy_update" />
+    <dialog
+        android:id="@+id/bloodSmearUpdateFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.update.fragment.BloodSmearUpdateFragment"
+        android:label="BloodSmearUpdateFragment"
+        tools:layout="@layout/fragment_bloodsmear_update" />
+    <dialog
+        android:id="@+id/urineUpdateFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.update.fragment.UrineUpdateFragment"
+        android:label="UrineUpdateFragment"
+        tools:layout="@layout/fragment_urine_update" />
+    <dialog
+        android:id="@+id/acfUpdateFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.individual.fragment.update.fragment.AcfUpdateFragment"
+        android:label="AcfUpdateFragment"
+        tools:layout="@layout/fragment_acf_update" />
+    <dialog
+        android:id="@+id/updateIodineSampleReportFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.mapping.fragment.UpdateIodineSampleReportFragment"
+        android:label="UpdateIodineSampleReportFragment"
+        tools:layout="@layout/fragment_iodine_sample_report" />
+    <dialog
+        android:id="@+id/updateWaterSampleReportFragment"
+        android:name="com.ssf.homevisit.healthWellnessSurveillance.ui.village.mapping.fragment.UpdateWaterSampleReportFragment"
+        android:label="UpdateWaterSampleReportFragment"
+        tools:layout="@layout/fragment_water_sample_report" />
+
+
+</navigation>

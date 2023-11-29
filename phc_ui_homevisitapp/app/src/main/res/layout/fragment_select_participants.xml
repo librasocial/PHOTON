@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="androidx.core.content.ContextCompat"/>
+        <import type="android.view.View"/>
+        <import type="com.ssf.homevisit.viewmodel.UIMode"/>
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.CreateMeetingViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.vhsnc.VHSNCOptionsFragment">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/search"
+        android:layout_margin="24dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/search_by_name"
+        android:text="@={viewModel.query}"
+        android:drawableEnd="@drawable/ic_search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintWidth_percent=".4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtInvitedVHSNC"
+        app:layout_constraintEnd_toStartOf="@id/txtShowCompleteHH"
+        app:layout_constraintStart_toEndOf="@id/search"
+        app:layout_constraintTop_toTopOf="@id/search"
+        android:text='@{"List of Invited Citizens for "+viewModel.vhsncOrVhd}'
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="12dp"
+        android:textColor="@{viewModel.listingMode == UIMode.FULL_LIST ? @color/button_blue : @color/selected_grey}"
+        app:layout_constraintBottom_toBottomOf="@id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtShowCompleteHH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search"
+        android:text="Show complete list of HH"
+        android:textSize="16sp"
+        android:textColor="@{viewModel.listingMode == UIMode.INVITED_LIST ? @color/button_blue : @color/selected_grey}"
+        android:padding="12dp"
+        android:layout_marginEnd="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:drawableStartCompat="@drawable/ic_home"
+        android:drawablePadding="8dp"
+        android:text="Select a Household to Invite Participants"
+        android:textAppearance="@style/rmncha_hh_sub_header_style"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/invitedCount"
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtHeading"
+        android:backgroundTint="#E8F5E9"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="12dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/white_round_corner_bg"
+        app:layout_constraintBottom_toBottomOf="@id/txtHeading"
+        android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ccListHeaders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.listingMode == UIMode.FULL_LIST ? View.VISIBLE: View.GONE}"
+            android:padding="12dp"
+            android:background="#F9F9F9"
+            android:layout_marginVertical="12dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintTop_toBottomOf="@id/txtHeading">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                app:layout_constraintGuide_percent=".005"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                app:layout_constraintGuide_percent=".25"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                app:layout_constraintGuide_percent=".52"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                app:layout_constraintGuide_percent=".7"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHouseHoldNumber"
+                android:layout_width="wrap_content"
+                android:text="Household Number"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtNameOfHead"
+                android:layout_width="wrap_content"
+                android:text="Name of the HH Head"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtNoOfMembers"
+                android:layout_width="wrap_content"
+                android:text="No. of Members"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAction"
+                android:layout_width="wrap_content"
+                android:text="Action"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/guideline4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ccInvitedHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="@{viewModel.listingMode == UIMode.INVITED_LIST ? View.VISIBLE: View.GONE}"
+        android:padding="12dp"
+        android:background="#F9F9F9"
+        android:layout_marginVertical="12dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtHeading">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            app:layout_constraintGuide_percent=".005"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline22"
+            app:layout_constraintGuide_percent=".3"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline32"
+            app:layout_constraintGuide_percent=".5"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline42"
+            app:layout_constraintGuide_percent=".72"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCitizenName"
+            android:layout_width="wrap_content"
+            android:text="Citizen’s Name"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/guideline12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:text="Age"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/guideline22"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHHHead"
+            android:layout_width="wrap_content"
+            android:text="Name of the HH Head"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/guideline32"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAction2"
+            android:layout_width="wrap_content"
+            android:text="Action"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/guideline42"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFullList"
+        android:layout_width="match_parent"
+        android:visibility="@{viewModel.listingMode == UIMode.FULL_LIST ? View.VISIBLE : View.GONE}"
+        app:layout_constraintTop_toBottomOf="@id/ccListHeaders"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            tools:listitem="@layout/item_invitees"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="24dp"
+            android:layout_height="match_parent"/>
+        <include
+            android:id="@+id/emptyFullList"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/empty_state_layout"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clInvited"
+        android:layout_width="match_parent"
+        android:visibility="@{viewModel.listingMode == UIMode.INVITED_LIST ? View.VISIBLE : View.GONE}"
+        app:layout_constraintTop_toBottomOf="@id/ccInvitedHeader"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerInvited"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:paddingHorizontal="24dp"
+            android:layout_height="match_parent"/>
+
+        <include
+            android:id="@+id/emptyInvitedList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/empty_state_layout"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toTopOf="@id/clFullList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE, default=gone}"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <include
+        android:id="@+id/bottomBar"
+        layout="@layout/vhsnc_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="androidx.core.content.ContextCompat" />
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.CreateMeetingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/newMeetingRoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNewMeetingHeading"
+            android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/fill_details_for_meeting_preparation"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/todayDateRoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvNewMeetingHeading">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/todayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/today_s_date"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/todayDateValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/todayDateValue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/todayDateValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/gray_bg_bordered"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/todayDate"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtVillageLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/village"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="24dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/todayDateValue"
+                        app:layout_constraintStart_toEndOf="@id/todayDateValue"
+                        app:layout_constraintTop_toTopOf="@id/todayDateValue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/villageNameValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/gray_bg_bordered"
+                        android:padding="8dp"
+                        android:text="@{viewModel.village.target.villageProperties.name}"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtVillageLabel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectTopics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/select_meeting_topic"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/tvNewMeetingHeading"
+                    app:layout_constraintTop_toBottomOf="@id/todayDateRoot" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/topicGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="8dp"
+            app:chipSpacingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectTopics">
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topicsDropDowns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_round_corner_bg"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintTop_toBottomOf="@id/topicGroup">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTopicDropDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/provide_additional_details"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dropDownContainer"
+                app:layout_constraintTop_toBottomOf="@id/txtTopicDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/dropDownFlow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:flow_horizontalAlign="start"
+                    app:flow_horizontalBias="0"
+                    app:flow_horizontalGap="10dp"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_verticalAlign="top"
+                    app:flow_verticalGap="10dp"
+                    app:flow_verticalStyle="packed"
+                    app:flow_wrapMode="aligned" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/alert_divider"
+            app:layout_constraintTop_toBottomOf="@id/topicsDropDowns" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/eventInfoContainer"
+            app:layout_constraintTop_toBottomOf="@id/divider2"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/eventInfoHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/provide_event_information"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMeetingDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/select_a_date_for_meeting"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/eventInfoHeading"
+                app:layout_constraintTop_toBottomOf="@id/eventInfoHeading" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMeetingDate"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvMeetingDateLabel"
+                app:layout_constraintStart_toStartOf="@id/tvMeetingDateLabel"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="@id/tvMeetingDateLabel"
+                android:textSize="12sp"
+                selectText="@{viewModel.meetingDate}"
+                trimChar='@{"T"}'
+                android:drawablePadding="8dp"
+                app:drawableEndCompat="@drawable/ic_calender"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/spinner_bh"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMeetingTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/select_start_time_for_meeting"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toEndOf="@id/tvMeetingDateLabel"
+                app:layout_constraintTop_toBottomOf="@id/eventInfoHeading" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMeetingTime"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvMeetingTimeLabel"
+                app:layout_constraintStart_toStartOf="@id/tvMeetingTimeLabel"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                app:layout_constraintHorizontal_bias="0"
+                android:minWidth="120dp"
+                app:layout_constraintEnd_toEndOf="@id/tvMeetingTimeLabel"
+                android:text="@string/select"
+                selectText="@{viewModel.meetingTime}"
+                trimChar='@{"T"}'
+                android:textSize="12sp"
+                android:drawablePadding="8dp"
+                app:drawableEndCompat="@drawable/ic_time"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/spinner_bh"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMeetingAssetLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/select_an_asset_for_venue"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toEndOf="@id/tvMeetingTimeLabel"
+                app:layout_constraintTop_toBottomOf="@id/eventInfoHeading" />
+
+            <LinearLayout
+                android:id="@+id/llReason"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                app:layout_constraintHorizontal_bias="0"
+                android:background="@drawable/spinner_bh"
+                android:minWidth="120dp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="@id/tvMeetingAssetLabel"
+                app:layout_constraintTop_toBottomOf="@id/tvMeetingAssetLabel"
+                app:layout_constraintStart_toStartOf="@id/tvMeetingAssetLabel">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinnerAsset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/alert_divider"
+                app:layout_constraintTop_toBottomOf="@id/tvMeetingDate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clVenuContainer"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/eventInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/venueHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@{@string/select_a_venue_for_vhsnc(viewModel.vhsncOrVhd)}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                tools:listitem="@layout/item_venue_selection"
+                app:layout_constraintTop_toBottomOf="@id/venueHeading" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/detailGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="topicsDropDowns"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE, default=gone}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

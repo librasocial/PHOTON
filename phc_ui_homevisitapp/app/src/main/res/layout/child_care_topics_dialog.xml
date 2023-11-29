@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vhndTopics"
+            type="com.ssf.homevisit.fragment.vhnd.VHNDTopics" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corner_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/path_toolbar_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfPNC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.CHILD_CARE_Q1}"
+        tools:text="Provide the total no. of children in the meeting"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfPNC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNoOfPNC" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfPNC"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="4dp"
+        android:text="Enter Details for Child Care"
+        android:textColor="@color/landing_page_subheadings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_child_care"
+        app:layout_constraintStart_toStartOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfPNC" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfVaccination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="No. of Vaccinations Provided"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHeading" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llVaccination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtNoOfVaccination">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBelow1Yr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Below 1 year"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etBelow1Yr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt1_2Yr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="1-2 years"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et1_2Yr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt2_3Yr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="2-3 years"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et2_3Yr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt3_4Yr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="3-4 years"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et3_4Yr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt4_5Yr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="4-5 years"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et4_5Yr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt5_6Yr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="5-6 years"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et5_6Yr"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtReferralBelow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{vhndTopics.CHILD_CARE_Q8}"
+            tools:text="No. of referral up for children below 2 Years"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/etReferralBelow2"
+            app:layout_constraintTop_toTopOf="@id/etReferralBelow2" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etReferralBelow2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="72dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:imeOptions="actionNext"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_bg2"
+            app:layout_constraintStart_toEndOf="@id/txtReferralBelow2"
+            app:layout_constraintTop_toBottomOf="@id/llVaccination" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMedicationBelow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.CHILD_CARE_Q9}"
+        tools:text="No. of medications for children below 2 Years"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etMedicationBelow2"
+        app:layout_constraintTop_toTopOf="@id/etMedicationBelow2" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etMedicationBelow2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionNext"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toStartOf="@id/etReferralBelow2"
+        app:layout_constraintTop_toBottomOf="@id/etReferralBelow2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfORS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopics.CHILD_CARE_Q10}"
+        tools:text="No. of children to whom ORS is given (0 to 5 years)"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfORS"
+        app:layout_constraintTop_toTopOf="@id/etNoOfORS" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfORS"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:imeOptions="actionDone"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg2"
+        app:layout_constraintStart_toStartOf="@id/etReferralBelow2"
+        app:layout_constraintTop_toBottomOf="@id/etMedicationBelow2" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/alert_divider"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfORS" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_bar_btn"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

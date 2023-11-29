@@ -1,0 +1,243 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HomeVisit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="login_head">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+    <style name="forgot_pasw">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="health_id_style">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="couple_card_style_grey">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="health_id_style_grey">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="health_id_style_white">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="digital_ind">
+        <item name="android:textSize">40sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="one_village">
+        <item name="android:textSize">38sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="lorem_ipsum">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="powered_by_">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="powered_by__">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="LoginText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#878787</item>
+    </style>
+
+    <style name="button_start_survi">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="type_someth">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="collected_report">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="location">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="what_are_yo">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="select_surv">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#4F4F4F</item>
+    </style>
+
+    <style name="btn_text_landing">
+        <item name="android:textSize">12.1sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="socio_econo">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#4F4F4F</item>
+    </style>
+
+    <style name="others">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#4F4F4F</item>
+    </style>
+
+    <style name="select_sub_type">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="mapping">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#4F4F4F</item>
+    </style>
+    <!-- styles.xml -->
+    <style name="popup_heade">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="select_phc">
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#4F4F4F</item>
+    </style>
+
+    <style name="already_exist">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="rmncha_anc_pw_service_row">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="rmncha_header_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="rmncha_hh_header_style">
+        <item name="android:textSize">33sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="rmncha_hh_sub_header_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="cancel">
+        <item name="android:textSize">19.5sp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="start_mapping">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="existing_pr">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="nearby_house_alert_header">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="footer_back_button_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="footer_save_and_continue_button_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#0085FF</item>
+    </style>
+
+    <style name="public_heal">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <style name="save_incomp">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <style name="complete_map">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="spinner">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Theme.HomeVisit.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.HomeVisit.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.HomeVisit.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

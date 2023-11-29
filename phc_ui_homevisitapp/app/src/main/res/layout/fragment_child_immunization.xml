@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.ssf.homevisit.R" />
+        <import type="com.ssf.homevisit.healthWellnessSurveillance.common.extension.StringExtensionKt" />
+
+        <import type="com.ssf.homevisit.rmncha.base.RMNCHAUtils" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.childCare.immunization.ChildImmunizationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/headingChildCare"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            app:labelDrawable='@{R.drawable.ic_child_care}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}"
+            app:valueData='@{"Child Care"}' />
+
+        <include
+            android:id="@+id/headingHHName"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"HH Head:"}'
+            app:layout_constraintStart_toEndOf="@id/headingChildCare"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}"
+            app:valueData='@{RMNCHAUtils.setNonNullValue(viewModel.selectedChild.targetNode.properties.houseHoldName)}' />
+
+        <include
+            android:id="@+id/headingMotherName"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"Mother Name:"}'
+            app:layout_constraintStart_toEndOf="@id/headingHHName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}"
+            app:valueData='@{viewModel.childMotherDetail.content.get(0).targetNode.properties.firstName}' />
+
+        <include
+            android:id="@+id/headingMotherId"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"Mother’s RCH-ID:"}'
+            app:layout_constraintStart_toEndOf="@id/headingMotherName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{false}"
+            app:valueData='@{viewModel.childMotherDetail.content.get(0).targetNode.properties.rchId}' />
+
+        <View
+            android:id="@+id/dividerOne"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/headingChildCare" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeadingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="4dp"
+            android:text="Provide Child Immunization Services"
+            android:textColor="@color/landing_page_subheadings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_child_care"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Child-ID"
+            android:textColor="@color/button_dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvChildId"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{viewModel.childMotherDetail.content.get(0).relationship.properties.childId}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <View
+            android:id="@+id/dividerTwo"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="@id/tvChildIdLabel"
+            app:layout_constraintEnd_toStartOf="@id/tvChildIdLabel"
+            app:layout_constraintTop_toTopOf="@id/tvChildIdLabel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectAsha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="Select ASHA Name"
+            android:textColor="@color/button_dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/llSpinnerAsha"
+            app:layout_constraintEnd_toStartOf="@id/llSpinnerAsha"
+            app:layout_constraintTop_toTopOf="@id/llSpinnerAsha" />
+
+        <LinearLayout
+            android:id="@+id/llSpinnerAsha"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/alert_phc_other"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/dividerTwo"
+            app:layout_constraintTop_toTopOf="@id/dividerOne">
+
+            <Spinner
+                android:id="@+id/spinner_select_asha_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".3" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:paddingVertical="4dp"
+            android:text="Fields in *asterisk is mandatory"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_warning"
+            app:layout_constraintBottom_toTopOf="@id/bottomBarInc"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ScrollView
+            android:id="@+id/leftScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/tvChildImmunization"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtHeadingTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgMother"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias=".75"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:s3ImageUrlFromArray="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.imageUrls}"
+                            app:shapeAppearanceOverlay="@style/FullRoundImageView"
+                            app:srcCompat="@drawable/demo_picture" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgChild"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias=".25"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:s3ImageUrlFromArray="@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.imageUrls}"
+                            app:shapeAppearanceOverlay="@style/FullRoundImageView"
+                            app:srcCompat="@drawable/demo_picture" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@id/cardImg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChildOf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.firstName}'
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGenderLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Gender"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOf" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAgeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Age"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/tvStatusLabel"
+                            app:layout_constraintStart_toEndOf="@id/tvGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOf" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Status"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOf" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.gender}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvGenderLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:bindDoubleToInt="@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.age}"
+                            app:layout_constraintStart_toStartOf="@id/tvAgeLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvAgeLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{RMNCHAUtils.getResidentStatus(viewModel.childMotherDetail.content.get(0).targetNode.properties.residingInVillage)}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvStatusLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvStatusLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChildOtherDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text='@{"Ph : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.contact)+"\nDOB : "+ RMNCHAUtils.setNonNullValue(viewModel.selectedChild.sourceNode.properties.dateOfBirth) +"\nHealth ID : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).sourceNode.properties.rchId)}'
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+                        <View
+                            android:id="@+id/dividerThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@color/divider"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOtherDetails" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMother"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.firstName}"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dividerThree" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherGenderLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Gender"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherAgeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Age"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/tvMotherStatusLabel"
+                            app:layout_constraintStart_toEndOf="@id/tvMotherGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Status"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.gender}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvMotherGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherGenderLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:bindDoubleToInt="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.age}"
+                            app:layout_constraintStart_toStartOf="@id/tvMotherAgeLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherAgeLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{RMNCHAUtils.getResidentStatus(viewModel.childMotherDetail.content.get(0).targetNode.properties.residingInVillage)}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvMotherStatusLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherStatusLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherOtherDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text='@{"Ph : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.contact)+"\nDOB : "+ "-" +"\nHealth ID : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.rchId)}'
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherGender" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildImmunization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Immunization History"
+            android:textColor="#0085FF"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:enabled="true"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@id/tvNote"
+            app:layout_constraintStart_toStartOf="@id/tvNote"
+            android:focusable="true" />
+
+
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/bottomBarInc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/leftScrollView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBabyWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clBabyWeightContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
+
+                        <include
+                            android:id="@+id/tvBabyWeight"
+                            layout="@layout/view_label_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:label='@{"Birth Weight:"}'
+                            app:labelDrawable='@{R.drawable.ic_baby}'
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:showDivider="@{false}"
+                            app:valueData='@{RMNCHAUtils.setNonNullValue(viewModel.selectedChild.sourceNode.properties.birthWeight)}' />
+
+                        <include
+                            android:id="@+id/tvBabyDOB"
+                            layout="@layout/view_label_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:label='@{"DOB:"}'
+                            app:labelDrawable='@{R.drawable.ic_balloons}'
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:showDivider="@{false}"
+                            app:valueData='@{RMNCHAUtils.setNonNullValue(viewModel.selectedChild.sourceNode.properties.dateOfBirth)}' />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImmunizationDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@id/cardBabyWeight">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clImmunizationDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="18dp"
+                        android:paddingVertical="8dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleImmunization"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Vaccination Week 1"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvFinancialYrValue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvImmunizationDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Immunization date"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/tvTodayDate"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/tvTodayDate" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTodayDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/gray_bg_bordered"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp"
+                            android:text="@{RMNCHAUtils.getDateToView(RMNCHAUtils.getCurrentDate(), RMNCHAUtils.RMNCHA_DATE_FORMAT)}"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@id/tvImmunizationDate"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFinancialYr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="Financial year"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/tvFinancialYrValue"
+                            app:layout_constraintStart_toEndOf="@id/tvTodayDate"
+                            app:layout_constraintTop_toTopOf="@id/tvFinancialYrValue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFinancialYrValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/gray_bg_bordered"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp"
+                            android:text="@{RMNCHAUtils.getCurrentFinancialYear()}"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@id/tvFinancialYr"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOpvDose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="OPV-1 dose"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleImmunization" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/etOPV1DoseDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:drawableEnd="@drawable/ic_calendar_black"
+                            android:hint="DD/MM/YYYY"
+                            android:text="@{viewModel.OPV1DoseDate}"
+                            android:minWidth="130dp"
+                            android:padding="8dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvOpvDose"
+                            app:layout_constraintTop_toBottomOf="@id/tvOpvDose" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPentavalent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Pentavalent-1 dose"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/etOPV1DoseDate"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleImmunization" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/etPanavalentDoseDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:drawableEnd="@drawable/ic_calendar_black"
+                            android:hint="DD/MM/YYYY"
+                            android:text="@{viewModel.pantavalentDoseDate}"
+                            android:minWidth="130dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvPentavalent"
+                            app:layout_constraintTop_toBottomOf="@id/tvPentavalent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRota1Dose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Rota-1 dose"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/etPanavalentDoseDate"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleImmunization" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/etRota1Dose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:drawableEnd="@drawable/ic_calendar_black"
+                            android:hint="DD/MM/YYYY"
+                            android:text="@{viewModel.rota1DoseDate}"
+                            android:minWidth="130dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvRota1Dose"
+                            app:layout_constraintTop_toBottomOf="@id/tvRota1Dose" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPCV1Dose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Rota-1 dose"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/etRota1Dose"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleImmunization" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/etPCV1Dose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:drawableEnd="@drawable/ic_calendar_black"
+                            android:hint="DD/MM/YYYY"
+                            android:text="@{viewModel.PCV1DoseDate}"
+                            android:minWidth="130dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvPCV1Dose"
+                            app:layout_constraintTop_toBottomOf="@id/tvPCV1Dose" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvICV1Dose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="ICV-1 dose"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/etOPV1DoseDate" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/etICV1Dose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:drawableEnd="@drawable/ic_calendar_black"
+                            android:hint="DD/MM/YYYY"
+                            android:text="@{viewModel.ICV1DoseDate}"
+                            android:minWidth="120dp"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvICV1Dose"
+                            app:layout_constraintTop_toBottomOf="@id/tvICV1Dose"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleVaccinationStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Vaccination Status"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/etICV1Dose" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvVaccinationStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Vaccination status*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleVaccinationStatus" />
+
+                        <FrameLayout
+                            android:id="@+id/flVaccinationStatus"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvVaccinationStatus">
+
+                            <Spinner
+                                android:id="@+id/spinnerVaccinationStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/vaccination_status"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvVaccineName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Vaccine name"
+                            android:visibility='@{viewModel.vaccinationStatus.equalsIgnoreCase("done") ? View.VISIBLE : View.GONE}'
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/flVaccinationStatus"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleVaccinationStatus" />
+
+                        <FrameLayout
+                            android:id="@+id/flVaccineName"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:visibility='@{viewModel.vaccinationStatus.equalsIgnoreCase("done") ? View.VISIBLE : View.GONE}'
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvVaccineName"
+                            app:layout_constraintTop_toBottomOf="@id/tvVaccineName">
+
+                            <Spinner
+                                android:id="@+id/spinnerVaccineName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/vaccine_name"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </FrameLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvReason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Reason"
+                            android:visibility='@{viewModel.vaccinationStatus.equalsIgnoreCase("not done") ? View.VISIBLE : View.GONE}'
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/flVaccineName"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleVaccinationStatus" />
+
+                        <FrameLayout
+                            android:id="@+id/flReason"
+                            android:layout_width="120dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:visibility='@{viewModel.vaccinationStatus.equalsIgnoreCase("not done") ? View.VISIBLE : View.GONE}'
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvReason"
+                            app:layout_constraintTop_toBottomOf="@id/tvReason">
+
+                            <Spinner
+                                android:id="@+id/spinnerReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/vaccine_not_done_reason"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleAdverseEvent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Adverse Events Following Immunization (AEFI) Reported if any"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/flVaccinationStatus" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAEFIStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="AEFI status"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleAdverseEvent" />
+
+                        <FrameLayout
+                            android:id="@+id/flAEFIStatus"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvAEFIStatus">
+
+                            <Spinner
+                                android:id="@+id/spinnerAEFIStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/aefi_status"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNonSeriousReason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="12dp"
+                            android:text='@{viewModel.aefiStatus.equalsIgnoreCase("serious") ? "Serious - reason*": "Non serious - reason*"}'
+                            android:visibility='@{viewModel.aefiStatus.equalsIgnoreCase("nil") ? View.GONE : View.VISIBLE}'
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/flAEFIStatus"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleAdverseEvent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etNonSeriousReason"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:background="@drawable/edit_text_bg2"
+                            android:hint="Type"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:visibility='@{viewModel.aefiStatus.equalsIgnoreCase("nil") ? View.GONE : View.VISIBLE}'
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@id/tvNonSeriousReason"
+                            app:layout_constraintTop_toBottomOf="@id/tvNonSeriousReason"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleDetailsOfVaccination"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Details Of Vaccination"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/flAEFIStatus" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvVaccinationName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Vaccination name*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleDetailsOfVaccination" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvVaccinationDetails"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            bindVaccineArray="@{viewModel.vaccinationNames}"
+                            android:drawableTint="@color/black"
+                            android:ellipsize="end"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingHorizontal="8dp"
+                            app:drawableEndCompat="@drawable/drop_down"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvVaccinationName"
+                            app:layout_constraintTop_toBottomOf="@id/tvVaccinationName" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llVaccines"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@id/tvVaccinationDetails">
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTitleCaseClosure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Case closure"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/llVaccines" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCaseClosure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Case closure status"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvTitleCaseClosure" />
+
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupCaseClosure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvCaseClosure">
+
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radioYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:text="YES"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radioNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:text="NO"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                        </RadioGroup>
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/caseClosureGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility='@{viewModel.isCaseClosure() &amp;&amp; viewModel.caseClosureReason.equalsIgnoreCase("Death") ? View.VISIBLE : View.GONE}'
+                            app:constraint_referenced_ids="tvDeathDate, tvDeathDateValue, tvDeathPlace, flDeathPlace, tvCauseOfDeath, flCauseOfDeath" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCaseCloserReason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="Case closure reason*"
+                            android:visibility="@{viewModel.isCaseClosure() ? View.VISIBLE : View.GONE}"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/tvCaseClosure"
+                            app:layout_constraintTop_toTopOf="@id/tvCaseClosure" />
+
+                        <FrameLayout
+                            android:id="@+id/flCaseCloserReason"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:visibility="@{viewModel.isCaseClosure() ? View.VISIBLE : View.GONE}"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvCaseCloserReason"
+                            app:layout_constraintTop_toBottomOf="@id/tvCaseCloserReason">
+
+                            <Spinner
+                                android:id="@+id/spinnerCaseCloserReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/case_closure_reason"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDeathDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Death date*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/radioGroupCaseClosure" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDeathDateValue"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:hint="DD/MM/YYYY"
+                            android:ellipsize="end"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:maxLines="1"
+                            android:text="@{viewModel.deathDate}"
+                            app:drawableEndCompat="@drawable/ic_calendar_black"
+                            app:layout_constraintStart_toStartOf="@id/tvDeathDate"
+                            app:layout_constraintTop_toBottomOf="@id/tvDeathDate" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDeathPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="Place of death*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/tvDeathDateValue"
+                            app:layout_constraintTop_toTopOf="@id/tvDeathDate" />
+
+                        <FrameLayout
+                            android:id="@+id/flDeathPlace"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvDeathPlace"
+                            app:layout_constraintTop_toBottomOf="@id/tvDeathPlace">
+
+                            <Spinner
+                                android:id="@+id/spinnerDeathPlace"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/place_of_death"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCauseOfDeath"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="Probable cause of death*"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/flDeathPlace"
+                            app:layout_constraintTop_toTopOf="@id/tvDeathDate" />
+
+                        <FrameLayout
+                            android:id="@+id/flCauseOfDeath"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvCauseOfDeath"
+                            app:layout_constraintTop_toBottomOf="@id/tvCauseOfDeath">
+
+                            <Spinner
+                                android:id="@+id/spinnerCauseOfDeath"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/probable_cause_of_death"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCovidTestDone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:drawablePadding="4dp"
+                            android:text="Is Covid test done?"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:drawableStartCompat="@drawable/ic_covid"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvDeathDateValue" />
+
+                        <FrameLayout
+                            android:id="@+id/flCovidTestDone"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvCovidTestDone"
+                            app:layout_constraintTop_toBottomOf="@id/tvCovidTestDone">
+
+                            <Spinner
+                                android:id="@+id/spinnerCovidTestDone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/child_care_covid_test"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCovidTestResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="Covid test results"
+                            android:visibility='@{viewModel.isCovidTestDone().equalsIgnoreCase("done") ? View.VISIBLE : View.GONE}'
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toEndOf="@id/tvCovidTestDone"
+                            app:layout_constraintTop_toTopOf="@id/tvCovidTestDone" />
+
+                        <FrameLayout
+                            android:id="@+id/flCovidTestResult"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:visibility='@{viewModel.isCovidTestDone().equalsIgnoreCase("done") ? View.VISIBLE : View.GONE}'
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintStart_toStartOf="@id/tvCovidTestResult"
+                            app:layout_constraintTop_toBottomOf="@id/tvCovidTestResult">
+
+                            <Spinner
+                                android:id="@+id/spinnerCovidTestResult"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/child_care_covid_test_result"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvIsFeelingILI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Is the child\nexperiencing ILI\n(Influenza Like Illness)*"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/flCovidTestDone" />
+
+                        <FrameLayout
+                            android:id="@+id/flIsFeelingILI"
+                            android:layout_width="130dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintBottom_toBottomOf="@id/tvIsFeelingILI"
+                            app:layout_constraintStart_toEndOf="@id/tvIsFeelingILI"
+                            app:layout_constraintTop_toTopOf="@id/tvIsFeelingILI">
+
+                            <Spinner
+                                android:id="@+id/spinnerIsFeelingILI"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/array_yes_no"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSymptoms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="(Are there symptoms like Cough, Fever, Cold, Sore throat, Difficulty in Breathing?)"
+                            android:textAlignment="center"
+                            android:textColor="@color/landing_page_headings"
+                            android:textSize="10sp"
+                            app:layout_constraintEnd_toEndOf="@id/flIsFeelingILI"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/flIsFeelingILI" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvIsCovidContact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="24dp"
+                            android:text="Did the child have any\ncontact with Covid-19\npositive patients\n(mother included)\nin the last 14 days?*"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toEndOf="@id/flIsFeelingILI"
+                            app:layout_constraintTop_toBottomOf="@id/flCovidTestDone" />
+
+                        <FrameLayout
+                            android:id="@+id/flIsCovidContact"
+                            android:layout_width="130dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/spinner_bh"
+                            app:layout_constraintBottom_toBottomOf="@id/tvIsCovidContact"
+                            app:layout_constraintStart_toEndOf="@id/tvIsCovidContact"
+                            app:layout_constraintTop_toTopOf="@id/tvIsCovidContact">
+
+                            <Spinner
+                                android:id="@+id/spinnerIsCovidContact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:entries="@array/array_yes_no"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRemarks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Remarks"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvSymptoms" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etRemarks"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/edit_text_bg2"
+                            android:gravity="top"
+                            android:hint="Type"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapWords"
+                            android:text="@={viewModel.remarks}"
+                            android:minHeight="50dp"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@id/tvRemarks"
+                            app:layout_constraintTop_toBottomOf="@id/tvRemarks" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottomBarInc"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

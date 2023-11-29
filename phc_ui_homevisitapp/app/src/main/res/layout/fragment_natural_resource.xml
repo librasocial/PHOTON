@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/footer_logo_first"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="27dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/footer_logo_first"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_plus" />
+
+            <ImageView
+                android:id="@+id/footer_logo_two"
+                android:layout_width="43dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toStartOf="@id/plus"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_tree" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/socio_economic_survey"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#646464"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/village_level"
+                    android:textColor="#646464"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Select the Survey Type for Socio Economic Survey"
+                    android:textColor="#1D9824"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/header_brand"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+        <TextView
+            android:id="@+id/tv_village_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw"
+            tools:text="Village Name" />
+
+
+        <TextView
+            android:id="@+id/tv_village_lgd_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#969696"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/tv_village_name"
+            app:layout_constraintTop_toBottomOf="@id/header_vw"
+            tools:text="|  Village LGD code" />
+
+        <LinearLayout
+            android:id="@+id/ll_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/tv_village_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_village_name">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:text="District"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:text="Taluk"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="190dp"
+                android:text="Gram Panchayat Name"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_heading_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ll_heading"
+            app:layout_constraintTop_toBottomOf="@id/ll_heading">
+
+            <LinearLayout
+                android:id="@+id/ll_state"
+                android:layout_width="150dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintStart_toStartOf="@id/tv_heading"
+                app:layout_constraintTop_toBottomOf="@id/tv_heading">
+
+                <Spinner
+                    android:id="@+id/spinner_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/dash"
+                    android:spinnerMode="dropdown"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_district"
+                android:layout_width="150dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintStart_toStartOf="@id/tv_heading"
+                app:layout_constraintTop_toBottomOf="@id/tv_heading">
+
+                <Spinner
+                    android:id="@+id/spinner_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/dash"
+                    android:spinnerMode="dropdown"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_taluk"
+                android:layout_width="200dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintStart_toStartOf="@id/tv_heading"
+                app:layout_constraintTop_toBottomOf="@id/tv_heading">
+
+                <Spinner
+                    android:id="@+id/spinner_taluk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/dash"
+                    android:spinnerMode="dropdown"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_gram"
+                android:layout_width="250dp"
+                android:layout_height="34dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                app:layout_constraintStart_toStartOf="@id/tv_heading"
+                app:layout_constraintTop_toBottomOf="@id/tv_heading">
+
+                <Spinner
+                    android:id="@+id/spinner_gram"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/dash"
+                    android:spinnerMode="dropdown"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vw"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ll_heading_value"
+            app:layout_constraintTop_toBottomOf="@id/ll_heading_value" />
+
+        <TextView
+            android:id="@+id/tv_todays_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="25dp"
+            android:text="Today’s Date"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/ll_heading_value"
+            app:layout_constraintTop_toBottomOf="@id/vw" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_date"
+            android:layout_width="93dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toEndOf="@id/tv_todays_date"
+            app:layout_constraintTop_toBottomOf="@id/vw">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background">
+
+                <TextView
+                    android:id="@+id/tv_current_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="20_05_2022" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_select_survey_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Select the Survey Type"
+            android:textColor="#333333"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_todays_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_todays_date" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_natural_resource_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ll_heading_value"
+            app:layout_constraintTop_toBottomOf="@id/tv_select_survey_type"
+            tools:itemCount="5"
+            tools:listitem="@layout/fragment_natural_resource_single_item" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_footer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_footer_wth_stroke"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAFAFA">
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@id/ll_btn_save"
+                    app:layout_constraintTop_toTopOf="@id/ll_btn_save" />
+
+                <LinearLayout
+                    android:id="@+id/ll_btn_save"
+                    android:layout_width="102dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_disabled"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/ic_floppy_disk_solid"
+                        android:backgroundTint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

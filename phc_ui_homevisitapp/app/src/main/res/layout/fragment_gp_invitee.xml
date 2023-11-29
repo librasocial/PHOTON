@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.CreateMeetingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/black"
+            android:gravity="center"
+            android:text="Select the GP Members to Whom The Invite Will Be Sent"
+            android:textAppearance="@style/rmncha_hh_sub_header_style"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_send_invite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGramPanchayatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gram_panchayat"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/tvHeading"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/gramPanchayat"
+            app:layout_constraintTop_toTopOf="@id/gramPanchayat"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/gramPanchayat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gray_bg_bordered"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@id/txtGramPanchayatLabel"
+            android:text="@{viewModel.gramPanchayat.name}"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/tvHeading" />
+
+        <include
+            android:id="@+id/listHeading"
+            layout="@layout/item_header_gp_invitees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintTop_toBottomOf="@id/gramPanchayat" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintTop_toBottomOf="@id/listHeading"
+            tools:listitem="@layout/item_gp_invitee" />
+
+        <include
+            android:id="@+id/emptyState"
+            layout="@layout/empty_state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintTop_toBottomOf="@id/listHeading" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="@id/recycler"
+            app:layout_constraintTop_toTopOf="@id/recycler"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE, default=gone}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

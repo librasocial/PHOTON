@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.PulsePolioFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/path_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgPolioLogo"
+        app:srcCompat="@drawable/ic_polio"
+        android:tint="@color/black"
+        android:layout_margin="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/heading"
+        app:layout_constraintTop_toTopOf="@id/imgPolioLogo"
+        app:layout_constraintStart_toEndOf="@id/imgPolioLogo"
+        android:layout_marginStart="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgPolioLogo"
+        android:textStyle="bold"
+        android:textAppearance="@style/rmncha_hh_sub_header_style"
+        android:text="Select a Day for Pulse Polio Programme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@id/imgPolioLogo"
+        app:layout_constraintStart_toStartOf="@id/imgPolioLogo"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/polioDayOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                app:ButtonImg="@drawable/ic_polio_day_one"
+                app:ButtonTxt="Pulse Polio - Day 1" />
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/polioDayTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                android:layout_marginStart="24dp"
+                app:ButtonImg="@drawable/ic_polio_day_two"
+                app:ButtonTxt="Pulse Polio - Day 2" />
+            <com.ssf.homevisit.views.RMNCHAButton
+                android:id="@+id/polioDayThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ButtonBgColor="@color/white"
+                android:layout_marginStart="24dp"
+                app:ButtonImg="@drawable/ic_polio_day_three"
+                app:ButtonTxt="Pulse Polio - Day 3" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

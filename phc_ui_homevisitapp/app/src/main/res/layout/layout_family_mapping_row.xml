@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+    <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/edit_bg">
+        <TextView
+                android:id="@+id/name_of_resident"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_weight="1"/>
+
+        <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_user_solid"
+                android:backgroundTint="#cacaca"/>
+    </LinearLayout>
+
+    <View
+            android:layout_width="20dp"
+            android:layout_margin="5dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_arrow_right_long_solid"/>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+        <Spinner
+                android:id="@+id/relationship_status"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>
