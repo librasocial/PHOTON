@@ -9,7 +9,7 @@ import {
 } from "react-google-maps";
 import { compose, withProps } from "recompose";
 
-const GOOGLE_API_KEY = "AIzaSyBITWADW5JiYQUJBspxyPq0OLCrTCNwrSQ";
+const GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY";
 
 function GoogleMapModal(props) {
   const [defaultLatLng, setDefaultLatLng] = useState({

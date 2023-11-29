@@ -5,8 +5,8 @@ const loadSecrets = (region, SecretId) =>
 	new Promise((resolve, reject) => {
         AWS.config.update({
           credentials: new AWS.Credentials({
-            accessKeyId: "AKIAR2KY2Z47FONLTPZX",
-            secretAccessKey: "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",
+            accessKeyId: "${aws-access-key}",
+            secretAccessKey: "${aws-secret-key}",
             region: process.env.region
           })
         });

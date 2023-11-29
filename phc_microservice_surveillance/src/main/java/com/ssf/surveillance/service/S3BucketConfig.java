@@ -25,7 +25,7 @@ public  class S3BucketConfig implements IS3BucketService {
     String bucketName = "ssf-dev-assets";
     Region region = Region.AP_SOUTH_1;
 
-    AwsCredentialsProvider credentialsProvider = StaticCredentialsProvider.create(AwsBasicCredentials.create("AKIAR2KY2Z47FONLTPZX", "Q0dwDIIf5On7N581scWo28m84N2vFaXRJ6KWXXbb"));
+    AwsCredentialsProvider credentialsProvider = StaticCredentialsProvider.create(AwsBasicCredentials.create("${aws-access-key}", "${aws-secret-key}"));
     S3Presigner presigner = S3Presigner.builder()
             .region(region)
             .credentialsProvider(credentialsProvider)
