@@ -1,0 +1,41 @@
+{
+	"name": "phc_microservice_medicalknowledge",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "NODE_ENV=test mocha --reporter mocha-junit-reporter --reporter-options mochaFile=./test/test-results.xml --timeout 10000 --exit",
+		"dev": "NODE_ENV=dev nodemon server.js",
+		"start": "NODE_ENV=prod nodemon server.js",
+		"prod": "NODE_ENV=prod nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SampoornaSwarajFoundation/PHC_Microservice_MedicalKnowledge.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SampoornaSwarajFoundation/PHC_Microservice_MedicalKnowledge/issues"
+	},
+	"homepage": "https://github.com/SampoornaSwarajFoundation/PHC_Microservice_MedicalKnowledge#readme",
+	"dependencies": {
+		"aws-sdk": "^2.1354.0",
+		"body-parser": "^1.20.0",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"express-actuator": "^1.8.1",
+		"express-validator": "^6.14.0",
+		"mongoose": "^6.4.6",
+		"nodemon": "^2.0.20",
+		"winston": "^3.7.2"
+	},
+	"devDependencies": {
+		"chai": "^4.3.6",
+		"chai-http": "^4.3.0",
+		"mocha": "^10.0.0",
+		"mocha-junit-reporter": "^2.0.2",
+		"mongodb-memory-server": "^8.5.2"
+	}
+}

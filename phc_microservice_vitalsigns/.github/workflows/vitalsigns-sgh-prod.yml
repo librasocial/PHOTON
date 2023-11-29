@@ -1,0 +1,175 @@
+# Dont change unless you know what you are doing
+name: VitalSigns.CI.SGH.PROD
+
+on:
+  workflow_dispatch:
+
+# Env variables for DEV environment 
+env:
+  profile: ${{ secrets.PROFILE }}
+  secret: ${{ secrets.SECRET }}
+  accesskey: ${{ secrets.ACCESSKEY }}
+  secretkey: ${{ secrets.SECRETKEY }}
+  region: ${{ secrets.REGION }}
+  IMAGE_NAME: sampoornaswarajfoundation/vitalsigns
+
+jobs:
+  build:
+    name: ⚒️ Build App
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    
+    - name: Checkout Main Repo
+      uses: actions/checkout@v3
+        
+    - name: Checkout Docker Repo
+      uses: actions/checkout@v3
+      with:
+        repository: SampoornaSwarajFoundation/PHC_Infrastructure
+        ref: stg-infra
+        path: vitalsigns
+        token: ${{ secrets.GHPAT }}
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        #cache: 'npm'
+        #cache-dependency-path: ${{github.workspace}}/package.json
+    
+    - name: Install Dependenicies
+      run: npm ci
+    
+    - name: npm Build
+      run: npm run build --if-present
+    
+#     - name: npm Test
+#       run: npm run test
+#       working-directory: test
+    
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      with:
+        version: v0.7.0
+    
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ secrets.GCR }}
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GHPAT }}   
+        
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y.%m.%d')"
+    
+    - name: Build and Push Image
+      id: gcr_push
+      uses: docker/build-push-action@v2
+      with:
+          context: .
+          file: vitalsigns/vitalsigns/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/sampoornaswarajfoundation/vitalsigns:v1.0
+            
+  deploy:
+    name: 📦 Deploy to SGH-PROD
+    environment:
+      name: SGH-PROD
+    needs: [build]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Infra Repo
+        uses: actions/checkout@v3
+        with:
+          repository: SampoornaSwarajFoundation/PHC_Infrastructure
+          ref: stg-infra
+          path: sgh-phcdt
+          token: ${{ secrets.GHPAT }} 
+      
+      - name: Change directory to sgh-phcdt
+        run: |
+          cd sgh-phcdt/sgh-phcdt/
+          ls -ltr
+      
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.13.7
+          cli_config_credentials_token: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ secrets.GCR }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHPAT }}  
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESSKEYID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Terraform Init
+        id: init
+        run: |
+            cd sgh-phcdt/sgh-phcdt/
+            terraform init
+        working-directory: ${{ github.workspace }}
+      
+      - name: Terraform Validate
+        id: validate
+        run: |
+            cd sgh-phcdt/sgh-phcdt/
+            terraform validate -no-color
+      
+      - name: Terraform Plan
+        id: plan
+        run: |
+            cd sgh-phcdt/sgh-phcdt/
+            terraform plan -no-color
+        working-directory: ${{ github.workspace }}
+      
+      - name: Get Image Version
+        id: image-version
+        env: 
+          SECRETS_CONTEXT: "${{ toJson(secrets) }}"
+        run: |
+          $secrets = ($env:SECRETS_CONTEXT | ConvertFrom-Json -AsHashtable)
+          $token = $secrets.GHPAT
+          $object = Invoke-RestMethod -Method Get -Uri https://api.github.com/orgs/SampoornaSwarajFoundation/packages/container/vitalsigns/versions -Headers @{Authorization = 'Bearer ' + $token}
+          $tags = $object.metadata.container.tags
+          $imageversion = $tags[0]
+          Write-Output $imageversion
+          echo "::set-output name=imageversion::$imageversion" 
+        shell: pwsh 
+      
+      - name: Tag and Push image
+        run: |
+          docker pull ${{secrets.GCR}}/${{env.IMAGE_NAME}}:${{steps.image-version.outputs.imageversion}}
+          docker tag ${{secrets.GCR}}/${{env.IMAGE_NAME}}:${{steps.image-version.outputs.imageversion}} ${{secrets.GCR}}/${{env.IMAGE_NAME}}:latest
+          docker push ${{secrets.GCR}}/${{env.IMAGE_NAME}}:latest
+      
+      - name: Update Secrets
+        run: |
+          cd sgh-phcdt/sgh-phcdt/
+          python3 updateAWSCredScript.py --file "../modules/eks/vitalsigns.tf" --accesskey "${{ secrets.ACCESSKEY }}" --secretkey "${{ secrets.SECRETKEY }}"
+          cat ../modules/eks/vitalsigns.tf
+      
+      - name: Terraform Apply
+        run: |
+            cd sgh-phcdt/sgh-phcdt/
+            terraform apply -auto-approve -var='vitalsigns-svc-image=ghcr.io/sampoornaswarajfoundation/vitalsigns:latest'
+        working-directory: '${{ github.workspace }}'
+

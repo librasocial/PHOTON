@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.5060" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-05-16T07:18:52" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="FamilyMemberHistory" timestamp="2022-05-16T07:18:52" tests="0" file="I:\AlignTogether\sampoorna\PHC_Microservice_FamilyMemberHistory\test\test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="/POST familyMemberHistory" timestamp="2022-05-16T07:18:52" tests="3" file="I:\AlignTogether\sampoorna\PHC_Microservice_FamilyMemberHistory\test\test.js" time="0.0810" failures="0">
+    <testcase name="FamilyMemberHistory /POST familyMemberHistory it should create a new familyMemberHistory" time="0.0620" classname="it should create a new familyMemberHistory">
+    </testcase>
+    <testcase name="FamilyMemberHistory /POST familyMemberHistory it should not create a new familyMemberHistory if encounterDate is not of Date type" time="0.0100" classname="it should not create a new familyMemberHistory if encounterDate is not of Date type">
+    </testcase>
+    <testcase name="FamilyMemberHistory /POST familyMemberHistory it should not create a new familymemberhistory if doctor is not of string type" time="0.0050" classname="it should not create a new familymemberhistory if doctor is not of string type">
+    </testcase>
+  </testsuite>
+  <testsuite name="/GET familyMemberHistory" timestamp="2022-05-16T07:18:53" tests="2" file="I:\AlignTogether\sampoorna\PHC_Microservice_FamilyMemberHistory\test\test.js" time="0.0230" failures="0">
+    <testcase name="FamilyMemberHistory /GET familyMemberHistory it should not fetch the familyMemberHistory" time="0.0110" classname="it should not fetch the familyMemberHistory">
+    </testcase>
+    <testcase name="FamilyMemberHistory /GET familyMemberHistory it should fetch the MedicalConditions" time="0.0100" classname="it should fetch the MedicalConditions">
+    </testcase>
+  </testsuite>
+  <testsuite name="/PATCH familyMemberHistory" timestamp="2022-05-16T07:18:53" tests="2" file="I:\AlignTogether\sampoorna\PHC_Microservice_FamilyMemberHistory\test\test.js" time="0.0200" failures="0">
+    <testcase name="FamilyMemberHistory /PATCH familyMemberHistory it should not update the familyMemberHistory" time="0.0100" classname="it should not update the familyMemberHistory">
+    </testcase>
+    <testcase name="FamilyMemberHistory /PATCH familyMemberHistory it should update the familyMemberHistory" time="0.0080" classname="it should update the familyMemberHistory">
+    </testcase>
+  </testsuite>
+  <testsuite name="/GET filter familyMemberHistory" timestamp="2022-05-16T07:18:53" tests="3" file="I:\AlignTogether\sampoorna\PHC_Microservice_FamilyMemberHistory\test\test.js" time="0.0350" failures="0">
+    <testcase name="FamilyMemberHistory /GET filter familyMemberHistory it should filter the familyMemberHistory if page, size and encounterId is provided" time="0.0130" classname="it should filter the familyMemberHistory if page, size and encounterId is provided">
+    </testcase>
+    <testcase name="FamilyMemberHistory /GET filter familyMemberHistory it should filter the familyMemberHistory if page, size and UHId is provided" time="0.0090" classname="it should filter the familyMemberHistory if page, size and UHId is provided">
+    </testcase>
+    <testcase name="FamilyMemberHistory /GET filter familyMemberHistory it should filter the familyMemberHistory if page, size and encounterDate is provided" time="0.0090" classname="it should filter the familyMemberHistory if page, size and encounterDate is provided">
+    </testcase>
+  </testsuite>
+</testsuites>
