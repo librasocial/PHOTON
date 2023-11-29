@@ -1,0 +1,12 @@
+{
+  "type": "LabOrders",
+  "properties": {
+    "medicalTests": [
+      {
+        "testCode": "string",
+        "testName": "string"
+      }
+    ],
+    "status": "RESULTS_ENTERED"
+  }
+}

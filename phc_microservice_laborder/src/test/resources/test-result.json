@@ -1,0 +1,25 @@
+{
+  "orderId": "string",
+  "orderSampleId": "string",
+  "sample": {
+    "labTestId": "string",
+    "labTestName": "string",
+    "resultType": "string",
+    "containerType": "string",
+    "containerCount": 0,
+    "sampleType": "string",
+    "serviceDate": "2022-07-15T10:15:49.348Z",
+    "isOutsourced": true,
+    "isSampleCollected": true
+  },
+  "results": [
+    {
+      "key": "string",
+      "value": "string",
+      "unitOfMeasure": "string",
+      "testMethod": "string",
+      "normalRange": "string",
+      "description": "string"
+    }
+  ]
+}

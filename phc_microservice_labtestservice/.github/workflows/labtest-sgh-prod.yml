@@ -1,0 +1,197 @@
+name: LabTest.CI.SGH.PROD
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+
+# Env variables for DEV environment
+env:
+  profile: ${{ secrets.PROFILE }}
+  secret: ${{ secrets.SECRET }}
+  accesskey: ${{ secrets.ACCESSKEY }}
+  secretkey: ${{ secrets.SECRETKEY }}
+  region: ${{ secrets.REGION }}
+  IMAGE_NAME: sampoornaswarajfoundation/labtest
+  
+jobs:
+  build:
+    name: 🛠 Build App
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
+      - name: Run Junit Tests
+        run: mvn -B test --file pom.xml
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: target/surefire-reports/*.xml
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: artifact
+          path: ${{github.workspace}}/target
+    
+  gcr-push:
+    name: 🐳 Build & Push Docker Image
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v3.0.0
+      with:
+        name: artifact
+        path: ${{github.workspace}}/target
+
+    - name: Checkout Docker Repo
+      uses: actions/checkout@v2
+      with:
+        repository: SampoornaSwarajFoundation/PHC_Infrastructure
+        ref: stg-infra
+        path: lab-test-svc
+        token: ${{ secrets.GHPAT }}
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      with:
+        version: v0.7.0
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ secrets.GCR }}
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GHPAT }}
+
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y.%m.%d')"
+
+    - name: Build and Push Image
+      id: gcr_push
+      uses: docker/build-push-action@v3
+      with:
+          context: .
+          file: lab-test-svc/lab-test-svc/Dockerfile
+          push: true
+          tags: |
+              ghcr.io/sampoornaswarajfoundation/labtest:v1.0
+
+  deploy:
+    name: 📦 Deploy to SGH-PROD
+    # needs: [build, gcr-push]
+    runs-on: ubuntu-latest
+    environment:
+      name: SGH-PROD
+    continue-on-error: false
+    
+    steps:
+      
+      - name: Checkout Infra Repo
+        uses: actions/checkout@v3
+        with:
+          repository: SampoornaSwarajFoundation/PHC_Infrastructure
+          ref: stg-infra
+          path: sgh-phcdt
+          token: ${{ secrets.GHPAT }} 
+      
+      - name: Change directory to sgh-phcdt
+        run: |
+              cd sgh-phcdt/sgh-phcdt/
+              ls -ltr
+      
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ${{ secrets.GCR }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHPAT }}
+      
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.13.7
+          cli_config_credentials_token: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Terraform Init
+        id: init
+        run: |
+          cd sgh-phcdt/sgh-phcdt/
+          terraform init
+        working-directory: ${{ github.workspace }}
+      
+      - name: Terraform Validate
+        id: validate
+        run: |
+          cd sgh-phcdt/sgh-phcdt/
+          terraform validate -no-color
+      
+      - name: Terraform Plan
+        id: plan
+        run: |
+          cd sgh-phcdt/sgh-phcdt/
+          terraform plan -no-color
+        working-directory: ${{ github.workspace }}
+      
+      - name: Get Image Version
+        id: image-version
+        env: 
+          SECRETS_CONTEXT: "${{ toJson(secrets) }}"
+        run: |
+            $secrets = ($env:SECRETS_CONTEXT | ConvertFrom-Json -AsHashtable)
+            $token = $secrets.GHPAT
+            $object = Invoke-RestMethod -Method Get -Uri https://api.github.com/orgs/SampoornaSwarajFoundation/packages/container/labtest/versions -Headers @{Authorization = 'Bearer ' + $token}
+            $object.metadata.container
+            $tags = $object.metadata.container.tags
+            Write-Output $tags
+            $imageversion = $tags[0]
+            Write-Output $imageversion
+            echo "::set-output name=imageversion::$imageversion" 
+        shell: pwsh 
+      
+      - name: Tag and Push image
+        run: |
+          docker pull ${{secrets.GCR}}/${{env.IMAGE_NAME}}:${{steps.image-version.outputs.imageversion}}
+          docker tag ${{secrets.GCR}}/${{env.IMAGE_NAME}}:${{steps.image-version.outputs.imageversion}} ${{secrets.GCR}}/${{env.IMAGE_NAME}}:latest
+          docker push ${{secrets.GCR}}/${{env.IMAGE_NAME}}:latest
+      
+      - name: Update Secrets
+        run: |
+          cd sgh-phcdt/sgh-phcdt/
+          python3 updateAWSCredScript.py --file "../modules/eks/labtestservice.tf" --accesskey "${{ secrets.ACCESSKEY }}" --secretkey "${{ secrets.SECRETKEY }}"
+          cat ../modules/eks/labtestservice.tf
+      
+      - name: Terraform Apply
+        run: |
+              cd sgh-phcdt/sgh-phcdt/
+              terraform apply -auto-approve -var='labtestservice-svc-image=ghcr.io/sampoornaswarajfoundation/labtest:latest'
+        working-directory: '${{ github.workspace }}'

@@ -1,0 +1,31 @@
+{
+  "id": "string",
+  "patient": {
+    "patientId": "string",
+    "citizenId": "string",
+    "healthId": "string",
+    "name": "string",
+    "gender": "Male",
+    "dob": "2022-07-09",
+    "phone": "string",
+    "uhid": "string"
+  },
+  "assignedToLab": "string",
+  "status": "RESULTS_ENTERED",
+  "originatedBy": "string",
+  "encounter": {
+    "encounterId": "string",
+    "encounterDateTime": "2022-07-09T05:15:54.129Z",
+    "staffId": "string",
+    "staffName": "string"
+  },
+  "medicalTests": [
+    {
+      "labTestId": "string",
+      "labTestName": "string",
+      "resultType": "string",
+      "sampleType": "string"
+    }
+  ],
+  "orderDate": "2022-07-09T05:15:54.129Z"
+}
