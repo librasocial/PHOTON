@@ -1,6 +1,6 @@
 # Overview 📝
 
-This repo contains all the services for PHOTON.
+This repo contains all the microservices for PHOTON.
 
 ## Services Catalogue 📚
 
