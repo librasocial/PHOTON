@@ -1,0 +1,19 @@
+{
+  "dateOfSurveillance": "2022-08-07",
+  "villageId": "string",
+  "placeType": "string",
+  "placeOrgId": "string",
+  "placeName": "string",
+  "householdId": "string",
+  "testResult": {
+    "reportImageUrl": ["string"],
+    "labTechName": "string",
+    "h2sResult": "string",
+    "resultDate": "2022-08-07"
+  },
+  "sample": {
+    "noOfSamples": "string",
+    "collectionDate": "2022-08-07",
+    "labSubmittedDate": "2022-08-07"
+  }
+}

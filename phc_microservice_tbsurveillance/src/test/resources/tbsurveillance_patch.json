@@ -1,0 +1,36 @@
+{
+    "citizenId":"b531297c-40f7-44f4-bdf7-f8bb9123276e",
+    "dateOfSurveillance":"2022-10-02T02:50:12.208Z",
+    "wasTreatedForTBInPast":"false",
+    "isReferredToPhc":"false",
+    "hasDiabetes":"false",
+    "hasTBSymptoms":"false",
+    "sample":[
+        {
+            "isSampleCollected":"true",
+            "sampleCollectedDate":"2022-10-02T02:50:12.208Z",
+            "sampleSubmittedDate":"2022-10-02T02:50:12.208Z",
+            "sampleSentToLoc":"chennai",
+            "labReceivedDate":"2022-10-02T02:50:12.208Z",
+            "remarks":"nil"
+     
+        }],
+        "labResult":{
+            "resultDate":"2022-10-02T02:50:12.208Z",
+            "dmcTestResult":"nil",
+            "naatTestResult":"nil",
+            "chestXRayTestResult":"nil",
+            "nameOfTechnician":"priya",
+            "labSerialNo":"12345",
+            "result":"nil",
+            "reportImages":["12345","87655","109866"]
+        },
+        "audit":{
+            "createdBy":"abslab",
+            "modifiedBy":"123678",
+            "dateCreated":"2021-12-02T02:50:12.208Z",
+            "dateModified":"2022-10-02T02:50:12.208Z"
+        }
+
+
+}

@@ -1,0 +1,86 @@
+{
+	"surveyName": "Individual Level Socio-economic Survey Fields",
+	"surveyType": "Individual",
+	"version": "1.0",
+	"quesOptions": [{
+			"question": "Relation to the Head of the Family",
+			"choices": ["Father”, “Mother”, “Son”,” Wife”, “Husband”, “Boyfriend”,” Girlfriend”,Daughter", " Daughter in Law", "Mother in Law", "Sister in Law", "Brother in Law", "Sister", "Step Sister", "Step Brother", "Grand Father", "Grand Mother", "Grand Grand Father", "Grand Grand Mother", "Grand Grand Grand Mother", "Grand Grand Grand Father", "Co-Brother", "Co-Sister"]
+		},
+		{
+			"question": " which Religion do you  belong to",
+			"choices": ["Hindu”,” Muslim”,“Cristian”,“Others"]
+		},
+
+		{
+			"question": "which Caste do you  belong to",
+			"choices": ["General”,“SC”,“ST”,“OBC"]
+
+		},
+		{
+			"question": "what is your Education",
+			"choices": ["Illiterate”,“Primary School”,“Middle School”,“High School”,“Intermediate/Diploma”,“Graduation”, “Professional Degree"]
+		},
+		{
+			"question": " Enter a Mobile Number",
+			"choices": []
+		},
+
+		{
+			"question": "what is Occupation",
+			"choices": ["Yes”,”No"]
+		},
+		{
+			"question": "Employed",
+			"choices": [" Yes”,”No"]
+		},
+
+		{
+			"question": "What Type of Job",
+			"choices": ["Regular”,“Irregular"]
+		},
+
+		{
+			"question": "do You have Government job",
+			"choices": [" Yes”,”No"]
+		},
+
+		{
+			"question": "do You have Private job",
+			"choices": [" Yes”,”No"]
+		},
+		{
+			"question": "do you have any Identity Proof ",
+			"choices": [" Aadhar”,“APL”, “BPL”,“Antyodaya”,“PAN”,“Driving Licence”,“Voter ID”,“Bank Passbook”,“ESI”,” None"]
+		},
+		{
+			"question": "what is your Marital Status",
+			"choices": ["Single”,”Married”,”Widow"]
+		},
+
+		{
+			"question": "do you have Health Insurance Scheme",
+			"choices": ["Yes”,”No"]
+		},
+		{
+			"question": "do you have Income source",
+			"choices": [" Yes”,”No"]
+		},
+
+		{
+			"question": "what is your Blood Group",
+			"choices": []
+		},
+		{
+			"question": "what is your Mother Tongue",
+			"choices": ["Kannada”,”English”,”Hindi”,“Telugu”,“Tamil”,”Urdu”,”Other"]
+		},
+		{
+			"question": "do you have any Identification Mark",
+			"choices": []
+		}
+	],
+	"audit": {
+		"dateCreated": "2021-12-17",
+		"createdBy": "1"
+	}
+}

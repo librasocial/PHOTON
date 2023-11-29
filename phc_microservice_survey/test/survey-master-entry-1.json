@@ -1,0 +1,34 @@
+{
+	"surveyName": "Household Socio-Economic Survey",
+	"surveyType": "HouseHold",
+	"version": "1.0",
+	"quesOptions": [{
+			"question": "what Type of House",
+			"choices": ["Kutcha", "Semi", "Pukka"]
+		},
+		{
+			"question": "Do you have a bathroom in your home",
+			"choices": ["Yes", "No"]
+		},
+		{
+			"question": "Do you have a Kitchen in your home,",
+			"choices": ["Yes", "No"]
+		},
+		{
+			"question": "Number of Living Rooms",
+			"choices": []
+		},
+		{
+			"question": "Ownership of the house",
+			"choices": ["Own", "Rented", "Leased", "Temporary Shelter"]
+		},
+		{
+			"question": "what is your HouseHold Category",
+			"choices": ["Registered Slum”,”Unauthorised Slum”,”Homeless Shelter”,”Temporary Settlement?"]
+		}
+	],
+	"audit": {
+		"dateCreated": "2021-12-16",
+		"createdBy": "1"
+	}
+}

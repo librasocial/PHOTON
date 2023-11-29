@@ -6,13 +6,7 @@ The steps to follow are:
 
 - Register the outcomes of the delivery
 
-- Further to this, register or enter the details of the infant. 
-
-## Build Status 🚦
-
-| Environment | Packages|
-|------|-------|
-|[![PNCRegistration.CI.DEV](https://github.com/SampoornaSwarajFoundation/PHC_Microservice_PNCRegistration/actions/workflows/pncregistration-dev.yml/badge.svg)](https://github.com/SampoornaSwarajFoundation/PHC_Microservice_PNCRegistration/actions/workflows/pncregistration-dev.yml)| [![PNCRegistration](https://img.shields.io/badge/docker-pncregistration-blue?logo=Docker&logoColor=white)](https://github.com/SampoornaSwarajFoundation/PHC_Microservice_PNCRegistration/pkgs/container/pnc-registration)|
+- Further to this, register or enter the details of the infant.
 
 
 

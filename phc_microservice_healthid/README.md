@@ -5,13 +5,3 @@ The Health ID is used for the purposes of uniquely identifying persons, authenti
 Health IDs can be created by either self-registration or in an assisted manner at a healthcare provider or other authorized entities. This microservice will orchestrate the "Assisted Registration”.  Assisted Registration is a bunch of Javascript based APIs that can be leveraged to generate a HelathId for a citizen. 
 
 This service is used by Healthcare providers to assist patients in creating Health IDs by integrating with the assisted registration APIs. The flows - creation with or without Aadhar is taken care by the assisted registration.
-
-## Build Status 🚦
-
-| Name| Status|
-|-----|-------|
-| [![HealthId.CI](https://github.com/SampoornaSwarajFoundation/PHC_Microservice_HealthId/actions/workflows/main.yml/badge.svg)](https://github.com/SampoornaSwarajFoundation/PHC_Microservice_HealthId/actions/workflows/main.yml)| [![HealthID](https://img.shields.io/badge/docker-healthid-blue?logo=Docker&logoColor=white)](https://github.com/SampoornaSwarajFoundation/PHC_Microservice_HealthId/pkgs/container/healthid)|
-
-## Code Coverage 🛡️
-
-TBA

@@ -1,0 +1,10 @@
+{
+  "larvaSurveillanceId": "62ecb0002d3e1541b79597c1",
+  "visitDate": "2022-08-06",
+  "isLarvaFound": "string",
+  "breedingSpotName": "string",
+  "breedingSite": "string",
+  "solutionProvided": "string",
+  "imageUrl": "string",
+  "nextInspectionDate": "2022-08-06"
+}
