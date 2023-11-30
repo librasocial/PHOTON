@@ -1,0 +1,30 @@
+{
+	"id":"string",
+	"citizenId":"string",
+    "dateOfSurveillance":"2022-10-02T02:50:12.208Z",
+    "wasTreatedForTBInPast":"false",
+    "isReferredToPhc":"false",
+    "hasDiabetes":"false",
+    "hasTBSymptoms":"false",
+    "sample":[
+        {
+            "isSampleCollected":"true",
+            "sampleCollectedDate":"2022-10-02T02:50:12.208Z",
+            "sampleSubmittedDate":"2022-10-02T02:50:12.208Z",
+            "sampleSentToLoc":"string",
+            "labReceivedDate":"2022-10-02T02:50:12.208Z",
+            "remarks":"string"
+     
+        }],
+    "labResult":{
+        "resultDate":"2022-10-02T02:50:12.208Z",
+        "dmcTestResult":"string",
+        "naatTestResult":"string",
+        "chestXRayTestResult":"string",
+        "nameOfTechnician":"string",
+        "labSerialNo":"string",
+        "result":"string",
+        "reportImages":["string","string","string"]
+    }
+
+}

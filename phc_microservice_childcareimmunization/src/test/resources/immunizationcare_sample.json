@@ -1,0 +1,44 @@
+{
+	"id":"string",
+    "childCitizenId": "888",
+    "registrationDate":"2023-01-11",
+    "ashaWorker": "renuka",
+    "targetDiseaseName": "covid",
+    "description": "fever",
+    "series": "1", 
+    "doseNumber": "dose1",
+    "vaccines":[{
+        "code":"1",
+        "name":"vac1",
+        "earliestDueDate":"2023-01-23",
+        "pendingReason":"cold",        
+        "immunization":{
+            "vaccinatedDate":"2023-01-25",
+            "manufacturer":"combiflame",
+            "batchNumber":"1",
+            "expirationDate":"2025-10-23"
+       }
+     }],
+    "reaction": {
+        "type": "non-serious", 
+        "date": "2022-07-15T10:15:49.348Z",
+        "detail": "",
+        "isCaseClosed": "true",
+        "caseClosureReason": "", 
+        "death": { 
+            "date": "",
+            "place": "", 
+            "cause": ""
+        }
+    }, 
+    "isCovidTestDone": "true", 
+    "isCovidResultPositive": "false",
+    "isILIExperienced": "false", 
+    "didContactCovidPatient": "false", 
+    "audit": {
+        "dateCreated": "2022-07-15T10:15:49.348Z",
+        "createdBy": "user",
+        "dateModified": "2022-12-24T10:15:49.348Z",
+        "modifiedBy": "user1"
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "phc_microservice_formutility",
+  "description": "There are instances where UI elements/options needs to be rendered dynamically. Creating domain specific masters to serve these request has many disadvantages -",
+  "version": "1.0.1",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1354.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-actuator": "^1.8.2",
+    "express-validator": "^6.14.2",
+    "mongodb-memory-server": "^8.9.3",
+    "mongoose": "^6.6.2",
+    "nodemon": "^2.0.15",
+    "winston": "^3.8.2"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha --timeout 100000 --exit",
+    "dev": "NODE_ENV=dev nodemon server.js",
+    "start": "NODE_ENV=prod nodemon server.js",
+    "prod": "NODE_ENV=prod node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SampoornaSwarajFoundation/PHC_Microservice_FormUtility.git"
+  },
+  "author": "Vikas M G",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampoornaSwarajFoundation/PHC_Microservice_FormUtility/issues"
+  },
+  "homepage": "https://github.com/SampoornaSwarajFoundation/PHC_Microservice_FormUtility#readme"
+}

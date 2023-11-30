@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FF0000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lime_green">#A1D4A0</color>
+    <color name="light_grey">#BABABA61</color>
+    <color name="transparent">#00000000</color>
+    <color name="view_bg">#000000</color>
+    <color name="alert_divider">#D1D1D1</color>
+    <color name="selected_grey">#828282</color>
+    <color name="selected_half_white">#C4C4C4</color>
+    <color name="selected_half_white_two">#F3F3F3</color>
+    <color name="button_blue">#0084FF</color>
+    <color name="button_dark_blue">#0085FF</color>
+    <color name="button_blue_pressed">#0871D3</color>
+    <color name="button_blue_disabled">#9BCEFC</color>
+    <color name="red_color">#DA1010</color>
+    <color name="button_green">#1D9824</color>
+    <color name="landing_page_headings">#4F4F4F</color>
+    <color name="landing_page_subheadings">#333333</color>
+    <color name="landing_registration_btn_bg">#E6EFFD</color>
+    <color name="landing_health_btn_bg">#FFE0E0</color>
+    <color name="landing_socioecosur_btn_bg">#EAE0D6</color>
+    <color name="light_grey_card">#E5E5E5</color>
+
+    <color name="limeRed">#F17979</color>
+    <color name="yellow">#FFBE5E</color>
+    <color name="lime_light_green">#7CCF93</color>
+
+    <color name="rmncha_unselected_color">#646464</color>
+    <color name="rmncha_eligible_couple_bg">#AFD3FF</color>
+    <color name="rmncha_ante_natal_care_bg">#FFDFAF</color>
+    <color name="rmncha_post_natal_care_bg">#BDE7C9</color>
+    <color name="rmncha_bg_selected_green">#D9FADD</color>
+    <color name="rmncha_child_care_bg">#FFC0D7</color>
+    <color name="rmncha_adolescent_care_bg">#DCB3E3</color>
+    <color name="divider">#cacaca</color>
+    <color name="green">#1D9824</color>
+    <color name="orange_dark">#E2A0A0</color>
+    <color name="bottom_color">#FAFAFA</color>
+    <color name="light_blue">#9ED1FF</color>
+    <color name="dark_blue">#1E4784</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="voilet">#893F2E</color>
+</resources>

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/footer_logo_first"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="27dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/footer_logo_first"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_plus" />
+
+            <ImageView
+                android:id="@+id/footer_logo_two"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toStartOf="@id/plus"
+                android:contentDescription="@string/ssf_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_tree" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/health_amp_wellness_surveillance"
+                    android:textColor="#646464"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/surveyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#646464"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    tools:text="@string/village_level" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_right_arrow" />
+
+                <TextView
+                    android:id="@+id/tv_select_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Update Iodine Test Details"
+                    android:textColor="#1D9824"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/header_vw"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="#CACACA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_brand" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/iv_sea"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_vw"
+            tools:background="@drawable/ic_water_sample" />
+
+        <TextView
+            android:id="@+id/tv_place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/view_bg"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_sea"
+            app:layout_constraintStart_toEndOf="@id/iv_sea"
+            app:layout_constraintTop_toTopOf="@+id/iv_sea"
+            tools:text="Timmappana Kere" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_timma"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="@id/iv_sea"
+            app:layout_constraintTop_toBottomOf="@id/iv_sea">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_place"
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:layout_height="match_parent"
+                tools:background="@drawable/demo_picture" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_grey_water_sample"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/image_not_available"
+                android:textColor="#828282"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_bottom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_card_bottom"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_image_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:lines="2"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="aman amana" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Timmappana Kere"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_timma"
+            app:layout_constraintEnd_toEndOf="@id/iv_timma"
+            app:layout_constraintStart_toStartOf="@id/iv_timma" />
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_timma"
+            app:layout_constraintTop_toTopOf="@id/iv_timma">
+
+            <TextView
+                android:id="@+id/tv_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="18dp"
+                android:textStyle="bold"
+                android:text="@string/visit_date"
+                android:textColor="@color/view_bg"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_current_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/view_bg"
+                android:textSize="14sp"
+                tools:text="20_05_2022" />
+
+
+            <TextView
+                android:id="@+id/tv_date_of_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:text="Date of Sample collected"
+                android:textColor="@color/view_bg"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_current_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:textColor="@color/view_bg"
+                android:textSize="14sp"
+                tools:text="20_05_2022" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_tap"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_timma"
+            app:layout_constraintTop_toBottomOf="@id/ll_date"
+            android:background="@drawable/ic_iodine" />
+
+        <TextView
+            android:id="@+id/tv_update_water_sample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11.38dp"
+            android:text="Update Iodine Sample Details"
+            android:textColor="@color/view_bg"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_tap"
+            app:layout_constraintStart_toEndOf="@id/iv_tap"
+            app:layout_constraintTop_toTopOf="@id/iv_tap" />
+
+        <LinearLayout
+            android:id="@+id/ll_iodine_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/iv_tap"
+            app:layout_constraintTop_toBottomOf="@id/iv_tap">
+
+            <TextView
+                android:id="@+id/tv_shop_owner_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shop_owner_s_name"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/trade_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:text="Trade name of salt*"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_blank"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:text="No of samples collected*"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_iodine_sample_count"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="@string/no_of_samples_collected"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_iodine_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/iv_tap"
+            app:layout_constraintTop_toBottomOf="@id/ll_iodine_information">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_shop_owner"
+                style="@style/subTitleNoBold"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_bg"
+                android:entries="@array/breedingSite"
+                android:hint="@string/type"
+                android:padding="5dp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/spinner_trade_name"
+                style="@style/subTitleNoBold"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_bg"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                app:drawableEndCompat="@drawable/ic_down" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_specify_other"
+                style="@style/subTitleNoBold"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/spinner_bg"
+                android:entries="@array/breedingSite"
+                android:hint="Type the salt name"
+                android:padding="5dp"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spinner_sample_count"
+                style="@style/subTitleNoBold"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_bg"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                app:drawableEndCompat="@drawable/ic_down" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_result_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Lab Results Status : Pending"
+            android:textColor="@color/view_bg"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_timma"
+            app:layout_constraintTop_toBottomOf="@id/iv_timma" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_test_result_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="#F6F8FA"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/footer_brand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_result_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_status">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F6F8FA">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_test_result_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#D7E7F6"
+                    android:weightSum="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/item1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.17"
+                        android:gravity="center"
+                        android:text="Trade name of salt"
+                        android:textColor="@color/view_bg"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.18"
+                        android:gravity="center"
+                        android:text="Date of sample\ncollected"
+                        android:textColor="@color/view_bg"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.13"
+                        android:gravity="center"
+                        android:text="No of samples \ncollected"
+                        android:textColor="@color/view_bg"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.12"
+                        android:gravity="center"
+                        android:text="Date of sample \nsubmitted to the lab"
+                        android:textColor="@color/view_bg"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="Lab results"
+                        android:textColor="@color/view_bg"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_test_result_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_test_result_heading"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/iodine_test_result_single_item" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:elevation="1dp"
+            android:orientation="horizontal"
+            android:background="@drawable/ic_footer_wth_stroke"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/btn_continue"
+                android:text="@string/cancel"
+                android:textColor="@color/view_bg"
+                android:textSize="18sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_continue"
+                android:layout_width="102dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_save_button"
+                android:clickable="false"
+                android:enabled="false"
+                android:focusable="false"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

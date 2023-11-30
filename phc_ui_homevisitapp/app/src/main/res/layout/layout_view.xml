@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout android:id="@+id/layout_frame"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.HouseHoldLevelMappingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Photo"
+                android:textSize="14sp" />
+
+            <TextView
+                android:textSize="14dp"
+                android:layout_width="202dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="86dp"
+                android:layout_marginTop="16dp"
+                android:text="Name of Resident*" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="108dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/photos10"
+                android:text="Photo"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile_image"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/first_name_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/nameprimarydata"
+                            android:hint="First Name"
+                            android:imeOptions="flagNoExtractUi"
+                            android:nextFocusRight="@id/middle_name_id"
+                            android:nextFocusForward="@id/middle_name_id"
+                            android:paddingStart="5dp"
+                            android:textSize="14dp" />
+
+                        <EditText
+                                android:imeOptions="flagNoExtractUi"
+                                android:background="@drawable/nameprimarydata"
+                                android:id="@+id/middle_name_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:nextFocusRight="@id/last_name_id"
+                                android:nextFocusForward="@id/last_name_id"
+                                android:nextFocusDown="@id/last_name_id"
+                                android:nextFocusLeft="@id/last_name_id"
+                                android:nextFocusUp="@id/last_name_id"
+                                android:layout_marginStart="20dp"
+                                android:hint="Middle Name"
+                                android:textSize="14dp" android:paddingStart="5dp"/>
+
+                        <EditText
+                                android:imeOptions="flagNoExtractUi"
+                                android:background="@drawable/nameprimarydata"
+                                android:id="@+id/last_name_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:nextFocusRight="@id/number"
+                                android:nextFocusForward="@id/number"
+                                android:nextFocusDown="@id/number"
+                                android:nextFocusLeft="@id/number"
+                                android:nextFocusUp="@id/number"
+                                android:layout_marginStart="20dp"
+                                android:hint="Last Name"
+                                android:textSize="14dp" android:paddingStart="5dp"/>
+
+                    </LinearLayout>
+
+
+
+                    <CheckBox
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/checkbox_ishead"
+                            android:layout_width="92dp"
+                            android:buttonTint="#4F4F4F"
+                            android:layout_height="24dp"
+                            android:text="Head" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                                                    <TextView
+                                                          android:textSize="12dp"
+                                                            android:layout_width="100dp"
+                                                            android:layout_height="15dp"
+                                                            android:layout_marginStart="20dp"
+                                                            android:text="Date of Birth*" />
+
+                    <TextView
+                            android:textSize="12dp"
+                            android:layout_width="75dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="24dp"
+                            android:text="Gender*" />
+
+                    <TextView
+                            android:textSize="12dp"
+                            android:layout_width="100dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="20.5dp"
+                            android:text="@string/mobile_number" />
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="22dp"
+                        android:text="@string/residing_status"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="21dp"
+                        android:orientation="horizontal">
+
+<!--                    <DatePicker-->
+<!--                            android:datePickerMode="spinner"-->
+<!--                            style="?android:spinnerStyle"-->
+<!--                            android:layout_marginStart="25dp"-->
+<!--                            android:layout_width="100dp"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_marginTop="0dp"-->
+<!--                            android:text="open date picker">-->
+
+
+                    <TextView
+                            android:background="@drawable/mobileprimarydata"
+                            android:onClick="openDatePicker"
+                            style="?android:spinnerStyle"
+                            android:layout_marginStart="25dp"
+                            android:id="@+id/simpleDatePicker"
+                            android:layout_width="100dp"
+                            android:textSize="12sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:hint="02/09/1997" android:paddingStart="5dp"/>
+<!--                    </DatePicker>-->
+                    <Spinner
+                            android:background="@drawable/genderprimarydata"
+                            android:id="@+id/gender"
+                            android:spinnerMode="dropdown"
+                            android:layout_width="75dp"
+                            android:textSize="14sp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center"
+                            android:text="@string/male" android:paddingStart="5dp"/>
+
+                    <EditText
+                            android:imeOptions="flagNoExtractUi"
+                            android:background="@drawable/mobileprimarydata"
+                            android:id="@+id/number"
+                            android:textSize="12sp"
+                            android:inputType="number"
+                            android:digits="0123456789"
+                            android:maxLength="10"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="20dp"
+                            android:hint="9xxxxxxxx0" android:paddingStart="5dp" />
+
+                    <Spinner
+                        android:id="@+id/residing"
+                        android:layout_width="230dp"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/residingprimarydata"
+                        android:gravity="center"
+                        android:paddingStart="5dp"
+                        android:spinnerMode="dropdown"
+                        android:text="Resides"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/alert_divider" />
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.0140" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-05-17T14:46:50" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="MedicalKnowledge" timestamp="2022-05-17T14:46:50" tests="0" file="I:\AlignTogether\sampoorna\PHC_Microservice_MedicalKnowledge\test\test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="/POST medicalknowledge" timestamp="2022-05-17T14:46:51" tests="3" file="I:\AlignTogether\sampoorna\PHC_Microservice_MedicalKnowledge\test\test.js" time="0.1040" failures="0">
+    <testcase name="MedicalKnowledge /POST medicalknowledge it should create a new medicalknowledge" time="0.0870" classname="it should create a new medicalknowledge">
+    </testcase>
+    <testcase name="MedicalKnowledge /POST medicalknowledge it should not create a new medicalknowledge if encounterDate is not of Date type" time="0.0090" classname="it should not create a new medicalknowledge if encounterDate is not of Date type">
+    </testcase>
+    <testcase name="MedicalKnowledge /POST medicalknowledge it should not create a new medicalknowledge if doctor is not of string type" time="0.0050" classname="it should not create a new medicalknowledge if doctor is not of string type">
+    </testcase>
+  </testsuite>
+  <testsuite name="/GET medicalknowledge" timestamp="2022-05-17T14:46:51" tests="2" file="I:\AlignTogether\sampoorna\PHC_Microservice_MedicalKnowledge\test\test.js" time="0.0190" failures="0">
+    <testcase name="MedicalKnowledge /GET medicalknowledge it should not fetch the medicalknowledge" time="0.0090" classname="it should not fetch the medicalknowledge">
+    </testcase>
+    <testcase name="MedicalKnowledge /GET medicalknowledge it should fetch the medicalknowledge" time="0.0080" classname="it should fetch the medicalknowledge">
+    </testcase>
+  </testsuite>
+  <testsuite name="/PATCH medicalknowledge" timestamp="2022-05-17T14:46:51" tests="2" file="I:\AlignTogether\sampoorna\PHC_Microservice_MedicalKnowledge\test\test.js" time="0.0200" failures="0">
+    <testcase name="MedicalKnowledge /PATCH medicalknowledge it should not update the medicalknowledge" time="0.0110" classname="it should not update the medicalknowledge">
+    </testcase>
+    <testcase name="MedicalKnowledge /PATCH medicalknowledge it should update the medicalknowledge" time="0.0090" classname="it should update the medicalknowledge">
+    </testcase>
+  </testsuite>
+  <testsuite name="/GET filter medicalknowledge" timestamp="2022-05-17T14:46:51" tests="3" file="I:\AlignTogether\sampoorna\PHC_Microservice_MedicalKnowledge\test\test.js" time="0.0350" failures="0">
+    <testcase name="MedicalKnowledge /GET filter medicalknowledge it should filter the medicalknowledge if page, size and encounterId is provided" time="0.0120" classname="it should filter the medicalknowledge if page, size and encounterId is provided">
+    </testcase>
+    <testcase name="MedicalKnowledge /GET filter medicalknowledge it should filter the medicalknowledge if page, size and UHId is provided" time="0.0090" classname="it should filter the medicalknowledge if page, size and UHId is provided">
+    </testcase>
+    <testcase name="MedicalKnowledge /GET filter medicalknowledge it should filter the medicalknowledge if page, size and encounterDate is provided" time="0.0100" classname="it should filter the medicalknowledge if page, size and encounterDate is provided">
+    </testcase>
+  </testsuite>
+</testsuites>

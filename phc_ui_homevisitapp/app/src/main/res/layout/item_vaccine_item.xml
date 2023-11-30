@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vaccineData"
+            type="com.ssf.homevisit.rmncha.childCare.immunization.VaccineItemData" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVaccineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_bg_bordered_extra_round"
+            android:minWidth="80dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="2dp"
+            android:text="@{vaccineData.name}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Vaccine Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Vaccine Batch"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tvVaccineName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etBatch"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_bg2"
+            android:hint="Type"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:inputType="textCapWords"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="6dp"
+            android:text="@={vaccineData.batch}"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvBatch"
+            app:layout_constraintTop_toBottomOf="@id/tvBatch" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExpiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Vaccine expiry date*"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/etBatch"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/etExpiryDate"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_bg2"
+            android:hint="DD/MM/YYYY"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="6dp"
+            android:text="@{vaccineData.expiryDate}"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/ic_calendar_black"
+            app:layout_constraintStart_toStartOf="@id/tvExpiryDate"
+            app:layout_constraintTop_toBottomOf="@id/tvExpiryDate" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVaccineManf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Vaccine manufacturer*"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tvExpiryDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etVaccineManf"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_bg2"
+            android:hint="Type"
+            android:inputType="textCapWords"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="6dp"
+            android:text="@={vaccineData.manufacturer}"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tvVaccineManf"
+            app:layout_constraintTop_toBottomOf="@id/tvVaccineManf" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

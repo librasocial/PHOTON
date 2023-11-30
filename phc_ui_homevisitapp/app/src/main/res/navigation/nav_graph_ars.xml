@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_ars"
+    app:startDestination="@id/ARSMeetingListFragment">
+
+    <fragment
+        android:id="@+id/ARSMeetingListFragment"
+        android:name="com.ssf.homevisit.fragment.ars.ARSMeetingListFragment"
+        android:label="ARSMeetingListFragment">
+        <action
+            android:id="@+id/arsMeetingListToNewMeeting"
+            app:destination="@id/createARSMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/arsMeetingListToProcessMeeting"
+            app:destination="@id/ARSProcessMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/createARSMeetingFragment"
+        android:name="com.ssf.homevisit.fragment.ars.CreateARSMeetingFragment"
+        android:label="CreateARSMeetingFragment">
+        <action
+            android:id="@+id/toMeetingDetail"
+            app:destination="@id/ARSMeetingDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/ARSMeetingDetailFragment"
+        android:name="com.ssf.homevisit.fragment.ars.ARSMeetingDetailFragment"
+        android:label="ARSMeetingDetailFragment">
+        <action
+            android:id="@+id/toAddSpecialInvitee"
+            app:destination="@id/ARSSpecialInviteeListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/ARSSpecialInviteeListFragment"
+        android:name="com.ssf.homevisit.fragment.ars.ARSSpecialInviteeListFragment"
+        android:label="ARSSpecialInviteeListFragment" />
+    <fragment
+        android:id="@+id/ARSProcessMeetingFragment"
+        android:name="com.ssf.homevisit.fragment.ars.ARSProcessMeetingFragment"
+        android:label="ARSProcessMeetingFragment" />
+</navigation>

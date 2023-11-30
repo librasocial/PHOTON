@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.viewmodel.ARSViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.vhsnc.VHSNCOptionsFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Schedule or Conduct ARS Monthly Meeting"
+            android:textAppearance="@style/rmncha_hh_sub_header_style"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnScheduleNewMeeting"
+            android:text="@string/schedule_ars_meeting"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="12dp"
+            android:layout_margin="24dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@drawable/meeting_action_btn_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/btn_meeting_actions"
+            app:layout_constraintTop_toBottomOf="@id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:id="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@id/btnScheduleNewMeeting"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/alert_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtScheduledMeetings"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Scheduled ARS Meeting(s)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clList"
+            app:layout_constraintTop_toBottomOf="@id/txtScheduledMeetings"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="12dp"
+            android:background="@drawable/white_round_corner_bg"
+            android:backgroundTint="#F6F8FA"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHeader"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_margin="12dp"
+                android:background="#D7E7F6"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineMonth"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".01"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineDate"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".16"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineTopics"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".25"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineReSchedule"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".72"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineCancel"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".85"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMonth"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guidelineMonth"
+                    android:text="Schedule Month"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDate"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guidelineDate"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTopics"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guidelineTopics"
+                    android:text="Meeting Topics to be Discussed"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReSchedule"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guidelineReSchedule"
+                    android:text="Re-Schedule Meet"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCancel"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Cancel Meet"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                app:layout_constraintTop_toBottomOf="@id/clHeader"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="12dp"
+                tools:listitem="@layout/item_scheduled_meeting"
+                android:layout_width="match_parent"
+                tools:itemCount="40"
+                android:layout_height="0dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            layout="@layout/empty_state_layout"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE, default=visible}"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupList"
+            app:constraint_referenced_ids="txtScheduledMeetings, clList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

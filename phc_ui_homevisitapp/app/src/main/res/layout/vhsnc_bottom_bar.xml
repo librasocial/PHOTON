@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="backText"
+            type="java.lang.String" />
+        <variable
+            name="mode"
+            type="com.ssf.homevisit.fragment.vhsnc.BottomBarMode" />
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="#FAFAFA"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/alert_divider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@{backText}"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            tools:text="@string/back"
+            tools:visibility="gone"
+            android:visibility="@{(mode.id == 4 || mode.id == 5) ? View.VISIBLE : View.GONE}"
+            android:layout_marginStart="24dp"
+            android:drawablePadding="10dp"
+            android:textAppearance="@style/footer_back_button_style"
+            app:drawableStartCompat="@drawable/ic_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCancel"
+            app:layout_constraintEnd_toStartOf="@id/saveButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/cancel"
+            android:visibility="@{mode.id == 1 ? View.VISIBLE : View.GONE}"
+            android:layout_marginEnd="18dp"
+            android:padding="4dp"
+            android:textAppearance="@style/footer_back_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/saveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bottom_bar_btn"
+            android:textStyle="bold"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="8dp"
+            android:visibility="@{mode.id == 1 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:drawableStartCompat="@drawable/ic_save"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="6dp"
+            tools:visibility="visible"
+            android:textAppearance="@style/button_start_survi"
+            android:text="@string/save_amp_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/finishBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bottom_bar_btn"
+            android:textStyle="bold"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="8dp"
+            android:visibility="@{mode.id == 2 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:drawableStartCompat="@drawable/tickmarkicon"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="6dp"
+            android:textAppearance="@style/button_start_survi"
+            android:text="@string/finish"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sendInvite"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bottom_bar_btn"
+            android:textStyle="bold"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:drawableStartCompat="@drawable/ic_send_invite"
+            android:paddingVertical="4dp"
+            android:visibility="@{mode.id == 4 ? View.VISIBLE : View.GONE}"
+
+            android:paddingHorizontal="6dp"
+            android:textAppearance="@style/button_start_survi"
+            android:text="@string/send_invite"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/continueBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bottom_bar_btn"
+            android:textStyle="bold"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="8dp"
+            android:visibility="@{mode.id == 3 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:drawableEndCompat="@drawable/ic_arrow_right"
+            android:paddingVertical="4dp"
+            tools:visibility="gone"
+            android:paddingHorizontal="6dp"
+            android:textAppearance="@style/button_start_survi"
+            android:text="@string/_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

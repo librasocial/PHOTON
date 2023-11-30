@@ -1,0 +1,13 @@
+{
+	"citizenId":"b531297c-40f7-44f4-bdf7-f8bb9123276f",
+	"dateOfSurveillance":"2022-11-07T06:50:12.208Z",
+	 "vaccineType":"covid 19",
+	 "noOfDoses":"two",
+	 "wasPreviouslyDiagnosed":"false",
+	"audit":{
+        "createdBy":"priya",
+        "modifiedBy":"priya",
+        "dateCreated":"2022-11-07T06:50:12.208Z",
+        "dateModified":"2022-11-07T07:50:12.208Z"
+    }
+}

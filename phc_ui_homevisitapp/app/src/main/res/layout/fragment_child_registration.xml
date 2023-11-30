@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.ssf.homevisit.R" />
+
+        <import type="com.ssf.homevisit.rmncha.base.RMNCHAUtils" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.childCare.registration.ChildCareRegistrationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/headingChildCare"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            app:labelDrawable='@{R.drawable.ic_child_care}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}"
+            app:valueData='@{"Child Care"}' />
+
+        <include
+            android:id="@+id/headingHHName"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"HH Head:"}'
+            app:layout_constraintStart_toEndOf="@id/headingChildCare"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}"
+            app:valueData='@{viewModel.selectedChild.targetNode.properties.houseHeadName}' />
+
+        <include
+            android:id="@+id/headingMotherName"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"Mother Name:"}'
+            app:layout_constraintStart_toEndOf="@id/headingHHName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}"
+            app:valueData='@{viewModel.childMotherDetail.content.get(0).targetNode.properties.firstName}' />
+
+        <include
+            android:id="@+id/headingMotherId"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"Mother’s RCH-ID:"}'
+            app:layout_constraintStart_toEndOf="@id/headingMotherName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{false}"
+            app:valueData='@{viewModel.childMotherDetail.content.get(0).targetNode.properties.rchId}' />
+
+        <View
+            android:id="@+id/dividerOne"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/headingChildCare" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeadingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="4dp"
+            android:text="Register the Child for Immunization"
+            android:textColor="@color/landing_page_subheadings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_child_care"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Child-ID"
+            android:textColor="@color/button_dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvChildId"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{viewModel.childMotherDetail.content.get(0).relationship.properties.childId}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <View
+            android:id="@+id/dividerTwo"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="@id/tvChildIdLabel"
+            app:layout_constraintEnd_toStartOf="@id/tvChildIdLabel"
+            app:layout_constraintTop_toTopOf="@id/tvChildIdLabel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectAsha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="Select ASHA Name"
+            android:textColor="@color/button_dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/llSpinnerAsha"
+            app:layout_constraintEnd_toStartOf="@id/llSpinnerAsha"
+            app:layout_constraintTop_toTopOf="@id/llSpinnerAsha" />
+
+        <LinearLayout
+            android:id="@+id/llSpinnerAsha"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/alert_phc_other"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/dividerTwo"
+            app:layout_constraintTop_toTopOf="@id/dividerOne">
+
+            <Spinner
+                android:id="@+id/spinner_select_asha_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".3" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNote"
+            app:drawableStartCompat="@drawable/ic_warning"
+            android:text="Fields in *asterisk is mandatory"
+            android:textColor="@color/red"
+            android:drawablePadding="4dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingVertical="4dp"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:id="@+id/leftScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/tvNote"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtHeadingTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgMother"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:s3ImageUrlFromArray="@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.imageUrls}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias=".75"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/FullRoundImageView"
+                            app:srcCompat="@drawable/demo_picture" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgChild"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:s3ImageUrlFromArray="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.imageUrls}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias=".25"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/FullRoundImageView"
+                            app:srcCompat="@drawable/demo_picture" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@id/cardImg">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChildOf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.firstName}'
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGenderLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Gender"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOf" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAgeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Age"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/tvStatusLabel"
+                            app:layout_constraintStart_toEndOf="@id/tvGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOf" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Status"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOf" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.gender}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvGenderLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvAgeLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvAgeLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{RMNCHAUtils.getResidentStatus(viewModel.childMotherDetail.content.get(0).targetNode.properties.residingInVillage)}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvStatusLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvStatusLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChildOtherDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text='@{"Ph : "+viewModel.childMotherDetail.content.get(0).targetNode.properties.contact+"\nDOB : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).sourceNode.properties.dateOfBirth)+"\nHealth ID : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).sourceNode.properties.healthID)}'
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+                        <View
+                            android:id="@+id/dividerThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@color/divider"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildOtherDetails" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMother"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.firstName}"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dividerThree" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherGenderLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Gender"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherAgeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Age"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toStartOf="@id/tvMotherStatusLabel"
+                            app:layout_constraintStart_toEndOf="@id/tvMotherGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Status"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvMother" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.gender}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvMotherGenderLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherGenderLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:bindDoubleToInt="@{viewModel.childMotherDetail.content.get(0).targetNode.properties.age}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvMotherAgeLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherAgeLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{RMNCHAUtils.getResidentStatus(viewModel.childMotherDetail.content.get(0).targetNode.properties.residingInVillage)}"
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/tvMotherStatusLabel"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherStatusLabel" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherOtherDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text='@{"Ph : "+viewModel.childMotherDetail.content.get(0).targetNode.properties.contact+"\nDOB : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.dateOfBirth) +"\nHealth ID : "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.healthID)}'
+                            android:textColor="#5C5C5C"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toBottomOf="@id/tvMotherGender" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/leftScrollView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llRCHSI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSIInRCH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Sl.no of child in RCH register*"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etSIInRCH"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edit_text_bg2"
+                        android:hint="Type"
+                        android:text="@={viewModel.siNumberInRCH}"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="4dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llRegDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@id/llRCHSI"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRegDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registration date"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/etRegDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/gray_bg_bordered"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:text="@{RMNCHAUtils.getDateToView(RMNCHAUtils.getCurrentDate(), RMNCHAUtils.RMNCHA_DATE_FORMAT)}"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llFinancialYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@id/llRegDate"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFinYearLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Financial year"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFinYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/gray_bg_bordered"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:text="@{RMNCHAUtils.getCurrentFinancialYear()}"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFatherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Father's Name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llRCHSI" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Mobile Number"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/etFatherName"
+                    app:layout_constraintTop_toBottomOf="@id/llRCHSI" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvWhoseMobileNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    tools:text="Whose mobile number?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/etMobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/llRCHSI" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBirthCertNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Birth certificate no. "
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tvWhoseMobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/llRCHSI" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etFatherName"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/gray_bg_bordered"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@{viewModel.coupleDetail.content.get(0).targetNode.properties.firstName}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tvFatherName"
+                    app:layout_constraintTop_toBottomOf="@id/tvFatherName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etMobileNumber"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/gray_bg_bordered"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="@{RMNCHAUtils.setNonNullValue(viewModel.coupleDetail.content.get(0).targetNode.properties.contact)}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tvMobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvFatherName" />
+
+
+
+                <FrameLayout
+                    android:id="@+id/flSpinnerWhoseMobile"
+                    android:layout_width="130dp"
+                    app:layout_constraintStart_toStartOf="@id/tvWhoseMobileNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvFatherName"
+                    app:layout_constraintBottom_toBottomOf="@id/etMobileNumber"
+                    android:background="@drawable/spinner_bh"
+                    android:layout_marginTop="4dp"
+                    android:layout_height="0dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerWhoseMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/child_care_whose_mobile"
+                        android:textColor="@color/black"
+                       android:textSize="12sp" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etCertNumber"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@={viewModel.birthCertNo}"
+                    android:hint="Type"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tvBirthCertNo"
+                    app:layout_constraintTop_toBottomOf="@id/tvFatherName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPlaceOfBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Place of birth"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etFatherName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPlaceOfBirthValue"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/gray_bg_bordered"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tvPlaceOfBirth"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlaceOfBirth" />
+
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkboxOtherState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="Other District"
+                    app:layout_constraintBottom_toBottomOf="@id/tvPlaceOfBirthValue"
+                    app:layout_constraintStart_toEndOf="@id/tvPlaceOfBirthValue"
+                    app:layout_constraintTop_toTopOf="@id/tvPlaceOfBirthValue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAadharEnrollNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Aadhaar enrollment No."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlaceOfBirthValue" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAadharEnrollNo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:maxLength="14"
+                    android:background="@drawable/edit_text_bg2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@={viewModel.aadharEnroll}"
+                    android:inputType="numberDecimal"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:hint="00000 0000 00000"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAadharEnrollNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAadharNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Child Aadhaar no."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tvAadharEnrollNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlaceOfBirthValue" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etAadharNumber"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text_bg2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="12"
+                    android:text="@={viewModel.childAadhaar}"
+                    android:inputType="numberDecimal"
+                    android:hint="0000 0000 0000"
+                    android:imeOptions="actionDone"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tvAadharNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvAadharNumber" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvIsCovidTested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="Is Covid test done?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_covid_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etAadharEnrollNo" />
+
+                <FrameLayout
+                    android:id="@+id/etIsCovidTested"
+                    android:layout_width="150dp"
+                    android:background="@drawable/spinner_bh"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvIsCovidTested"
+                    android:layout_marginTop="4dp"
+                    android:layout_height="30dp">
+
+                    <Spinner
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/spinnerCovidTested"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/child_care_covid_test"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCovidResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="18dp"
+                    android:gravity="center_vertical"
+                    android:text="Covid test results"
+                    android:visibility='@{viewModel.covidTested.equalsIgnoreCase("Done") ? View.VISIBLE : View.GONE}'
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tvIsCovidTested"
+                    app:layout_constraintTop_toBottomOf="@id/etAadharEnrollNo" />
+
+                <FrameLayout
+                    android:id="@+id/etCovidResult"
+                    android:layout_width="150dp"
+                    android:visibility='@{viewModel.covidTested.equalsIgnoreCase("Done") ? View.VISIBLE : View.GONE}'
+                    android:background="@drawable/spinner_bh"
+                    app:layout_constraintStart_toStartOf="@id/tvCovidResult"
+                    app:layout_constraintTop_toBottomOf="@id/tvCovidResult"
+                    android:layout_marginTop="4dp"
+                    android:layout_height="30dp">
+
+                    <Spinner
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/spinnerCovidResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/child_care_covid_test_result"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInfluenzaLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    tools:text="Is the child experiencing\nILI (Influenza Like Illness)* "
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etIsCovidTested" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvInfluenzaSubLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="( Are there Symptoms like Cough, Fever, Cold, Sore\nthroat, Difficulty in Breathing?) "
+                    android:textColor="@color/gray_600"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tvInfluenzaLabel"
+                    app:layout_constraintTop_toBottomOf="@id/tvInfluenzaLabel" />
+
+                <FrameLayout
+                    android:id="@+id/etInfluenza"
+                    android:layout_width="100dp"
+                    android:background="@drawable/spinner_bh"
+                    app:layout_constraintBottom_toBottomOf="@id/tvInfluenzaLabel"
+                    app:layout_constraintStart_toEndOf="@id/tvInfluenzaLabel"
+                    app:layout_constraintTop_toTopOf="@id/tvInfluenzaLabel"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_height="30dp">
+
+                    <Spinner
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/spinnerIncluenza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/array_yes_no"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContactWithCovid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center_vertical"
+                    tools:text="Did the child have\n any contact with Covid-19\n positive patients(mother\n included) in the last 14 days?*"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/etInfluenza"
+                    app:layout_constraintTop_toTopOf="@id/tvInfluenzaLabel" />
+
+                <FrameLayout
+                    android:id="@+id/etContactWithCovid"
+                    android:layout_width="150dp"
+                    android:background="@drawable/spinner_bh"
+                    app:layout_constraintBottom_toBottomOf="@id/tvContactWithCovid"
+                    app:layout_constraintStart_toEndOf="@id/tvContactWithCovid"
+                    app:layout_constraintTop_toTopOf="@id/tvContactWithCovid"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_height="30dp">
+
+                    <Spinner
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/spinnerCovidContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/array_yes_no"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

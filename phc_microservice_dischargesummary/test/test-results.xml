@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.5930" tests="10" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-06-16T16:39:28" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="DischargeSummary" timestamp="2022-06-16T16:39:28" tests="0" file="G:\Work\PHC_Microservice_DischargeSummary\test\test.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="/POST dischargesummary" timestamp="2022-06-16T16:39:29" tests="3" file="G:\Work\PHC_Microservice_DischargeSummary\test\test.js" time="0.1190" failures="0">
+    <testcase name="DischargeSummary /POST dischargesummary it should create a new dischargesummary" time="0.1000" classname="it should create a new dischargesummary">
+    </testcase>
+    <testcase name="DischargeSummary /POST dischargesummary it should not create a new dischargesummary if encounterDate is not of Date type" time="0.0100" classname="it should not create a new dischargesummary if encounterDate is not of Date type">
+    </testcase>
+    <testcase name="DischargeSummary /POST dischargesummary it should not create a new dischargesummary if doctor is not of string type" time="0.0070" classname="it should not create a new dischargesummary if doctor is not of string type">
+    </testcase>
+  </testsuite>
+  <testsuite name="/GET dischargesummary" timestamp="2022-06-16T16:39:29" tests="2" file="G:\Work\PHC_Microservice_DischargeSummary\test\test.js" time="0.0710" failures="0">
+    <testcase name="DischargeSummary /GET dischargesummary it should not fetch the dischargesummary" time="0.0380" classname="it should not fetch the dischargesummary">
+    </testcase>
+    <testcase name="DischargeSummary /GET dischargesummary it should fetch the Discharge Summary" time="0.0320" classname="it should fetch the Discharge Summary">
+    </testcase>
+  </testsuite>
+  <testsuite name="/PATCH dischargesummary" timestamp="2022-06-16T16:39:29" tests="2" file="G:\Work\PHC_Microservice_DischargeSummary\test\test.js" time="0.0730" failures="0">
+    <testcase name="DischargeSummary /PATCH dischargesummary it should not update the dischargesummary" time="0.0350" classname="it should not update the dischargesummary">
+    </testcase>
+    <testcase name="DischargeSummary /PATCH dischargesummary it should update the dischargesummary" time="0.0370" classname="it should update the dischargesummary">
+    </testcase>
+  </testsuite>
+  <testsuite name="/GET filter dischargesummary" timestamp="2022-06-16T16:39:29" tests="3" file="G:\Work\PHC_Microservice_DischargeSummary\test\test.js" time="0.2020" failures="0">
+    <testcase name="DischargeSummary /GET filter dischargesummary it should filter the dischargesummary if page, size and encounterId is provided" time="0.0520" classname="it should filter the dischargesummary if page, size and encounterId is provided">
+    </testcase>
+    <testcase name="DischargeSummary /GET filter dischargesummary it should filter the dischargesummary if page, size and UHId is provided" time="0.0550" classname="it should filter the dischargesummary if page, size and UHId is provided">
+    </testcase>
+    <testcase name="DischargeSummary /GET filter dischargesummary it should filter the dischargesummary if page, size and encounterDate is provided" time="0.0570" classname="it should filter the dischargesummary if page, size and encounterDate is provided">
+    </testcase>
+  </testsuite>
+</testsuites>

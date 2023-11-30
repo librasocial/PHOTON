@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/createMeetingFragment">
+
+    <fragment
+        android:id="@+id/vhsncHomeFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.VHSNCOptionsFragment"
+        android:label="VHSNC Fragment"
+        tools:layout="@layout/fragment_vhsnc_options">
+
+        <action
+            android:id="@+id/vhsncHome_to_CreateMeeting"
+            app:destination="@id/createMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createMeetingFragment"
+        tools:layout="@layout/fragment_create_meeting"
+        android:name="com.ssf.homevisit.fragment.vhsnc.CreateMeetingFragment"
+        android:label="CreateMeetingFragment">
+
+        <action
+            android:id="@+id/createMeeting_to_newMeeting"
+            app:destination="@id/newMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/createMeeting_to_newVHNDMeeting"
+            app:destination="@id/newVHNDMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/toReScheduleMeetingFragment"
+            app:destination="@id/reScheduleMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+
+        <action
+            android:id="@+id/toProcessMeetingFragment"
+            app:destination="@id/processMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+        <action
+            android:id="@+id/toProcessVHNDMeeting"
+            app:destination="@id/processVHNDMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                app:nullable="false" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/newMeetingFragment"
+        tools:layout="@layout/fragment_new_meeting"
+        android:name="com.ssf.homevisit.fragment.vhsnc.NewMeetingFragment"
+        android:label="NewMeetingFragment">
+        <action
+            android:id="@+id/newMeeting_to_meetingDetail"
+            app:destination="@id/meetingDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/meetingDetailFragment"
+        tools:layout="@layout/fragment_meeting_detail"
+        android:name="com.ssf.homevisit.fragment.vhsnc.MeetingDetailFragment"
+        android:label="MeetingDetailFragment">
+
+        <action
+            android:id="@+id/meetingDetail_to_participantSelection"
+            app:destination="@id/selectMeetingParticipantFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+
+        <action
+            android:id="@+id/meetingDetail_to_allGPInviteeFragment"
+            app:destination="@id/GPInviteeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+
+        <action
+            android:id="@+id/to_AllInviteeList"
+            app:destination="@id/allInviteeListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+
+        <action
+            android:id="@+id/toSpecialInvitees"
+            app:destination="@id/specialInviteeListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+        <action
+            android:id="@+id/toPhcStaffList"
+            app:destination="@id/PHCStaffListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectMeetingParticipantFragment"
+        tools:layout="@layout/fragment_select_participants"
+        android:name="com.ssf.homevisit.fragment.vhsnc.SelectMeetingParticipantFragment"
+        android:label="SelectMeetingParticipantFragment">
+
+        <action
+            android:id="@+id/meetingParticipant_to_individualSelection"
+            app:destination="@id/individualSelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                app:argType="string"
+                android:name="householdID"
+                app:nullable="false"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/individualSelectionFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.IndividualSelectionFragment"
+        android:label="IndividualSelectionFragment" />
+
+    <fragment
+        android:id="@+id/specialInviteeListFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.SpecialInviteeListFragment"
+        android:label="SpecialInviteeListFragment" />
+    <fragment
+        android:id="@+id/reScheduleMeetingFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.ReScheduleMeetingFragment"
+        android:label="ReScheduleMeetingFragment" >
+
+        <action
+            android:id="@+id/reSchedule_toIndividualSelection"
+            app:destination="@id/meetingDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                app:argType="string"
+                android:name="meetingId"
+                app:nullable="false"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/processMeetingFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.ProcessMeetingFragment"
+        android:label="ProcessMeetingFragment">
+
+        <action
+            android:id="@+id/processMeeting_toReScheduleMeeting"
+            app:destination="@id/reScheduleMeetingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" >
+            <argument
+                app:argType="string"
+                android:name="meetingId"
+                app:nullable="false"/>
+            <argument
+                app:argType="boolean"
+                android:name="editVenue"
+                android:defaultValue="true"
+                app:nullable="false"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/newVHNDMeetingFragment"
+        android:name="com.ssf.homevisit.fragment.vhnd.NewVHNDMeetingFragment"
+        android:label="NewVHNDMeetingFragment" >
+        <action
+            android:id="@+id/newVHNDMeetingFragment_to_meetingDetail"
+            app:destination="@id/meetingDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="meetingId"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/processVHNDMeetingFragment"
+        android:name="com.ssf.homevisit.fragment.vhnd.ProcessVHNDMeetingFragment"
+        android:label="ProcessVHNDMeetingFragment" />
+    <fragment
+        android:id="@+id/PHCStaffListFragment"
+        android:name="com.ssf.homevisit.fragment.vhnd.PHCStaffListFragment"
+        android:label="PHCStaffListFragment" />
+    <fragment
+        android:id="@+id/allInviteeListFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.AllInviteeListFragment"
+        android:label="AllInviteeListFragment" />
+    <fragment
+        android:id="@+id/GPInviteeFragment"
+        android:name="com.ssf.homevisit.fragment.vhsnc.GPInviteeFragment"
+        android:label="GPInviteeFragment" />
+
+
+</navigation>

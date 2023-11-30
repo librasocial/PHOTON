@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="11dp"
+        android:paddingTop="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/watersourcecont" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Water Source &amp; Contamination"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/househead_container"
+                android:layout_alignStart="@+id/househead_container"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/water_source_for_village"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/househead_container"
+                android:layout_alignStart="@+id/househead_container"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/piped_water"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/well___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/tank___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/tube_well___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/hand_pump___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/househead_container"
+                android:layout_alignStart="@+id/househead_container"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/canal___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/river___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/lake___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/watershed___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/others___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/househead_container"
+                android:layout_alignStart="@+id/househead_container"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/no_of_wells__"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/no_of_tanks__"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/no_of_tubewells__"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+
+                <com.ssf.homevisit.views.SESQuestionResponseView
+                    android:id="@+id/no_of_handpumps___"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

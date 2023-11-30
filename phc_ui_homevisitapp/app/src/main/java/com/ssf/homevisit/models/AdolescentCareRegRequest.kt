@@ -1,0 +1,17 @@
+package com.ssf.homevisit.models
+
+data class AdolescentCareRegRequest(
+    val birthCertificateNo: String,
+    val childAadharNo: String,
+    val citizenId: String,
+    val didContactCovidPatient: Boolean,
+    val fatherName: String,
+    val financialYear: String,
+    val isCovidResultPositive: Boolean,
+    val isCovidTestDone: Boolean,
+    val isILIExperienced: Boolean,
+    val mobileNumber: String,
+    val mobileOwner: String,
+    val rchId: String,
+    val registeredOn: String
+)

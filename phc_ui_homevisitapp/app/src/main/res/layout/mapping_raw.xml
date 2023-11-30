@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:id="@+id/cl_root"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/rowIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@drawable/well" />
+
+        <TextView
+            android:id="@+id/rowTitle"
+            style="@style/subTitleNoBold"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            tools:text="Grinding Stone"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rowIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/breedingSiteSpinner"
+            style="@style/subTitleNoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:drawablePadding="5dp"
+            android:layout_marginStart="8dp"
+            android:entries="@array/breedingSite"
+            app:layout_constraintStart_toEndOf="@+id/rowTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableEndCompat="@drawable/ic_down" />
+
+        <Spinner
+            android:id="@+id/anyLarvaSpinner"
+            style="@style/subTitleNoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toEndOf="@+id/breedingSiteSpinner"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawablePadding="5dp"
+            android:entries="@array/anyLarvaFound"
+            android:padding="5dp"
+            app:drawableEndCompat="@drawable/ic_down" />
+
+        <Spinner
+            android:id="@+id/solutionProvidedSpinner"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_disabled_spinner"
+            android:drawablePadding="5dp"
+            android:entries="@array/solutionProvide"
+            android:padding="5dp"
+            android:clickable="false"
+            android:layout_marginStart="35dp"
+            style="@style/subTitleDisabled"
+            app:layout_constraintStart_toEndOf="@+id/anyLarvaSpinner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableEndCompat="@drawable/ic_down" />
+
+        <ImageView
+            android:id="@+id/attachImageView"
+            style="@style/subTitleNoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            app:layout_constraintStart_toEndOf="@+id/solutionProvidedSpinner"
+            android:background="@drawable/spinner_bg"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_image_place_holder"
+            android:text="@string/attach_images" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/dateTitleValueLayout"
+            android:background="@drawable/text_view_rect_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            app:layout_constraintStart_toEndOf="@+id/attachImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/dateTitleValue"
+                style="@style/subTitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_20_05_2022" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <ImageView
+            android:id="@+id/deleteRow"
+            style="@style/subTitleNoBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:padding="5dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintStart_toEndOf="@+id/dateTitleValueLayout"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/delete"
+            android:text="@string/delete" />
+
+        <View
+            android:id="@+id/view"
+            app:layout_constraintTop_toBottomOf="@id/solutionProvidedSpinner"
+            android:layout_width="wrap_content"
+            android:background="#CACACA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/deleteRow"
+            android:layout_marginTop="10dp"
+            android:layout_height="1dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

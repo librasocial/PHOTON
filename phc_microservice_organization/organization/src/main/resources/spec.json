@@ -1,0 +1,181 @@
+{
+  "Country": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Country"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Country"
+      }
+    }
+  ],
+  "District": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "District",
+        "name": "name",
+        "lgd_code": "lgd_code"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "District"
+      }
+    }
+  ],
+  "GramPanchayat": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "GramPanchayat",
+        "name": "name",
+        "lgd_code": "lgd_code"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "GramPanchayat"
+      }
+    }
+  ],
+  "HouseHold": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "HouseHold",
+        "h_id": "h_id",
+        "latitude": "latitude",
+        "longitude": "longitude"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HouseHold"
+      }
+    }
+  ],
+  "Phc": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Phc",
+        "h_id": "h_id",
+        "latitude": "latitude",
+        "longitude": "longitude"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Phc"
+      }
+    }
+  ],
+  "Place": [
+    {
+      "operation": "shift",
+      "Place": {
+        "uuid": "uuid",
+        "type": "Place",
+        "name": "name",
+        "assetType": "assetType",
+        "assetSubType": "assetSubType",
+        "imgUrl": "imgUrl",
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "requiredSurveys": "requiredSurveys"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Place"
+      }
+    }
+  ],
+  "State": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "State",
+        "name": "name"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "State"
+      }
+    }
+  ],
+  "SubCenter": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "SubCenter",
+        "name": "name",
+        "latitude": "latitude",
+        "longitude": "longitude"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "SubCenter"
+      }
+    }
+  ],
+  "Taluk": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Taluk",
+        "name": "name",
+        "lgd_code": "lgd_code"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Taluk"
+      }
+    }
+  ],
+  "Village": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Village",
+        "name": "name",
+        "lgd_code": "lgd_code",
+        "household_count": "household_count",
+        "in_area_count": "in_area_count",
+        "out_of_area_count": "out_of_area_count",
+        "total_population": "total_population"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Village"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rmncha.ec.ecservice.ECServiceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@id/divider"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bc_history_visit_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Visit No"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/bc_history_visit_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Visit Date"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/bc_history_type_of_contraceptive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Type of Contraceptive"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/bc_history_pregnancy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Pregnancy Test Taken"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/bc_history_pregnancy_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Pregnancy Test Result"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/alert_divider" />
+
+    </RelativeLayout>
+
+</layout>

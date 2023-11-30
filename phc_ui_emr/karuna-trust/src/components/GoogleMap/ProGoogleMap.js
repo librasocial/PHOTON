@@ -59,7 +59,7 @@ import PageLoader from "../PageLoader";
 import SaveButton from "../EMR_Buttons/SaveButton";
 import { ncdarray, diabetiessubtopic } from "./GisConstant";
 
-const GOOGLE_API_KEY = "AIzaSyBITWADW5JiYQUJBspxyPq0OLCrTCNwrSQ";
+const GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY";
 
 window.google = window.google || {};
 export default function ProGoogleMap(props) {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_child_care"
+    app:startDestination="@id/childRegistrationFragment">
+
+    <fragment
+        android:id="@+id/childRegistrationFragment"
+        android:name="com.ssf.homevisit.rmncha.childCare.registration.ChildRegistrationFragment"
+        tools:layout="@layout/fragment_child_registration">
+    </fragment>
+</navigation>

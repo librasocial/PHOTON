@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.ssf.homevisit.R" />
+
+        <import type="com.ssf.homevisit.rmncha.base.RMNCHAUtils" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.adolescentCare.AdolescentCareServiceViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/headingChildCare"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            app:valueData='@{"Adolescent Care"}'
+            app:labelDrawable='@{R.drawable.ic_adolescent_sh}'
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}" />
+
+        <include
+            android:id="@+id/headingHHName"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"HH Head:"}'
+            app:valueData='@{RMNCHAUtils.setNonNullValue(viewModel.selectedChild.targetNode.properties.houseHoldName)}'
+            app:layout_constraintStart_toEndOf="@id/headingChildCare"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}" />
+
+        <include
+            android:id="@+id/headingMotherName"
+            layout="@layout/view_label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:label='@{"Mother Name:"}'
+            app:valueData='@{RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.firstName)}'
+            app:layout_constraintStart_toEndOf="@id/headingHHName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showDivider="@{true}" />
+
+        <View
+            android:id="@+id/dividerOne"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/headingChildCare" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeadingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="Provide Adolescent Care Services"
+            android:textColor="@color/landing_page_subheadings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_adolescent_sh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Child-ID"
+            android:textColor="@color/button_dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvChildId"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvChildId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@{String.valueOf(viewModel.childMotherDetail.content.get(0).sourceNode.id)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerOne" />
+
+        <View
+            android:id="@+id/dividerTwo"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="@id/tvChildIdLabel"
+            app:layout_constraintEnd_toStartOf="@id/tvChildIdLabel"
+            app:layout_constraintTop_toTopOf="@id/tvChildIdLabel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSelectAsha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="Select ASHA Name"
+            android:textColor="@color/button_dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/llSpinnerAsha"
+            app:layout_constraintEnd_toStartOf="@id/llSpinnerAsha"
+            app:layout_constraintTop_toTopOf="@id/llSpinnerAsha" />
+
+        <LinearLayout
+            android:id="@+id/llSpinnerAsha"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/alert_phc_other"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/dividerTwo"
+            app:layout_constraintTop_toTopOf="@id/dividerOne">
+
+            <Spinner
+                android:id="@+id/spinner_select_asha_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".3" />
+
+
+        <ScrollView
+            android:id="@+id/leftScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtHeadingTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/selected_half_white_two"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgChild"
+                            android:layout_width="80dp"
+                            android:layout_height="0dp"
+                            app:s3ImageUrlFromArray="@{viewModel.childMotherDetail.content.get(0).sourceNode.properties.imageUrls}"
+                            app:layout_constraintDimensionRatio="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_pick_image" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvChildName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text='@{"Name: "+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).sourceNode.properties.firstName)}'
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgChild"
+                            app:layout_constraintTop_toTopOf="@id/imgChild" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAgeGender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text='@{String.valueOf(viewModel.childMotherDetail.content.get(0).targetNode.properties.age)+" - "+ viewModel.childMotherDetail.content.get(0).targetNode.properties.gender}'
+                            android:textColor="@color/rmncha_unselected_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgChild"
+                            app:layout_constraintTop_toBottomOf="@id/tvChildName" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMotherName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text='@{"Mother Name: \n"+RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.firstName)}'
+                            android:textColor="@color/rmncha_unselected_color"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgChild"
+                            app:layout_constraintTop_toBottomOf="@id/tvAgeGender" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvResidentStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:text="Status: Resident"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@id/imgChild"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgChild" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHealthID"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text='@{"Health ID number : "+ RMNCHAUtils.setNonNullValue(viewModel.childMotherDetail.content.get(0).targetNode.properties.rchId)}'
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgChild" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+        <ScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/leftScrollView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llRegDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRegDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today’s Date"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/etRegDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/gray_bg_bordered"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:text="@{RMNCHAUtils.getDateToView(RMNCHAUtils.getCurrentDate(), RMNCHAUtils.RMNCHA_DATE_FORMAT)}"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/tvFinYearLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="Referral-up to PHC"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/llRegDate"
+                    app:layout_constraintStart_toEndOf="@id/llRegDate"
+                    app:layout_constraintTop_toTopOf="@id/llRegDate" />
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/servicesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="12dp"
+                    app:flow_horizontalAlign="start"
+                    app:flow_horizontalBias="0"
+                    app:flow_horizontalGap="6dp"
+                    app:constraint_referenced_ids="btnCommodities, btnInformation, btnFollowUps"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_verticalAlign="top"
+                    app:flow_verticalGap="6dp"
+                    app:flow_verticalStyle="packed"
+                    app:flow_wrapMode="aligned"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llRegDate" />
+
+                <com.ssf.homevisit.views.VHNDTopicButton
+                    android:id="@+id/btnCommodities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:BtnIcon="@drawable/ic_commodities"
+                    app:BtnLabel="Commodities" />
+
+                <com.ssf.homevisit.views.VHNDTopicButton
+                    android:id="@+id/btnInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:BtnIcon="@drawable/ic_information"
+                    app:BtnLabel="Eligible Couple" />
+
+                <com.ssf.homevisit.views.VHNDTopicButton
+                    android:id="@+id/btnFollowUps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:BtnIcon="@drawable/ic_follow_ups"
+                    app:BtnLabel="Services\nFollow-up" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottomBar"
+            layout="@layout/vhsnc_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

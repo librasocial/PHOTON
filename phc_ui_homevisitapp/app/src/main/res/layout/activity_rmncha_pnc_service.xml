@@ -1,0 +1,2760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.HouseholdMappingFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.pnc.service.PNCServiceViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/divider"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="RMNCH+A"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=">"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hh_pnc_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=">"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/hh_pnc_service_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textColor="#1D9824"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end">
+
+                    <ImageView
+                        android:id="@+id/logo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/logo_tree"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="+"
+                        android:textAppearance="@style/rmncha_hh_sub_header_style"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="@string/ssf_logo"
+                        android:padding="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo_two" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/alert_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:drawablePadding="10dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/hh_pnc_header_message"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold"
+                    app:drawableLeftCompat="@drawable/ic_pnc_grey" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="#000000"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="HH Head : "
+                    android:textAppearance="@style/rmncha_header_style" />
+
+                <TextView
+                    android:id="@+id/hh_head_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="30dp"
+                    android:drawablePadding="10dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="#000000"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="Husband : "
+                    android:textAppearance="@style/rmncha_header_style" />
+
+                <TextView
+                    android:id="@+id/header_husband_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="30dp"
+                    android:drawablePadding="10dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:textAppearance="@style/rmncha_header_style"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/alert_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_pnc"
+                    android:drawablePadding="10dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/hh_pnc_service_header_message"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="Select ASHA Name"
+                    android:textColor="#0085FF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/alert_phc_other"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_select_asha_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="#000000"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tv_header_rchIDItitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="RCH-ID"
+                    android:textColor="#0085FF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_header_rchID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="40dp"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left|center_vertical"
+                    android:singleLine="true"
+                    android:text="None"
+                    android:textColor="#878787"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="255dp"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <LinearLayout
+                    android:id="@+id/layout_select_beneficiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="50dp"
+                        android:src="@drawable/ic_curve_arrow_left" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_not_found" />
+
+                        <TextView
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:text="Select any one of the Beneficiary to start PNC Services "
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layout_mother_pnc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/selected_half_white_two"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:src="@drawable/ic_mom_and_baby" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:drawablePadding="10dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Type of Delivery :"
+                                        android:textColor="#646464"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/text_view_header_type_of_delivery"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Normal"
+                                        android:textColor="#646464"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:src="@drawable/ic_gift" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:drawablePadding="10dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Delivery Date :"
+                                        android:textColor="#646464"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/text_view_header_delivery_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="2022/05/22"
+                                        android:textColor="#878787"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:backgroundTint="@color/selected_half_white_two"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center_vertical"
+                                            android:lines="1"
+                                            android:text="PNC period"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="150dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@drawable/alert_phc_other"
+                                            android:orientation="horizontal">
+
+                                            <Spinner
+                                                android:id="@+id/spinner_pnc_period"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:entries="@array/array_pnc_period"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="center_vertical"
+                                            android:lines="2"
+                                            android:text="PNC date"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/pnc_date"
+                                            android:layout_width="100dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@drawable/bg_rounder_corner_half_white"
+                                            android:gravity="center_vertical"
+                                            android:paddingStart="5dp"
+                                            android:paddingEnd="5dp"
+                                            android:singleLine="true"
+                                            android:text="2022/05/20"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="145dp"
+                                                android:layout_height="wrap_content"
+                                                android:drawableStart="@drawable/ic_pills"
+                                                android:drawablePadding="5dp"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="No. of Iron Folic Acid (IFA) tablets given"
+                                                android:textColor="@color/black"
+                                                android:textSize="13sp" />
+
+                                            <EditText
+                                                android:id="@+id/no_of_iron_folic_acid"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="000"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="number"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:paddingEnd="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="160dp"
+                                                android:layout_height="wrap_content"
+                                                android:drawablePadding="5dp"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="PPC methods used"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="140dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_ppc_method"
+                                                    android:layout_width="140dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="0dp"
+                                                    android:layout_weight="1"
+                                                    android:entries="@array/array_ppc_method"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="130dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Any signs of danger to the mother"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_sign_of_danger"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_mother_danger_signs"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Referral facility"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_referral_facility"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_pnc_referral_facility"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Referral place"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_referral_place"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="bottom"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Remarks"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <EditText
+                                            android:id="@+id/remarks"
+                                            android:layout_width="300dp"
+                                            android:layout_height="30dp"
+                                            android:layout_marginTop="5dp"
+                                            android:background="@drawable/alert_phc_other"
+                                            android:gravity="center_vertical"
+                                            android:hint="Type"
+                                            android:imeOptions="actionDone"
+                                            android:inputType="text"
+                                            android:lines="1"
+                                            android:paddingStart="10dp"
+                                            android:paddingEnd="10dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="140dp"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:drawableStart="@drawable/ic_covid"
+                                                android:drawablePadding="5dp"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Is Covid test done?"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="140dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_covid_test_taken"
+                                                    android:layout_width="140dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginStart="0dp"
+                                                    android:layout_weight="1"
+                                                    android:entries="@array/array_done_not_done"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_covid_result"
+                                            android:layout_width="140dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Covid test results"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="140dp"
+                                                android:layout_height="30dp"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_marginTop="8dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_covid_test_result"
+                                                    android:layout_width="140dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="0dp"
+                                                    android:layout_weight="1"
+                                                    android:entries="@array/array_positive_negative"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="140dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:lines="3"
+                                            android:text="Is pregnant woman experiencing ILI (Influenza Like Illness)"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="140dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:background="@drawable/alert_phc_other"
+                                            android:orientation="horizontal">
+
+                                            <Spinner
+                                                android:id="@+id/spinner_having_ili"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:entries="@array/array_positive_negative"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="165dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="center_vertical"
+                                            android:lines="4"
+                                            android:text="Did Pregnant woman have any contact with Covid-19 positive patients in the last 14 days?"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="140dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:background="@drawable/alert_phc_other"
+                                            android:orientation="horizontal">
+
+                                            <Spinner
+                                                android:id="@+id/spinner_covid_contact"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:entries="@array/array_positive_negative"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="330dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:hint="(Are there symptoms like Cough, Fever, Cold, Sore throat, Difficulty in Breathing?)"
+                                        android:lines="2"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Postpartum Care"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="150dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="1"
+                                                android:text="Any complaints"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <EditText
+                                                android:id="@+id/any_complaints"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="Type"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="text"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="120dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="1"
+                                                android:text="Pallor"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <EditText
+                                                android:id="@+id/pallor"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="Type"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="text"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:paddingEnd="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="160dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="1"
+                                                android:text="Blood pressure"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <EditText
+                                                android:id="@+id/blood_pressure"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="Type"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="numberDecimal"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:paddingEnd="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Temperature"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="140dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:id="@+id/temperature_minus"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginEnd="4dp"
+                                                    android:src="@drawable/ic_minus" />
+
+
+                                                <EditText
+                                                    android:id="@+id/temperature"
+                                                    android:layout_width="70dp"
+                                                    android:layout_height="match_parent"
+                                                    android:hint="Type"
+                                                    android:inputType="numberDecimal"
+                                                    android:imeOptions="actionDone"
+                                                    android:lines="1"
+                                                    android:paddingStart="2dp"
+                                                    android:background="@drawable/edit_text_bg"
+                                                    android:paddingEnd="2dp"
+                                                    android:singleLine="true"
+                                                    android:text="96.055"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/temperature_plus"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="4dp"
+                                                    android:src="@drawable/ic_plus" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Breasts condition"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_breast_condition"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_breast_condition"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Nipple condition"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_nipple_condition"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_nipple_condition"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Uterus tenderness"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_uterus_tenderness"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_uterus_condition"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Bleeding (PV)"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_bleeding"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_bleeding_condition"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Lochia condition"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_lochia_condition"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_lochia_condition"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Episiotomy / Tear"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="140dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_episiotomy"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_episiotomy_condition"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="140dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Family planning counselling"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_family_planning"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_done_not_done"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="140dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Any complications (Specify)"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <EditText
+                                                android:id="@+id/any_complications"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="Type"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="text"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:paddingEnd="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <CheckBox
+                                            android:id="@+id/checkbox_refer_phc"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="30dp"
+                                            android:text="Referral-up to PHC"
+                                            android:textSize="14sp" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Maternal death"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <RadioGroup
+                                                android:id="@+id/radio_group_maternal_death"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <RadioButton
+                                                    android:id="@+id/radio_maternal_death_yes"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginEnd="20dp"
+                                                    android:enabled="false"
+                                                    android:text="Yes"
+                                                    android:textSize="14sp" />
+
+                                                <RadioButton
+                                                    android:id="@+id/radio_maternal_death_no"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:checked="true"
+                                                    android:text="No"
+                                                    android:textSize="14sp" />
+
+                                            </RadioGroup>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_mother_death_details"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="20dp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:singleLine="true"
+                                                    android:text="Mother’s death date"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:id="@+id/text_view_mother_death_date"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:background="@drawable/alert_phc_other"
+                                                    android:drawableEnd="@drawable/ic_calendar_black"
+                                                    android:gravity="center_vertical"
+                                                    android:hint="DD/MM/YYYY"
+                                                    android:lines="1"
+                                                    android:paddingStart="10dp"
+                                                    android:paddingEnd="10dp"
+                                                    android:singleLine="true"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="20dp"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:gravity="center_vertical"
+                                                        android:singleLine="true"
+                                                        android:text="Probable cause of death"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="14sp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:gravity="center_vertical"
+                                                        android:singleLine="true"
+                                                        android:text="*"
+                                                        android:textColor="@color/red"
+                                                        android:textSize="14sp"
+                                                        android:textStyle="bold" />
+
+                                                </LinearLayout>
+
+                                                <TextView
+                                                    android:id="@+id/textview_cause_of_death"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:background="@drawable/alert_phc_other"
+                                                    android:ellipsize="end"
+                                                    android:gravity="center_vertical"
+                                                    android:hint="Select"
+                                                    android:lines="1"
+                                                    android:padding="5dp"
+                                                    android:singleLine="true"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/layout_pnc_mother_service_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="@color/selected_half_white_two"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#D7E7F6"
+                                        android:paddingTop="5dp">
+
+                                        <include layout="@layout/layout_rmncha_pnc_mother_service_row" />
+
+                                    </LinearLayout>
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recyclerview_pnc_mother_service_history"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:overScrollMode="never"
+                                        android:scrollbars="none" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_child_pnc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/selected_half_white_two"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:src="@drawable/ic_mom_and_baby" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:drawablePadding="10dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Date of Registration :"
+                                        android:textColor="#646464"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/text_view_header_date_registration"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="-/-"
+                                        android:textColor="#646464"
+                                        android:textSize="16sp" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:src="@drawable/ic_gift" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:drawablePadding="10dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Delivery Date :"
+                                        android:textColor="#646464"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/text_view_header_child_delivery_date"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:focusableInTouchMode="true"
+                                        android:gravity="left|center_vertical"
+                                        android:singleLine="true"
+                                        android:text="-/-"
+                                        android:textColor="#878787"
+                                        android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:backgroundTint="@color/selected_half_white_two"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:paddingStart="20dp"
+                                    android:paddingEnd="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center_vertical"
+                                            android:lines="1"
+                                            android:text="PNC period"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="150dp"
+                                            android:layout_height="30dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@drawable/alert_phc_other"
+                                            android:orientation="horizontal">
+
+                                            <Spinner
+                                                android:id="@+id/spinner_child_pnc_period"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:entries="@array/array_pnc_period"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="center_vertical"
+                                            android:lines="2"
+                                            android:text="PNC date"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="*"
+                                            android:textColor="@color/red"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/child_pnc_date"
+                                            android:layout_width="100dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:background="@drawable/bg_rounder_corner_half_white"
+                                            android:gravity="center_vertical"
+                                            android:paddingStart="5dp"
+                                            android:paddingEnd="5dp"
+                                            android:singleLine="true"
+                                            android:text="28/05/2022"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="130dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Any signs of danger for the Infant"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_child_sign_of_danger"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_infant_danger_signs"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Referral facility"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_child_referral_facility"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_pnc_referral_facility"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Referral place"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_child_referral_place"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="bottom"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Remarks"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <EditText
+                                            android:id="@+id/child_remarks"
+                                            android:layout_width="300dp"
+                                            android:layout_height="30dp"
+                                            android:layout_marginTop="5dp"
+                                            android:background="@drawable/alert_phc_other"
+                                            android:gravity="center_vertical"
+                                            android:hint="Type"
+                                            android:imeOptions="actionDone"
+                                            android:inputType="text"
+                                            android:lines="1"
+                                            android:paddingStart="10dp"
+                                            android:paddingEnd="10dp"
+                                            android:singleLine="true"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Infant Care"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:lines="1"
+                                                    android:text="Infant’s weight(Kgs)"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:singleLine="true"
+                                                    android:text="*"
+                                                    android:textColor="@color/red"
+                                                    android:textSize="14sp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <EditText
+                                                android:id="@+id/child_weight"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="000"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="numberDecimal"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="120dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="1"
+                                                android:text="Urine passed"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_child_urine_passed"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="120dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="1"
+                                                android:text="Stool passed"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_child_stool_passed"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Temperature"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="140dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:orientation="horizontal">
+
+                                                <ImageView
+                                                    android:id="@+id/child_temp_minus"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginEnd="4dp"
+                                                    android:src="@drawable/ic_minus" />
+
+                                                <EditText
+                                                    android:id="@+id/child_temperature"
+                                                    android:layout_width="70dp"
+                                                    android:layout_height="match_parent"
+                                                    android:hint="Type"
+                                                    android:inputType="numberDecimal"
+                                                    android:imeOptions="actionDone"
+                                                    android:lines="1"
+                                                    android:paddingStart="2dp"
+                                                    android:background="@drawable/edit_text_bg"
+                                                    android:paddingEnd="2dp"
+                                                    android:singleLine="true"
+                                                    android:text="96.055"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/child_temp_plus"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="4dp"
+                                                    android:src="@drawable/ic_plus" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Jaundice"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_jaundice"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Diarrhoea"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_diarrhoea"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Vomiting"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_vomiting"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Convolusions"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_convolusions"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Activity"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_activity"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_infant_activity"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Sucking"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_sucking"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_infant_sucking"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Breathing"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_breathing"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_infant_breathing"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Chest indrawing"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_chest"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_yes_no"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="140dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Skin pustules"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:orientation="horizontal">
+
+                                                <Spinner
+                                                    android:id="@+id/spinner_skin_pustules"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:entries="@array/array_present_absent"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="140dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Condition of umbilical stump"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <EditText
+                                                android:id="@+id/condition_of_umbilical"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="Type"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="text"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:paddingEnd="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="20dp"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="140dp"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:lines="2"
+                                                android:text="Any complications (Specify)"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <EditText
+                                                android:id="@+id/child_any_complications"
+                                                android:layout_width="150dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginTop="5dp"
+                                                android:background="@drawable/alert_phc_other"
+                                                android:gravity="center_vertical"
+                                                android:hint="Type"
+                                                android:imeOptions="actionDone"
+                                                android:inputType="text"
+                                                android:lines="1"
+                                                android:paddingStart="10dp"
+                                                android:paddingEnd="10dp"
+                                                android:singleLine="true"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="bottom"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center_vertical"
+                                                android:singleLine="true"
+                                                android:text="Infant death"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+
+                                            <RadioGroup
+                                                android:id="@+id/radio_group_infant_death"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <RadioButton
+                                                    android:id="@+id/radio_infant_death_yes"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginEnd="20dp"
+                                                    android:enabled="false"
+                                                    android:text="Yes"
+                                                    android:textSize="14sp" />
+
+                                                <RadioButton
+                                                    android:id="@+id/radio_infant_death_no"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:checked="true"
+                                                    android:text="No"
+                                                    android:textSize="14sp" />
+
+                                            </RadioGroup>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/layout_infant_death_details"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="20dp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:singleLine="true"
+                                                    android:text="Infant’s death date"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:id="@+id/text_view_infantr_death_date"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:background="@drawable/alert_phc_other"
+                                                    android:drawableEnd="@drawable/ic_calendar_black"
+                                                    android:gravity="center_vertical"
+                                                    android:hint="DD/MM/YYYY"
+                                                    android:lines="1"
+                                                    android:paddingStart="10dp"
+                                                    android:paddingEnd="10dp"
+                                                    android:singleLine="true"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="20dp"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center_vertical"
+                                                    android:singleLine="true"
+                                                    android:text="Place of death"
+                                                    android:textColor="@color/black"
+                                                    android:textSize="14sp" />
+
+                                                <LinearLayout
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginTop="5dp"
+                                                    android:background="@drawable/alert_phc_other"
+                                                    android:orientation="horizontal">
+
+                                                    <Spinner
+                                                        android:id="@+id/spinner_child_place_of_death"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:entries="@array/array_yes_no"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="20dp"
+                                                android:orientation="vertical">
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:gravity="center_vertical"
+                                                        android:singleLine="true"
+                                                        android:text="Probable cause of death"
+                                                        android:textColor="@color/black"
+                                                        android:textSize="14sp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:gravity="center_vertical"
+                                                        android:singleLine="true"
+                                                        android:text="*"
+                                                        android:textColor="@color/red"
+                                                        android:textSize="14sp"
+                                                        android:textStyle="bold" />
+
+                                                </LinearLayout>
+
+                                                <TextView
+                                                    android:id="@+id/textview_child_cause_of_death"
+                                                    android:layout_width="150dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginTop="5dp"
+                                                    android:background="@drawable/alert_phc_other"
+                                                    android:ellipsize="end"
+                                                    android:gravity="center_vertical"
+                                                    android:hint="Select"
+                                                    android:lines="1"
+                                                    android:padding="5dp"
+                                                    android:singleLine="true"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/layout_pnc_child_service_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:backgroundTint="@color/selected_half_white_two"
+                                app:cardUseCompatPadding="true">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#D7E7F6"
+                                        android:paddingTop="5dp">
+
+                                        <include layout="@layout/layout_rmncha_pnc_child_service_row" />
+
+                                    </LinearLayout>
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recyclerview_pnc_child_service_history"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:overScrollMode="never"
+                                        android:scrollbars="none" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/button_save"
+            android:background="@color/alert_divider" />
+
+        <TextView
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toStartOf="@id/button_save"
+            android:text="Cancel"
+            android:textAppearance="@style/footer_back_button_style"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#0085FF"
+            android:text="Save"
+            android:textAppearance="@style/footer_back_button_style"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

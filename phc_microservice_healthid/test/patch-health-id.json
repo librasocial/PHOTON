@@ -1,0 +1,36 @@
+[
+  {
+    "testObject": {
+      "status": "GENERATED",
+      "timestamp": "2022-01-21T09:07:58.660+00:00",
+      "success": {
+        "healthId": "string",
+        "firstName":"firstName",
+        "middleName":"middleName",
+        "lastName":"lastName",
+        "gender":"MALE",
+        "dob":"2022-02-17T05:29:53.331Z",
+        "phone":"1234123412"
+      }
+    }
+  },
+  {
+    "testObject": {
+      "status": "GENERATED",
+      "success": {
+        "healthId": "string",
+        "generatedTimeStamp": "2022-01-21T09:07:58.660+00:00"
+      }
+    }
+  },
+  {
+    "testObject": {
+      "status": "HANDEDOVER"
+    }
+  },
+  {
+    "testObject": {
+      "status": "PRINTED"
+    }
+  }
+]

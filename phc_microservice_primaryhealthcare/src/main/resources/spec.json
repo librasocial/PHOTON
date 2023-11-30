@@ -1,0 +1,514 @@
+{
+  "AshaWorker": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "AshaWorker",
+        "name": "name",
+        "contact": "contact",
+        "phc": "phc",
+        "phc_sub_center": "phc_sub_center",
+        "worker_id": "worker_id"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "AshaWorker"
+      }
+    }
+  ],
+  "Citizen": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Citizen",
+        "healthID": "healthID",
+        "faceId": "faceId",
+        "firstName": "firstName",
+        "middleName": "middleName",
+        "lastName": "lastName",
+        "dateOfBirth": "dateOfBirth",
+        "age": "age",
+        "gender": "gender",
+        "isHead": "isHead",
+        "isAdult": "isAdult",
+        "isPregnant": "isPregnant",
+        "contact": "contact",
+        "rchId": "rchId",
+        "rmnchaServiceStatus": "rmnchaServiceStatus",
+        "residingInVillage": "residingInVillage",
+        "relationshipWithHead": "relationshipWithHead",
+        "imageUrls": "imageUrls",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy",
+        "houseHold": "houseHold"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Citizen"
+      }
+    }
+  ],
+  "MedicalOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "HeadMedicalOfficer",
+        "name": "name",
+        "contact": "contact"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HeadMedicalOfficer"
+      }
+    }
+  ],
+  "JuniorHealthAssistantFemale": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "JuniorHealthAssistantFemale",
+        "name": "name",
+        "contact": "contact",
+        "posted_by": "posted_by"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorHealthAssistantFemale"
+      }
+    }
+  ],
+  "JuniorHealthAssistantMale": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "JuniorHealthAssistantMale",
+        "name": "name",
+        "contact": "contact",
+        "posted_by": "posted_by"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorHealthAssistantMale"
+      }
+    }
+  ],
+  "JuniorHealthAssistant": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "JuniorHealthAssistant",
+        "name": "name",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorHealthAssistant"
+      }
+    }
+  ],
+  "HouseHold": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "HouseHold",
+        "houseID": "houseID",
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "totalFamilyMembers": "totalFamilyMembers",
+        "houseHeadName": "houseHeadName",
+        "hasEligibleCouple": "hasEligibleCouple",
+        "hasPregnantWoman": "hasPregnantWoman",
+        "hasNewBorn": "hasNewBorn",
+        "hasDelivered": "hasDelivered",
+        "pregnantLadyName": "pregnantLadyName",
+        "houseHeadImageUrls": "houseHeadImageUrls",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy",
+        "village": "village"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HouseHold"
+      }
+    }
+  ],
+  "SubCenter": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "SubCenter",
+        "name": "name",
+        "latitude": "latitude",
+        "longitude": "longitude"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "SubCenter"
+      }
+    }
+  ],
+  "Phc": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Phc",
+        "name": "name",
+        "latitude": "latitude",
+        "longitude": "longitude"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Phc"
+      }
+    }
+  ],
+  "PhcAdministrator": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "PhcAdministrator",
+        "posted_by": "posted_by",
+        "name": "name",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "PhcAdministrator"
+      }
+    }
+  ],
+  "Village": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Village",
+        "name": "name",
+        "lgdCode": "lgdCode",
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "houseHoldCount": "houseHoldCount",
+        "inAreaCount": "inAreaCount",
+        "totalPopulation": "totalPopulation"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Village"
+      }
+    }
+  ],
+  "Locality": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "Locality",
+        "name": "name",
+        "localityCode": "localityCode",
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "houseHoldCount": "houseHoldCount",
+        "inAreaCount": "inAreaCount",
+        "totalPopulation": "totalPopulation"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Locality"
+      }
+    }
+  ],
+  "JuniorLabTechnician": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "JuniorLabTechnician",
+        "name": "name",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorLabTechnician"
+      }
+    }
+  ],
+  "DGroupAttender": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "DGroupAttender",
+        "name": "name",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "DGroupAttender"
+      }
+    }
+  ],
+  "HeadMedicalOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "HeadMedicalOfficer",
+        "name": "name",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HeadMedicalOfficer"
+      }
+    }
+  ],
+  "PrimaryHealthCareOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "PrimaryHealthCareOfficer",
+        "name": "name",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "PrimaryHealthCareOfficer"
+      }
+    }
+  ],
+  "HealthInspectingOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "HealthInspectingOfficer",
+        "name": "name"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HealthInspectingOfficer"
+      }
+    }
+  ],
+  "JuniorPharmacist": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "JuniorPharmacist",
+        "name": "name",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorPharmacist"
+      }
+    }
+  ],
+  "MARRIEDTO": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "rchId": "rchId",
+        "type": "MARRIEDTO",
+        "serialNumber": "serialNumber",
+        "ecServiceId": "ecServiceId",
+        "ecRegistrationId": "ecRegistrationId",
+        "ancServiceId": "ancServiceId",
+        "ancRegistrationId": "ancRegistrationId",
+        "pncRegistrationId": "pncRegistrationId",
+        "pncServiceId": "pncServiceId",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "MARRIEDTO"
+      }
+    }
+  ],
+  "MOTHEROF": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "childId": "childId",
+        "type": "MOTHEROF",
+        "pncInfantServiceId": "pncInfantServiceId",
+        "pncInfantRegistrationId": "pncInfantRegistrationId",
+        "pncServiceId": "pncServiceId"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "MOTHEROF"
+      }
+    }
+  ],
+  "MEMBEROF": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "MEMBEROF"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "MEMBEROF"
+      }
+    }
+  ],
+  "CONTAINEDINPLACE": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "CONTAINEDINPLACE"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "CONTAINEDINPLACE"
+      }
+    }
+  ],
+  "RESIDESIN": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "RESIDESIN"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "RESIDESIN"
+      }
+    }
+  ],
+  "REPORTSINTO": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "REPORTSINTO"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "REPORTSINTO"
+      }
+    }
+  ],
+  "SERVICEDBY": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "SERVICEDBY"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "SERVICEDBY"
+      }
+    }
+  ],
+  "CitizenCreatedUpdatedPayload": [
+    {
+      "operation": "shift",
+      "spec": {
+        "authorization": "authorization",
+        "idToken": "idToken",
+        "payload": "payload"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+      }
+    }
+  ]
+}

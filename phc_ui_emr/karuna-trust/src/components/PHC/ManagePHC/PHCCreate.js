@@ -18,7 +18,7 @@ import * as serviceHeaders from "../../ConstUrl/serviceHeaders";
 import GoogleMapModal from "./GoogleMapModal";
 import Geocode from "react-geocode";
 import PageLoader from "../../PageLoader";
-Geocode.setApiKey("AIzaSyBITWADW5JiYQUJBspxyPq0OLCrTCNwrSQ");
+Geocode.setApiKey("YOUR_GOOGLE_API_KEY");
 
 export default function PHCCreate(props) {
   let dispatch = useDispatch();

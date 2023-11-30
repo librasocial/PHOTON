@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/childImmunizationFragment">
+
+    <fragment
+        android:id="@+id/childImmunizationFragment"
+        android:name="com.ssf.homevisit.rmncha.childCare.immunization.ChildImmunizationFragment"
+        tools:layout="@layout/fragment_child_immunization" />
+
+
+    <dialog
+        android:id="@+id/childHistoryFragment"
+        android:name="com.ssf.homevisit.rmncha.childCare.immunization.HistoryFragment"
+        tools:layout="@layout/immunization_history" />
+
+</navigation>

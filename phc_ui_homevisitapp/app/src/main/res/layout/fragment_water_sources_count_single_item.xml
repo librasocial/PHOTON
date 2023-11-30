@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp">
+
+
+        <TextView
+            android:id="@+id/tv_resources_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="No. of Wells" />
+
+        <EditText
+            android:id="@+id/et_resource_count"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_text_bg"
+            android:hint="000"
+            android:textColor="#646464"
+            android:paddingStart="8dp"
+            android:inputType="number"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/tv_resources_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_resources_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

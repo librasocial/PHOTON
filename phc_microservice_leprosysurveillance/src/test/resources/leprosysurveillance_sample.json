@@ -1,0 +1,24 @@
+{
+	"id":"string",
+	"citizenId": "b531297c-40f7-44f4-bdf7-f8bb9123276e",
+	"dateOfSurveillance": "2022-10-02T02:50:12.208Z",
+	"isNewlySuspected": "true",
+	"suspectedType": "Type", 
+	"symptoms": ["symptom1", "symptom2", "symptom3"], 
+	"isReferredToPhc": "true",
+	"past": {
+		"wasConfirmed": "true",
+		"result": "postive",
+		"hasUndergoneRCSSurgery": "true"
+	},
+	"sample": {
+		"isSampleCollected": "test",
+		"sampleCollectedDate": "2022-10-02T02:50:12.208Z",             
+		"labReceivedDate": "2022-10-02T02:50:12.208Z"
+	}, 
+	"labResult": {
+		"resultDate": "2022-10-02T02:50:12.208Z", 
+		"result": "postive",
+		"reportImages": ["string, bucketId", "string, bucketId", "string, bucketId"]
+	}
+}

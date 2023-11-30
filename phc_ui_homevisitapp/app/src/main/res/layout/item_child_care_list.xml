@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.ssf.homevisit.rmncha.base.RMNCHAUtils" />
+
+        <variable
+            name="listItem"
+            type="com.ssf.homevisit.models.CcChildListContent" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clListItem"
+        app:layout_constraintTop_toBottomOf="@id/txtSubHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".035"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".305"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".595"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeadHouseHoldNumber"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{listItem.targetNode.properties.lgdCode}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginVertical="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeadNameOfChild"
+            android:text="@{RMNCHAUtils.setNonNullValue(listItem.sourceNode.properties.firstName)}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeadAction"
+            android:text="Select a Child for Child Care"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="16sp"
+            android:textAppearance="@style/rmncha_header_style"
+            android:textColor="#0084FF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/divider"
+            android:background="@color/alert_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+            

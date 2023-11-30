@@ -1,0 +1,667 @@
+{
+  "AshaWorker": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "AshaWorker",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "AshaWorker"
+      }
+    }
+  ],
+  "Employee": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "Employee",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "AshaWorker"
+      }
+    }
+  ],
+  "Admin": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "Admin",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Admin"
+      }
+    }
+  ],
+  "MedicalOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "MedicalOfficer",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "MedicalOfficer"
+      }
+    }
+  ],
+  "JuniorHealthAssistantFemale": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "JuniorHealthAssistantFemale",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorHealthAssistantFemale"
+      }
+    }
+  ],
+  "JuniorHealthAssistantMale": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "JuniorHealthAssistantMale",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorHealthAssistantMale"
+      }
+    }
+  ],
+  "JuniorHealthAssistant": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "JuniorHealthAssistant",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorHealthAssistant"
+      }
+    }
+  ],
+  "PhcAdministrator": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "PhcAdministrator",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "PhcAdministrator"
+      }
+    }
+  ],
+  "JuniorLabTechnician": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "JuniorLabTechnician",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorLabTechnician"
+      }
+    }
+  ],
+  "DGroupAttender": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "DGroupAttender",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "DGroupAttender"
+      }
+    }
+  ],
+  "HeadMedicalOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "HeadMedicalOfficer",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HeadMedicalOfficer"
+      }
+    }
+  ],
+  "PrimaryHealthCareOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "PrimaryHealthCareOfficer",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "PrimaryHealthCareOfficer"
+      }
+    }
+  ],
+  "HealthInspectingOfficer": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "HealthInspectingOfficer",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HealthInspectingOfficer"
+      }
+    }
+  ],
+  "JuniorPharmacist": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "JuniorPharmacist",
+        "uuid": "uuid",
+        "salutation": "salutation",
+        "name": "name",
+        "email": "email",
+        "contact": "contact",
+        "gender": "gender",
+        "dateOfBirth": "dateOfBirth",
+        "healthID": "healthID",
+        "pan": "pan",
+        "citizenIdType": "citizenIdType",
+        "citizenIdNumber": "citizenIdNumber",
+        "bloodGroup": "bloodGroup",
+        "height": "height",
+        "caste": "caste",
+        "religion": "religion",
+        "nationality": "nationality",
+        "photo": "photo",
+        "status": "status",
+        "posted_by": "posted_by",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "JuniorPharmacist"
+      }
+    }
+  ],
+  "Activity": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "Activity",
+        "uuid": "uuid",
+        "name": "name"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Activity"
+      }
+    }
+  ],
+  "Application": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "Application",
+        "uuid": "uuid",
+        "name": "name"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Application"
+      }
+    }
+  ],
+  "Process": [
+    {
+      "operation": "shift",
+      "spec": {
+        "type": "Process",
+        "uuid": "uuid",
+        "name": "name"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "Process"
+      }
+    }
+  ],
+  "HASROLE": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "HASROLE",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HASROLE"
+      }
+    }
+  ],
+  "HASACCESS": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "orgType": "orgType",
+        "orgUuid": "orgUuid",
+        "type": "HASACCESS",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "HASACCESS"
+      }
+    }
+  ],
+  "OWNEROF": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "orgType": "orgType",
+        "orgUuid": "orgUuid",
+        "type": "OWNEROF",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "OWNEROF"
+      }
+    }
+  ],
+  "CAPABILITYOF": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "CAPABILITYOF",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "CAPABILITYOF"
+      }
+    }
+  ],
+  "ISPARTOF": [
+    {
+      "operation": "shift",
+      "spec": {
+        "uuid": "uuid",
+        "type": "ISPARTOF",
+        "dateCreated": "dateCreated",
+        "createdBy": "createdBy",
+        "dateModified": "dateModified",
+        "modifiedBy": "modifiedBy"
+      }
+    },
+    {
+      "operation": "default",
+      "spec": {
+        "type": "ISPARTOF"
+      }
+    }
+  ]
+}

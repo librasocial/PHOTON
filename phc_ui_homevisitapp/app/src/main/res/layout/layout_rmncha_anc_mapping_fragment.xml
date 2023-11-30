@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.HouseholdMappingFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ssf.homevisit.rmncha.anc.mapping.ANCMappingFragmentViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/divider"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <fragment
+                    android:id="@+id/rmncha_map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/you_are_in_village_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:backgroundTint="#FFBE5E"
+                    android:drawableLeft="@drawable/ic_anc_round"
+                    android:drawablePadding="5dp"
+                    android:enabled="false"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/hh_anc_you_are_in_village_message"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:cornerRadius="15dp" />
+            </FrameLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="RMNCH+A"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text=">"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Ante Natal Care"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text=">"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/header_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/hh_select_anc_hh_message"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textColor="#1D9824"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/alert_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_bg"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/search_by_name"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="1dp"
+                                android:layout_weight="1"
+                                android:background="#FFFFFF"
+                                android:drawablePadding="10dp"
+                                android:hint="@string/search_by_name"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPersonName"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textAppearance="@style/LoginText" />
+
+                            <ImageButton
+                                android:id="@+id/search_by_head_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="#FFFFFF"
+                                android:padding="4dp"
+                                android:src="@drawable/ic_search" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/show_list_of_pw"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Show list of PW"
+                            android:textColor="@color/button_blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/show_complete_list"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="@string/show_complete_list_of_hh"
+                            android:textColor="@color/rmncha_unselected_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/anc_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/anc_pw_header_message"
+                        android:textColor="@color/black"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:drawableLeft="@drawable/ic_home"
+                        android:drawablePadding="10dp"
+                        android:focusableInTouchMode="true"
+                        android:gravity="left|center_vertical"
+                        android:paddingStart="10dp"
+                        android:singleLine="true"
+                        android:text="Select a PW for Ante Natal Care"
+                        android:textAppearance="@style/rmncha_hh_sub_header_style" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="15dp"
+                        android:background="#C4C4C4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"
+                            android:text="@string/hh_number_header"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/name_header"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"
+                            android:text="@string/hh_head_name"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/count_header"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.8"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"
+                            android:text="@string/hh_members"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1.5"
+                            android:focusableInTouchMode="true"
+                            android:singleLine="true"
+                            android:text="@string/hh_action"
+                            android:textAppearance="@style/rmncha_header_style"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/member_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/footer_brand"
+            android:background="@color/alert_divider" />
+
+        <RelativeLayout
+            android:id="@+id/footer_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:drawableLeft="@drawable/ic_back_button"
+                android:drawablePadding="10dp"
+                android:text="@string/back"
+                android:textAppearance="@style/footer_back_button_style" />
+
+            <ImageView
+                android:id="@+id/footer_logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/footer_tv"
+                android:contentDescription="@string/ssf_logo"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo_two" />
+
+            <TextView
+                android:id="@+id/footer_tv"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/powered_by_"
+                android:textAppearance="@style/powered_by__" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</layout>

@@ -21,7 +21,7 @@ import * as Tostify from "../../../ConstUrl/Tostify";
 import { ToastContainer } from "react-toastify";
 import Geocode from "react-geocode";
 import FileUpload from "../../FileUpload/FileUpload";
-Geocode.setApiKey("AIzaSyBITWADW5JiYQUJBspxyPq0OLCrTCNwrSQ");
+Geocode.setApiKey("YOUR_GOOGLE_API_KEY");
 
 let center_type = "Sub-Center";
 let updateType = "remove-image";

@@ -1,0 +1,25 @@
+{
+    "childCitizenId": "1234",
+    "visitDate": "2022-07-15T10:15:49.348Z",
+    "isReferredToPhc": "false", 
+    "servicedBy": "56784",
+	"servicedByName": "asha",
+	"commoditiesProvided": [{ 
+		"info": "service",
+		"status": "true" 
+	}],
+	"informationCollected": [{ 
+		"info": "collected",
+		"status": "true" 
+	}], 
+	"councelingData": [{ 
+		"info": "nil",
+		"status": "false"
+	}],
+    "audit": {
+        "dateCreated": "2022-07-15T10:15:49.348Z",
+        "createdBy": "user",
+        "dateModified": "2022-07-15T10:15:49.348Z",
+        "modifiedBy": "user"
+    }
+}

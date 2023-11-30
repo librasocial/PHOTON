@@ -1,0 +1,12 @@
+{
+  "iodineSurveillanceId": "string",
+  "shopOwnerName": "string",
+  "saltBrandName": "string",
+  "noOfSamplesCollected": 0,
+  "dateCollected": "2022-08-10",
+  "labSubmittedDate": "2022-08-10",
+  "labTestResultStatus": "string",
+  "reportImageUrl": ["string"],
+  "iodineResultQty": 0,
+  "resultDate": "2022-08-10"
+}

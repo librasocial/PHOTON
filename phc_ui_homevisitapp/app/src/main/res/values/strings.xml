@@ -1,0 +1,1008 @@
+<resources>
+    <string name="app_name">PHOTON</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="ndata">
+
+        41\u00C2\u00B024\'12.2"N - 2\u00C2\u00B010\'26.5"E
+    </string>
+    <string name="forgot_pasw">Forgot Password?</string>
+    <string name="check">
+
+        Check
+    </string>
+
+    <string name="mapping_suc">
+
+        Registration Successful --- 41\u00C2\u00B024\'12.2"N - 2\u00C2\u00B010\'26.5"E
+    </string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="residing">
+        <item>Alive</item>
+        <item>Dead</item>
+        <item>Alive</item>
+    </string-array>
+    <string name="button">Login</string>
+    <string name="digital_ind">Digital India!</string>
+    <string name="one_village">One village at a time</string>
+    <string name="lorem_ipsum">Karuna Trust provides Comprehensive Primary Health care services in the PHCs. With the Government
+        of India backing the Digital India movement, there have been a lot of advancements in the technology
+        front in health care.\n\nThe Mobile Apps embedded this Tab allow us to capture basic profiles of Residents,
+        Household and Village. Mobile Apps for monitoring the complete
+        workflow of RMNCH+A will allow us to integrate with PHC EMR Web App.
+        Similarly the surveillance App will allow us to collect data of Communicable Disease and integrate with PHC EMR Web App.
+    </string>
+    <string name="powered_by_">Powered by: &lt;br /&gt; <b>SAMPOORNA SWARAJ FOUNDATION\u0020</b> &lt;br /&gt;Bangalore
+    </string>
+    <string name="powered_by">Powered by:/n SAMPOORNA SWARAJ FOUNDATION /n Bangalore
+    </string>
+    <string name="powered_by_sam">Powered by: &lt;br /&gt; <b>SAMPOORNA SWARAJ FOUNDATION\u0020</b> &lt;br /&gt;Bangalore
+    </string>
+    <string name="check_internet_connection">Check your internet connection.</string>
+    <string name="deceased">Deceased</string>
+    <string name="location_phc_here">Location /PHC Here</string>
+    <string name="user_name_here">User Name Here</string>
+    <string name="collected_reports">Collected Reports</string>
+    <string name="surveillance">Surveillance</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="what_are_yo">What are you doing today</string>
+    <string name="select_surv">Select surveillance type</string>
+    <string name="field_label_lang">Larva Surveillance at Household</string>
+    <string name="others">Special/Others</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_key" translatable="false">AIzaSyDyUTKZxc2pZObEoRD7C5bKJYW5OMIgcCs</string>
+    <string name="village_level_mapping">Village Level Registration</string>
+    <string name="household_level_mapping">Household Level Registration</string>
+    <string name="village_level_survey">Village Level Survey</string>
+    <string name="household_level_survey">Household Level Survey</string>
+    <string name="resident_level_survey">Individual Level Survey</string>
+    <string name="village_level">Village Level</string>
+    <string name="household_level">Household Level</string>
+    <string name="individual_level">Individual Level</string>
+
+    <!--    villagelevelsocioecosurvey   start-->
+
+    <string name="villagename">
+
+        | VillageName-123456-XX
+    </string>
+    <string name="villageinfo">
+
+        Village Info
+    </string>
+    <string name="populationinhshld">
+
+        Population in household
+    </string>
+    <string name="gram_panchayat_name">
+
+        Gram Panchayat Name*
+    </string>
+
+    <string name="tauluk">
+
+        Taluk*
+    </string>
+    <string name="district">
+
+        District*
+    </string>
+    <string name="state">
+
+        State*
+    </string>
+
+    <!--    villagelevelsocioecosurvey   end-->
+    <string name="revisits_follow_up">Revisits / Follow up</string>
+    <string name="popup_heade">Select Village for &lt; Village Level Registration ></string>
+    <string name="select_phc">Select PHC</string>
+    <string name="phc">PHC</string>
+    <string name="already_exist">Data already exists</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Please Retry</string>
+    <string name="start_mapping">Start Registration</string>
+    <string name="submit">Submit</string>
+    <string name="save">Save</string>
+    <string name="select_village">Select Village</string>
+    <string name="village">Village</string>
+    <string name="select_subcenter">Select Sub-center</string>
+    <string name="subcenter">Subcenter</string>
+    <string name="existing_pr">Existing Primary Data</string>
+    <string name="public_heal"><![CDATA[Public Health Center Name > Subcenter Number 1 > Mayasandra]]></string>
+    <string name="complete_map">COMPLETE_MAPPING</string>
+    <string name="incomplete">Save Incomplete</string>
+    <string name="lgd_code_00">LGD CODE</string>
+    <string name="smthwntwrng">Something went wrong</string>
+    <string name="n_2_10_26_5">Please wait … getting GPS location</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_splash">SplashAct</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="name_of_the_asset">Name of the asset</string>
+    <string name="lava_surveillance_at_village">Larva Surveillance at Village</string>
+    <string name="urine_sample">Urine Sample</string>
+    <string name="iec_programme">IEC Programme</string>
+    <string name="water_sample_collection">Water Sample Collection</string>
+    <string name="iodine_test">Iodine Test</string>
+    <string name="what_survey_and_surveillance_is_required">What Surveillance is required</string>
+    <string name="gps">GPS</string>
+    <string name="hotel">Hotel</string>
+    <string name="temple">Temple</string>
+    <string name="mosque">Mosque</string>
+    <string name="church">Church</string>
+    <string name="office">Office</string>
+    <string name="hospital">Hospital</string>
+    <string name="construction">Construction</string>
+    <string name="school_college">School</string>
+    <string name="bus_stop">Bus Stop</string>
+    <string name="water_body">Water Body</string>
+    <string name="park">Park</string>
+    <string name="toilet">Toilet</string>
+    <string name="shop">Shop</string>
+    <string name="other">Other</string>
+    <string name="add_image">Add Image</string>
+    <string name="back">Back</string>
+    <string name="save_and_continue">Save And Continue</string>
+    <string name="click_to_continue">Click here to Continue</string>
+    <string name="subcenter_number_1">Subcenter Number 1</string>
+    <string name="public_health_center_name">Public Health Center Name</string>
+    <string name="mayasandra">Mayasandra</string>
+    <string name="marked_places">Marked Places</string>
+    <string name="_10">10</string>
+    <string name="logout">Logout</string>
+    <string name="logout1">
+        <u>Logout</u>
+    </string>
+    <string name="select_survillance">Select Surveillance</string>
+    <string name="hh_number_g">
+        | HH-NUMBER- |
+    </string>
+    <string name="hh_number">HH-NUMBER
+    </string>
+    <string name="residing_status">Resident Status*</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="male">Male</string>
+    <string name="border_main">Border Main</string>
+    <string name="background">Background</string>
+    <string name="ssf_logo">SSF Logo</string>
+    <string name="karuna_trust_logo">Karuna Trust Logo</string>
+    <string name="emptystring" />
+    <string name="search_by_name">Search by Name</string>
+    <string name="find_by_location">Find HH by GPS location</string>
+    <string name="hh_number_header">Household Number</string>
+    <string name="hh_head_name">Name of HH Head</string>
+    <string name="hh_members">No. of Members</string>
+    <string name="hh_action">Action</string>
+    <string name="select_ec_hh">Select Eligible Couple Household</string>
+    <string name="select_pw_for_anc">Select PW for Ante Natal Care</string>
+    <string name="select_pw_for_pnc">Select PW for Post Natal Care</string>
+    <string name="select_pw_for_anc_service">Select PW for ANC Service</string>
+    <string name="select_pw_for_pnc_service">Select Woman for PNC Service</string>
+    <string name="select_hh_for_anc">Select HH for Ante Natal Care</string>
+    <string name="select_hh_for_pnc">Select HH for Post Natal Care</string>
+    <string name="show_complete_list_of_hh">Show complete list of HH</string>
+    <string name="hh_filter_header_message">Based on your location we found these Households</string>
+    <string name="anc_pw_header_message">Here is a list of Pregnant Women</string>
+    <string name="pnc_women_header_message">Here is a list of Women for Post Natal Care</string>
+    <string name="anc_hh_header_message">Here is a list of Households</string>
+    <string name="pnc_hh_header_message">Here is a list of Households</string>
+    <string name="hh_filter_sub_header_message">Select a house for Eligible Couple Process</string>
+    <string name="hh_select_female_for_ec_header_message">Select a Female Member for EC Process</string>
+    <string name="hh_select_female_for_anc_header_message">Select a Female Member for Ante Natal Care</string>
+    <string name="hh_select_female_for_pnc_header_message">Select a Female member for Post Natal Care</string>
+    <string name="hh_start_service_or_select_female_header_message">Start Service or Select a Female for EC Registration</string>
+    <string name="hh_select_spouse_header_message">Select Spouse for EC Registration</string>
+    <string name="hh_select_spouse_for_ec_service_header_message">Provide Birth Control or Pre-Conception Service</string>
+    <string name="hh_pnc_details_header_message">Enter Delivery Outcome Details and Infant Details</string>
+    <string name="hh_pnc_delivery_outcomes_header_message">Enter Delivery Outcome Details</string>
+    <string name="text_pnc_view_delivery_outcomes">View Delivery Outcome Details</string>
+    <string name="text_pnc_view_infant_details">View Infant Details</string>
+    <string name="hh_pnc_infant_header_message">Enter Infant Details</string>
+    <string name="hh_pnc_service_header_message">Selection of Beneficiary for PNC services</string>
+    <string name="hh_select_pw_anc_service_header_message">Register Pregnant Woman for Ante Natal Care Services</string>
+    <string name="hh_select_pw_anc_tracking_header_message">Perform Periodic Medical Check-ups</string>
+    <string name="hh_select_anc_hh_message">Selection of Households</string>
+    <string name="hh_select_pnc_hh_message">Selection of Households</string>
+    <string name="hh_select_pnc_women_message">Selection of Women for PNC</string>
+    <string name="hh_select_pw_anc_message">Selection of PW for ANC</string>
+    <string name="hh_select_spouse_header_with_rchid_message">Register EC for RCH - ID</string>
+    <string name="hh_ec_process_header_message">Eligible Couple Process</string>
+    <string name="hh_anc_header_message">Ante Natal Care</string>
+    <string name="hh_pnc_header_message">Post Natal Care</string>
+    <string name="hh_ec_provide_service_header_message">Provide BC or PC Service</string>
+    <string name="hh_anc_pw_registration_header_message">Ante Natal care - PW Registration</string>
+    <string name="hh_ec_choose_type_service_header_message">Choose The Type Of Service</string>
+    <string name="hh_ec_update_service_status_header_message">Update Service Status</string>
+    <string name="hh_you_are_in_village_message">You are in @@ Village for Eligible Couple Process</string>
+    <string name="hh_anc_you_are_in_village_message">You are in @@ Village for Ante Natal Care</string>
+    <string name="hh_pnc_you_are_in_village_message">You are in @@ Village for Post Natal Care</string>
+    <string name="hh_collect_ank_details">Collect Bank Details</string>
+    <string name="hh_enter_existing_rch_id">Enter Existing RCH-ID</string>
+    <string name="total">Total</string>+
+    <string name="back_arrow">Back Arrow</string>
+    <string name="mark_a_spot">Mark a spot</string>
+    <string name="GPSAlertDialogTitle">Enable GPS</string>
+    <string name="GPSAlertDialogMessage">Go to setting to enable it.</string>
+    <string name="action_settings">open Settings</string>
+    <string name="show_completed_list">Show Completed List</string>
+    <string name="greater_than"><![CDATA[>]]></string>
+    <string name="status">status</string>
+    <string name="find_automa">
+        Find automatically by GPS my location
+    </string>
+    <string name="show_complete_list">Show complete list</string>
+    <string name="based_on_yo">Based on your location we have found these results</string>
+    <string name="household_level_se_survey">Household Level SE Survey</string>
+    <string name="complete_survey">Complete Survey</string>
+    <string name="perform_hh_se_survey">Perform HH SE Survey</string>
+    <string name="forward_slash">/</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="save_survey">Save Survey</string>
+    <string name="save_do_resident">Save &amp; Do Resident Survey</string>
+    <string name="save_and_perform_resident_survey">Save and perform individual survey</string>
+    <string name="household_information">Household information</string>
+    <string name="hh_number_">HH-NUMBER-</string>
+    <string name="is_head_of_the_family">Is head of the family?</string>
+    <string name="healthcare_info_and_preferance">Healthcare info and preferance</string>
+    <string name="physical_location_info">Physical Location info</string>
+    <string name="house_ownership_info">House Ownership info</string>
+    <string name="sanitation">Sanitation</string>
+    <string name="select_mapping">Select Registration</string>
+    <string name="perform_individual_level_survey">Perform Individual Level Survey</string>
+    <string name="person_info">Person Info</string>
+    <string name="photo">Photo</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="head">Head</string>
+    <string name="yes">Yes</string>
+    <string name="languages_known">Languages Known</string>
+    <string name="education">Education</string>
+    <string name="language">Language</string>
+    <string name="spoken">Spoken</string>
+    <string name="read">Read</string>
+    <string name="written">Written</string>
+    <string name="occupation">Occupation</string>
+    <string name="economic_status">Economic Status</string>
+    <string name="question">Question*</string>
+    <string name="disablities">Disabilities</string>
+    <string name="social_security">Social Security Benefits</string>
+    <string name="family_mapping">Family Mapping</string>
+    <string name="head_of_family">Head Of Family</string>
+    <string name="name_of_residents">Name Of Residents</string>
+    <string name="relationship_status">Relationship Status</string>
+
+
+    <string-array name="array_whose_number">
+        <item>Select</item>
+        <item>Woman</item>
+        <item>Husband</item>
+        <item>Neighbours</item>
+        <item>Relatives</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="array_list_temp_bank_branches">
+        <item>Select</item>
+        <item>Sagar</item>
+        <item>Sakleshpur</item>
+        <item>Sathanur</item>
+        <item>Settihalli</item>
+        <item>Shikaripur</item>
+        <item>Shimoga</item>
+        <item>Shorapur</item>
+        <item>Siddakatte</item>
+        <item>Sindhanoor</item>
+        <item>Sirsi</item>
+        <item>Somwarpet</item>
+        <item>Sorab</item>
+        <item>Srinivasapur</item>
+        <item>Sugganahalli</item>
+    </string-array>
+
+    <string-array name="array_list_temp_banks">
+        <item>Select</item>
+        <item>Canara Bank</item>
+        <item>Karnataka Bank</item>
+        <item>Karnataka Grameena Bank</item>
+        <item>State Bank of India</item>
+    </string-array>
+
+    <string-array name="array_list_infertile_refer_to">
+        <item>Select</item>
+        <item>FRU</item>
+        <item>District hospital</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="array_service_types">
+        <item>Birth Control</item>
+        <item>Pre - Conception</item>
+    </string-array>
+
+    <string-array name="contraceptive_type_male">
+        <item>Select</item>
+        <item>Condom</item>
+        <item>Male sterilization</item>
+        <item>none</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="contraceptive_type_female">
+        <item>Select</item>
+        <item>OC pills</item>
+        <item>IUCD CU 380A (10 yrs)</item>
+        <item>IUCD CU 375 (5yrs)</item>
+        <item>Female sterilization</item>
+        <item>EC pills</item>
+        <item>none</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="array_sex">
+        <item>Select</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="array_positive_negative">
+        <item>Select</item>
+        <item>Positive</item>
+        <item>Negative</item>
+    </string-array>
+
+    <string-array name="array_temp_spouse_list">
+        <item>Kempaiah Gowda - 60y - Male (H) </item>
+        <item>Ramappa Gowda - 40y - Male </item>
+        <item>Muniyappa - 38y - Male</item>
+        <item>Male Muniyappa - 27y Male</item>
+        <item>Not Available</item>
+    </string-array>
+
+    <string-array name="array_yes_no">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="array_infant_activity">
+        <item>Select</item>
+        <item>Good</item>
+        <item>Lethargic</item>
+    </string-array>
+
+    <string-array name="array_infant_breathing">
+        <item>Select</item>
+        <item>Normal</item>
+        <item>Fast</item>
+        <item>Difficult</item>
+    </string-array>
+
+    <string-array name="array_infant_sucking">
+        <item>Select</item>
+        <item>Good</item>
+        <item>Poor</item>
+    </string-array>
+
+    <string-array name="array_blood_groups">
+        <item>Select</item>
+        <item>A +ve</item>
+        <item>B +ve</item>
+        <item>AB +ve</item>
+        <item>O +ve</item>
+        <item>A -ve</item>
+        <item>B -ve</item>
+        <item>AB -ve</item>
+        <item>O -ve</item>
+    </string-array>
+
+    <string-array name="array_complications">
+        <item>Convulsion</item>
+        <item>Ante Partum Haemorrhage (APH)</item>
+        <item>Pregnancy Induced Hypertension (PIH)</item>
+        <item>Repeated Abortion</item>
+        <item>Stillbirth</item>
+        <item>Congenital Anomaly</item>
+        <item>Caesarean - Section</item>
+        <item>Blood Transfusion</item>
+        <item>Twins</item>
+        <item>Obstructed Labour</item>
+        <item>Postpartum Haemorrage (PPH)</item>
+        <item>None</item>
+        <item>Any Other (Specify)</item>
+    </string-array>
+
+    <string-array name="array_possible_death">
+        <item>Eclampsia</item>
+        <item>Haemorrahge</item>
+        <item>High Fever</item>
+        <item>Abortion</item>
+        <item>Any other (Specify)</item>
+    </string-array>
+
+    <string-array name="array_other_symptoms_of_high_risk">
+        <item>Eclampsia</item>
+        <item>Haemorrahge</item>
+        <item>High Fever</item>
+        <item>Abortion</item>
+        <item>Any other (Specify)</item>
+    </string-array>
+
+    <string-array name="array_pregnancy_outcome">
+        <item>Select</item>
+        <item>Live Birth</item>
+        <item>Still Birth</item>
+        <item>Abortion</item>
+    </string-array>
+
+    <string-array name="array_expected_facility_for_delivery">
+        <item>Select</item>
+        <item>Primary Health Care Centre</item>
+        <item>Community Health Centre</item>
+        <item>Urban Health Centre</item>
+        <item>District Hospital</item>
+        <item>Referral Hospital</item>
+        <item>Medical College Hospital</item>
+        <item>Other Private Hospital</item>
+        <item>Home</item>
+        <item>Other Public Facility</item>
+        <item>Accredited Private Hospital-Centre</item>
+    </string-array>
+
+    <string-array name="array_positive_negative_symbol">
+        <item>Select</item>
+        <item>+ ve</item>
+        <item>- ve</item>
+    </string-array>
+
+    <string-array name="array_reactive_non_reactive">
+        <item>Select</item>
+        <item>Reactive</item>
+        <item>Non Reactive</item>
+    </string-array>
+
+    <string-array name="array_tt_dose">
+        <item>Select</item>
+        <item>TT - 1</item>
+        <item>TT - 2</item>
+        <item>TTB</item>
+    </string-array>
+
+    <string-array name="array_done_not_done">
+        <item>Select</item>
+        <item>Done</item>
+        <item>Not Done</item>
+    </string-array>
+
+    <string-array name="array_present_absent">
+        <item>Select</item>
+        <item>Absent</item>
+        <item>Present</item>
+    </string-array>
+
+    <string-array name="array_risk_symptoms">
+        <item>High BP (Systolic >= 140 and/or Diastolic >= 90 mmHg)</item>
+        <item>Convulsions</item>
+        <item>Vaginal Bleeding</item>
+        <item>Foul Smelling Discharge</item>
+        <item>Severe Anaemia (Hb level less than 7 gms%)</item>
+        <item>Diabetic</item>
+        <item>Twins</item>
+        <item>Habitual Abortion</item>
+        <item>None</item>
+        <item>Any Other (Specify)</item>
+    </string-array>
+
+    <string-array name="array_count">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="array_women_age_at_marriage">
+        <item>0</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+    </string-array>
+
+    <string-array name="array_year">
+        <item>1990</item>
+        <item>1991</item>
+        <item>1992</item>
+        <item>1993</item>
+        <item>1994</item>
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+    </string-array>
+
+    <string-array name="array_years">
+        <item>Year</item>
+        <item>0 years</item>
+        <item>1 year</item>
+        <item>2 years</item>
+        <item>3 years</item>
+        <item>4 years</item>
+        <item>5 years</item>
+        <item>6 years</item>
+        <item>7 years</item>
+        <item>8 years</item>
+        <item>9 years</item>
+        <item>10 years</item>
+        <item>11 years</item>
+        <item>12 years</item>
+        <item>13 years</item>
+        <item>14 years</item>
+        <item>15 years</item>
+        <item>16 years</item>
+        <item>17 years</item>
+        <item>18 years</item>
+        <item>19 years</item>
+        <item>20 years</item>
+        <item>21 years</item>
+        <item>22 years</item>
+        <item>23 years</item>
+        <item>24 years</item>
+        <item>25 years</item>
+        <item>26 years</item>
+        <item>27 years</item>
+        <item>28 years</item>
+        <item>29 years</item>
+        <item>30 years</item>
+        <item>31 years</item>
+
+    </string-array>
+
+    <string-array name="array_month">
+        <item>Month</item>
+        <item>1 month</item>
+        <item>2 months</item>
+        <item>3 months</item>
+        <item>4 months</item>
+        <item>5 months</item>
+        <item>6 months</item>
+        <item>7 months</item>
+        <item>8 months</item>
+        <item>9 months</item>
+        <item>10 months</item>
+        <item>11 months</item>
+    </string-array>
+
+    <string-array name="array_deliver_conducted_by">
+        <item>Select</item>
+        <item>ANM (PHCO)</item>
+        <item>LHV</item>
+        <item>Doctor</item>
+        <item>Staff nurse</item>
+        <item>Relative</item>
+        <item>Other</item>
+        <item>Stand-by Assistant (SBA)</item>
+        <item>NON SBA</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_type_of_delivery">
+        <item>Select</item>
+        <item>Normal</item>
+        <item>Cesarean</item>
+        <item>Assisted</item>
+    </string-array>
+
+    <string-array name="array_delivery_complications">
+        <item>Select</item>
+        <item>Postpartum Haemorrage (PPH)</item>
+        <item>Retained Placenta</item>
+        <item>Obstructed Delivery</item>
+        <item>Prolapsed Cord</item>
+        <item>Twins Pregnancy</item>
+        <item>Convulsions</item>
+        <item>Death</item>
+        <item>Dont Know</item>
+        <item>None</item>
+        <item>Any Other (Specify)</item>
+    </string-array>
+
+    <string-array name="array_count_zero_to_six">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="array_count_one_to_six">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="array_did_baby_cry">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Information not available</item>
+    </string-array>
+
+    <string-array name="array_referred">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Not Applicable</item>
+    </string-array>
+
+    <string-array name="array_abortion_type">
+        <item>Select</item>
+        <item>Induced</item>
+        <item>Spontaneous</item>
+    </string-array>
+
+    <string-array name="array_birth_defects">
+        <item>Select</item>
+        <item>Not Applicable</item>
+        <item>Cleft Lip / Cleft Palate</item>
+        <item>Club Foot</item>
+        <item>Down Syndrome</item>
+        <item>Hydrocephalus</item>
+        <item>Imperforate Anus</item>
+        <item>Neural Tube Defect (Spina Bifida)</item>
+        <item>Any Others</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_pnc_period">
+        <item>Select</item>
+        <item>Day 1</item>
+        <item>Day 3</item>
+        <item>Day 7</item>
+        <item>Day 14</item>
+        <item>Day 21</item>
+        <item>Day 28</item>
+        <item>Day 42</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="array_ppc_method">
+        <item>Select</item>
+        <item>Postpartum IUCD(PPIUCD - Within 48hrs of delivery)</item>
+        <item>Condom</item>
+        <item>Male sterilization</item>
+        <item>Postpartum Sterilization(PPS - within 7 days of delivery)</item>
+        <item>none</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="array_mother_danger_signs">
+        <item>Select</item>
+        <item>Postpartum Haemorrage (PPH)</item>
+        <item>Fever</item>
+        <item>Sepsis</item>
+        <item>Severe Abdominal Pain</item>
+        <item>Severe Headache or Blurred Vision</item>
+        <item>Difficult Breathing</item>
+        <item>Fever / Chills</item>
+        <item>None</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="array_infant_danger_signs">
+        <item>Select</item>
+        <item>Jaundice</item>
+        <item>Diarrohea</item>
+        <item>Vomiting</item>
+        <item>Fever</item>
+        <item>Hypothermia (Cold body)</item>
+        <item>Convulsions</item>
+        <item>Chest-in–drawing (fast breathing)</item>
+        <item>Difficulity in Feeding / Unable to Suck / Decreased Movements</item>
+        <item>None</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="array_pnc_referral_facility">
+        <item>Select</item>
+        <item>Primary Health Care Centre</item>
+        <item>Community Health Centre</item>
+        <item>District Hospital</item>
+        <item>Referral Hospital</item>
+        <item>Other Private Hospital</item>
+        <item>Any others (specify)</item>
+    </string-array>
+
+    <string-array name="array_infant_death_place">
+        <item>Select</item>
+        <item> Soft</item>
+        <item>Engorged</item>
+    </string-array>
+
+    <string-array name="array_breast_condition">
+        <item>Select</item>
+        <item> Soft</item>
+        <item>Engorged</item>
+    </string-array>
+
+    <string-array name="array_nipple_condition">
+        <item>Select</item>
+        <item>Cracked</item>
+        <item>Normal</item>
+    </string-array>
+
+    <string-array name="array_uterus_condition">
+        <item>Select</item>
+        <item>Present</item>
+        <item>Absent</item>
+    </string-array>
+
+    <string-array name="array_bleeding_condition">
+        <item>Select</item>
+        <item>Excessive</item>
+        <item>Normal</item>
+    </string-array>
+
+
+    <string-array name="array_lochia_condition">
+        <item>Select</item>
+        <item>Healthy</item>
+        <item>Foul Smelling</item>
+    </string-array>
+
+
+    <string-array name="array_episiotomy_condition">
+        <item>Select</item>
+        <item>Healthy</item>
+        <item>Injected</item>
+    </string-array>
+
+
+
+    <string name="type">Type</string>
+    <string name="select_surveillance_type">Select Surveillance Type</string>
+    <string name="select_an_asset_for_larva_surveillance">Select an Asset for Surveillance</string>
+    <string name="health_amp_wellness_surveillance"><![CDATA[Health & Wellness Surveillance]]></string>
+    <string name="select_a_place_for_water_sample">Select a Place for Water Sample</string>
+    <string name="puttaiah_kere">Puttaiah Kere</string>
+    <string name="change_surveillance_type">Change Surveillance Type</string>
+    <string name="select_a_breeding_spot">Select a Breeding Spot</string>
+    <string name="breeding_spots">Breeding Spots</string>
+    <string name="delete">Delete</string>
+    <string name="next_inspection_date">Next Inspection Date</string>
+    <string name="attach_images">Attach Images</string>
+    <string name="solution_provided">Solution Provided</string>
+    <string name="any_larva_found">Any Larva Found?</string>
+    <string name="breeding_sites">Breeding sites</string>
+    <string name="swaminarayana_temple">Swaminarayana Temple</string>
+    <string name="_20_05_2022">20/05/2022</string>
+    <string name="visit_date">Visit date</string>
+    <string name="larva_surveillance">Larva Surveillance</string>
+    <string name="water_surveillance">Water Sample Collection</string>
+    <string name="iodine_surveillance">Iodine Test</string>
+    <string name="hnw_frag_header">Health and Wellness Surveillance</string>
+    <string name="btn_continue">Continue</string>
+    <string name="image_not_available">Image not available</string>
+
+    <string-array name="sampleCount">
+        <item>Select</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+
+    <string-array name="breedingSite">
+        <item>Select</item>
+        <item>Indoor</item>
+        <item>Outdoor</item>
+    </string-array>
+
+    <string-array name="labResult">
+        <item>Select</item>
+        <item>SPP (Satisfactory for Portable Purpose)</item>
+        <item>NSPP (Not Satisfactory for Portable Purpose)</item>
+    </string-array>
+
+    <string-array name="anyLarvaFound">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="dash">
+        <item>--</item>
+
+    </string-array>
+
+    <string-array name="select_phc">
+        <item>Sugganahalli Rural PHC</item>
+    </string-array>
+
+    <string-array name="solutionProvide">
+        <item>Select</item>
+        <item>Abate solution</item>
+        <item>Guppy / Gambusia fish</item>
+        <item>Cleaned the water</item>
+    </string-array>
+    <string name="date">DD/MM/yyyy</string>
+    <string name="continue_text">continue</string>
+    <string name="name_of_lab_technician">Name of Lab technician</string>
+    <string name="update_lab_report_image">Update lab report image(s)</string>
+    <string name="Result_analysis">Result of H2S analysis</string>
+    <string name="dash">---</string>
+    <string name="socio_economic_survey">Socio Economic Survey</string>
+    <string name="no">no</string>
+    <string name="No">No</string>
+    <string name="input_quality_of_environment_sanitation"><![CDATA[Input Quality of Environment & Sanitation]]></string>
+    <string name="enter_details_about_physical_infrastructure">Enter Details about Physical Infrastructure</string>
+    <string name="distance_of_the_village_from_the_nearest_national_state_highway_major_district_road">Distance of the Village from the nearest \nNational/State Highway/Major District Road</string>
+    <string name="availability_of_public_facilities">Availability of Public Facilities</string>
+    <string name="would_you_like_to_exit_without_saving">Would you like to exit without saving?</string>
+    <string name="form_has_been_saved_successfully">Form has been saved successfully!</string>
+    <string name="exit">Exit</string>
+    <string name="click_here_to_exit">Click here to Exit</string>
+    <string name="trade_name_of_salt">Trade name of salt</string>
+    <string name="no_of_samples_collected">No of samples collected*</string>
+    <string name="shop_owner_s_name">Shop owner’s name*</string>
+
+    <string-array name="resultAnalysis">
+        <item>Select</item>
+        <item>SPP (Satisfactory for Portable Purpose)</item>
+        <item>NSPP (Not Satisfactory for Portable Purpose)</item>
+    </string-array>
+
+    <string-array name="saltTadeName">
+        <item>Select</item>
+        <item>Annapurna salt</item>
+        <item>Shashi salt</item>
+        <item>TATA salt</item>
+        <item>Nirma salt</item>
+        <item>Sadguru salt</item>
+        <item>M.S.K salt</item>
+        <item>Sprinkle salt</item>
+        <item>Arokya salt</item>
+        <item>Unpackaged Salt</item>
+        <item>Others (Specify)</item>
+
+
+    </string-array>
+    <string name="vhsnc_vhnd">VHSNC/VHND</string>
+    <string name="select_village_for_vhsnc">Select Village for VHSNC</string>
+    <string name="select_an_activity_for_vhsnc">Select an Activity for VHSNC</string>
+    <string name="save_amp_continue"><![CDATA[Save & Continue]]></string>
+    <string name="finish">Finish</string>
+    <string name="_continue">Continue</string>
+    <string name="send_invite">Send Invite</string>
+    <string name="fill_details_regarding_monthly_meeting">Fill Details Regarding Monthly Meeting</string>
+    <string name="employment">Employment</string>
+    <string name="facility">Facilities</string>
+    <string name="food_amp_drinking_water"><![CDATA[Food & Drinking Water]]></string>
+    <string name="health_vhnd">Health/VHND</string>
+    <string name="iec_program">IEC Program</string>
+    <string name="shelter">Shelter</string>
+    <string name="other_meeting_topics">Other meeting topics</string>
+    <string name="provide_additional_details">Provide Additional Details</string>
+    <string name="select_topics_under_employment">Select topics under\nemployment</string>
+    <string name="monthly_meeting_details">Monthly Meeting Details</string>
+    <string name="fill_details_for_meeting_preparation">Fill Details for Meeting Preparation</string>
+    <string name="select_meeting_topic">Select Meeting Topic*</string>
+    <string name="provide_event_information">Provide Event Information</string>
+    <string name="select_a_date_for_meeting">Select a date for meeting*</string>
+    <string name="select">Select</string>
+    <string name="select_start_time_for_meeting">Select start time for meeting*</string>
+    <string name="select_an_asset_for_venue">Select an asset for venue*</string>
+    <string name="select_a_venue_for_vhsnc">Select a Venue for %s</string>
+    <string name="today_s_date">Today’s Date</string>
+    <string name="select_reason_for_this_meet">Select reason for this meet</string>
+    <string name="meeting_information">Meeting Information</string>
+    <string name="schedule_vhsnc_monthly_meeting">Schedule %s Monthly Meeting</string>
+    <string name="schedule_or_conduct_vhsnc_monthly_meeting">Schedule or Conduct %s Monthly Meeting</string>
+    <string name="schedule_vhsnc_meeting">Schedule %s Meeting</string>
+    <string name="scheduled_vhsnc_meetings">Scheduled %s Meeting(s)</string>
+    <string name="select_topic_under">Select topics under %s</string>
+    <string name="no_data_found">No Data Available!</string>
+    <string name="select_other_hh">Select Other HH</string>
+    <string name="invitation_sent">Invitation Sent</string>
+    <string name="total_invites">Total No. of Invitees : %d</string>
+    <string name="mark_committee_member">Mark as Committee Member</string>
+    <string name="committee_member">Committee Member</string>
+    <string name="gram_panchayat">Gram Panchayat</string>
+    <string name="schedule_ars_meeting">Schedule ARS Meeting</string>
+    <string name="development">Development</string>
+    <string name="structure_maintanance">Structure Maintenance</string>
+    <string name="infra_maintanance">Infrastructure Maintenance</string>
+    <string name="garden_plantation">Garden/Plantation</string>
+    <string name="human_resource">Human Resource</string>
+    <string name="health_services">Health Services</string>
+    <string name="annual_account_planning">Annual Accounts Planning</string>
+    <string name="maintaining_records">Maintaining Records</string>
+    <string name="child_care_mapping_title">You are in %s Village for Child Care</string>
+    <string name="adolescent_care_mapping_title">You are in %s Village for Adolescent Care</string>
+</resources>

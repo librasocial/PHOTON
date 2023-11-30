@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="venue"
+            type="com.ssf.homevisit.models.PlacesInVillageResponse.Content" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            s3OrgImageUrlFromArray="@{venue.target.properties.imgUrl}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundCornerImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_gradiant"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingVertical="10dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:text="@{venue.target.properties.name}"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image"
+            app:layout_constraintStart_toStartOf="@id/image"/>
+
+        <FrameLayout
+            android:id="@+id/flSelected"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{venue.selected ? View.VISIBLE : View.GONE}"
+            android:background="@drawable/ic_venue_selected"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintEnd_toEndOf="@id/image"
+            app:layout_constraintStart_toStartOf="@id/image"
+            app:layout_constraintTop_toTopOf="@id/image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

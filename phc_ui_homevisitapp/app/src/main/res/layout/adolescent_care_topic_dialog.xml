@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vhndTopic"
+            type="com.ssf.homevisit.fragment.vhnd.VHNDTopics" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corner_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/path_toolbar_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfPNC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Provide the total no. of adolescents in the meeting"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etAdolescentMale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAdolescentMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="48dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Male"
+        app:layout_constraintStart_toEndOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etAdolescentMale"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtAdolescentMale"
+        app:layout_constraintTop_toBottomOf="@id/txtAdolescentMale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtAdolescentFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Female"
+        app:layout_constraintStart_toEndOf="@id/etAdolescentMale"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etAdolescentFemale"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtAdolescentFemale"
+        app:layout_constraintTop_toBottomOf="@id/txtAdolescentFemale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="4dp"
+        android:text="Enter Details for Adolescent Care"
+        android:textColor="@color/landing_page_subheadings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_adolescent_sh"
+        app:layout_constraintStart_toStartOf="@id/txtNoOfPNC"
+        app:layout_constraintTop_toBottomOf="@id/etAdolescentMale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfCounselling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopic.ADS_CARE_Q3}"
+        tools:text="No. of Counselling done on other topics done"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfCounselling"
+        app:layout_constraintTop_toTopOf="@id/etNoOfCounselling"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfCounselling"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtAdolescentMale"
+        app:layout_constraintTop_toBottomOf="@id/txtHeading" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfIFA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="No. of IFA tablets given"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etCounsellingMale"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCounsellingMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Male"
+        app:layout_constraintStart_toStartOf="@id/txtAdolescentMale"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfCounselling" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCounsellingMale"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtCounsellingMale"
+        app:layout_constraintTop_toBottomOf="@id/txtCounsellingMale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCounsellingFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Female"
+        app:layout_constraintStart_toEndOf="@id/etCounsellingMale"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfCounselling" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCounsellingFemale"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtCounsellingFemale"
+        app:layout_constraintTop_toBottomOf="@id/txtCounsellingFemale" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfCalciumTablet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="No. of calcium tablets given"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etCalciumMale"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCalciumMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Male"
+        app:layout_constraintStart_toStartOf="@id/txtAdolescentMale"
+        app:layout_constraintTop_toBottomOf="@id/etCounsellingMale" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCalciumMale"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtCalciumMale"
+        app:layout_constraintTop_toBottomOf="@id/txtCalciumMale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCalciumFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Female"
+        app:layout_constraintStart_toEndOf="@id/etCalciumMale"
+        app:layout_constraintTop_toBottomOf="@id/etCounsellingMale" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCalciumFemale"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/txtCalciumFemale"
+        app:layout_constraintTop_toBottomOf="@id/txtCalciumFemale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFamilyPlanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopic.ADS_CARE_Q8}"
+        tools:text="No. of Counselling on Family planning (Early marriage)"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etFamilyPlanning"
+        app:layout_constraintTop_toTopOf="@id/etFamilyPlanning"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFamilyPlanning"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="18dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/etCalciumMale"
+        app:layout_constraintTop_toBottomOf="@id/etCalciumMale" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfOCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopic.ADS_CARE_Q9}"
+        tools:text="No. of OCP provided (Early marriage)"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfOCP"
+        app:layout_constraintTop_toTopOf="@id/etNoOfOCP"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfOCP"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="18dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/etFamilyPlanning"
+        app:layout_constraintTop_toBottomOf="@id/etFamilyPlanning" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNoOfCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@{vhndTopic.ADS_CARE_Q10}"
+        tools:text="No. of CC provided (Early marriage)"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/etNoOfCC"
+        app:layout_constraintTop_toTopOf="@id/etNoOfCC"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNoOfCC"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_bg2"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="18dp"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/etFamilyPlanning"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfOCP" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/alert_divider"
+        app:layout_constraintTop_toBottomOf="@id/etNoOfOCP" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_bar_btn"
+        android:drawablePadding="8dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".rmncha.ec.ecservice.ECServiceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@id/divider"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/anc_service_visit_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Visit No"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_period"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:lines="2"
+                android:text="ANC Period"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="2"
+                android:text="ANC Date"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_weeks"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Weeks of Pregnancy"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_tt_dose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:lines="2"
+                android:text="TT Dose"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_tt_dose_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:lines="1"
+                android:text="TT Dose Date"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_fa_given"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:lines="2"
+                android:text="FA given"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_ifa_given"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:lines="2"
+                android:text="IFA given"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_abortion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Abortion"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_abortion_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Abortion Date"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_maternal_death"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Maternal Death"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_maternal_death_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Death Date"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_asha_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Asha Name"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+            <TextView
+                android:id="@+id/anc_service_anc_covid_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:lines="2"
+                android:text="Covid Result"
+                android:textAppearance="@style/rmncha_anc_pw_service_row" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/alert_divider" />
+
+    </RelativeLayout>
+
+</layout>

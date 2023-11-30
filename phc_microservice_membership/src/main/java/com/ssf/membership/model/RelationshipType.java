@@ -1,0 +1,5 @@
+package com.ssf.membership.model;
+
+public enum RelationshipType {
+    MEMBEROF, SERVICEDBY, REPORTSINTO, RESIDESIN, CONTAINEDINPLACE, MARRIEDTO, MOTHEROF, EMPLOYEEOF, HEADOF
+}

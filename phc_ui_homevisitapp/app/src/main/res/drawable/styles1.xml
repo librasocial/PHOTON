@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="cancel" tools:ignore="MissingPrefix">
+
+        <item name="android:textSize" tools:ignore="MissingPrefix">
+            16sp
+        </item>
+
+        <item name="android:textColor" tools:ignore="MissingPrefix">
+            #0084FF
+        </item>
+
+    </style>
+</selector>

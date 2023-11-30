@@ -1,0 +1,88 @@
+package com.ssf.homevisit.rmncha.adolescentCare
+
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.view.WindowManager
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
+import androidx.navigation.fragment.NavHostFragment
+import com.ssf.homevisit.R
+import com.ssf.homevisit.controller.AppController
+import com.ssf.homevisit.databinding.ActivityAdolescentCareServiceBinding
+import com.ssf.homevisit.models.CcChildListContent
+import com.ssf.homevisit.models.PhcResponse
+import com.ssf.homevisit.models.SubCVillResponse
+import com.ssf.homevisit.models.SubcentersFromPHCResponse
+
+class AdolescentCareServiceActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityAdolescentCareServiceBinding
+    private lateinit var navController: NavController
+    private val viewModel: AdolescentCareServiceViewModel by viewModels()
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+        binding = ActivityAdolescentCareServiceBinding.inflate(layoutInflater)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
+        setContentView(binding.root)
+        initComponents()
+        setFragmentChangeListener()
+    }
+
+    private fun initComponents() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.adolescent_service_nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
+    }
+
+    private fun setFragmentChangeListener() {
+        navController.addOnDestinationChangedListener { _, destination, arguments ->
+            updateToolbar(
+                destination,
+                arguments
+            )
+        }
+    }
+
+    private fun updateToolbar(destination: NavDestination, arguments: Bundle?) {
+        val toolbar = binding.toolbar
+        when (destination.id) {
+            R.id.adolescentCareServiceFragment -> {
+                toolbar.path = "RMNCH+A > Adolescent Care > "
+                toolbar.destination = "Provide Adolescent Care Services"
+            }
+        }
+    }
+
+    companion object {
+        const val keyVillage = "village"
+        const val keySubCenter = "subCenter"
+        const val keyVhc = "phc"
+        const val childDetail = "childDetail"
+
+        fun getNewIntent(
+            context: Context,
+            villageProperties: SubCVillResponse.Content,
+            subCenter: SubcentersFromPHCResponse.Content,
+            phc: PhcResponse.Content,
+            childDetails: CcChildListContent
+        ) = Intent(context, AdolescentCareServiceActivity::class.java).apply {
+            putExtra(keyVillage, villageProperties)
+            putExtra(keySubCenter, subCenter)
+            putExtra(keyVhc, phc)
+            putExtra(childDetail, childDetails)
+        }
+    }
+}

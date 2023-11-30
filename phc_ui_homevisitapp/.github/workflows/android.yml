@@ -1,0 +1,120 @@
+name: HomeVisit.Android.CI.DEV
+
+on:
+#   workflow_dispatch:  
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: main, develop
+
+jobs:
+  build:
+    name: ⚒️ Build App
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+   
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        distribution: adopt
+        java-version: 11
+    
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    
+    - name: Build with Gradle
+      #run: ./gradlew assembleDebug --stacktrace
+      run: ./gradlew build
+      
+    - name: Sign Android App
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: ${{github.workspace}}/app/build/outputs/apk/debug/
+        signingKeyBase64: ${{ secrets.SIGNING_KEY_TEST }}
+        alias: ${{ secrets.ALIAS }}
+        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+      
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
+      with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug-signed.apk
+  
+#   gh-release:
+#     name: 🚀 GitHub Release
+#     needs: [build]
+#     runs-on: ubuntu-latest
+#     environment: 
+#       name: GitHub
+#     continue-on-error: false
+    
+#     steps: 
+    
+#       - name: Download a Build Artifact
+#         uses: actions/download-artifact@v3.0.0
+#         with:
+#           name: app
+#           path: .
+      
+#       - name: Create Release
+#         uses: ncipollo/release-action@v1.10.0
+#         with: 
+#           artifacts: ${{github.workspace}}/app-debug-signed.apk
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           generateReleaseNotes: true
+#           tag: ${{github.run_number}}
+  
+  deploy-dev:
+    name: 📦 Deploy to App Center 
+    needs: [build]
+    runs-on: ubuntu-latest
+    environment:
+      name: App Center
+    continue-on-error: false
+    steps:
+      
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: app
+          path: .
+          
+      - name: Upload app to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: ssf/HomeVisit
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: Collaborators
+          file: ${{github.workspace}}/app-debug-signed.apk
+          notifyTesters: true
+          debug: false
+
+#   deploy-staging:
+#     name: 📦 Deploy to App Center Staging
+#     needs: [build]
+#     runs-on: ubuntu-latest
+#     environment:
+#       name: App Center Staging
+#     continue-on-error: false
+#     if: github.ref == 'refs/heads/main'
+    
+#     steps:
+    
+#     - name: Download a Build Artifact
+#       uses: actions/download-artifact@v3.0.0
+#       with:
+#         name: app
+#         path: .
+    
+#     - name: Upload app to App Center
+#       uses: wzieba/AppCenter-Github-Action@v1
+#       with:
+#           appName: ssf/HomeVisit
+#           token: ${{secrets.APP_CENTER_TOKEN}}
+#           group: Staging-Testers
+#           file: ${{github.workspace}}/app-debug-signed.apk
+#           notifyTesters: true
+#           debug: false

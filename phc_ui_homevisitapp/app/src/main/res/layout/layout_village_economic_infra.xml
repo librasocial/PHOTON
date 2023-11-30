@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/primary_agriculture_society__"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/cooperation_marketing_society"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/dairy_pollutry_fisheries___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/banks_rural___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/does_the_village"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+        <com.ssf.homevisit.views.SESQuestionResponseCheckBox
+            android:id="@+id/any_other___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rrres" />
+
+
+    </LinearLayout>
+</merge>
